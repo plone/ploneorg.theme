@@ -1,0 +1,124 @@
+@font-face {
+  font-family: 'DINRegular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/DINRegular.eot?v=3.0.1');
+  src: url('fonts/DINRegular.eot?#iefix&v=3.0.1') format('embedded-opentype'), url('fonts/DINRegular.woff?v=3.0.1') format('woff'), url('fonts/DINRegular.ttf?v=3.0.1') format('truetype'), url('fonts/DINRegular.svg#fontawesomeregular?v=3.0.1') format('svg');
+  src: url('fonts/DINRegular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'DINLight';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/DINLight.eot?v=3.0.1');
+  src: url('fonts/DINLight.eot?#iefix&v=3.0.1') format('embedded-opentype'), url('fonts/DINLight.woff?v=3.0.1') format('woff'), url('fonts/DINLight.ttf?v=3.0.1') format('truetype'), url('fonts/DINLight.svg#fontawesomeregular?v=3.0.1') format('svg');
+  src: url('fonts/DINLight.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'DINMedium';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/DINMedium.eot?v=3.0.1');
+  src: url('fonts/DINMedium.eot?#iefix&v=3.0.1') format('embedded-opentype'), url('fonts/DINMedium.woff?v=3.0.1') format('woff'), url('fonts/DINMedium.ttf?v=3.0.1') format('truetype'), url('fonts/DINMedium.svg#fontawesomeregular?v=3.0.1') format('svg');
+  src: url('fonts/DINMedium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'DINBold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/DINBold.eot?v=3.0.1');
+  src: url('fonts/DINBold.eot?#iefix&v=3.0.1') format('embedded-opentype'), url('fonts/DINBold.woff?v=3.0.1') format('woff'), url('fonts/DINBold.ttf?v=3.0.1') format('truetype'), url('fonts/DINBold.svg#fontawesomeregular?v=3.0.1') format('svg');
+  src: url('fonts/DINBold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'DINBlack';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/DINBlack.eot?v=3.0.1');
+  src: url('fonts/DINBlack.eot?#iefix&v=3.0.1') format('embedded-opentype'), url('fonts/DINBlack.woff?v=3.0.1') format('woff'), url('fonts/DINBlack.ttf?v=3.0.1') format('truetype'), url('fonts/DINBlack.svg#fontawesomeregular?v=3.0.1') format('svg');
+  src: url('fonts/DINBlack.otf') format('opentype');
+}
+
+header {
+  width: 1024px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 1200px) {
+  header {
+    width: 1024px;
+  }
+}
+
+#downloadcurrent {
+  padding: 10px 20px;
+  line-height: 55px;
+  background-color: #eaf2f6;
+}
+
+.getplone {
+  width: 13% !important;
+  font-family: DINMedium;
+  font-size: 24px;
+}
+
+.currentversion {
+  font-size: 60px;
+}
+
+.features {
+  width: 30% !important;
+  font-family: DINBold;
+  font-size: 17px;
+  color: #3399cc;
+}
+
+.features ul {
+  margin: 0 0 0 10px;
+}
+
+.features ul li {
+  line-height: 20px;
+  list-style: none;
+}
+
+.info {
+  width: 30% !important;
+  font-size: 14px;
+}
+
+.info a {
+  font-family: DINMedium;
+  text-decoration: none;
+}
+
+.info li {
+  display: inline-block;
+}
+
+.info li:after {
+  content: " /";
+}
+
+.info li:last-child:after {
+  content: "";
+}
+
+.info ul {
+  margin: 0 0 0 10px;
+}
+
+.info ul li {
+  line-height: 20px;
+  list-style: none;
+}
+
+.download {
+  width: 20% !important;
+  font-family: DINBlack;
+}

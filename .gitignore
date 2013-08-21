@@ -16,3 +16,4 @@ passwd
 data
 docs/_build
 *.mo
+node_modules
