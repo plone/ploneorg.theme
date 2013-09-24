@@ -22,6 +22,8 @@
         <after css:theme-children="html head"
                content="/html/head/link | /html/head/style | /html/head/meta" />
 
+        <drop content="/html/head/meta" if-content="(//*[@name='viewport'])"/>
+
         <!-- merge classes from Plone body with theme body -->
         <merge attributes="class" css:theme="body" css:content="body" />
 
@@ -38,7 +40,7 @@
              with rules that copy particular parts of the content into particular
              targets in your theme.
          -->
-        <after css:theme="body p" css:content="#visual-portal-wrapper" />
+        <after css:theme="body" css:content="#visual-portal-wrapper" />
 
     </rules>
 

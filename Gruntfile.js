@@ -3,7 +3,8 @@ module.exports = function (grunt) {
     grunt.initConfig({
         recess: {
             options: {
-                compile: true
+                compile: true,
+                includePath: ['ploneorg/theme/diazo_resources/bootstrap/less']
             },
             files: {
                 src: ['ploneorg/theme/diazo_resources/less/main.less'],

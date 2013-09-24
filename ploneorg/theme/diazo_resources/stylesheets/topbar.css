@@ -1,0 +1,504 @@
+#plone-global-topbar-wrapper {
+  background: #555555;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(top, #555555 0%, #1b1b1b 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #555555), color-stop(100%, #1b1b1b));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #555555 0%, #1b1b1b 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #555555 0%, #1b1b1b 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #555555 0%, #1b1b1b 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to bottom, #555555 0%, #1b1b1b 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#555555', endColorstr='#1b1b1b', GradientType=0);
+  /* IE6-9 */
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+#plone-global-topbar-wrapper {
+  /* Main links */
+
+  /* caixa desplegada */
+
+  /* Logo */
+
+  /* Paisos */
+
+  /* Search */
+
+  /* TO OVERRIDE GOOGLE SEARCH ( TEMPORAL ) */
+
+}
+#plone-global-topbar-wrapper #plone-global-topbar-iframe {
+  padding: 5px 20px 5px 20px;
+  height: 25px;
+}
+#plone-global-topbar-wrapper .mostrar_mobile {
+  display: block !important;
+}
+#plone-global-topbar-wrapper #plone-global-topbar-mainlinks {
+  float: right;
+  width: 60%;
+  margin-top: 0px;
+}
+#plone-global-topbar-wrapper #plone-global-topbar-mainlinks ul {
+  list-style: none outside none;
+  float: right;
+  margin: 0px;
+  padding-right: 20px;
+}
+#plone-global-topbar-wrapper #plone-global-topbar-mainlinks li {
+  float: left;
+  padding: 0px 0px 0px 0px;
+}
+#plone-global-topbar-wrapper #links-select li:hover {
+  background: #444444;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(top, #444444 0%, #3d3d3d 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #444444), color-stop(100%, #3d3d3d));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #444444 0%, #3d3d3d 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #444444 0%, #3d3d3d 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #444444 0%, #3d3d3d 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to bottom, #444444 0%, #3d3d3d 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#444444', endColorstr='#3d3d3d', GradientType=0);
+  /* IE6-9 */
+
+}
+#plone-global-topbar-wrapper #links-select li:hover a {
+  color: #FFFFFF;
+}
+#plone-global-topbar-wrapper #links-select li a {
+  color: #999;
+  font-size: 0.7em;
+  font-family: 'DINBold';
+  display: block;
+  padding: 6px 1em;
+  text-decoration: none;
+}
+#plone-global-topbar-wrapper #links-select li:hover > .caixa-desplegada {
+  display: inline-block;
+  position: absolute;
+  /*top: 100%;*/
+
+}
+#plone-global-topbar-wrapper .caixa-desplegada {
+  background: #3d3d3d;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(top, #3d3d3d 0%, #444444 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3d3d3d), color-stop(100%, #444444));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #3d3d3d 0%, #444444 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #3d3d3d 0%, #444444 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #3d3d3d 0%, #444444 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to bottom, #3d3d3d 0%, #444444 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d3d3d', endColorstr='#444444', GradientType=0);
+  /* IE6-9 */
+
+  display: none;
+  z-index: 1000;
+  border-radius: 0px 5px 5px 5px;
+  padding: 30px;
+  position: absolute;
+  /*top: 100%;*/
+
+}
+#plone-global-topbar-wrapper .caixa-desplegada h2 {
+  font-family: 'DINLight';
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: normal;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+#plone-global-topbar-wrapper .caixa-desplegada hr {
+  border: 0;
+  color: #666;
+  background-color: #666;
+  height: 1px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+#plone-global-topbar-wrapper .columnna-caixa-desplegada {
+  display: inline-block;
+  position: relative;
+  width: auto;
+  float: left;
+}
+#plone-global-topbar-wrapper .columnna-caixa-desplegada h5 {
+  font-family: 'DINLight';
+  color: #999;
+  font-weight: normal;
+  padding-left: 10px;
+  font-size: 0.83em;
+  margin-top: 1.67em;
+  margin-bottom: 5px;
+}
+#plone-global-topbar-wrapper .columnna-caixa-desplegada ul {
+  border-radius: 0 0 0 0;
+  padding: 0 !important;
+  display: inline-block !important;
+  border-right: none!important;
+}
+#plone-global-topbar-wrapper .columnna-caixa-desplegada ul li {
+  float: none !important;
+  position: relative;
+  text-align: left;
+}
+#plone-global-topbar-wrapper .columnna-caixa-desplegada ul li a {
+  font-weight: normal;
+  font-family: 'DINBold';
+  display: block;
+  padding: 10px 40px 10px 10px !important;
+  font-size: 0.8em !important;
+}
+#plone-global-topbar-wrapper .columnna-caixa-desplegada ul li a:hover {
+  background: #3d3d3d;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(top, #3d3d3d 0%, #323232 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3d3d3d), color-stop(100%, #323232));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #3d3d3d 0%, #323232 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #3d3d3d 0%, #323232 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #3d3d3d 0%, #323232 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to bottom, #3d3d3d 0%, #323232 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d3d3d', endColorstr='#323232', GradientType=0);
+  /* IE6-9 */
+
+}
+#plone-global-topbar-wrapper #plone-global-topbar-logo {
+  float: left;
+  width: 10%;
+}
+#plone-global-topbar-wrapper #plone-global-topbar-logo img {
+  margin-top: 2px;
+  height: 20px;
+}
+#plone-global-topbar-wrapper #plone-global-topbar-sites {
+  float: right;
+  margin-bottom: 2px;
+  width: 15%;
+}
+#plone-global-topbar-wrapper #sites-select {
+  padding-left: 30px;
+}
+#plone-global-topbar-wrapper #sites-select ul ul {
+  z-index: 1000;
+  display: none;
+}
+#plone-global-topbar-wrapper #sites-select ul li:hover > ul {
+  display: block;
+}
+#plone-global-topbar-wrapper #sites-select ul {
+  background: #444444;
+  border-radius: 5px;
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.15);
+  display: inline-table;
+  list-style: none outside none;
+  padding: 0 10px;
+  border: 1px solid #575757;
+  position: relative;
+  margin: 0px 0px 0px 0px;
+}
+#plone-global-topbar-wrapper #sites-select ul:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+#plone-global-topbar-wrapper #sites-select ul li {
+  float: left;
+}
+#plone-global-topbar-wrapper #sites-select ul li:hover {
+  background: no;
+}
+#plone-global-topbar-wrapper #sites-select ul li:hover a {
+  color: #FFFFFF;
+}
+#plone-global-topbar-wrapper #sites-select li a {
+  background: url("../img/arrow.png") no-repeat scroll 10px 6px;
+  background-position: 65px 8px;
+  color: #999;
+  font-family: 'DINRegular';
+  font-weight: normal;
+  font-size: 0.8em;
+  display: block;
+  padding: 3px 20px;
+  text-decoration: none;
+}
+#plone-global-topbar-wrapper #sites-select ul li a:hover {
+  background: url("../img/arrow.png") no-repeat scroll 10px 6px;
+  background-position: 65px 8px;
+}
+#plone-global-topbar-wrapper #sites-select ul ul {
+  background: #3d3d3d;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(top, #3d3d3d 0%, #444444 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3d3d3d), color-stop(100%, #444444));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #3d3d3d 0%, #444444 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #3d3d3d 0%, #444444 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #3d3d3d 0%, #444444 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to bottom, #3d3d3d 0%, #444444 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d3d3d', endColorstr='#444444', GradientType=0);
+  /* IE6-9 */
+
+  border-radius: 5px 0px 5px 5px;
+  padding: 30px !important;
+  position: absolute;
+  left: -77px;
+  top: 18px;
+  border: none !important;
+}
+#plone-global-topbar-wrapper #sites-select ul ul li {
+  border-bottom: 1px solid #666;
+  border-top: none;
+  float: none;
+  position: relative;
+  display: list-item;
+}
+#plone-global-topbar-wrapper #sites-select ul ul li a {
+  color: #FFFFFF;
+  padding: 6px 30px;
+  background-image: none;
+}
+#plone-global-topbar-wrapper #sites-select ul ul li a:hover {
+  background: #3d3d3d;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(top, #3d3d3d 0%, #323232 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3d3d3d), color-stop(100%, #323232));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #3d3d3d 0%, #323232 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #3d3d3d 0%, #323232 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #3d3d3d 0%, #323232 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to bottom, #3d3d3d 0%, #323232 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d3d3d', endColorstr='#323232', GradientType=0);
+  /* IE6-9 */
+
+}
+#plone-global-topbar-wrapper #search {
+  margin: 0px;
+}
+#plone-global-topbar-wrapper #plone-global-topbar-searchbox {
+  float: right;
+  width: 15%;
+}
+#plone-global-topbar-wrapper .cse .gsc-control-cse,
+#plone-global-topbar-wrapper .gsc-control-cse {
+  padding: 0px !important;
+  background-color: transparent!important;
+  border: 1px solid transparent!important;
+}
+#plone-global-topbar-wrapper .gsc-input-box {
+  height: 20px !important;
+  border-radius: 5px!important;
+  border: 1px solid transparent!important;
+}
+#plone-global-topbar-wrapper .cse .gsc-search-button input.gsc-search-button-v2,
+#plone-global-topbar-wrapper input.gsc-search-button-v2 {
+  height: auro!important;
+  margin-top: 2px;
+  min-width: 13px;
+  padding: 3px 17px!important;
+  width: 13px;
+}
+#plone-global-topbar-wrapper .gsib_a {
+  padding: 2px 10px !important;
+}
+#plone-global-topbar-wrapper table.gsc-search-box {
+  margin-bottom: 0px!important;
+}
+#plone-global-topbar-wrapper input.gsc-search-button,
+#plone-global-topbar-wrapper input.gsc-search-button:hover,
+#plone-global-topbar-wrapper input.gsc-search-button:focus {
+  background-color: #666!important;
+  border-color: #888!important;
+}
+#plone-global-topbar-wrapper input.gsc-input {
+  border: no!important;
+  font-size: 11px!important;
+  padding: 2px 0px!important;
+  width: 99%!important;
+  background-color: transparent!important;
+  color: #666;
+}
+#plone-global-topbar-wrapper table.gsc-search-box td {
+  vertical-align: top!important;
+}
+#plone-global-topbar-wrapper .cse .gsc-search-button input.gsc-search-button-v2,
+#plone-global-topbar-wrapper input.gsc-search-button-v2 {
+  margin-top: 0px !important;
+}
+#plone-global-topbar-wrapper .gsc-search-box-tools .gsc-search-box .gsc-input {
+  padding-right: 5px !important;
+}
+#plone-global-topbar-wrapper .gsst_a .gscb_a {
+  color: #ccc!important;
+}
+#plone-global-topbar-wrapper #display_mobile {
+  display: none;
+}
+@media only screen and (max-width: 980px) {
+  #plone-global-topbar-wrapper #plone-global-topbar-iframe {
+    height: 40px;
+    padding: 5px 20px 5px 20px;
+  }
+  #plone-global-topbar-wrapper #plone-global-topbar-logo {
+    width: 100%;
+  }
+  #plone-global-topbar-wrapper #plone-global-topbar-logo img {
+    padding-top: 4px;
+    height: 30px;
+    margin-top: 0px;
+  }
+  #plone-global-topbar-wrapper #plone-global-topbar-logo a {
+    padding: 6px 30px 6px 30px;
+    margin-top: 4px;
+    background-color: #444!important;
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid #575757;
+    color: #999;
+    font-family: 'DINBold';
+    font-size: 0.9em;
+    text-decoration: none;
+  }
+  #plone-global-topbar-wrapper #plone-global-topbar-logo a:hover {
+    background-color: #333!important;
+    color: #fff;
+  }
+  #plone-global-topbar-wrapper #plone-global-topbar-sites {
+    display: none;
+  }
+  #plone-global-topbar-wrapper #plone-global-topbar-searchbox {
+    display: none;
+  }
+  #plone-global-topbar-wrapper #plone-global-topbar-mainlinks {
+    width: 100%;
+    float: left;
+    display: none;
+  }
+  #plone-global-topbar-wrapper #display_mobile {
+    display: block;
+    float: right;
+  }
+  #plone-global-topbar-wrapper #plone-global-topbar-mainlinks li {
+    width: 100%;
+    display: inline-block;
+    float: left;
+    position: relative;
+  }
+  #plone-global-topbar-wrapper #plone-global-topbar-mainlinks ul {
+    border-right: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    float: left;
+    padding-left: 0;
+  }
+  #plone-global-topbar-wrapper .caixa-desplegada {
+    background: none;
+    float: left;
+    width: 90%;
+    padding: 0px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+  #plone-global-topbar-wrapper .caixa-desplegada h2 {
+    display: none;
+  }
+  #plone-global-topbar-wrapper .caixa-desplegada hr {
+    display: none;
+  }
+  #plone-global-topbar-wrapper .columnna-caixa-desplegada {
+    padding: 15px 0px 0px 0px !important;
+    border-bottom: 1px solid #575757;
+    width: 100%;
+  }
+  #plone-global-topbar-wrapper .columnna-caixa-desplegada h5 {
+    margin-top: 0px;
+  }
+  #plone-global-topbar-wrapper .columnna-caixa-desplegada ul {
+    margin-top: 0px !important;
+  }
+  #plone-global-topbar-wrapper .columnna-caixa-desplegada ul li a {
+    padding: 5px 40px 5px 10px !important;
+  }
+  #plone-global-topbar-wrapper #links-select li:hover > .caixa-desplegada {
+    display: inline-block;
+    position: relative;
+    /*top: 100%;*/
+
+  }
+}
