@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<object name="portal_skins" allow_any="False" cookie_persistence="False"
+   default_skin="ploneorg.theme.customization.layer">
+
+ <object name="ploneorg_theme_custom"
+    meta_type="Filesystem Directory View"
+    directory="ploneorg.theme:skins/ploneorg_theme_custom"/>
+
+ <skin-path name="ploneorg.theme.customization.layer" based-on="Sunburst Theme">
+  <layer name="ploneorg_theme_custom"
+     insert-after="custom"/>
+ </skin-path>
+
+</object>

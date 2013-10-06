@@ -43,16 +43,217 @@
   src: url('/++theme++ploneorg.theme/fonts/DINBlack.otf') format('opentype');
 }
 
-header {
-  width: 1024px;
+html,
+body {
+  /* Sticky footer */
+
+  height: 100%;
+}
+
+#outer-wrapper {
+  height: auto !important;
+  height: 100%;
+  min-height: 100%;
+  margin: 0 auto -23em;
+}
+
+#plone-global-topbar-wrapper #plone-global-topbar-iframe {
+  height: 40px !important;
+}
+
+#plone-global-topbar-logo {
+  display: none;
+}
+
+#plone-global-topbar-wrapper #links-select li a {
+  font-size: 12px !important;
+}
+
+#plone-global-topbar-wrapper #sites-select li a {
+  font-size: 13px !important;
+}
+
+#plone-global-topbar-wrapper #sites-select ul ul {
+  top: 26px !important;
+  left: -57px !important;
+}
+
+.inner-container {
+  padding-right: 15px;
+  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
 
-@media (min-width: 1200px) {
-  header {
-    width: 1024px;
+.inner-container:before,
+.inner-container:after {
+  display: table;
+  content: " ";
+}
+
+.inner-container:after {
+  clear: both;
+}
+
+@media (min-width: 768px) {
+  .inner-container {
+    max-width: 670px;
   }
+}
+
+@media (min-width: 992px) {
+  .inner-container {
+    max-width: 890px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .inner-container {
+    max-width: 1090px;
+  }
+}
+
+.header-wrapper {
+  height: 90px;
+  background-color: #3094c8;
+}
+
+#portal-logo {
+  float: left;
+  margin: 22px 0;
+}
+
+.motto {
+  float: left;
+  margin: 42px 0 0 10px;
+  font-family: DinRegular;
+  font-size: 14px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.main-sections {
+  float: right;
+  margin-top: 40px;
+}
+
+.main-sections li {
+  padding: 0 10px;
+}
+
+.main-sections li a {
+  font-family: DinMedium;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#edit-bar {
+  margin-bottom: 18px;
+  border-bottom: 1px solid #CCCCCC;
+  box-shadow: 0 -10px 12px -18px #000000 inset;
+}
+
+#edit-bar .nav-tabs {
+  margin: 0;
+  border-bottom: 0;
+  box-shadow: none;
+}
+
+#edit-bar .nav-pills {
+  margin: 0;
+}
+
+#edit-bar .dropdown-toggle .label,
+#edit-bar .dropdown-toggle .badge {
+  font-size: 100%;
+}
+
+#push,
+footer {
+  /* Sticky footer */
+
+  height: 23em;
+}
+
+footer {
+  background: #eaf2f6;
+  -webkit-box-shadow: inset 0px 7px 9px -10px #222222;
+     -moz-box-shadow: inset 0px 7px 9px -10px #222222;
+          box-shadow: inset 0px 7px 9px -10px #222222;
+}
+
+footer p {
+  font-family: DinRegular;
+  font-size: 12px;
+}
+
+footer p a {
+  color: #3094c8;
+}
+
+footer p a:hover {
+  color: white;
+  background-color: #3094c8;
+}
+
+footer sup {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.footer-container {
+  width: 800px;
+  padding: 1em 0;
+  margin: 0 auto;
+  font-family: "Lucida Grande", Verdana, FreeSans, sans-serif;
+  color: #3094c8;
+}
+
+#footer p a:hover {
+  color: #329fd7;
+  background-color: White;
+}
+
+#footer-logo {
+  float: left;
+  width: 114px;
+  height: 44px;
+  margin: 0 1em 0 0.5em;
+  background-image: url(../images/sprite-ploneorg.png);
+  background-position: 0 -376px;
+  border-right: 1px solid white;
+}
+
+#sitemap {
+  width: 100%;
+  padding-top: 1em;
+  clear: both;
+}
+
+#sitemap dl {
+  display: inline-block;
+  width: 20%;
+  font-family: "Lucida Grande", Verdana, FreeSans, sans-serif;
+  color: #3094c8;
+  vertical-align: top;
+}
+
+#sitemap dl a {
+  display: block;
+  padding: 0.25em 6px;
+  font-size: 11px;
+  color: #3094c8;
+  text-decoration: none;
+}
+
+#sitemap dl a:hover {
+  color: white;
+  background-color: #3094c8;
+}
+
+#sitemap dl dt a {
+  font-size: 12px;
 }
 
 #downloadcurrent {

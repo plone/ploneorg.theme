@@ -1,7 +1,40 @@
 <?xml version="1.0"?>
-<!-- This file holds the setup configuration for the portal_css tool. -->
-
 <object name="portal_css">
+
+  <stylesheet
+    id="++theme++ploneorg.theme/bootstrap/css/bootstrap.min.css"
+    applyPrefix="True"
+    media="" rel="stylesheet" rendering="link"
+    cacheable="True" compression="safe" cookable="False"
+    enabled="1" expression="request/HTTP_X_THEME_ENABLED | nothing"/>
+
+  <stylesheet title=""
+    id="++theme++ploneorg.theme/stylesheets/main.css"
+    applyPrefix="True"
+    media="" rel="stylesheet" rendering="link"
+    cacheable="True" compression="safe" cookable="False"
+    enabled="1" expression="request/HTTP_X_THEME_ENABLED | nothing"/>
+
+
+  <stylesheet id="authoring.css" enabled="True" expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
+<!--   <stylesheet id="reset.css" enabled="False" />
+  <stylesheet id="member.css" enabled="False" />
+  <stylesheet id="base.css" enabled="False" />
+  <stylesheet id="public.css" enabled="False" />
+  <stylesheet id="columns.css" enabled="False" />
+
+  <stylesheet id="portlets.css" enabled="False" />
+  <stylesheet id="controlpanel.css" enabled="False" />
+  <stylesheet id="deprecated.css" enabled="False" />
+  <stylesheet id="navtree.css" enabled="False" />
+  <stylesheet id="invisibles.css" enabled="False" />
+  <stylesheet id="forms.css" enabled="False" />
+  <stylesheet id="print.css" enabled="False" />
+  <stylesheet id="mobile.css" enabled="False" />
+  <stylesheet id="RTL.css" enabled="False" />
+  <stylesheet id="++resource++plone.app.jquerytools.overlays.css" enabled="False" />
+  <stylesheet id="IEFixes.css" enabled="False" />
+  <stylesheet id="ploneCustom.css" enabled="False" /> -->
 
  <!-- Stylesheets that will be registered with the portal_css tool are defined
       here. You can also specify values for existing resources if you need to

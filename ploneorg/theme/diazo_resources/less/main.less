@@ -2,14 +2,215 @@
 @import "mixins";
 @import "fonts";
 
-header {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1024px;
+html, body {
+/* Sticky footer */
+  height: 100%;
+}
 
-    @media (min-width: 1200px) {
-        width: 1024px;
+#outer-wrapper {
+/* Sticky footer w/IE fixes*/
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -23em;
+}
+
+#plone-global-topbar-wrapper #plone-global-topbar-iframe { height: 40px !important; }
+#plone-global-topbar-logo { display: none; }
+#plone-global-topbar-wrapper #links-select li a { font-size: 12px !important; }
+#plone-global-topbar-wrapper #sites-select li a { font-size: 13px !important; }
+#plone-global-topbar-wrapper #sites-select ul ul { top: 26px !important; left: -57px !important; }
+
+.inner-container {
+  .container-fixed();
+}
+// Minus 80px (40px per side) for the inner margin
+@media (min-width: @screen-tablet) {
+  .inner-container {
+    max-width: (@container-tablet - 80px);
+  }
+}
+@media (min-width: @screen-desktop) {
+  .inner-container {
+    max-width: (@container-desktop - 80px);
+  }
+}
+@media (min-width: @screen-lg-desktop) {
+  .inner-container {
+    max-width: (@container-lg-desktop - 80px);
+  }
+}
+
+.header-wrapper {
+  height: 90px;
+  background-color: #3094c8;
+  // #0095D3 is the official logo color.
+      // background-image: -webkit-gradient(linear, 0 0, 100% 100%,
+      //                         color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent),
+      //                         color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)),
+      //                         color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent),
+      //                         to(transparent));
+      // background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+      //                     transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+      //                     transparent 75%, transparent);
+      // background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+      //                     transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+      //                     transparent 75%, transparent);
+      // background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+      //                     transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+      //                     transparent 75%, transparent);
+      // background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+      //                     transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+      //                     transparent 75%, transparent);
+      // background-image: linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+      //                     transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+      //                     transparent 75%, transparent);
+      // -webkit-background-size: 50px 50px;
+      // -moz-background-size: 50px 50px;
+      // background-size: 50px 50px;
+      // background-size: 71px 50px;
+}
+
+#portal-logo {
+  margin: 22px 0;
+  float: left;
+}
+
+.motto {
+  float: left;
+  margin: 42px 0 0 10px;
+  font-family: DinRegular;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.main-sections {
+  float: right;
+  margin-top: 40px;
+  li {
+    padding: 0 10px;
+    a {
+    font-size: 14px;
+    font-family: DinMedium;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
     }
+  }
+}
+
+#edit-bar {
+  border-bottom: 1px solid #CCCCCC;
+    box-shadow: 0 -10px 12px -18px black inset;
+    margin-bottom:18px;
+    & .nav-tabs {
+      border-bottom:0;
+      box-shadow:none;
+      margin:0;
+    }
+    & .nav-pills {margin:0;}
+    & .dropdown-toggle .label,
+    & .dropdown-toggle .badge {
+      font-size:100%;
+    }
+}
+
+#push, footer {
+  /* Sticky footer */
+  height: 23em;
+}
+
+footer {
+  background: #eaf2f6;
+  -moz-box-shadow:    inset 0px 7px 9px -10px #222;
+  -webkit-box-shadow: inset 0px 7px 9px -10px #222;
+  box-shadow: inset 0px 7px 9px -10px #222;
+  p {
+    font-family: DinRegular;
+    font-size: 12px;
+    a {
+      color: #3094c8;
+      &:hover { color: white; background-color: #3094c8; }
+    }
+  }
+  sup { font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
+}
+
+.footer-container {
+  color: #3094c8;
+  font-family: "Lucida Grande", Verdana, FreeSans, sans-serif;
+  margin: 0 auto;
+  padding: 1em 0;
+  width: 800px;
+}
+
+// #footer-gradient {
+//   background: top left url(../images/sprite-ploneorg.png) repeat-x;
+//   height: 7px;
+// }
+
+// #footer {
+//   color: White;
+//   font-family: "Lucida Grande", Verdana, FreeSans, sans-serif;
+//   margin: 0 auto;
+//   padding: 1em 0;
+//   width: 800px;
+// }
+
+
+#footer p a:hover {
+  color: #329fd7;
+  background-color: White;
+}
+
+#footer-logo {
+  float: left;
+  background-image: url(../images/sprite-ploneorg.png);
+  background-position: 0 -376px;
+  width: 114px;
+  height: 44px;
+  border-right: 1px solid white;
+  margin: 0 1em 0 0.5em;
+}
+
+#sitemap {
+  width: 100%;
+  clear: both;
+  padding-top: 1em;
+}
+
+#sitemap dl {
+  font-family: "Lucida Grande", Verdana, FreeSans, sans-serif;
+  color: #3094c8;
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+/*
+
+IE:   width: 16.3%;*/
+
+
+/*
+
+IE:   float: left;*/
+}
+
+#sitemap dl a {
+  font-size: 11px;
+  color: #3094c8;
+  display: block;
+  padding: 0.25em 6px;
+  text-decoration: none;
+}
+
+#sitemap dl a:hover {
+  color: white;
+  background-color: #3094c8;
+}
+
+#sitemap dl dt a {
+  font-size: 12px;
 }
 
 #downloadcurrent {
