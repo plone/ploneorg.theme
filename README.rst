@@ -6,6 +6,7 @@ plone.org Diazo Theme.
 
 Development
 -----------
+VIC
 
 The theme is based on Bootstrap 3. CSS resources are developed using LESS, tied
 to some of the original Bootstrap 3 LESS sources. At the moment of writing this
