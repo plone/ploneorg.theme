@@ -40,7 +40,7 @@ html, body {
 }
 @media (min-width: @screen-lg-desktop) {
   .inner-container {
-    max-width: (@container-lg-desktop - 80px);
+    max-width: (@container-large-desktop - 80px);
   }
 }
 
@@ -101,7 +101,7 @@ html, body {
 
 #push, footer {
   /* Sticky footer */
-  height: 23em;
+  min-height: 23em;
 }
 
 footer {
@@ -109,6 +109,7 @@ footer {
   -moz-box-shadow:    inset 0 8px 12px -12px rgba(0,0,0,.5);
   -webkit-box-shadow: inset 0 8px 12px -12px rgba(0,0,0,.5);
   box-shadow: inset 0 8px 12px -12px rgba(0,0,0,.5);
+  padding-top:1em;
   p {
     font-family: DinRegular;
     font-size: 12px;
@@ -163,20 +164,39 @@ footer {
   padding-top: 1em;
 }
 
-#sitemap dl {
-  font-family: "Lucida Grande", Verdana, FreeSans, sans-serif;
-  color: #3094c8;
-  display: inline-block;
-  vertical-align: top;
-  width: 20%;
-/*
+//#sitemap dl {
+//  font-family: "Lucida Grande", Verdana, FreeSans, sans-serif;
+//  color: #3094c8;
+//  display: inline-block;
+//  vertical-align: top;
+//  width: 20%;
+//
+///*
+//
+//IE:   width: 16.3%;*/
+//
+//
+///*
+//
+//IE:   float: left;*/
+//}
 
-IE:   width: 16.3%;*/
+//under 768px with lines
+@media (max-width: 767px) {
+  .five-col > * {display: inline-block; float:left;}
+  .five-col > dt {clear:left; margin-top: .5em}
+  .five-col > dt + dd {clear:left;}
 
-
-/*
-
-IE:   float: left;*/
+}
+@media (min-width: 768px) {
+  .csscolumns .five-col {  
+    -webkit-column-count: 5; -moz-column-count: 5; -o-column-count: 5; column-count: 5;
+    -webkit-column-gap : 20px; -moz-column-gap: 20px; -o-column-gap: 20px; column-gap: 20px;
+    & dt {
+      -webkit-column-break-before:always; -moz-column-break-before:always; -o-column-break-before:always; column-break-before:always;
+    }
+  }
+  .col-no-css {width:20%; float:left;}
 }
 
 #sitemap dl a {

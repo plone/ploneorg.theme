@@ -23,9 +23,9 @@
 
 <div id="outer-wrapper">
 
-  <div class="container">
-    <div id="topbarcontainer"></div>
-  </div>
+  <!--<div class="container">-->
+    <div id="topbarcontainer" class="navbar navbar-default navbar-static-top" role="navigation"></div>
+  <!--</div>-->
 
   <header>
     <div class="container">
@@ -59,7 +59,7 @@
 </div>
 
 <footer>
-  <div class="footer-container">
+  <div class="container">
     <div class="row">
       <div class="col-lg-3">
         <a id="footer-logo"
@@ -72,73 +72,64 @@
       </div>
     </div>
 
-  <div id="sitemap">
-    <!-- <dl>
-      <dt><a href="">Plone for…</a></dt>
-      <dd><a href="">Small/Medium Business </a></dd>
-      <dd><a href="">Enterprise            </a></dd>
-      <dd><a href="">Non-profits           </a></dd>
-      <dd><a href="">Government            </a></dd>
-      <dd><a href="">Education             </a></dd>
-      <dd><a href="">Science               </a></dd>
-      <dd><a href="">Media &amp; Publishing</a></dd>
-    </dl> -->
-
-    <dl>
-      <dt><a href="/products">Downloads</a></dt>
-      <dd><a href="/download">Get Plone</a></dd>
-      <dd><a href="/products?getCategories=themes">Themes</a></dd>
-      <dd><a href="/products?getCategories=dev">Development tools</a></dd>
-      <dd><a href="/products?getCategories=auth">Authentication</a></dd>
-      <dd><a href="/products">&hellip;and more.</a></dd>
-    </dl>
-
-    <dl>
-      <dt><a href="/documentation">Documentation</a></dt>
-      <dd><a href="/documentation/faq/">FAQs</a></dd>
-      <dd><a href="/documentation/movies/">Tutorial videos</a></dd>
-      <dd><a href="/documentation/manual">Manuals</a></dd>
-      <dd><a href="/documentation/books">Books</a></dd>
-      <!-- <dd><a href="">Knowledge Base</a></dd> -->
-      <dd><a href="/documentation/error">Error Reference</a></dd>
-      <!-- <dd><a href="">Module documentation</a></dd> -->
-      <dd><a href="http://plone.net/sites">Sites using Plone</a></dd>
-    </dl>
-
-    <dl>
-      <dt><a href="http://dev.plone.org/plone">Developers</a></dt>
-      <dd><a href="http://plone.org/roadmap">Roadmap</a></dd>
-      <dd><a href="http://dev.plone.org/newticket">Report bugs in Plone</a></dd>
-      <dd><a href="https://dev.plone.org/newticket?field_component=Website">Report website issues</a></dd>
-      <dd><a href="http://dev.plone.org/timeline">Latest changes</a></dd>
-      <dd><a href="http://github.com/plone">Browse source</a></dd>
-      <dd><a href="https://dev.plone.org/#ContributetoPlone">Contribute to Plone</a></dd>
-      <dd><a href="http://planet.plone.org">Community blogs</a></dd>
-    </dl>
-
-    <dl>
-      <dt><a href="/foundation">Plone Foundation</a></dt>
-      <dd><a href="/foundation/foundation-donations">Donate</a></dd>
-      <dd><a href="/foundation/donors">Sponsors</a></dd>
-      <dd><a href="/foundation/meetings/minutes">Meeting minutes</a></dd>
-      <dd><a href="/team/FoundationBoard">Current board</a></dd>
-      <dd><a href="/foundation/members">Foundation members</a></dd>
-      <dd><a href="/foundation/membership">Apply for membership</a></dd>
-      <dd><a href="/foundation#contact">Contact</a></dd>
-    </dl>
-
-    <dl>
-      <dt><a href="/support">Support</a></dt>
-      <dd><a href="http://plone.net/providers">Commercial services</a></dd>
-      <dd><a href="/support/chat">Chat room</a></dd>
-      <dd><a href="/support/forums">Forums</a></dd>
-      <dd><a href="/support/for">Sector-specific forums</a></dd>
-      <dd><a href="/support/region">Region-specific forums</a></dd>
-      <dd><a href="/support/local-user-groups">Local user groups</a></dd>
-      <dd><a href="/events/training">Training</a></dd>
-    </dl>
-  </div>
-
+    <div id="sitemap">
+      <!-- <dl>
+        <dt><a href="">Plone for…</a></dt>
+        <dd><a href="">Small/Medium Business </a></dd>
+        <dd><a href="">Enterprise            </a></dd>
+        <dd><a href="">Non-profits           </a></dd>
+        <dd><a href="">Government            </a></dd>
+        <dd><a href="">Education             </a></dd>
+        <dd><a href="">Science               </a></dd>
+        <dd><a href="">Media &amp; Publishing</a></dd>
+      </dl> -->
+      
+      <dl class="five-col">
+        <dt><a href="/products">Downloads</a></dt>
+        <dd><a href="/download">Get Plone</a></dd>
+        <dd><a href="/products?getCategories=themes">Themes</a></dd>
+        <dd><a href="/products?getCategories=dev">Development tools</a></dd>
+        <dd><a href="/products?getCategories=auth">Authentication</a></dd>
+        <dd><a href="/products">&hellip;and more.</a></dd>
+    
+        <dt><a href="/documentation">Documentation</a></dt>
+        <dd><a href="/documentation/faq/">FAQs</a></dd>
+        <dd><a href="/documentation/movies/">Tutorial videos</a></dd>
+        <dd><a href="/documentation/manual">Manuals</a></dd>
+        <dd><a href="/documentation/books">Books</a></dd>
+        <!-- <dd><a href="">Knowledge Base</a></dd> -->
+        <dd><a href="/documentation/error">Error Reference</a></dd>
+        <!-- <dd><a href="">Module documentation</a></dd> -->
+        <dd><a href="http://plone.net/sites">Sites using Plone</a></dd>
+    
+        <dt><a href="http://dev.plone.org/plone">Developers</a></dt>
+        <dd><a href="http://plone.org/roadmap">Roadmap</a></dd>
+        <dd><a href="http://dev.plone.org/newticket">Report bugs in Plone</a></dd>
+        <dd><a href="https://dev.plone.org/newticket?field_component=Website">Report website issues</a></dd>
+        <dd><a href="http://dev.plone.org/timeline">Latest changes</a></dd>
+        <dd><a href="http://github.com/plone">Browse source</a></dd>
+        <dd><a href="https://dev.plone.org/#ContributetoPlone">Contribute to Plone</a></dd>
+        <dd><a href="http://planet.plone.org">Community blogs</a></dd>
+      
+        <dt><a href="/foundation">Plone Foundation</a></dt>
+        <dd><a href="/foundation/foundation-donations">Donate</a></dd>
+        <dd><a href="/foundation/donors">Sponsors</a></dd>
+        <dd><a href="/foundation/meetings/minutes">Meeting minutes</a></dd>
+        <dd><a href="/team/FoundationBoard">Current board</a></dd>
+        <dd><a href="/foundation/members">Foundation members</a></dd>
+        <dd><a href="/foundation/membership">Apply for membership</a></dd>
+        <dd><a href="/foundation#contact">Contact</a></dd>
+     
+        <dt><a href="/support">Support</a></dt>
+        <dd><a href="http://plone.net/providers">Commercial services</a></dd>
+        <dd><a href="/support/chat">Chat room</a></dd>
+        <dd><a href="/support/forums">Forums</a></dd>
+        <dd><a href="/support/for">Sector-specific forums</a></dd>
+        <dd><a href="/support/region">Region-specific forums</a></dd>
+        <dd><a href="/support/local-user-groups">Local user groups</a></dd>
+        <dd><a href="/events/training">Training</a></dd>
+      </dl>
+    </div>
   </div>
 </footer>
 
@@ -148,6 +139,8 @@
         <script src="bootstrap/js/bootstrap.min.js"></script>
 
         <script src="js/main.js"></script>
+
+        
 <!--
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

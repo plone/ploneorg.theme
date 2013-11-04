@@ -2,7 +2,7 @@
 <object name="portal_css">
 
   <stylesheet
-    id="++theme++ploneorg.theme/bootstrap/css/bootstrap.min.css"
+    id="++theme++ploneorg.theme/stylesheets/bootstrap.css"
     applyPrefix="True"
     media="" rel="stylesheet" rendering="link"
     cacheable="True" compression="safe" cookable="False"

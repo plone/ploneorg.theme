@@ -6,14 +6,22 @@ module.exports = function (grunt) {
                 compile: true,
                 includePath: ['ploneorg/theme/diazo_resources/bootstrap/less']
             },
-            files: {
+            main: {
                 src: ['ploneorg/theme/diazo_resources/less/main.less'],
                 dest: 'ploneorg/theme/diazo_resources/stylesheets/main.css'
+            },
+            bootstrap: {
+                // options: {
+                //   compress: true
+                // },
+                src: ['ploneorg/theme/diazo_resources/bootstrap/less/bootstrap.less'],
+                dest: 'ploneorg/theme/diazo_resources/stylesheets/bootstrap.css'
             }
         },
         watch: {
             scripts: {
-                files: 'ploneorg/theme/diazo_resources/less/*.less',
+                files: ['ploneorg/theme/diazo_resources/less/*.less',
+                        'ploneorg/theme/diazo_resources/bootstrap/less/*.less'],
                 tasks: ['recess']
             }
         }
