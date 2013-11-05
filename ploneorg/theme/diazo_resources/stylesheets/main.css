@@ -48,6 +48,7 @@ body {
   /* Sticky footer */
 
   height: 100%;
+  font-family: DinMedium, Helvetica, Arial, sans-serif;
 }
 
 #outer-wrapper {
@@ -59,10 +60,8 @@ body {
 
 .container {
   max-width: 100%;
-  /*
   padding-right: 0;
   padding-left: 0;
-  */
 }
 
 #plone-global-topbar-wrapper #plone-global-topbar-iframe {
@@ -85,44 +84,43 @@ body {
   top: 26px !important;
   left: -57px !important;
 }
+
 /*
 .inner-container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  .container-fixed();
 }
-
-.inner-container:before,
-.inner-container:after {
-  display: table;
-  content: " ";
+// Minus 80px (40px per side) for the inner margin
+@media (min-width: @screen-tablet) {
+  .inner-container {
+    max-width: (@container-tablet - 80px);
+  }
 }
-
-.inner-container:after {
-  clear: both;
+@media (min-width: @screen-desktop) {
+  .inner-container {
+    max-width: (@container-desktop - 80px);
+  }
+}
+@media (min-width: @screen-lg-desktop) {
+  .inner-container {
+    max-width: (@container-large-desktop - 80px);
+  }
 }
 */
+
 /*
-@media (min-width: 768px) {
-  .inner-container {
-    max-width: 670px;
-  }
-}
-
-@media (min-width: 992px) {
-  .inner-container {
-    max-width: 890px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .inner-container {
-    max-width: 1090px;
-  }
+.header-wrapper {
+  height: 90px;
+  background-color: #3094c8;
+  
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
+  -moz-background-size: 18px 18px;-webkit-background-size: 18px 18px;background-size: 18px 18px;
 }
 */
-.header-wrapper .row {
+
+.header-wrapper .row,
+.navbar-plonetheme {
   background-color: #3094c8;
   background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
   background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
@@ -130,6 +128,29 @@ body {
   -webkit-background-size: 18px 18px;
      -moz-background-size: 18px 18px;
           background-size: 18px 18px;
+  border: 0;
+  border-radius: 0;
+  /*fem que el menú ocupi el 100%*/
+
+}
+
+.header-wrapper .row .navbar-nav > li > a,
+.navbar-plonetheme .navbar-nav > li > a {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.header-wrapper .row .navbar-nav > li,
+.navbar-plonetheme .navbar-nav > li {
+  position: inherit;
+}
+
+.header-wrapper .row .navbar-nav > li > ul,
+.navbar-plonetheme .navbar-nav > li > ul {
+  width: 100%;
+  min-width: 100%;
 }
 
 #portal-logo {
