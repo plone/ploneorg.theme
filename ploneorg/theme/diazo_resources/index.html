@@ -28,32 +28,28 @@
   <!--</div>-->
 
   <header>
-    <div class="container">
-      <div class="header-wrapper">
-        <div class="inner-container">
-          <div class="row">
-            <div class="col-lg-4">
-              <a id="portal-logo" href=""><img src="logo.png" /></a>
-              <span class="motto">We are Community</span>
-            </div>
-            <div class="col-lg-8">
-              <ul class="main-sections">
-                <li><a href="#">Plone CMS</a></li>
-                <li><a href="#">Add-ons</a></li>
-                <li><a href="#">Community</a></li>
-                <li><a href="#">Plone Foundation</a></li>
-              </ul>
-            </div>
-          </div>
+    <div class="header-wrapper container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+          <a id="portal-logo" href=""><img src="logo.png" /></a>
+          <span class="motto">We are Community</span>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-8">
+          <nav role="navigation">
+            <ul class="main-sections">
+              <li><a href="#">Plone CMS</a></li>
+              <li><a href="#">Add-ons</a></li>
+              <li><a href="#">Community</a></li>
+              <li><a href="#">Plone Foundation</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>
   </header>
 
-  <div class="main-content">
-    <div class="inner-container">
-
-    </div>
+  <div class="main-content container">
+    <div class="inner-container row"></div>
     <div id="push"></div>
   </div>
 </div>
@@ -61,18 +57,18 @@
 <footer>
   <div class="container">
     <div class="row">
-      <div class="col-lg-3">
+      <div class="col-xs-12 col-sm-3">
         <a id="footer-logo"
            href="http://plone.org"
            title="Plone CMS, the open source content management system"></a>
       </div>
-      <div class="col-lg-9">
+
+      <div class="col-xs-12 col-sm-9">
         <p>The Plone<sup>&reg;</sup> CMS/WCM is &copy; 2000&ndash;2012 the Plone Foundation and friends. Site hosted by <a href="http://www.sixfeetup.com">Six Feet Up</a>.</p>
         <p>Plone<sup>&reg;</sup> and the Plone logo are registered trademarks of the Plone Foundation. You&#x2019;re looking good today.</p>
       </div>
-    </div>
 
-    <div id="sitemap">
+      <div id="sitemap" class="col-xs-12">
       <!-- <dl>
         <dt><a href="">Plone for…</a></dt>
         <dd><a href="">Small/Medium Business </a></dd>
@@ -130,15 +126,16 @@
         <dd><a href="/events/training">Training</a></dd>
       </dl>
     </div>
+    </div>
   </div>
 </footer>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
 
-        <script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
 
-        <script src="js/main.js"></script>
+<script src="js/main.js"></script>
 
         
 <!--
@@ -149,5 +146,5 @@
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
 -->
-    </body>
+</body>
 </html>
