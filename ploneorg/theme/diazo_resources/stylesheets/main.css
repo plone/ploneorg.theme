@@ -1,25 +1,25 @@
 @font-face {
-  font-family: 'DINRegular';
-  font-style: normal;
-  font-weight: normal;
-  src: url('/++theme++ploneorg.theme/fonts/DINRegular.eot?v=3.0.1');
-  src: url('/++theme++ploneorg.theme/fonts/DINRegular.eot?#iefix&v=3.0.1') format('embedded-opentype'), url('/++theme++ploneorg.theme/fonts/DINRegular.woff?v=3.0.1') format('woff'), url('/++theme++ploneorg.theme/fonts/DINRegular.ttf?v=3.0.1') format('truetype'), url('/++theme++ploneorg.theme/fonts/DINRegular.svg#fontawesomeregular?v=3.0.1') format('svg');
-  src: url('/++theme++ploneorg.theme/fonts/DINRegular.otf') format('opentype');
-}
-
-@font-face {
   font-family: 'DINLight';
   font-style: normal;
-  font-weight: normal;
+  font-weight: 200;
   src: url('/++theme++ploneorg.theme/fonts/DINLight.eot?v=3.0.1');
   src: url('/++theme++ploneorg.theme/fonts/DINLight.eot?#iefix&v=3.0.1') format('embedded-opentype'), url('/++theme++ploneorg.theme/fonts/DINLight.woff?v=3.0.1') format('woff'), url('/++theme++ploneorg.theme/fonts/DINLight.ttf?v=3.0.1') format('truetype'), url('/++theme++ploneorg.theme/fonts/DINLight.svg#fontawesomeregular?v=3.0.1') format('svg');
   src: url('/++theme++ploneorg.theme/fonts/DINLight.otf') format('opentype');
 }
 
 @font-face {
+  font-family: 'DINRegular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/++theme++ploneorg.theme/fonts/DINRegular.eot?v=3.0.1');
+  src: url('/++theme++ploneorg.theme/fonts/DINRegular.eot?#iefix&v=3.0.1') format('embedded-opentype'), url('/++theme++ploneorg.theme/fonts/DINRegular.woff?v=3.0.1') format('woff'), url('/++theme++ploneorg.theme/fonts/DINRegular.ttf?v=3.0.1') format('truetype'), url('/++theme++ploneorg.theme/fonts/DINRegular.svg#fontawesomeregular?v=3.0.1') format('svg');
+  src: url('/++theme++ploneorg.theme/fonts/DINRegular.otf') format('opentype');
+}
+
+@font-face {
   font-family: 'DINMedium';
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   src: url('/++theme++ploneorg.theme/fonts/DINMedium.eot?v=3.0.1');
   src: url('/++theme++ploneorg.theme/fonts/DINMedium.eot?#iefix&v=3.0.1') format('embedded-opentype'), url('/++theme++ploneorg.theme/fonts/DINMedium.woff?v=3.0.1') format('woff'), url('/++theme++ploneorg.theme/fonts/DINMedium.ttf?v=3.0.1') format('truetype'), url('/++theme++ploneorg.theme/fonts/DINMedium.svg#fontawesomeregular?v=3.0.1') format('svg');
   src: url('/++theme++ploneorg.theme/fonts/DINMedium.otf') format('opentype');
@@ -28,7 +28,7 @@
 @font-face {
   font-family: 'DINBold';
   font-style: normal;
-  font-weight: normal;
+  font-weight: 700;
   src: url('/++theme++ploneorg.theme/fonts/DINBold.eot?v=3.0.1');
   src: url('/++theme++ploneorg.theme/fonts/DINBold.eot?#iefix&v=3.0.1') format('embedded-opentype'), url('/++theme++ploneorg.theme/fonts/DINBold.woff?v=3.0.1') format('woff'), url('/++theme++ploneorg.theme/fonts/DINBold.ttf?v=3.0.1') format('truetype'), url('/++theme++ploneorg.theme/fonts/DINBold.svg#fontawesomeregular?v=3.0.1') format('svg');
   src: url('/++theme++ploneorg.theme/fonts/DINBold.otf') format('opentype');
@@ -37,7 +37,7 @@
 @font-face {
   font-family: 'DINBlack';
   font-style: normal;
-  font-weight: normal;
+  font-weight: 900;
   src: url('/++theme++ploneorg.theme/fonts/DINBlack.eot?v=3.0.1');
   src: url('/++theme++ploneorg.theme/fonts/DINBlack.eot?#iefix&v=3.0.1') format('embedded-opentype'), url('/++theme++ploneorg.theme/fonts/DINBlack.woff?v=3.0.1') format('woff'), url('/++theme++ploneorg.theme/fonts/DINBlack.ttf?v=3.0.1') format('truetype'), url('/++theme++ploneorg.theme/fonts/DINBlack.svg#fontawesomeregular?v=3.0.1') format('svg');
   src: url('/++theme++ploneorg.theme/fonts/DINBlack.otf') format('opentype');
@@ -48,6 +48,7 @@ body {
   /* Sticky footer */
 
   height: 100%;
+  font-family: DinMedium, Helvetica, Arial, sans-serif;
 }
 
 #outer-wrapper {
@@ -55,6 +56,12 @@ body {
   height: 100%;
   min-height: 100%;
   margin: 0 auto -23em;
+}
+
+.container {
+  max-width: 100%;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 #plone-global-topbar-wrapper #plone-global-topbar-iframe {
@@ -78,44 +85,72 @@ body {
   left: -57px !important;
 }
 
+/*
 .inner-container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  .container-fixed();
 }
-
-.inner-container:before,
-.inner-container:after {
-  display: table;
-  content: " ";
-}
-
-.inner-container:after {
-  clear: both;
-}
-
-@media (min-width: 768px) {
+// Minus 80px (40px per side) for the inner margin
+@media (min-width: @screen-tablet) {
   .inner-container {
-    max-width: 670px;
+    max-width: (@container-tablet - 80px);
   }
 }
-
-@media (min-width: 992px) {
+@media (min-width: @screen-desktop) {
   .inner-container {
-    max-width: 890px;
+    max-width: (@container-desktop - 80px);
   }
 }
-
-@media (min-width: 1200px) {
+@media (min-width: @screen-lg-desktop) {
   .inner-container {
-    max-width: 1090px;
+    max-width: (@container-large-desktop - 80px);
   }
 }
+*/
 
+/*
 .header-wrapper {
   height: 90px;
   background-color: #3094c8;
+  
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
+  -moz-background-size: 18px 18px;-webkit-background-size: 18px 18px;background-size: 18px 18px;
+}
+*/
+
+.header-wrapper .row,
+.navbar-plonetheme {
+  background-color: #3094c8;
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
+  -webkit-background-size: 18px 18px;
+     -moz-background-size: 18px 18px;
+          background-size: 18px 18px;
+  border: 0;
+  border-radius: 0;
+  /*fem que el menú ocupi el 100%*/
+
+}
+
+.header-wrapper .row .navbar-nav > li > a,
+.navbar-plonetheme .navbar-nav > li > a {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.header-wrapper .row .navbar-nav > li,
+.navbar-plonetheme .navbar-nav > li {
+  position: inherit;
+}
+
+.header-wrapper .row .navbar-nav > li > ul,
+.navbar-plonetheme .navbar-nav > li > ul {
+  width: 100%;
+  min-width: 100%;
 }
 
 #portal-logo {
@@ -174,14 +209,15 @@ body {
 footer {
   /* Sticky footer */
 
-  height: 23em;
+  min-height: 23em;
 }
 
 footer {
+  padding-top: 1em;
   background: #eaf2f6;
-  -webkit-box-shadow: inset 0px 7px 9px -10px #222222;
-     -moz-box-shadow: inset 0px 7px 9px -10px #222222;
-          box-shadow: inset 0px 7px 9px -10px #222222;
+  -webkit-box-shadow: inset 0 8px 12px -12px rgba(0, 0, 0, 0.5);
+     -moz-box-shadow: inset 0 8px 12px -12px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 8px 12px -12px rgba(0, 0, 0, 0.5);
 }
 
 footer p {
@@ -231,12 +267,41 @@ footer sup {
   clear: both;
 }
 
-#sitemap dl {
-  display: inline-block;
-  width: 20%;
-  font-family: "Lucida Grande", Verdana, FreeSans, sans-serif;
-  color: #3094c8;
-  vertical-align: top;
+@media (max-width: 767px) {
+  .five-col > * {
+    display: inline-block;
+    float: left;
+  }
+  .five-col > dt {
+    margin-top: 0.5em;
+    clear: left;
+  }
+  .five-col > dt + dd {
+    clear: left;
+  }
+}
+
+@media (min-width: 768px) {
+  .csscolumns .five-col {
+    -webkit-column-count: 5;
+       -moz-column-count: 5;
+         -o-column-count: 5;
+            column-count: 5;
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+         -o-column-gap: 20px;
+            column-gap: 20px;
+  }
+  .csscolumns .five-col dt {
+    -webkit-column-break-before: always;
+       -moz-column-break-before: always;
+         -o-column-break-before: always;
+            column-break-before: always;
+  }
+  .col-no-css {
+    float: left;
+    width: 20%;
+  }
 }
 
 #sitemap dl a {

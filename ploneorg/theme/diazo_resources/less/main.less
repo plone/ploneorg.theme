@@ -5,6 +5,7 @@
 html, body {
 /* Sticky footer */
   height: 100%;
+  font-family: DinMedium, Helvetica, Arial, sans-serif;
 }
 
 #outer-wrapper {
@@ -15,12 +16,15 @@ html, body {
   margin: 0 auto -23em;
 }
 
+//container al 100% perquè vagi de banda a banda les barres
+.container {max-width:100%; padding-left:0; padding-right: 0}
+
 #plone-global-topbar-wrapper #plone-global-topbar-iframe { height: 40px !important; }
 #plone-global-topbar-logo { display: none; }
 #plone-global-topbar-wrapper #links-select li a { font-size: 12px !important; }
 #plone-global-topbar-wrapper #sites-select li a { font-size: 13px !important; }
 #plone-global-topbar-wrapper #sites-select ul ul { top: 26px !important; left: -57px !important; }
-
+/*
 .inner-container {
   .container-fixed();
 }
@@ -40,36 +44,40 @@ html, body {
     max-width: (@container-large-desktop - 80px);
   }
 }
-
+*/
+/*
 .header-wrapper {
   height: 90px;
   background-color: #3094c8;
-  // #0095D3 is the official logo color.
-      // background-image: -webkit-gradient(linear, 0 0, 100% 100%,
-      //                         color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent),
-      //                         color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)),
-      //                         color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent),
-      //                         to(transparent));
-      // background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
-      //                     transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
-      //                     transparent 75%, transparent);
-      // background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
-      //                     transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
-      //                     transparent 75%, transparent);
-      // background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
-      //                     transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
-      //                     transparent 75%, transparent);
-      // background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
-      //                     transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
-      //                     transparent 75%, transparent);
-      // background-image: linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
-      //                     transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
-      //                     transparent 75%, transparent);
-      // -webkit-background-size: 50px 50px;
-      // -moz-background-size: 50px 50px;
-      // background-size: 50px 50px;
-      // background-size: 71px 50px;
+  
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
+  -moz-background-size: 18px 18px;-webkit-background-size: 18px 18px;background-size: 18px 18px;
 }
+*/
+.header-wrapper .row,
+.navbar-plonetheme {
+  background-color: #3094c8;
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
+  -webkit-background-size: 18px 18px;
+     -moz-background-size: 18px 18px;
+          background-size: 18px 18px;
+  border:0;
+  border-radius:0;
+  .navbar-nav > li > a {
+    color:#fff;
+    text-transform: uppercase;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  /*fem que el menú ocupi el 100%*/
+  .navbar-nav > li {position:inherit;}
+  .navbar-nav > li > ul {width:100%; min-width:100%}
+}
+
 
 #portal-logo {
   margin: 22px 0;
@@ -118,14 +126,15 @@ html, body {
 
 #push, footer {
   /* Sticky footer */
-  height: 23em;
+  min-height: 23em;
 }
 
 footer {
   background: #eaf2f6;
-  -moz-box-shadow:    inset 0px 7px 9px -10px #222;
-  -webkit-box-shadow: inset 0px 7px 9px -10px #222;
-  box-shadow: inset 0px 7px 9px -10px #222;
+  -moz-box-shadow:    inset 0 8px 12px -12px rgba(0,0,0,.5);
+  -webkit-box-shadow: inset 0 8px 12px -12px rgba(0,0,0,.5);
+  box-shadow: inset 0 8px 12px -12px rgba(0,0,0,.5);
+  padding-top:1em;
   p {
     font-family: DinRegular;
     font-size: 12px;
@@ -180,20 +189,39 @@ footer {
   padding-top: 1em;
 }
 
-#sitemap dl {
-  font-family: "Lucida Grande", Verdana, FreeSans, sans-serif;
-  color: #3094c8;
-  display: inline-block;
-  vertical-align: top;
-  width: 20%;
-/*
+//#sitemap dl {
+//  font-family: "Lucida Grande", Verdana, FreeSans, sans-serif;
+//  color: #3094c8;
+//  display: inline-block;
+//  vertical-align: top;
+//  width: 20%;
+//
+///*
+//
+//IE:   width: 16.3%;*/
+//
+//
+///*
+//
+//IE:   float: left;*/
+//}
 
-IE:   width: 16.3%;*/
+//under 768px with lines
+@media (max-width: 767px) {
+  .five-col > * {display: inline-block; float:left;}
+  .five-col > dt {clear:left; margin-top: .5em}
+  .five-col > dt + dd {clear:left;}
 
-
-/*
-
-IE:   float: left;*/
+}
+@media (min-width: 768px) {
+  .csscolumns .five-col {  
+    -webkit-column-count: 5; -moz-column-count: 5; -o-column-count: 5; column-count: 5;
+    -webkit-column-gap : 20px; -moz-column-gap: 20px; -o-column-gap: 20px; column-gap: 20px;
+    & dt {
+      -webkit-column-break-before:always; -moz-column-break-before:always; -o-column-break-before:always; column-break-before:always;
+    }
+  }
+  .col-no-css {width:20%; float:left;}
 }
 
 #sitemap dl a {
