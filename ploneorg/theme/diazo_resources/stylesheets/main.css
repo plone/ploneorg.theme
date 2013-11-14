@@ -64,27 +64,6 @@ body {
   padding-left: 0;
 }
 
-#plone-global-topbar-wrapper #plone-global-topbar-iframe {
-  height: 40px !important;
-}
-
-#plone-global-topbar-logo {
-  display: none;
-}
-
-#plone-global-topbar-wrapper #links-select li a {
-  font-size: 12px !important;
-}
-
-#plone-global-topbar-wrapper #sites-select li a {
-  font-size: 13px !important;
-}
-
-#plone-global-topbar-wrapper #sites-select ul ul {
-  top: 26px !important;
-  left: -57px !important;
-}
-
 /*
 .inner-container {
   .container-fixed();
@@ -119,8 +98,8 @@ body {
 }
 */
 
-.header-wrapper .row,
-.navbar-plonetheme {
+header {
+  margin-bottom: 50px;
   background-color: #3094c8;
   background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
   background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
@@ -128,10 +107,15 @@ body {
   -webkit-background-size: 18px 18px;
      -moz-background-size: 18px 18px;
           background-size: 18px 18px;
+}
+
+.header-wrapper .row,
+.navbar-plonetheme {
+  padding: 0 5px 0 20px;
+  margin-bottom: 0;
+  background-color: transparent;
   border: 0;
   border-radius: 0;
-  /*fem que el menú ocupi el 100%*/
-
 }
 
 .header-wrapper .row .navbar-nav > li > a,

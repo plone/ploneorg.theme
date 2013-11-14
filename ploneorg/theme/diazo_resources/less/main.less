@@ -2,6 +2,7 @@
 @import "mixins";
 @import "fonts";
 
+
 html, body {
 /* Sticky footer */
   height: 100%;
@@ -19,11 +20,8 @@ html, body {
 //container al 100% perquè vagi de banda a banda les barres
 .container {max-width:100%; padding-left:0; padding-right: 0}
 
-#plone-global-topbar-wrapper #plone-global-topbar-iframe { height: 40px !important; }
-#plone-global-topbar-logo { display: none; }
-#plone-global-topbar-wrapper #links-select li a { font-size: 12px !important; }
-#plone-global-topbar-wrapper #sites-select li a { font-size: 13px !important; }
-#plone-global-topbar-wrapper #sites-select ul ul { top: 26px !important; left: -57px !important; }
+
+
 /*
 .inner-container {
   .container-fixed();
@@ -56,15 +54,21 @@ html, body {
   -moz-background-size: 18px 18px;-webkit-background-size: 18px 18px;background-size: 18px 18px;
 }
 */
-.header-wrapper .row,
-.navbar-plonetheme {
+header{  
   background-color: #3094c8;
+  margin-bottom: 50px;
   background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
   background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
   background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
   -webkit-background-size: 18px 18px;
      -moz-background-size: 18px 18px;
           background-size: 18px 18px;
+}
+.header-wrapper .row,
+.navbar-plonetheme {
+  padding: 0 5px 0 20px;
+  background-color: transparent;
+  margin-bottom: 0;
   border:0;
   border-radius:0;
   .navbar-nav > li > a {

@@ -14,7 +14,7 @@ var html = [
         '<div id="plone-global-topbar-sites">',
           '<div id="sites-select">',
             '<ul>',
-              '<li><a href="#">Countries</a>',
+              '<li><a href="#">Select your country</a>',
               '<ul>',
                 '<li><a href="#">Catalunya</a></li>',
                 '<li><a href="#">Pais Basc</a></li>',
