@@ -78,7 +78,7 @@
 
 #plone-global-topbar-wrapper #plone-global-topbar-iframe {
   min-height: 40px;
-  padding: 5px 20px 5px 20px;
+  padding: 4px 20px 5px 20px;
 }
 
 #plone-global-topbar-wrapper .mostrar_mobile {
@@ -91,9 +91,17 @@
   margin-top: 0;
 }
 
+#plone-global-topbar-wrapper #plone-global-topbar-mainlinks .separador {
+  width: 2px;
+  height: 25px;
+  margin-left: 5px;
+  background-color: #101010;
+  border-left: 1px solid #3d3d3d;
+}
+
 #plone-global-topbar-wrapper #plone-global-topbar-mainlinks ul {
   float: right;
-  padding-right: 20px;
+  padding-right: 15px;
   margin: 0;
   list-style: none outside none;
 }
@@ -498,4 +506,28 @@
 
 .gsc-completion-container table {
   font-size: 13px !important;
+}
+
+.gssb_a,
+.gssb_a td {
+  padding-bottom: 1px !important;
+}
+
+.gsc-results-wrapper-visible .gsc-wrapper {
+  padding: 20px !important;
+}
+
+.gsc-results-wrapper-visible .gsc-above-wrapper-area {
+  padding: 10px !important ;
+  margin-bottom: 40px !important;
+  background-color: #101010;
+}
+
+.gsc-result-info,
+.gsc-orderby-label {
+  color: #bbbbbb !important;
+}
+
+.gsc-inline-block {
+  margin-left: 5px !important;
 }

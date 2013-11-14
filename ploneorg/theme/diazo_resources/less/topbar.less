@@ -34,7 +34,7 @@
 #plone-global-topbar-wrapper {
 
 
-    #plone-global-topbar-iframe{ min-height: 40px; padding: 5px 20px 5px 20px; }
+    #plone-global-topbar-iframe{ min-height: 40px; padding: 4px 20px 5px 20px; }
 
     .mostrar_mobile { display: block !important; }
 
@@ -45,12 +45,20 @@
         float: right;
         width: 60%;
         margin-top: 0px;
+
+        .separador{
+            width: 2px;
+            height: 25px;
+            background-color: @black;
+            border-left: 1px solid @darkGrey2;
+            margin-left: 5px;
+        }
     }
     #plone-global-topbar-mainlinks ul {
         list-style: none outside none;
         float: right;
         margin: 0px;
-        padding-right:20px;
+        padding-right:15px;
 
     }
     #plone-global-topbar-mainlinks li {
@@ -409,7 +417,11 @@
 .gsc-completion-container{ background-color: @black !important; border: none !important; border-radius: 0 0 5px 5px;}
 .gsc-completion-selected{ color: @black; }
 .gsc-completion-container table { font-size: 13px !important; }
-
+.gssb_a, .gssb_a td { padding-bottom: 1px !important;}
+.gsc-results-wrapper-visible .gsc-wrapper { padding: 20px !important; }
+.gsc-results-wrapper-visible .gsc-above-wrapper-area{background-color: @black; margin-bottom: 40px !important; padding: 10px !important ; }
+.gsc-result-info, .gsc-orderby-label { color: @fontColor !important; }
+.gsc-inline-block { margin-left: 5px !important; }
 //********************//
 
 

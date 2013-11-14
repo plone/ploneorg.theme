@@ -27,7 +27,7 @@ var html = [
         '</div>',
 
 
-        '<!-- Search box -->',
+        '<!-- Search box -->',        
         '<div id="plone-global-topbar-searchbox">',
           '<gcse:search></gcse:search>',
         '</div>',
@@ -86,6 +86,7 @@ var html = [
             '<li>',
             '<a href="http://plone.org" title="Plone Org">COMMUNITY</a>',
             '</li>',
+            '<li class="separador"></li>',
           '</ul>',
         '</div>',
       '</div>',
