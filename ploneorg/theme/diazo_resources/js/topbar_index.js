@@ -37,6 +37,7 @@ var html = [
           '<ul id="links-select">',
             '<li>',
             '<a href="http://planet.plone.org" title="Plone Planet">PLANET</a>',
+            /*
             '<div class="caixa-desplegada">',
               '<h2>Thank\'s to collaborate with us!</h2>',
               '<hr>',
@@ -65,8 +66,8 @@ var html = [
                   '<li><a href="#">Option3</a></li>',
                 '</ul>',
               '</div>',
-
             '</div>',
+            */
             '</li>',
             '<!-- Developers -->',
             '<li>',

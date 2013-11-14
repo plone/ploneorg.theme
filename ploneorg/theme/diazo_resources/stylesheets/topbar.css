@@ -113,7 +113,7 @@
   font-family: 'DINRegular';
   font-size: 12px;
   font-weight: normal;
-  color: #bbb;
+  color: #bbbbbb;
   text-decoration: none;
 }
 
@@ -352,12 +352,12 @@
   padding-left: 15px !important;
   font-family: 'DINRegular';
   font-size: 13px;
-  color: #bbb;
+  color: #bbbbbb;
   background: transparent !important;
 }
 
 #plone-global-topbar-wrapper .gsst_a .gscb_a {
-  color: #bbb;
+  color: #bbbbbb;
   cursor: pointer;
 }
 
@@ -472,4 +472,30 @@
     position: relative;
     display: inline-block;
   }
+}
+
+.gssb_c {
+  top: 40px !important;
+  right: 0 !important;
+  left: inherit !important;
+  width: 30% !important;
+  color: #bbbbbb;
+}
+
+.gssb_e {
+  border-radius: 0 0 5px 5px;
+}
+
+.gsc-completion-container {
+  background-color: #101010 !important;
+  border: none !important;
+  border-radius: 0 0 5px 5px;
+}
+
+.gsc-completion-selected {
+  color: #101010;
+}
+
+.gsc-completion-container table {
+  font-size: 13px !important;
 }

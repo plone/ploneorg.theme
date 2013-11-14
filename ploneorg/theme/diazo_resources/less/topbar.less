@@ -3,6 +3,7 @@
 @darkGrey1: #444444;
 @darkGrey2: #3d3d3d;
 @darkGrey3: #323232;
+@fontColor: #bbb;
 
 
 
@@ -35,9 +36,8 @@
 
     #plone-global-topbar-iframe{ min-height: 40px; padding: 5px 20px 5px 20px; }
 
-    .mostrar_mobile {
-        display: block !important;
-    }
+    .mostrar_mobile { display: block !important; }
+
 
     /* Main links */
 
@@ -64,7 +64,7 @@
     }
     #links-select li:hover a { color: #FFFFFF; }
     #links-select li a {
-        color: #bbb;
+        color: @fontColor;
         font-size:12px;
         font-family: 'DINRegular';
         font-weight: normal;
@@ -149,20 +149,15 @@
         float: left;
         width: 10%;
     }
-
     #plone-global-topbar-logo img{
         margin-top: 2px;
         height:20px;
     }
+    #plone-global-topbar-logo { display: none; }
 
-
-#plone-global-topbar-logo { display: none; }
 
     /* Paisos */
-
     #plone-global-topbar-sites{ margin-top: 4px; }
-
-
     #sites-select{ position: absolute; margin-top: 1px; }    
     #sites-select ul {
         background-color: @darkGrey !important;
@@ -224,18 +219,11 @@
 
 
     /* Search */
-
-    #search {
-        margin:0px;
-    }
-    #plone-global-topbar-searchbox {
-        float: right;
-        width: 15%;
-    }
+    #search { margin:0px; }
+    #plone-global-topbar-searchbox { float: right; width: 15%; }
 
 
     /* TO OVERRIDE GOOGLE SEARCH ( TEMPORAL ) */
-
     .gsc-search-box .gsc-input>input:focus, .gsc-input-box-focus, .gsc-search-box .gsc-input>input:hover, .gsc-input-box-hover {
         border: 0;
         -moz-box-shadow: none !important;
@@ -243,8 +231,6 @@
         box-shadow: inset none !important;
         font-size: 13px;
     }
-
-
     .cse .gsc-control-cse, .gsc-control-cse {
         //padding: 0px !important;
         background-color:   transparent!important;
@@ -260,7 +246,7 @@
         padding-top: 2px;
     }
     input.gsc-input {
-        color: #bbb;
+        color: @fontColor;
         background: transparent !important;
         font-size: 13px;
         font-family: 'DINRegular';
@@ -268,7 +254,7 @@
         height: auto !important;
     }
     .gsst_a .gscb_a {
-        color: #bbb;
+        color: @fontColor;
         cursor: pointer;
     }
     .gscb_a { font: 20px/13px arial,sans-serif; padding: 3px 5px 1px 5px; background: @darkGrey;}
@@ -313,20 +299,13 @@
     .gsst_a .gscb_a {
         color: #ccc!important;
     }*/
-    #display_mobile {
-        display: none;
-    }
+
+    #display_mobile { display: none; }
 
     @media only screen and (max-width:980px) {
 
-        #plone-global-topbar-iframe {
-            height: 40px;
-            padding: 5px 20px 5px 20px;
-        }
-
-        #plone-global-topbar-logo {
-            width: 100%;
-        }
+        #plone-global-topbar-iframe { height: 40px; padding: 5px 20px 5px 20px; }
+        #plone-global-topbar-logo { width: 100%; }
         #plone-global-topbar-logo img{
             padding-top: 4px;
             height:30px;
@@ -416,3 +395,21 @@
 
     }
 }
+
+//*** GOOGLE Search ****//
+
+.gssb_c {
+    top: 40px !important;
+    width: 30% !important;    
+    left: inherit !important;
+    right: 0px !important;
+    color: @fontColor;
+}
+.gssb_e { border-radius: 0 0 5px 5px; }
+.gsc-completion-container{ background-color: @black !important; border: none !important; border-radius: 0 0 5px 5px;}
+.gsc-completion-selected{ color: @black; }
+.gsc-completion-container table { font-size: 13px !important; }
+
+//********************//
+
+
