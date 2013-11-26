@@ -14,7 +14,7 @@ var html = [
         '<div id="plone-global-topbar-sites">',
           '<div id="sites-select">',
             '<ul>',
-              '<li><a href="#">Countries</a>',
+              '<li><a href="#">Select your country</a>',
               '<ul>',
                 '<li><a href="#">Catalunya</a></li>',
                 '<li><a href="#">Pais Basc</a></li>',
@@ -27,7 +27,7 @@ var html = [
         '</div>',
 
 
-        '<!-- Search box -->',
+        '<!-- Search box -->',        
         '<div id="plone-global-topbar-searchbox">',
           '<gcse:search></gcse:search>',
         '</div>',
@@ -37,6 +37,7 @@ var html = [
           '<ul id="links-select">',
             '<li>',
             '<a href="http://planet.plone.org" title="Plone Planet">PLANET</a>',
+            /*
             '<div class="caixa-desplegada">',
               '<h2>Thank\'s to collaborate with us!</h2>',
               '<hr>',
@@ -65,8 +66,8 @@ var html = [
                   '<li><a href="#">Option3</a></li>',
                 '</ul>',
               '</div>',
-
             '</div>',
+            */
             '</li>',
             '<!-- Developers -->',
             '<li>',
@@ -85,6 +86,7 @@ var html = [
             '<li>',
             '<a href="http://plone.org" title="Plone Org">COMMUNITY</a>',
             '</li>',
+            '<li class="separador"></li>',
           '</ul>',
         '</div>',
       '</div>',

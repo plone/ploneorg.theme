@@ -16,6 +16,10 @@ module.exports = function (grunt) {
                 // },
                 src: ['ploneorg/theme/diazo_resources/bootstrap/less/bootstrap.less'],
                 dest: 'ploneorg/theme/diazo_resources/stylesheets/bootstrap.css'
+            },
+            topbar: {
+                src: ['ploneorg/theme/diazo_resources/less/topbar.less'],
+                dest: 'ploneorg/theme/diazo_resources/stylesheets/topbar.css'
             }
         },
         watch: {
