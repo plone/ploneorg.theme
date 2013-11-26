@@ -56,7 +56,7 @@ html, body {
   -moz-background-size: 18px 18px;-webkit-background-size: 18px 18px;background-size: 18px 18px;
 }
 */
-.header-wrapper .row,
+.header-wrapper > .row,
 .navbar-plonetheme {
   background-color: #3094c8;
   background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
@@ -76,6 +76,12 @@ html, body {
   /*fem que el menú ocupi el 100%*/
   .navbar-nav > li {position:inherit;}
   .navbar-nav > li > ul {width:100%; min-width:100%}
+  .dropdown-menu {
+    border: 0;
+    border-radius: 0;
+    background: rgba(11,66,88,.95);
+  }
+  .navbar-nav > .open > a, .navbar-nav > .open > a:hover {background-color: #12495f;}
 }
 
 

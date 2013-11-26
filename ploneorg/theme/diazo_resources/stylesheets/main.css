@@ -119,7 +119,7 @@ body {
 }
 */
 
-.header-wrapper .row,
+.header-wrapper > .row,
 .navbar-plonetheme {
   background-color: #3094c8;
   background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
@@ -134,7 +134,7 @@ body {
 
 }
 
-.header-wrapper .row .navbar-nav > li > a,
+.header-wrapper > .row .navbar-nav > li > a,
 .navbar-plonetheme .navbar-nav > li > a {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -142,15 +142,29 @@ body {
   text-transform: uppercase;
 }
 
-.header-wrapper .row .navbar-nav > li,
+.header-wrapper > .row .navbar-nav > li,
 .navbar-plonetheme .navbar-nav > li {
   position: inherit;
 }
 
-.header-wrapper .row .navbar-nav > li > ul,
+.header-wrapper > .row .navbar-nav > li > ul,
 .navbar-plonetheme .navbar-nav > li > ul {
   width: 100%;
   min-width: 100%;
+}
+
+.header-wrapper > .row .dropdown-menu,
+.navbar-plonetheme .dropdown-menu {
+  background: rgba(11, 66, 88, 0.95);
+  border: 0;
+  border-radius: 0;
+}
+
+.header-wrapper > .row .navbar-nav > .open > a,
+.navbar-plonetheme .navbar-nav > .open > a,
+.header-wrapper > .row .navbar-nav > .open > a:hover,
+.navbar-plonetheme .navbar-nav > .open > a:hover {
+  background-color: #12495f;
 }
 
 #portal-logo {
