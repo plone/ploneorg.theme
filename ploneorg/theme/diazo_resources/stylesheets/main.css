@@ -90,7 +90,7 @@ body {
 .header-wrapper {
   height: 90px;
   background-color: #3094c8;
-  
+
   background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
   background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
   background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
@@ -98,13 +98,8 @@ body {
 }
 */
 
-<<<<<<< HEAD
-.header-wrapper > .row,
-.navbar-plonetheme {
-=======
 header {
   margin-bottom: 50px;
->>>>>>> 556c05eefb7be3a104f4cd9b0ba24a3689d8b2f2
   background-color: #3094c8;
   background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
   background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
@@ -123,7 +118,7 @@ header {
   border-radius: 0;
 }
 
-.header-wrapper > .row .navbar-nav > li > a,
+.header-wrapper .row .navbar-nav > li > a,
 .navbar-plonetheme .navbar-nav > li > a {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -131,27 +126,27 @@ header {
   text-transform: uppercase;
 }
 
-.header-wrapper > .row .navbar-nav > li,
+.header-wrapper .row .navbar-nav > li,
 .navbar-plonetheme .navbar-nav > li {
   position: inherit;
 }
 
-.header-wrapper > .row .navbar-nav > li > ul,
+.header-wrapper .row .navbar-nav > li > ul,
 .navbar-plonetheme .navbar-nav > li > ul {
   width: 100%;
   min-width: 100%;
 }
 
-.header-wrapper > .row .dropdown-menu,
+.header-wrapper .row .dropdown-menu,
 .navbar-plonetheme .dropdown-menu {
   background: rgba(11, 66, 88, 0.95);
   border: 0;
   border-radius: 0;
 }
 
-.header-wrapper > .row .navbar-nav > .open > a,
+.header-wrapper .row .navbar-nav > .open > a,
 .navbar-plonetheme .navbar-nav > .open > a,
-.header-wrapper > .row .navbar-nav > .open > a:hover,
+.header-wrapper .row .navbar-nav > .open > a:hover,
 .navbar-plonetheme .navbar-nav > .open > a:hover {
   background-color: #12495f;
 }
