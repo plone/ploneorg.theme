@@ -1,38 +1,45 @@
-'use strict';
+
 module.exports = function (grunt) {
+    'use strict';
+
     grunt.initConfig({
-        recess: {
-            options: {
-                compile: true,
-                includePath: ['ploneorg/theme/diazo_resources/bootstrap/less']
-            },
+        less: {
             main: {
-                src: ['ploneorg/theme/diazo_resources/less/main.less'],
-                dest: 'ploneorg/theme/diazo_resources/stylesheets/main.css'
-            },
-            bootstrap: {
-                // options: {
-                //   compress: true
-                // },
-                src: ['ploneorg/theme/diazo_resources/bootstrap/less/bootstrap.less'],
-                dest: 'ploneorg/theme/diazo_resources/stylesheets/bootstrap.css'
+                options: {
+                  paths: ['ploneorg/theme/diazo_resources/bootstrap/less'],
+                  strictMath: false,
+                  sourceMap: true,
+                  outputSourceFiles: true,
+                  sourceMapURL: '/++theme++ploneorg.theme/stylesheets/main.css.map',
+                  sourceMapFilename: 'ploneorg/theme/diazo_resources/stylesheets/main.css.map'
+                },
+                files: {
+                  'ploneorg/theme/diazo_resources/stylesheets/main.css': 'ploneorg/theme/diazo_resources/less/main.less'
+                }
             },
             topbar: {
-                src: ['ploneorg/theme/diazo_resources/less/topbar.less'],
-                dest: 'ploneorg/theme/diazo_resources/stylesheets/topbar.css'
+                options: {
+                  paths: ['ploneorg/theme/diazo_resources/bootstrap/less'],
+                  strictMath: false,
+                  sourceMap: true,
+                  outputSourceFiles: true,
+                  sourceMapURL: '/++theme++ploneorg.theme/stylesheets/topbar.css.map',
+                  sourceMapFilename: 'ploneorg/theme/diazo_resources/stylesheets/topbar.css.map'
+                },
+                files: {
+                  'ploneorg/theme/diazo_resources/stylesheets/topbar.css': 'ploneorg/theme/diazo_resources/less/topbar.less'
+                }
             }
         },
         watch: {
             scripts: {
-                files: ['ploneorg/theme/diazo_resources/less/*.less',
-                        'ploneorg/theme/diazo_resources/bootstrap/less/*.less'],
-                tasks: ['recess']
+                files: ['ploneorg/theme/diazo_resources/less/*.less',],
+                tasks: ['less']
             }
         }
     });
 
-    // grunt.loadTasks('tasks');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-recess');
-    grunt.registerTask('default', ['recess']);
+    grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.registerTask('default', ['less']);
 };

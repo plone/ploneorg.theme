@@ -1,69 +1,61 @@
 @font-face {
   font-family: 'DINLight';
-  font-style: normal;
-  font-weight: 200;
   src: url('/++theme++ploneorg.theme/fonts/DINLight.eot?v=3.0.1');
   src: url('/++theme++ploneorg.theme/fonts/DINLight.eot?#iefix&v=3.0.1') format('embedded-opentype'), url('/++theme++ploneorg.theme/fonts/DINLight.woff?v=3.0.1') format('woff'), url('/++theme++ploneorg.theme/fonts/DINLight.ttf?v=3.0.1') format('truetype'), url('/++theme++ploneorg.theme/fonts/DINLight.svg#fontawesomeregular?v=3.0.1') format('svg');
   src: url('/++theme++ploneorg.theme/fonts/DINLight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
 }
-
 @font-face {
   font-family: 'DINRegular';
-  font-style: normal;
-  font-weight: 400;
   src: url('/++theme++ploneorg.theme/fonts/DINRegular.eot?v=3.0.1');
   src: url('/++theme++ploneorg.theme/fonts/DINRegular.eot?#iefix&v=3.0.1') format('embedded-opentype'), url('/++theme++ploneorg.theme/fonts/DINRegular.woff?v=3.0.1') format('woff'), url('/++theme++ploneorg.theme/fonts/DINRegular.ttf?v=3.0.1') format('truetype'), url('/++theme++ploneorg.theme/fonts/DINRegular.svg#fontawesomeregular?v=3.0.1') format('svg');
   src: url('/++theme++ploneorg.theme/fonts/DINRegular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
 }
-
 @font-face {
   font-family: 'DINMedium';
-  font-style: normal;
-  font-weight: 500;
   src: url('/++theme++ploneorg.theme/fonts/DINMedium.eot?v=3.0.1');
   src: url('/++theme++ploneorg.theme/fonts/DINMedium.eot?#iefix&v=3.0.1') format('embedded-opentype'), url('/++theme++ploneorg.theme/fonts/DINMedium.woff?v=3.0.1') format('woff'), url('/++theme++ploneorg.theme/fonts/DINMedium.ttf?v=3.0.1') format('truetype'), url('/++theme++ploneorg.theme/fonts/DINMedium.svg#fontawesomeregular?v=3.0.1') format('svg');
   src: url('/++theme++ploneorg.theme/fonts/DINMedium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
 }
-
 @font-face {
   font-family: 'DINBold';
-  font-style: normal;
-  font-weight: 700;
   src: url('/++theme++ploneorg.theme/fonts/DINBold.eot?v=3.0.1');
   src: url('/++theme++ploneorg.theme/fonts/DINBold.eot?#iefix&v=3.0.1') format('embedded-opentype'), url('/++theme++ploneorg.theme/fonts/DINBold.woff?v=3.0.1') format('woff'), url('/++theme++ploneorg.theme/fonts/DINBold.ttf?v=3.0.1') format('truetype'), url('/++theme++ploneorg.theme/fonts/DINBold.svg#fontawesomeregular?v=3.0.1') format('svg');
   src: url('/++theme++ploneorg.theme/fonts/DINBold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
 }
-
 @font-face {
   font-family: 'DINBlack';
-  font-style: normal;
-  font-weight: 900;
   src: url('/++theme++ploneorg.theme/fonts/DINBlack.eot?v=3.0.1');
   src: url('/++theme++ploneorg.theme/fonts/DINBlack.eot?#iefix&v=3.0.1') format('embedded-opentype'), url('/++theme++ploneorg.theme/fonts/DINBlack.woff?v=3.0.1') format('woff'), url('/++theme++ploneorg.theme/fonts/DINBlack.ttf?v=3.0.1') format('truetype'), url('/++theme++ploneorg.theme/fonts/DINBlack.svg#fontawesomeregular?v=3.0.1') format('svg');
   src: url('/++theme++ploneorg.theme/fonts/DINBlack.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
 }
-
 html,
 body {
   /* Sticky footer */
-
   height: 100%;
   font-family: DinMedium, Helvetica, Arial, sans-serif;
 }
-
 #outer-wrapper {
+  /* Sticky footer w/IE fixes*/
+  min-height: 100%;
   height: auto !important;
   height: 100%;
-  min-height: 100%;
   margin: 0 auto -23em;
 }
-
 .container {
   max-width: 100%;
-  padding-right: 0;
   padding-left: 0;
+  padding-right: 0;
 }
-
 /*
 .inner-container {
   .container-fixed();
@@ -85,7 +77,6 @@ body {
   }
 }
 */
-
 /*
 .header-wrapper {
   height: 90px;
@@ -97,292 +88,248 @@ body {
   -moz-background-size: 18px 18px;-webkit-background-size: 18px 18px;background-size: 18px 18px;
 }
 */
-
 header {
-  margin-bottom: 50px;
   background-color: #3094c8;
+  margin-bottom: 50px;
   background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
   background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
   background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
   -webkit-background-size: 18px 18px;
-     -moz-background-size: 18px 18px;
-          background-size: 18px 18px;
+  -moz-background-size: 18px 18px;
+  background-size: 18px 18px;
 }
-
 .header-wrapper .row,
 .navbar-plonetheme {
   padding: 0 5px 0 20px;
-  margin-bottom: 0;
   background-color: transparent;
+  margin-bottom: 0;
   border: 0;
   border-radius: 0;
+  /*fem que el menú ocupi el 100%*/
 }
-
 .header-wrapper .row .navbar-nav > li > a,
 .navbar-plonetheme .navbar-nav > li > a {
-  padding-top: 32px;
-  padding-bottom: 32px;
   color: #fff;
   text-transform: uppercase;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
-
 .header-wrapper .row .navbar-nav > li,
 .navbar-plonetheme .navbar-nav > li {
   position: inherit;
 }
-
 .header-wrapper .row .navbar-nav > li > ul,
 .navbar-plonetheme .navbar-nav > li > ul {
   width: 100%;
   min-width: 100%;
 }
-
 .header-wrapper .row .dropdown-menu,
 .navbar-plonetheme .dropdown-menu {
-  background: rgba(11, 66, 88, 0.95);
   border: 0;
   border-radius: 0;
+  background: rgba(11, 66, 88, 0.95);
 }
-
 .header-wrapper .row .navbar-nav > .open > a,
 .navbar-plonetheme .navbar-nav > .open > a,
 .header-wrapper .row .navbar-nav > .open > a:hover,
 .navbar-plonetheme .navbar-nav > .open > a:hover {
   background-color: #12495f;
 }
-
 #portal-logo {
-  float: left;
   margin: 22px 0;
+  float: left;
 }
-
 .motto {
   float: left;
   margin: 42px 0 0 10px;
   font-family: DinRegular;
   font-size: 14px;
-  color: white;
   text-transform: uppercase;
+  color: white;
 }
-
 .main-sections {
   float: right;
   margin-top: 40px;
 }
-
 .main-sections li {
   padding: 0 10px;
 }
-
 .main-sections li a {
-  font-family: DinMedium;
   font-size: 14px;
-  color: white;
-  text-decoration: none;
+  font-family: DinMedium;
   text-transform: uppercase;
+  text-decoration: none;
+  color: white;
 }
-
 #edit-bar {
-  margin-bottom: 18px;
   border-bottom: 1px solid #CCCCCC;
   box-shadow: 0 -10px 12px -18px #000000 inset;
+  margin-bottom: 18px;
 }
-
 #edit-bar .nav-tabs {
-  margin: 0;
   border-bottom: 0;
   box-shadow: none;
+  margin: 0;
 }
-
 #edit-bar .nav-pills {
   margin: 0;
 }
-
 #edit-bar .dropdown-toggle .label,
 #edit-bar .dropdown-toggle .badge {
   font-size: 100%;
 }
-
 #push,
 footer {
   /* Sticky footer */
-
   min-height: 23em;
 }
-
 footer {
-  padding-top: 1em;
   background: #eaf2f6;
+  -moz-box-shadow: inset 0 8px 12px -12px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: inset 0 8px 12px -12px rgba(0, 0, 0, 0.5);
-     -moz-box-shadow: inset 0 8px 12px -12px rgba(0, 0, 0, 0.5);
-          box-shadow: inset 0 8px 12px -12px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 8px 12px -12px rgba(0, 0, 0, 0.5);
+  padding-top: 1em;
 }
-
 footer p {
   font-family: DinRegular;
   font-size: 12px;
 }
-
 footer p a {
   color: #3094c8;
 }
-
 footer p a:hover {
   color: white;
   background-color: #3094c8;
 }
-
 footer sup {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
 .footer-container {
-  width: 800px;
-  padding: 1em 0;
-  margin: 0 auto;
-  font-family: "Lucida Grande", Verdana, FreeSans, sans-serif;
   color: #3094c8;
+  font-family: "Lucida Grande", Verdana, FreeSans, sans-serif;
+  margin: 0 auto;
+  padding: 1em 0;
+  width: 800px;
 }
-
 #footer p a:hover {
   color: #329fd7;
   background-color: White;
 }
-
 #footer-logo {
   float: left;
-  width: 114px;
-  height: 44px;
-  margin: 0 1em 0 0.5em;
   background-image: url(../images/sprite-ploneorg.png);
   background-position: 0 -376px;
+  width: 114px;
+  height: 44px;
   border-right: 1px solid white;
+  margin: 0 1em 0 0.5em;
 }
-
 #sitemap {
   width: 100%;
-  padding-top: 1em;
   clear: both;
+  padding-top: 1em;
 }
-
 @media (max-width: 767px) {
   .five-col > * {
     display: inline-block;
     float: left;
   }
   .five-col > dt {
-    margin-top: 0.5em;
     clear: left;
+    margin-top: 0.5em;
   }
   .five-col > dt + dd {
     clear: left;
   }
 }
-
 @media (min-width: 768px) {
   .csscolumns .five-col {
     -webkit-column-count: 5;
-       -moz-column-count: 5;
-         -o-column-count: 5;
-            column-count: 5;
+    -moz-column-count: 5;
+    -o-column-count: 5;
+    column-count: 5;
     -webkit-column-gap: 20px;
-       -moz-column-gap: 20px;
-         -o-column-gap: 20px;
-            column-gap: 20px;
+    -moz-column-gap: 20px;
+    -o-column-gap: 20px;
+    column-gap: 20px;
   }
   .csscolumns .five-col dt {
     -webkit-column-break-before: always;
-       -moz-column-break-before: always;
-         -o-column-break-before: always;
-            column-break-before: always;
+    -moz-column-break-before: always;
+    -o-column-break-before: always;
+    column-break-before: always;
   }
   .col-no-css {
-    float: left;
     width: 20%;
+    float: left;
   }
 }
-
 #sitemap dl a {
-  display: block;
-  padding: 0.25em 6px;
   font-size: 11px;
   color: #3094c8;
+  display: block;
+  padding: 0.25em 6px;
   text-decoration: none;
 }
-
 #sitemap dl a:hover {
   color: white;
   background-color: #3094c8;
 }
-
 #sitemap dl dt a {
   font-size: 12px;
 }
-
 #downloadcurrent {
+  background-color: #eaf2f6;
   padding: 10px 20px;
   line-height: 55px;
-  background-color: #eaf2f6;
 }
-
 .getplone {
-  width: 13% !important;
   font-family: DINMedium;
   font-size: 24px;
+  width: 13% !important;
 }
-
 .currentversion {
   font-size: 60px;
 }
-
 .features {
   width: 30% !important;
   font-family: DINBold;
   font-size: 17px;
   color: #3399cc;
 }
-
 .features ul {
   margin: 0 0 0 10px;
 }
-
 .features ul li {
-  line-height: 20px;
   list-style: none;
+  line-height: 20px;
 }
-
 .info {
   width: 30% !important;
   font-size: 14px;
 }
-
 .info a {
   font-family: DINMedium;
   text-decoration: none;
 }
-
 .info li {
   display: inline-block;
 }
-
 .info li:after {
   content: " /";
 }
-
 .info li:last-child:after {
   content: "";
 }
-
 .info ul {
   margin: 0 0 0 10px;
 }
-
 .info ul li {
-  line-height: 20px;
   list-style: none;
+  line-height: 20px;
 }
-
 .download {
   width: 20% !important;
   font-family: DINBlack;
 }
+/*# sourceMappingURL=/++theme++ploneorg.theme/stylesheets/main.css.map */
