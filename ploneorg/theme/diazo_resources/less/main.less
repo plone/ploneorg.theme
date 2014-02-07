@@ -20,8 +20,34 @@ html, body {
 //container al 100% perquè vagi de banda a banda les barres
 .container {max-width:100%; padding-left:0; padding-right: 0}
 
+#portal-breadcrumbs {
+    border-top: 1px solid #CDCDCD;
+    color: #9A9A9A;
+    font-size: 92.5%;
+    padding-left: 0.25em;
+    padding-top: 0.5em;
+    text-transform: uppercase;
+}
 
+h1, .h1 {
+ font-family: DinLight;
+    font-size: 48px;
+    font-weight: 100 !important;
+    color:#000;
+}
+h2, .h2 {
+ font-family: DinLight;
+    font-size: 36px;
+    font-weight: 100 !important;
+    color:#000;
+}
 
+#content, #sidebar {
+    font-size: 100%;
+}
+#content .documentDescription, #content #description {
+  font-family: DinLight; color:#000; font-weight: 200;
+}
 /*
 .inner-container {
   .container-fixed();
@@ -67,7 +93,7 @@ header{
 }
 .header-wrapper .row,
 .navbar-plonetheme {
-  padding: 0 5px 0 20px;
+
   background-color: transparent;
   margin-bottom: 0;
   border:0;
@@ -76,7 +102,7 @@ header{
     color:#fff;
     text-transform: uppercase;
     padding-top: 32px;
-    padding-bottom: 32px;
+    padding-bottom: 33px;
   }
   /*fem que el menú ocupi el 100%*/
   .navbar-nav > li {position:inherit;}
@@ -86,9 +112,12 @@ header{
     border-radius: 0;
     background: rgba(11,66,88,.95);
   }
-  .navbar-nav > .open > a, .navbar-nav > .open > a:hover {background-color: #12495f;}
+  .navbar-nav > .open > a, .navbar-nav > .open > a:hover, .navbar-nav > .open > a:focus {background-color: #12495f; color:#fff;}
 }
 
+.dropdown-plonetheme {
+  h2 {color:#4b7387; font-weight: bold; font-family: DinRegular;}
+}
 
 #portal-logo {
   margin: 22px 0;

@@ -23,11 +23,11 @@
 
 <div id="outer-wrapper">
 
-  <!--<div class="container">-->
-  <div id="topbarcontainer" class="navbar navbar-default navbar-static-top" role="navigation"></div>
-  <!--</div>-->
+  <div class="container">
+    <div id="topbarcontainer" class="navbar navbar-default navbar-static-top" role="navigation"></div>
+  </div>
 
-  <header class="header-wrapper">
+  <header class="header-wrapper" role="banner">
     <!--
     <div class="header-wrapper container">
       <div class="row">
@@ -47,7 +47,7 @@
         </div>
       </div>
     </div>
-  -->
+  --><div class="container">
     <nav class="navbar navbar-default navbar-plonetheme" role="navigation">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-plonetheme">
@@ -69,7 +69,7 @@
           <li><a href="#">Plone Foundation</a></li>
           <li class="dropdown">
             <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>-->
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Community</a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Community <span class="caret"></span></a>
             <!--
             <ul class="dropdown-menu">
               <li class="dropdown-header">Dropdown header</li>
@@ -86,10 +86,10 @@
               <li><a href="#">Link</a></li>
             </ul>
             -->
-            <div class="dropdown-menu" style="left:0; padding:0;">
+            <div class="dropdown-menu dropdown-plonetheme" style="left:0; padding:0;">
               <div class="row" style="margin:0;"><!-- albertcasado-->
                 <div class="col-md-3">
-                  <h2>I want to see...</h2>
+                  <h2>I want<br>to see...</h2>
                 </div>
                 <div class="col-md-9">
                   <div class="row">
@@ -110,8 +110,9 @@
           
         </ul>
       </div>
-    </nav>
+    </nav></div>
   </header>
+  
 
   <div class="main-content container">
     <div class="inner-container row"></div>
