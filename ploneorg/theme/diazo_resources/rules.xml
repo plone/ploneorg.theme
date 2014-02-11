@@ -1,57 +1,160 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <rules
     xmlns="http://namespaces.plone.org/diazo"
     xmlns:css="http://namespaces.plone.org/diazo/css"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xi="http://www.w3.org/2001/XInclude">
 
-    <!-- Apply the following rules to standard Plone pages -->
-    <rules css:if-content="#visual-portal-wrapper">
+  <theme href="index.html" />
+  <rules if-content="//*[@id='portal-top']">
+    <!-- Attributes -->
+    <copy attributes="*" theme="/html" content="/html"/>
+    <!-- Base tag -->
+    <before theme="/html/head/title" content="/html/head/base"/>
+    <!-- Title -->
+    <replace theme="/html/head/title" content="/html/head/title" />
+    <!-- Pull in Plone Meta -->
+    <after theme-children="/html/head" content="/html/head/meta" />
+    <!-- dont use Plone icons, use the theme -->
+    <drop css:content="head link[rel='apple-touch-icon']" />
+    <drop css:content="head link[rel='shortcut icon']" />
+    <!-- Script -->
+    <after theme="/html/body/div/footer" content="/html/head/script" />
+    <!-- CSS -->
+    <before theme-children="/html/head" content="/html/head/link" />
+  </rules>
 
-        <theme href="index.html" />
+  <!-- Copy over the id/class attributes on the body tag.
+       This is important for per-section styling -->
+  <copy attributes="class" css:content="body" css:theme="body" />
+  <copy attributes="id dir" css:content="body" css:theme="body" />
 
-        <!-- Replace title with Plone's page title  -->
-        <replace css:theme="html head title" css:content="html head title" />
+  <!-- The standard logo -->
+  <replace css:theme="#portal-logo" css:content="#portal-logo" />
+  <!-- replaced with the svg version one -->
+  <xi:include href="/++theme++ploneorg.theme/svglogo.xml"/>
 
-        <!-- Drop the favicon spec coming from content; we'll use the one in the theme. -->
-        <drop content="/html/head/link[@rel='shortcut icon']" />
+  <!-- Central column -->
+  <xsl:variable name="central">
+    <xsl:if test="//aside[@id='portal-column-one'] and //aside[@id='portal-column-two']">col-xs-12 col-sm-6</xsl:if>
+    <xsl:if test="//aside[@id='portal-column-two'] and not(//aside[@id='portal-column-one'])">col-xs-12 col-sm-9</xsl:if>
+    <xsl:if test="//aside[@id='portal-column-one'] and not(//aside[@id='portal-column-two'])">col-xs-12 col-sm-9</xsl:if>
+    <xsl:if test="not(//aside[@id='portal-column-one']) and not(//aside[@id='portal-column-two'])">col-xs-12 col-sm-12</xsl:if>
+  </xsl:variable>
 
-        <!-- Copy base tag from Plone -->
-        <before css:theme-children="html head" css:content="html head base" />
+  <rules if-content="//*[@id='edit-bar']">
+    <append css:theme="#edit-bar" css:content-children="#edit-bar" />
 
-        <!-- Copy link, style, meta tags from Plone head -->
-        <after css:theme-children="html head"
-               content="/html/head/link | /html/head/style | /html/head/meta" />
+    <replace css:content="#content-views">
+      <ul class="nav nav-tabs pull-left clearfix">
+          <xsl:apply-templates select="./*"/>
+      </ul>
+    </replace>
 
-        <drop content="/html/head/meta" if-content="(//*[@name='viewport'])"/>
+    <replace css:content="#edit-bar > .contentActions">
+      <div class="contentActions">
+        <ul class="nav nav-pills pull-right clearfix actionItems">
+          <xsl:for-each select="./ul/li">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <xsl:attribute name="title"><xsl:value-of select="./dl/dt/a/@title"/></xsl:attribute>
+                <xsl:attribute name="id"><xsl:value-of select="./dl/dt/a/@id"/></xsl:attribute>
+                <xsl:apply-templates select="./dl/dt/a/*"/>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu pull-right actionMenuContent">
+                <xsl:apply-templates select=".//dd/ul/li"/>
+              </ul>
+            </li>
+          </xsl:for-each>
+        </ul>
+      </div>
+    </replace>
 
-        <!-- merge classes from Plone body with theme body -->
-        <merge attributes="class" css:theme="body" css:content="body" />
+    <replace content="//*[@class='selected']/@class">
+        <xsl:attribute name="class">active</xsl:attribute>
+    </replace>
 
-        <!-- Copy script tags from Plone head to end of body -->
-        <after css:theme-children="html body" css:content="html head script" />
+    <drop css:content=".contentActions .arrowDownAlternative"/>
 
-        <!-- Move inline scripts in content to end of body -->
-        <drop css:content="body script" />
-        <after css:theme-children="html body" css:content="html body script" method="raw" />
+    <replace css:content=".actionSeparator">
+        <li class="divider"></li>
+        <li><xsl:apply-templates select="./*"/></li>
+    </replace>
+  </rules>
 
-        <!-- Insert your own rules here -->
+  <!-- Alert message -->
+  <strip css:content=".portalMessage dd"/>
+  <replace css:content=".portalMessage">
+    <xsl:choose>
+        <xsl:when css:test=".portalMessage[style]"/>
+        <xsl:when css:test=".portalMessage.info">
+            <div class="alert alert-dismissable alert-info">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><xsl:value-of disable-output-escaping="yes" select="string('&amp;times')"/></button>
+                <strong><xsl:apply-templates select="./dt/text()"/></strong>
+                <!-- <xsl:if test="not(./dd/)">body node missing</xsl:if> -->
+                <xsl:apply-templates select="./dd/*"/>
+            </div>
+        </xsl:when>
+        <xsl:when css:test=".portalMessage.error">
+            <div class="alert alert-dismissable alert-danger">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <strong><xsl:apply-templates select="./dt/text()"/></strong>
+                <xsl:apply-templates select="./dd/text()"/>
+            </div>
+        </xsl:when>
+        <xsl:when css:test=".portalMessage.success">
+            <div class="alert alert-dismissable alert-warning">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <strong><xsl:apply-templates select="./dt/text()"/></strong>
+                <xsl:apply-templates select="./dd/text()"/>
+            </div>
+        </xsl:when>
+        <xsl:otherwise>
+            <div class="alert alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <strong><xsl:apply-templates select="./dt/text()"/></strong>
+                <xsl:apply-templates select="./dd/text()"/>
+            </div>
+        </xsl:otherwise>
+    </xsl:choose>
+  </replace>
+  <!-- <append css:theme="#globalstatusmessage" css:content=".portalMessage" /> -->
 
-        <!-- The standard logo -->
-        <replace css:theme="#portal-logo" css:content="#portal-logo" />
-        <!-- replaced with the svg version one -->
-        <xi:include href="/++theme++ploneorg.theme/svglogo.xml"/>
+  <replace css:theme="#content-container" method="raw">
+      <div class="{$central}">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12">
+               <xsl:copy-of select="//div[@id='content']"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12">
+             <xsl:copy-of select="//div[@id='viewlet-below-content']"/>
+            </div>
+          </div>
+      </div><!--/row-->
+  </replace>
 
-        <!-- Taken from Thijs Jonkman fabulous diazoframework.bootstrap -->
-        <xi:include href="/++theme++ploneorg.theme/grid.xml"/>
-        <xi:include href="/++theme++ploneorg.theme/edit.xml"/>
+  <!-- Left column -->
+  <rules if-content="//*[@id='portal-column-one']">
+    <replace css:theme="#column1-container">
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+          <aside id="portal-column-one">
+             <xsl:copy-of select="//*[@id='portal-column-one']/*"/>
+          </aside>
+        </div>
+    </replace>
+  </rules>
 
-        <!-- This rule pulls in the whole Plone layout. You'll typically replace this
-             with rules that copy particular parts of the content into particular
-             targets in your theme.
-         -->
-        <copy css:theme=".main-content .inner-container" css:content="#portal-columns" />
-
-    </rules>
-
+  <!-- Right column -->
+  <rules if-content="//*[@id='portal-column-two']">
+    <replace css:theme="#column2-container">
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+          <aside id="portal-column-two">
+             <xsl:copy-of select="//*[@id='portal-column-two']/*"/>
+          </aside>
+        </div>
+    </replace>
+  </rules>
 </rules>

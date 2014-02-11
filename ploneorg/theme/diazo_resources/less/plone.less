@@ -1,0 +1,66 @@
+
+.hiddenStructure {.sr-only}
+
+// Forms
+.selected {
+    &:extend(.active);
+}
+.fieldRequired {font-size: 0;}
+.fieldRequired:after {font-size: 20px !important;}
+.fieldRequired,
+.required {
+    &:after {
+        color: red;
+        content: "*";
+        top:.35em;
+        position: relative;
+        font-size:150%;
+        line-height: 0;
+    }
+}
+.selected.required:after {color: white;}
+.field {
+    margin-bottom: @line-height-base;
+    & input[type="radio"],
+    input[type="checkbox"] {
+        margin:0 0 3px;
+    }
+}
+.formControls {
+    padding-top: 25px;
+}
+
+// Tabs
+.formTabs {
+    &:extend(.nav all);
+    &:extend(.nav-pills all);
+}
+
+// Buttons
+
+.standalone, input[value^="Cancel"], [type="submit"] {
+  &:extend(.btn);
+}
+
+.context {
+    &:extend(.btn);
+    &:extend(.btn-primary);
+}
+
+// Tables
+.listing {
+    &:extend(.table all);
+    &:extend(.table-condensed all);
+    &:extend(.table-striped all);
+    &:extend(.table-hover all);
+    &:extend(.table-bordered all);
+}
+
+// Portal Messages
+.portalMessage {
+    &:extend(.alert all);
+    &.info {&:extend(.alert-info all);}
+    //&.warning  {@extend .alert-warning;}
+    &.error {&:extend(.alert-danger all);}
+    & dt, & dd {margin:0; display:inline;}
+}

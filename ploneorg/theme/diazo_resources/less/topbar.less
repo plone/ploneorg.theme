@@ -19,8 +19,15 @@
 
 }
 
+#topbar {
+    .gradient-background(@darkGrey, @black);
+    .container {
+        height: 40px;
+    }
+}
+
 /**** Contenidor global CROSS-BAR ****/
-#topbarcontainer{ min-height: 40px; margin-bottom: 0; border: none; }
+#topbarcontainer{ min-height: 40px; margin-bottom: 0; border: none; background: none; }
 /************************************/
 
 #plone-global-topbar-wrapper {
@@ -34,7 +41,7 @@
 #plone-global-topbar-wrapper {
 
 
-    #plone-global-topbar-iframe{ min-height: 40px; padding: 4px 20px 5px 20px; }
+    #plone-global-topbar-iframe{ min-height: 40px; padding: 4px 0px 5px 0px; }
 
     .mostrar_mobile { display: block !important; }
 
@@ -166,12 +173,13 @@
 
     /* Paisos */
     #plone-global-topbar-sites{ margin-top: 4px; }
-    #sites-select{ position: absolute; margin-top: 1px; }    
+    #sites-select{ position: absolute; margin-top: 1px; }
     #sites-select ul {
         background-color: @darkGrey !important;
         border-radius: 10px;
         box-shadow: 0 0 9px rgba(0, 0, 0, 0.15);
         border:1px solid #414141;
+        list-style: none;
         //border-top: 1px solid #000000;
         //border-bottom: 1px solid #414141;
 
@@ -185,7 +193,7 @@
                 font-weight: normal;
                 background: url("../img/arrow.png") no-repeat scroll 95% 8px;
                 padding: 1px 30px 1px 15px;
-                text-decoration: none;         
+                text-decoration: none;
             }
         }
         li:hover { background: no; }
@@ -202,7 +210,7 @@
         li {
             float: none;
             position: relative;
-            display: list-item;            
+            display: list-item;
         }
         li a {
             color: #FFFFFF;
@@ -408,7 +416,7 @@
 
 .gssb_c {
     top: 40px !important;
-    width: 30% !important;    
+    width: 30% !important;
     left: inherit !important;
     right: 0px !important;
     color: @fontColor;

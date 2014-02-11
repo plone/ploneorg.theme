@@ -1,13 +1,16 @@
-@import "variables";
-@import "mixins";
+@import (reference) "bootstrap";
+// @import "mixins";
 @import "fonts";
-
+@import "plone";
 
 html, body {
 /* Sticky footer */
   height: 100%;
-  font-family: DinMedium, Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
 }
+
+// Victor dont't sure about it
+.row {margin-left: 0; margin-right: 0;}
 
 #outer-wrapper {
 /* Sticky footer w/IE fixes*/
@@ -83,7 +86,8 @@ h2, .h2 {
 
 header{
   background-color: #3094c8;
-  margin-bottom: 50px;
+  // Victor ??
+  // margin-bottom: 50px;
   background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
   background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
   background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
@@ -113,6 +117,7 @@ header{
     background: rgba(11,66,88,.95);
   }
   .navbar-nav > .open > a, .navbar-nav > .open > a:hover, .navbar-nav > .open > a:focus {background-color: #12495f; color:#fff;}
+  a {font-family: DinMedium;}
 }
 
 .dropdown-plonetheme {
@@ -148,10 +153,15 @@ header{
   }
 }
 
+#globalstatusmessage {
+  margin-top: 10px;
+  .alert {margin-bottom: 0px}
+}
+
 #edit-bar {
+  margin-top: 10px;
   border-bottom: 1px solid #CCCCCC;
-    box-shadow: 0 -10px 12px -18px black inset;
-    margin-bottom:18px;
+  box-shadow: 0 -10px 12px -18px black inset;
     & .nav-tabs {
       border-bottom:0;
       box-shadow:none;

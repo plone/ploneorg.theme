@@ -23,4 +23,14 @@
     cacheable="False" compression="safe" cookable="False"
     enabled="True" expression=""  inline="False" />
 
+ <javascript
+    id="++theme++ploneorg.theme/bootstrap/js/bootstrap.min.js"
+    cacheable="False" compression="none" cookable="False"
+    enabled="True" expression=""  inline="False" />
+
+ <javascript
+    id="++theme++ploneorg.theme/js/main.js"
+    cacheable="False" compression="none" cookable="False"
+    enabled="True" expression=""  inline="False" />
+
 </object>
