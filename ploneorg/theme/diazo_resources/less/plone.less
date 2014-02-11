@@ -20,7 +20,7 @@
 }
 .selected.required:after {color: white;}
 .field {
-    margin-bottom: @line-height-base;
+    margin-bottom: 5px;
     & input[type="radio"],
     input[type="checkbox"] {
         margin:0 0 3px;
@@ -64,3 +64,43 @@
     &.error {&:extend(.alert-danger all);}
     & dt, & dd {margin:0; display:inline;}
 }
+
+// Internal menus
+#portlet-prefs {
+    border:0;
+    .portletHeader {
+        display:none;
+    }
+    & dd {
+        margin:0;
+    }
+}
+.configlets {
+    &:extend(.nav all);
+    &:extend(.nav-tabs all);
+    &:extend(.nav-stacked all);
+    & img {float:right;}
+}
+
+// Pagination
+.listingBar {&:extend(.pagination);}
+.listingBar li:only-child{ display:none !important;}
+
+// Content action menus icons
+.icon-delete {&:extend(.icon-remove);}
+
+.icon-folder_summary_view {&:extend(.icon-resume-view);}
+.icon-folder_full_view {&:extend(.icon-content-view);}
+.icon-folder_tabular_view {&:extend(.icon-table-view);}
+.icon-atct_album_view {&:extend(.icon-th);}
+.icon-folder_listing {&:extend(.icon-list-view);}
+.icon-contextSetDefaultPage {&:extend(.icon-star-empty);}
+
+.icon-folder {&:extend(.icon-folder-close);}
+.icon-image {&:extend(.icon-picture);}
+.icon-document {&:extend(.icon-page);}
+.icon-event {&:extend(.icon-calendar);}
+.icon-news-item {&:extend(.icon-news);}
+.icon-more {&:extend(.icon-plus);}
+.icon-settings {&:extend(.icon-filter);}
+.icon-formfolder {&:extend(.icon-check);}

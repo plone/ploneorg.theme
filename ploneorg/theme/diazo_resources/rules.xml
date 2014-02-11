@@ -36,12 +36,13 @@
 
   <!-- Central column -->
   <xsl:variable name="central">
-    <xsl:if test="//aside[@id='portal-column-one'] and //aside[@id='portal-column-two']">col-xs-12 col-sm-6</xsl:if>
-    <xsl:if test="//aside[@id='portal-column-two'] and not(//aside[@id='portal-column-one'])">col-xs-12 col-sm-9</xsl:if>
-    <xsl:if test="//aside[@id='portal-column-one'] and not(//aside[@id='portal-column-two'])">col-xs-12 col-sm-9</xsl:if>
-    <xsl:if test="not(//aside[@id='portal-column-one']) and not(//aside[@id='portal-column-two'])">col-xs-12 col-sm-12</xsl:if>
+    <xsl:if test="//*[@id='portal-column-one'] and //*[@id='portal-column-two']">col-xs-12 col-sm-6</xsl:if>
+    <xsl:if test="//*[@id='portal-column-two'] and not(//*[@id='portal-column-one'])">col-xs-12 col-sm-9</xsl:if>
+    <xsl:if test="//*[@id='portal-column-one'] and not(//*[@id='portal-column-two'])">col-xs-12 col-sm-9</xsl:if>
+    <xsl:if test="not(//*[@id='portal-column-one']) and not(//*[@id='portal-column-two'])">col-xs-12 col-sm-12</xsl:if>
   </xsl:variable>
 
+  <!-- Edit bar -->
   <rules if-content="//*[@id='edit-bar']">
     <append css:theme="#edit-bar" css:content-children="#edit-bar" />
 
@@ -63,7 +64,17 @@
                 <span class="caret"></span>
               </a>
               <ul class="dropdown-menu pull-right actionMenuContent">
-                <xsl:apply-templates select=".//dd/ul/li"/>
+                <xsl:for-each select=".//dd/ul/li">
+                  <xsl:if css:test=".actionSeparator">
+                    <li class="divider"></li>
+                  </xsl:if>
+                  <li>
+                    <i>
+                      <xsl:attribute name="class"><xsl:value-of select="concat('icon-', ./a/@id)"/></xsl:attribute>
+                    </i>
+                    <xsl:apply-templates select="./*"/>
+                  </li>
+                </xsl:for-each>
               </ul>
             </li>
           </xsl:for-each>
@@ -82,6 +93,7 @@
         <li><xsl:apply-templates select="./*"/></li>
     </replace>
   </rules>
+  <drop css:theme="#edit-bar" if-content="not(//*[@id='edit-bar'])" />
 
   <!-- Alert message -->
   <strip css:content=".portalMessage dd"/>
@@ -112,7 +124,7 @@
             </div>
         </xsl:when>
         <xsl:otherwise>
-            <div class="alert alert-dismissable">
+            <div class="alert alert-dismissable alert-info">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                 <strong><xsl:apply-templates select="./dt/text()"/></strong>
                 <xsl:apply-templates select="./dd/text()"/>
@@ -142,7 +154,7 @@
   <!-- Left column -->
   <rules if-content="//*[@id='portal-column-one']">
     <replace css:theme="#column1-container">
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+        <div class="col-xs-6 col-sm-3" id="sidebar" role="navigation">
           <aside id="portal-column-one">
              <xsl:copy-of select="//*[@id='portal-column-one']/*"/>
           </aside>
@@ -153,7 +165,7 @@
   <!-- Right column -->
   <rules if-content="//*[@id='portal-column-two']">
     <replace css:theme="#column2-container">
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+        <div class="col-xs-6 col-sm-3" id="sidebar" role="navigation">
           <aside id="portal-column-two">
              <xsl:copy-of select="//*[@id='portal-column-two']/*"/>
           </aside>
