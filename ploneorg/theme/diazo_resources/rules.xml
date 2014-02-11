@@ -85,15 +85,16 @@
 
   <!-- Alert message -->
   <strip css:content=".portalMessage dd"/>
+  <drop css:content=".portalMessage dt"/>
   <replace css:content=".portalMessage">
     <xsl:choose>
         <xsl:when css:test=".portalMessage[style]"/>
         <xsl:when css:test=".portalMessage.info">
             <div class="alert alert-dismissable alert-info">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><xsl:value-of disable-output-escaping="yes" select="string('&amp;times')"/></button>
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                 <strong><xsl:apply-templates select="./dt/text()"/></strong>
                 <!-- <xsl:if test="not(./dd/)">body node missing</xsl:if> -->
-                <xsl:apply-templates select="./dd/*"/>
+                <xsl:apply-templates select="./*"/>
             </div>
         </xsl:when>
         <xsl:when css:test=".portalMessage.error">
@@ -119,13 +120,15 @@
         </xsl:otherwise>
     </xsl:choose>
   </replace>
-  <!-- <append css:theme="#globalstatusmessage" css:content=".portalMessage" /> -->
+
+  <append css:theme="#globalstatusmessage" css:content=".portalMessage" if-content="not(//*[@id='content']/dl)" />
 
   <replace css:theme="#content-container" method="raw">
       <div class="{$central}">
           <div class="row">
             <div class="col-xs-12 col-sm-12">
-               <xsl:copy-of select="//div[@id='content']"/>
+               <xsl:apply-templates select="//div[@id='content']"/>
+               <!-- <xsl:copy-of select="//div[@id='content']"/> -->
             </div>
           </div>
           <div class="row">
