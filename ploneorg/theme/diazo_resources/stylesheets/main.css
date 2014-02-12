@@ -1063,4 +1063,7 @@ footer sup {
   width: 20% !important;
   font-family: DINBlack;
 }
+.member_info {
+  list-style: none;
+}
 /*# sourceMappingURL=/++theme++ploneorg.theme/stylesheets/main.css.map */
