@@ -87,20 +87,26 @@
 .listingBar li:only-child{ display:none !important;}
 
 // Content action menus icons
-.icon-delete {&:extend(.icon-remove);}
+// .icon-delete {&:extend(.fa-icon-remove);}
 
-.icon-folder_summary_view {&:extend(.icon-resume-view);}
-.icon-folder_full_view {&:extend(.icon-content-view);}
-.icon-folder_tabular_view {&:extend(.icon-table-view);}
-.icon-atct_album_view {&:extend(.icon-th);}
-.icon-folder_listing {&:extend(.icon-list-view);}
-.icon-contextSetDefaultPage {&:extend(.icon-star-empty);}
+// .icon-folder_summary_view {&:extend(.icon-resume-view);}
+// .icon-folder_full_view {&:extend(.icon-content-view);}
+// .icon-folder_tabular_view {&:extend(.icon-table-view);}
+// .icon-atct_album_view {&:extend(.icon-th);}
+// .icon-folder_listing {&:extend(.icon-list-view);}
 
-.icon-folder {&:extend(.icon-folder-close);}
-.icon-image {&:extend(.icon-picture);}
-.icon-document {&:extend(.icon-page);}
-.icon-event {&:extend(.icon-calendar);}
-.icon-news-item {&:extend(.icon-news);}
-.icon-more {&:extend(.icon-plus);}
-.icon-settings {&:extend(.icon-filter);}
-.icon-formfolder {&:extend(.icon-check);}
+.icon-contextSetDefaultPage:before {
+// star-o
+  content: "\f006";
+}
+.icon-folder:before {
+// folder-o
+  content: "\f114";
+}
+// .icon-image {&:extend(.icon-picture);}
+// .icon-document {&:extend(.icon-page);}
+// .icon-event {&:extend(.icon-calendar);}
+// .icon-news-item {&:extend(.icon-news);}
+// .icon-more {&:extend(.icon-plus);}
+// .icon-settings {&:extend(.icon-filter);}
+// .icon-formfolder {&:extend(.icon-check);}

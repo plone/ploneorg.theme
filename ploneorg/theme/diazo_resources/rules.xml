@@ -19,7 +19,7 @@
     <drop css:content="head link[rel='apple-touch-icon']" />
     <drop css:content="head link[rel='shortcut icon']" />
     <!-- Script -->
-    <after theme="/html/body/div/footer" content="/html/head/script" />
+    <after theme="/html/body/footer" content="/html/head/script" />
     <!-- CSS -->
     <before theme-children="/html/head" content="/html/head/link" />
   </rules>
@@ -67,13 +67,21 @@
                 <xsl:for-each select=".//dd/ul/li">
                   <xsl:if css:test=".actionSeparator">
                     <li class="divider"></li>
+                    <xsl:copy-of select="./div/span"/>
                   </xsl:if>
+                  <xsl:if test="not(./actionSeparator)">
                   <li>
-                    <i>
-                      <xsl:attribute name="class"><xsl:value-of select="concat('icon-', ./a/@id)"/></xsl:attribute>
-                    </i>
-                    <xsl:apply-templates select="./*"/>
+                    <a>
+                      <xsl:copy-of select="./a/@*" />
+                      <xsl:value-of select="./a/text()"/>
+                      <i>
+                        <xsl:attribute name="class"><xsl:value-of select="concat('fa icon-', ./a/@id)"/></xsl:attribute>
+                      </i>
+                      <xsl:copy-of select="./a/span"/>
+                    </a>
+                    <!-- <xsl:apply-templates select="./*"/> -->
                   </li>
+                  </xsl:if>
                 </xsl:for-each>
               </ul>
             </li>
@@ -135,6 +143,7 @@
 
   <append css:theme="#globalstatusmessage" css:content=".portalMessage" if-content="not(//*[@id='content']/dl)" />
 
+  <!-- Main content -->
   <replace css:theme="#content-container" method="raw">
       <div class="{$central}">
           <div class="row">

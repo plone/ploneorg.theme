@@ -708,6 +708,12 @@ input[value^="Cancel"],
 .listingBar li:only-child {
   display: none !important;
 }
+.icon-contextSetDefaultPage:before {
+  content: "\f006";
+}
+.icon-folder:before {
+  content: "\f114";
+}
 html,
 body {
   /* Sticky footer */
@@ -724,6 +730,7 @@ body {
   height: auto !important;
   height: 100%;
   margin: 0 auto -23em;
+  padding: 0 0 23em;
 }
 .container {
   max-width: 100%;
@@ -740,7 +747,6 @@ body {
 }
 h1,
 .h1 {
-  font-family: DinLight;
   font-size: 48px;
   font-weight: 100 !important;
   color: #000;
