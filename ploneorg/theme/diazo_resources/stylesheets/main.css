@@ -2010,4 +2010,7 @@ footer sup {
 .fact-data-info {
   background-color: #00669c;
 }
+.colophon p {
+  margin-bottom: 2px;
+}
 /*# sourceMappingURL=/++theme++ploneorg.theme/stylesheets/main.css.map */
