@@ -1,34 +1,42 @@
 
 .hiddenStructure {.sr-only}
 
-// Forms
-.selected {
-    &:extend(.active);
-}
-.fieldRequired {font-size: 0;}
-.fieldRequired:after {font-size: 20px !important;}
-.fieldRequired,
-.required {
-    &:after {
-        color: red;
-        content: "*";
-        top:.35em;
-        position: relative;
-        font-size:150%;
-        line-height: 0;
+/* Form elements */
+.discreet {
+    color: @gray-light;
     }
-}
-.selected.required:after {color: white;}
-.field {
-    margin-bottom: 5px;
-    & input[type="radio"],
-    input[type="checkbox"] {
-        margin:0 0 3px;
+.formHelp {
+    font-style: italic;
+    color: @gray-light;
     }
-}
-.formControls {
-    padding-top: 25px;
-}
+.formControls  {
+    margin-top:30px;
+    }
+.field  {
+    margin-top:15px;
+    margin-bottom:15px;
+    }
+
+.listing:extend(.table all) {}
+
+// I keep every extension separeted to show each element
+[type="text"]:extend(.form-control all),
+[type="password"]:extend(.form-control all),
+.textType:extend(.form-control all),
+.passwordType:extend(.form-control all),
+select:extend(.form-control all),
+textarea:extend(.form-control all) {font-size:100%;}
+
+
+button:extend(.btn all),
+[type="submit"]:extend(.btn all),
+.context:extend(.btn all),
+.standalone:extend(.btn all) { }
+.context:extend(.btn-primary all) { }
+
+
+/* help classes */
+.visualClear:extend(.clearfix all) {}
 
 // Tabs
 .formTabs {
@@ -94,7 +102,7 @@
 // .icon-folder_tabular_view {&:extend(.icon-table-view);}
 // .icon-atct_album_view {&:extend(.icon-th);}
 // .icon-folder_listing {&:extend(.icon-list-view);}
-
+.subMenuTitle { padding-left: 5px; }
 .icon-contextSetDefaultPage:before {
 // star-o
   content: "\f006";
