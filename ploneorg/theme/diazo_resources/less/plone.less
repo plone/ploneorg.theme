@@ -118,3 +118,15 @@ button:extend(.btn all),
 // .icon-more {&:extend(.icon-plus);}
 // .icon-settings {&:extend(.icon-filter);}
 // .icon-formfolder {&:extend(.icon-check);}
+
+.pb-ajax {
+  &:extend(.modal);}
+
+.pb-ajax .documentFirstHeading, .pb-ajax > div > h2 {
+  &:extend(.modal-header); margin:0; font-size: 130.769% !important;
+}
+
+.pb-ajax #content-core, .pb-ajax .documentDescription, .pb-ajax #content-history {
+  &:extend(.modal-body); margin-bottom:0;
+  max-height: 400px;
+}

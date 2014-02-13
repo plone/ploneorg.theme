@@ -1464,6 +1464,31 @@ button .badge,
 .panel > .table-responsive > .listing > tfoot > tr:last-child > td {
   border-bottom: 0;
 }
+.pb-ajax {
+  display: none;
+  overflow: auto;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+.pb-ajax .documentFirstHeading,
+.pb-ajax > div > h2 {
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+  min-height: 16.42857143px;
+}
+.pb-ajax #content-core,
+.pb-ajax .documentDescription,
+.pb-ajax #content-history {
+  position: relative;
+  padding: 20px;
+}
 .modal-footer button + button,
 .modal-footer [type="submit"] + [type="submit"],
 .modal-footer .context + .context,
@@ -1638,6 +1663,17 @@ textarea {
 }
 .icon-folder:before {
   content: "\f114";
+}
+.pb-ajax .documentFirstHeading,
+.pb-ajax > div > h2 {
+  margin: 0;
+  font-size: 130.769% !important;
+}
+.pb-ajax #content-core,
+.pb-ajax .documentDescription,
+.pb-ajax #content-history {
+  margin-bottom: 0;
+  max-height: 400px;
 }
 html,
 body {

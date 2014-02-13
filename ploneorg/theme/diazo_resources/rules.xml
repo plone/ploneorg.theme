@@ -7,6 +7,10 @@
 
   <theme href="index.html" />
   <notheme if="$ajax_load" />
+  <notheme if-path="@@faceted_query" />
+  <notheme if-path="@@updatetilecontent" />
+  <notheme if-path="@@faceted_widgets" />
+  <notheme if-path="@@faceted.catalog.types.json" />
 
   <rules if-content="//*[@id='portal-top']">
     <!-- Attributes -->
