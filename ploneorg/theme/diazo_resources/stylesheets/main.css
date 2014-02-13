@@ -753,7 +753,6 @@ h1,
 }
 h2,
 .h2 {
-  font-family: DinLight;
   font-size: 36px;
   font-weight: 100 !important;
   color: #000;
@@ -764,7 +763,6 @@ h2,
 }
 #content .documentDescription,
 #content #description {
-  font-family: DinLight;
   color: #000;
   font-weight: 200;
 }
@@ -1063,7 +1061,28 @@ footer sup {
   width: 20% !important;
   font-family: DINBlack;
 }
-.member_info {
+.member-info {
   list-style: none;
+}
+.fact-data {
+  float: left;
+  width: 250px;
+  height: 115px;
+  margin: 5px 5px;
+  border-radius: 3px;
+}
+.fact-data h1 {
+  font-size: 40px;
+  text-align: center;
+  color: white;
+}
+.fact-data h2 {
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+  color: white;
+}
+.fact-data-info {
+  background-color: #00669c;
 }
 /*# sourceMappingURL=/++theme++ploneorg.theme/stylesheets/main.css.map */
