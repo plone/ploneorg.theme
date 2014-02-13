@@ -33,4 +33,9 @@
     cacheable="False" compression="none" cookable="False"
     enabled="True" expression=""  inline="False" />
 
+  <!-- Unload the BS2 JS from collective.cover -->
+  <javascript id="++resource++collective.js.bootstrap/js/bootstrap.min.js"
+      cacheable="True" compression="none" cookable="True" enabled="False"
+      expression="" inline="False" />
+
 </object>

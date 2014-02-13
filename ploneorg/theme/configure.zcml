@@ -13,7 +13,7 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="plone.org 2013 Theme Package"
+      title="plone.org 2014 Theme Package (ploneorg.theme)"
       directory="profiles/default"
       description="Extension profile for Example Diazo Theme Package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
