@@ -1780,8 +1780,8 @@ header {
 .navbar-plonetheme .navbar-nav > li > a {
   color: #fff;
   text-transform: uppercase;
-  padding-top: 32px;
-  padding-bottom: 33px;
+  padding-bottom: 35px;
+  padding-top: 34px;
 }
 .header-wrapper .row .navbar-nav > li,
 .navbar-plonetheme .navbar-nav > li {
@@ -2046,7 +2046,39 @@ footer sup {
 .fact-data-info {
   background-color: #00669c;
 }
+#content {
+  margin-bottom: 2em;
+}
 .colophon p {
   margin-bottom: 2px;
+}
+.documentByLine {
+  color: #999999;
+}
+.alert strong:after,
+.portalMessage strong:after {
+  content: " ";
+}
+.plone_jscalendar > *,
+.z3cformInlineValidation > * {
+  display: inline;
+  float: left;
+  margin-right: 5px;
+}
+.plone_jscalendar select,
+.z3cformInlineValidation select {
+  max-width: 200px;
+}
+textarea {
+  resize: vertical;
+}
+.label {
+  color: #333333;
+  font-size: 100%;
+}
+/*provisional fixar columnes */
+.row .row [class^='col-'] {
+  padding-left: 0;
+  padding-right: 0;
 }
 /*# sourceMappingURL=/++theme++ploneorg.theme/stylesheets/main.css.map */
