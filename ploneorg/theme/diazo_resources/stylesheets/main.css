@@ -2059,16 +2059,6 @@ footer sup {
 .portalMessage strong:after {
   content: " ";
 }
-.plone_jscalendar > *,
-.z3cformInlineValidation > * {
-  display: inline;
-  float: left;
-  margin-right: 5px;
-}
-.plone_jscalendar select,
-.z3cformInlineValidation select {
-  max-width: 200px;
-}
 textarea {
   resize: vertical;
 }
