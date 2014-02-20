@@ -1682,8 +1682,8 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .row {
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 #outer-wrapper {
   /* Sticky footer w/IE fixes*/
@@ -1695,8 +1695,6 @@ body {
 }
 .container {
   max-width: 100%;
-  padding-left: 0;
-  padding-right: 0;
 }
 #portal-breadcrumbs {
   border-top: 1px solid #CDCDCD;
@@ -2067,8 +2065,4 @@ textarea {
   font-size: 100%;
 }
 /*provisional fixar columnes */
-.row .row [class^='col-'] {
-  padding-left: 0;
-  padding-right: 0;
-}
 /*# sourceMappingURL=/++theme++ploneorg.theme/stylesheets/main.css.map */
