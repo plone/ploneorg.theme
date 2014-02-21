@@ -1561,6 +1561,12 @@ button .badge,
 .configlets:after {
   clear: both;
 }
+.icon-contextSetDefaultPage:before {
+  content: "\f006";
+}
+.icon-folder:before {
+  content: "\f114";
+}
 @font-face {
   font-family: 'DINLight';
   src: url('/++theme++ploneorg.theme/fonts/DINLight.eot?v=3.0.1');
@@ -1657,12 +1663,6 @@ textarea {
 }
 .subMenuTitle {
   padding-left: 5px;
-}
-.icon-contextSetDefaultPage:before {
-  content: "\f006";
-}
-.icon-folder:before {
-  content: "\f114";
 }
 .pb-ajax .documentFirstHeading,
 .pb-ajax > div > h2 {
