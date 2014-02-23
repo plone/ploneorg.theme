@@ -24,6 +24,8 @@
     <!-- dont use Plone icons, use the theme -->
     <drop css:content="head link[rel='apple-touch-icon']" />
     <drop css:content="head link[rel='shortcut icon']" />
+    <!-- Drop w.fc custom css -->
+    <!-- <drop css:content="link[href*='bootstrap-fixed.css']" /> -->
     <!-- Script -->
     <after theme="/html/body/footer" content="/html/head/script" />
     <!-- CSS -->

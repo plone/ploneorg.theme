@@ -103,14 +103,10 @@ button:extend(.btn all),
 // .icon-atct_album_view {&:extend(.icon-th);}
 // .icon-folder_listing {&:extend(.icon-list-view);}
 .subMenuTitle { padding-left: 5px; }
-.icon-contextSetDefaultPage:before {
-// star-o
-  content: "\f006";
-}
-.icon-folder:before {
-// folder-o
-  content: "\f114";
-}
+
+.icon-contextSetDefaultPage {&:extend(.fa-star-o all);}
+.icon-folder {&:extend(.fa-folder-o all);}
+
 // .icon-image {&:extend(.icon-picture);}
 // .icon-document {&:extend(.icon-page);}
 // .icon-event {&:extend(.icon-calendar);}
@@ -119,14 +115,24 @@ button:extend(.btn all),
 // .icon-settings {&:extend(.icon-filter);}
 // .icon-formfolder {&:extend(.icon-check);}
 
-.pb-ajax {
-  &:extend(.modal);}
+// .pb-ajax {
+//   display: block;
+// }
 
-.pb-ajax .documentFirstHeading, .pb-ajax > div > h2 {
-  &:extend(.modal-header); margin:0; font-size: 130.769% !important;
-}
+// .pb-ajax > div {
+//     // &:extend(.modal all);
+//     padding: 10px;
+//     border-radius: 5px;
+//     background-color: white;
+//     width: 700px;
+//     .center-block();
+// }
 
-.pb-ajax #content-core, .pb-ajax .documentDescription, .pb-ajax #content-history {
-  &:extend(.modal-body); margin-bottom:0;
-  max-height: 400px;
-}
+// .pb-ajax .documentFirstHeading, .pb-ajax > div > h2 {
+//   &:extend(.modal-header all); margin:0; font-size: 130.769% !important;
+// }
+
+// .pb-ajax #content-core, .pb-ajax .documentDescription, .pb-ajax #content-history {
+//   &:extend(.modal-body); margin-bottom:0;
+//   max-height: 400px;
+// }

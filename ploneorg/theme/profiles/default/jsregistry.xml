@@ -17,7 +17,6 @@
       for the latest list of all available keys and default values.
       -->
 
-
  <javascript
     id="++theme++ploneorg.theme/js/topbar_load.js"
     cacheable="False" compression="safe" cookable="False"
