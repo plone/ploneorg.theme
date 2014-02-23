@@ -1675,6 +1675,13 @@ textarea {
   margin-bottom: 0;
   max-height: 400px;
 }
+@font-face {
+  font-family: 'tinymce';
+  src: url('++resource++plone.app.widgets-tinymce-icomoon.eot');
+  src: url('++resource++plone.app.widgets-tinymce-icomoon.eot?#iefix') format('embedded-opentype'), url('++resource++plone.app.widgets-tinymce-icomoon.woff') format('woff'), url('++resource++plone.app.widgets-tinymce-icomoon.ttf') format('truetype'), url('++resource++plone.app.widgets-tinymce-icomoon.svg#tinymce') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 html,
 body {
   /* Sticky footer */
