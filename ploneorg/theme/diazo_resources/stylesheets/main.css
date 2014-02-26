@@ -1882,7 +1882,7 @@ header {
 }
 .header-wrapper .row a,
 .navbar-plonetheme a {
-  font-family: DinMedium;
+  font-family: 'Roboto', sans-serif;
 }
 .dropdown-plonetheme {
   /*auto columnat UL segons menu*/
@@ -1890,12 +1890,12 @@ header {
 .dropdown-plonetheme h2 {
   color: #4b7387;
   font-weight: bold;
-  font-family: DinBold;
+  font-family: 'Roboto', sans-serif;
 }
 .dropdown-plonetheme h3 {
   color: #a7b3ba;
   font-weight: bold;
-  font-family: DinBold;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-size: 13px;
   border-bottom: 1px solid  #90a5b0;
@@ -1922,6 +1922,28 @@ header {
   -moz-column-gap: 20px;
   -o-column-gap: 20px;
   column-gap: 20px;
+}
+.dropdown-plonetheme input {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+  width: 185px;
+}
+select.dropdown-plonetheme input {
+  height: 30px;
+  line-height: 30px;
+}
+textarea.dropdown-plonetheme input,
+select[multiple].dropdown-plonetheme input {
+  height: auto;
+}
+.dropdown-plonetheme button {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
 }
 #portal-logo {
   margin: 22px 0;
