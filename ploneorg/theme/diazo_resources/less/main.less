@@ -11,7 +11,7 @@ html, body {
 }
 
 // Victor dont't sure about it
-.row {margin-left: 0; margin-right: 0;}
+.row {margin-left: -15px; margin-right: -15px;}
 
 #outer-wrapper {
 /* Sticky footer w/IE fixes*/
@@ -23,7 +23,7 @@ html, body {
 }
 
 //container al 100% perquè vagi de banda a banda les barres
-.container {max-width:100%; padding-left:0; padding-right: 0}
+.container {max-width:100%;}
 
 #portal-breadcrumbs {
     border-top: 1px solid #CDCDCD;
@@ -118,13 +118,27 @@ header{
     border: 0;
     border-radius: 0;
     background: rgba(11,66,88,.95);
+    margin: 0 -30px;
+    padding: 15px;
+    left: 0;
   }
   .navbar-nav > .open > a, .navbar-nav > .open > a:hover, .navbar-nav > .open > a:focus {background-color: #12495f; color:#fff;}
   a {font-family: DinMedium;}
 }
 
 .dropdown-plonetheme {
-  h2 {color:#4b7387; font-weight: bold; font-family: DinRegular;}
+  h2 {color:#4b7387; font-weight: bold; font-family: DinBold;}
+  h3 {color: #a7b3ba; font-weight: bold; font-family: DinBold; text-transform: uppercase; font-size:13px; border-bottom:1px solid  #90a5b0;margin-top: 1em;padding-bottom: .25em;}
+  ul {margin: 0; padding: 0;
+    li {list-style: none; padding: 0;
+      a {color: #fff;}
+    }
+  }
+  /*auto columnat UL segons menu*/
+  .col-md-8 ul {
+    -webkit-column-count: 2; -moz-column-count: 2; -o-column-count: 2; column-count: 2;
+    -webkit-column-gap : 20px; -moz-column-gap: 20px; -o-column-gap: 20px; column-gap: 20px;
+  }
 }
 
 #portal-logo {
@@ -385,9 +399,6 @@ footer {
 textarea { resize:vertical; }
 .label {color:@gray-dark; font-size: 100%;}
 /*provisional fixar columnes */
-.row .row [class^='col-'] {padding-left:0; padding-right: 0;}
-
-
 
 
 
