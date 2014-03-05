@@ -1740,6 +1740,9 @@ div.overlay .formControls a {
   margin: 0.75em;
 }
 /* @end */
+.template-addon #formfield-form-widgets-certification .option {
+  display: block;
+}
 @font-face {
   font-family: 'tinymce';
   src: url('++resource++plone.app.widgets-tinymce-icomoon.eot');
