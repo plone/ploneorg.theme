@@ -36,10 +36,24 @@ module.exports = function (grunt) {
                 files: ['ploneorg/theme/diazo_resources/less/*.less',],
                 tasks: ['less']
             }
+        },
+        browserSync: {
+            dev: {
+                bsFiles: {
+                    src : 'ploneorg/theme/diazo_resources/stylesheets/*.css'
+                },
+                options: {
+                    watchTask: true,
+                    debugInfo: true,
+                    proxy: "http://localhost"
+                }
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.registerTask('default', ['less']);
+    grunt.loadNpmTasks('grunt-browser-sync');
+    // grunt.registerTask('default', ['less']);
+    grunt.registerTask('default', ["browserSync", "watch"]);
 };

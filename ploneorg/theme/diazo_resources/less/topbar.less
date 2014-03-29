@@ -4,7 +4,7 @@
 @darkGrey2: #3d3d3d;
 @darkGrey3: #323232;
 @fontColor: #bbb;
-
+@font-roboto: 'Roboto', sans-serif;
 
 
 .gradient-background(@color1, @color2) {
@@ -81,8 +81,8 @@
     #links-select li a {
         color: @fontColor;
         font-size:12px;
-        font-family: 'DINRegular';
-        font-weight: normal;
+        font-family: @font-roboto;
+        font-weight: 400;
         display: block;
         padding: 4px 1em;
         text-decoration: none;
@@ -104,7 +104,8 @@
         /*top: 100%;*/
     }
     .caixa-desplegada h2 {
-        font-family: 'DINLight';
+        font-family: @font-roboto;
+        font-weight: 100;
         color: #fff;
         font-size: 1.5em;
         font-weight:normal;
@@ -126,7 +127,8 @@
         float: left;
     }
     .columnna-caixa-desplegada h5{
-        font-family: 'DINLight';
+        font-family: @font-roboto;
+        font-weight: 100;
         color: #999;
         font-weight: normal;
         padding-left: 10px;
@@ -149,7 +151,8 @@
     }
     .columnna-caixa-desplegada ul li a {
         font-weight:normal;
-        font-family: 'DINBold';
+        font-family: @font-roboto;
+        font-weight: 700;
         display: block;
         padding: 10px 40px 10px 10px !important;
         font-size: 0.8em !important;
@@ -187,7 +190,8 @@
             float: left;
             a {
                 display: block;
-                font-family: 'DINRegular';
+                font-family: @font-roboto;
+                font-weight: 400;
                 font-size: 13px;
                 color: #999;
                 font-weight: normal;
@@ -265,7 +269,8 @@
         color: @fontColor;
         background: transparent !important;
         font-size: 13px;
-        font-family: 'DINRegular';
+        font-family: @font-roboto;
+        font-weight: 400;
         padding-left: 15px !important;
         height: auto !important;
     }
@@ -334,7 +339,8 @@
             border-radius: 5px 5px 5px 5px;
             border: 1px solid #575757;
             color: #999;
-            font-family: 'DINBold';
+            font-family: @font-roboto;
+            font-weight: 700;
             font-size: 0.9em;
             text-decoration: none;
         }

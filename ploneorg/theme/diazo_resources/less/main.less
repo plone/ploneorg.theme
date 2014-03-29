@@ -3,7 +3,7 @@
 @import "plone";
 @import "overlays";
 @import "templates";
-@import "widgets-fix";
+@import "icheck-square/blue.css";
 
 html, body {
 /* Sticky footer */
@@ -124,12 +124,12 @@ header{
     left: 0;
   }
   .navbar-nav > .open > a, .navbar-nav > .open > a:hover, .navbar-nav > .open > a:focus {background-color: #12495f; color:#fff;}
-  a {font-family: 'Roboto', sans-serif;}
+  a {font-family: @font-roboto;}
 }
 
 .dropdown-plonetheme {
-  h2 {color:#4b7387; font-weight: bold; font-family: 'Roboto', sans-serif;}
-  h3 {color: #a7b3ba; font-weight: bold; font-family: 'Roboto', sans-serif; text-transform: uppercase; font-size:13px; border-bottom:1px solid  #90a5b0;margin-top: 1em;padding-bottom: .25em;}
+  h2 {color:#4b7387; font-weight: bold; font-family: @font-roboto;}
+  h3 {color: #a7b3ba; font-weight: bold; font-family: @font-roboto; text-transform: uppercase; font-size:13px; border-bottom:1px solid  #90a5b0;margin-top: 1em;padding-bottom: .25em;}
   ul {margin: 0; padding: 0;
     li {list-style: none; padding: 0;
       a {color: #fff;}
