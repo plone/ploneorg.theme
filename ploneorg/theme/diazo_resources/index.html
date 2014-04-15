@@ -10,8 +10,25 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="shortcut icon" type="image/x-icon"
+          href="./++theme++ploneorg.theme/favicon.ico"/>
+    <link rel="apple-touch-icon"
+          href="./++theme++ploneorg.theme/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="./++theme++ploneorg.theme/apple-touch-icon-144x144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="./++theme++ploneorg.theme/apple-touch-icon-114x114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="./++theme++ploneorg.theme/apple-touch-icon-72x72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57"
+          href="./++theme++ploneorg.theme/apple-touch-icon-57x57-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed"
+          href="./++theme++ploneorg.theme/apple-touch-icon-precomposed.png" />
+
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -97,24 +114,55 @@
                 </div>
                 <div class="col-md-9">
                   <div class="row">
-                    <div class="col-md-8">
-                      <h3>Manuals</h3>
+                    <div class="col-md-2">
+                      <h3>Contribute</h3>
                       <ul>
-                      <li><a href="#">Primer</a></li>
-                      <li><a href="#">Primer</a></li>
-                      <li><a href="#">Primer</a></li>
-                      <li><a href="#">Primer</a></li>
-                      <li><a href="#">Primer</a></li>
-                      <li><a href="#">Primer</a></li>
+                      <li><a href="#">Develop</a></li>
+                      <li><a href="#">Document</a></li>
+                      <li><a href="#">Help others</a></li>
+                      <li><a href="#">Squash bugs</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-2">
+                      <h3>Get help</h3>
+                      <ul>
+                      <li><a href="#">Documentation</a></li>
+                      <li><a href="#">Support</a></li>
+                      <li><a href="#">Blogs</a></li>
+                      <li><a href="#">News</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-3">
+                      <h3>Community structure</h3>
+                      <ul>
+                      <li><a href="#">Getting things done</a></li>
+                      <li><a href="#">Teams</a></li>
+                      <li><a href="#">Local</a></li>
+                      <li><a href="#">Governance</a></li>
                       </ul>
                     </div>
                     <div class="col-md-4">
-                      <h3>Manuals</h3>
-                      <ul>
-                      <li><a href="#">Primer</a></li>
-                      <li><a href="#">Primer</a></li>
-                      <li><a href="#">Primer</a></li>
-                      </ul>
+                      <h3>Log in</h3>
+                      <form id="login-form" action="login_form" method="post" role="form">
+                        <button class="btn btn-default btn-sm pull-right" type="submit" name="submit">Log in</button>
+
+                        <input id="came-from-input" type="hidden" value="" name="came_from">
+                        <input type="hidden" name="form.submitted" value="1">
+                        <div class="form-group">
+                          <!-- <label for="__ac_name" class="control-label">username</label> -->
+                          <input type="text" id="__ac_name" class="form-control input-sm" value="" name="__ac_name" size="15" placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                          <!-- <label for="__ac_password">password</label> -->
+                          <input type="password" id="__ac_password" class="form-control input-sm" value="" name="__ac_password" size="15" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                          <a href="./mail_password_form?userid=">Forgot password?</a>
+                          <a href="./mail_password_form?userid=">New user?</a>
+                        </div>
+
+
+                      </form>
                     </div>
                   </div>
                 </div>

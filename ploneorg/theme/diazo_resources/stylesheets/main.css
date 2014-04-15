@@ -1,3 +1,4 @@
+@import "icheck-square/blue.css";
 @media print {
   .listing td,
   .listing th,
@@ -1542,46 +1543,6 @@ button .badge,
 .icon-folder:before {
   content: "\f114";
 }
-@font-face {
-  font-family: 'DINLight';
-  src: url('/++theme++ploneorg.theme/fonts/DINLight.eot?v=3.0.1');
-  src: url('/++theme++ploneorg.theme/fonts/DINLight.eot?#iefix&v=3.0.1') format('embedded-opentype'), url('/++theme++ploneorg.theme/fonts/DINLight.woff?v=3.0.1') format('woff'), url('/++theme++ploneorg.theme/fonts/DINLight.ttf?v=3.0.1') format('truetype'), url('/++theme++ploneorg.theme/fonts/DINLight.svg#fontawesomeregular?v=3.0.1') format('svg');
-  src: url('/++theme++ploneorg.theme/fonts/DINLight.otf') format('opentype');
-  font-weight: 200;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'DINRegular';
-  src: url('/++theme++ploneorg.theme/fonts/DINRegular.eot?v=3.0.1');
-  src: url('/++theme++ploneorg.theme/fonts/DINRegular.eot?#iefix&v=3.0.1') format('embedded-opentype'), url('/++theme++ploneorg.theme/fonts/DINRegular.woff?v=3.0.1') format('woff'), url('/++theme++ploneorg.theme/fonts/DINRegular.ttf?v=3.0.1') format('truetype'), url('/++theme++ploneorg.theme/fonts/DINRegular.svg#fontawesomeregular?v=3.0.1') format('svg');
-  src: url('/++theme++ploneorg.theme/fonts/DINRegular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'DINMedium';
-  src: url('/++theme++ploneorg.theme/fonts/DINMedium.eot?v=3.0.1');
-  src: url('/++theme++ploneorg.theme/fonts/DINMedium.eot?#iefix&v=3.0.1') format('embedded-opentype'), url('/++theme++ploneorg.theme/fonts/DINMedium.woff?v=3.0.1') format('woff'), url('/++theme++ploneorg.theme/fonts/DINMedium.ttf?v=3.0.1') format('truetype'), url('/++theme++ploneorg.theme/fonts/DINMedium.svg#fontawesomeregular?v=3.0.1') format('svg');
-  src: url('/++theme++ploneorg.theme/fonts/DINMedium.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'DINBold';
-  src: url('/++theme++ploneorg.theme/fonts/DINBold.eot?v=3.0.1');
-  src: url('/++theme++ploneorg.theme/fonts/DINBold.eot?#iefix&v=3.0.1') format('embedded-opentype'), url('/++theme++ploneorg.theme/fonts/DINBold.woff?v=3.0.1') format('woff'), url('/++theme++ploneorg.theme/fonts/DINBold.ttf?v=3.0.1') format('truetype'), url('/++theme++ploneorg.theme/fonts/DINBold.svg#fontawesomeregular?v=3.0.1') format('svg');
-  src: url('/++theme++ploneorg.theme/fonts/DINBold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'DINBlack';
-  src: url('/++theme++ploneorg.theme/fonts/DINBlack.eot?v=3.0.1');
-  src: url('/++theme++ploneorg.theme/fonts/DINBlack.eot?#iefix&v=3.0.1') format('embedded-opentype'), url('/++theme++ploneorg.theme/fonts/DINBlack.woff?v=3.0.1') format('woff'), url('/++theme++ploneorg.theme/fonts/DINBlack.ttf?v=3.0.1') format('truetype'), url('/++theme++ploneorg.theme/fonts/DINBlack.svg#fontawesomeregular?v=3.0.1') format('svg');
-  src: url('/++theme++ploneorg.theme/fonts/DINBlack.otf') format('opentype');
-  font-weight: 900;
-  font-style: normal;
-}
 .hiddenStructure {
   position: absolute;
   width: 1px;
@@ -1740,12 +1701,8 @@ div.overlay .formControls a {
   margin: 0.75em;
 }
 /* @end */
-@font-face {
-  font-family: 'tinymce';
-  src: url('++resource++plone.app.widgets-tinymce-icomoon.eot');
-  src: url('++resource++plone.app.widgets-tinymce-icomoon.eot?#iefix') format('embedded-opentype'), url('++resource++plone.app.widgets-tinymce-icomoon.woff') format('woff'), url('++resource++plone.app.widgets-tinymce-icomoon.ttf') format('truetype'), url('++resource++plone.app.widgets-tinymce-icomoon.svg#tinymce') format('svg');
-  font-weight: normal;
-  font-style: normal;
+.template-addon #formfield-form-widgets-certification .option {
+  display: block;
 }
 html,
 body {
@@ -1882,7 +1839,7 @@ header {
 }
 .header-wrapper .row a,
 .navbar-plonetheme a {
-  font-family: DinMedium;
+  font-family: 'Roboto', sans-serif;
 }
 .dropdown-plonetheme {
   /*auto columnat UL segons menu*/
@@ -1890,12 +1847,12 @@ header {
 .dropdown-plonetheme h2 {
   color: #4b7387;
   font-weight: bold;
-  font-family: DinBold;
+  font-family: 'Roboto', sans-serif;
 }
 .dropdown-plonetheme h3 {
   color: #a7b3ba;
   font-weight: bold;
-  font-family: DinBold;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-size: 13px;
   border-bottom: 1px solid  #90a5b0;
@@ -1922,6 +1879,28 @@ header {
   -moz-column-gap: 20px;
   -o-column-gap: 20px;
   column-gap: 20px;
+}
+.dropdown-plonetheme input {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+  width: 185px;
+}
+select.dropdown-plonetheme input {
+  height: 30px;
+  line-height: 30px;
+}
+textarea.dropdown-plonetheme input,
+select[multiple].dropdown-plonetheme input {
+  height: auto;
+}
+.dropdown-plonetheme button {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
 }
 #portal-logo {
   margin: 22px 0;

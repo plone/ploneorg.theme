@@ -4,5 +4,10 @@ $( document ).ready(function() {
   $('.no-csscolumns dt').each(function(){
       $(this).nextUntil('dt').andSelf().wrapAll('<dl class="col-no-css"/>');
   });
+  $('input').iCheck({
+    checkboxClass: 'icheckbox_square-blue',
+    radioClass: 'iradio_square-blue',
+    // increaseArea: '20%' // optional
+  });
 });
 

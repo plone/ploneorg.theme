@@ -129,8 +129,8 @@
 #plone-global-topbar-wrapper #links-select li a {
   color: #bbbbbb;
   font-size: 12px;
-  font-family: 'DINRegular';
-  font-weight: normal;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   display: block;
   padding: 4px 1em;
   text-decoration: none;
@@ -165,7 +165,8 @@
   /*top: 100%;*/
 }
 #plone-global-topbar-wrapper .caixa-desplegada h2 {
-  font-family: 'DINLight';
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
   color: #fff;
   font-size: 1.5em;
   font-weight: normal;
@@ -187,7 +188,8 @@
   float: left;
 }
 #plone-global-topbar-wrapper .columnna-caixa-desplegada h5 {
-  font-family: 'DINLight';
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
   color: #999;
   font-weight: normal;
   padding-left: 10px;
@@ -208,7 +210,8 @@
 }
 #plone-global-topbar-wrapper .columnna-caixa-desplegada ul li a {
   font-weight: normal;
-  font-family: 'DINBold';
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
   display: block;
   padding: 10px 40px 10px 10px !important;
   font-size: 0.8em !important;
@@ -261,7 +264,8 @@
 }
 #plone-global-topbar-wrapper #sites-select ul li a {
   display: block;
-  font-family: 'DINRegular';
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   font-size: 13px;
   color: #999;
   font-weight: normal;
@@ -341,7 +345,8 @@
   color: #bbbbbb;
   background: transparent !important;
   font-size: 13px;
-  font-family: 'DINRegular';
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   padding-left: 15px !important;
   height: auto !important;
 }
@@ -386,7 +391,8 @@
     border-radius: 5px 5px 5px 5px;
     border: 1px solid #575757;
     color: #999;
-    font-family: 'DINBold';
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
     font-size: 0.9em;
     text-decoration: none;
   }

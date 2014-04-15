@@ -2,12 +2,13 @@
 # The humans responsible & technology colophon
 
 # TEAM
-
-    <name> -- <role> -- <twitter>
+    Albert Casado -- Frontend developer and designer -- @albertcasado
+    Víctor Fernández de Alba -- Frontend and backend developer -- @sneridagh
+    Oriol Martí -- Designer -- @oriolmarti
 
 # THANKS
 
-    <name>
+    Plone Foundation and friends
 
 # TECHNOLOGY COLOPHON
 
