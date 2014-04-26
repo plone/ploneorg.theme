@@ -46,6 +46,9 @@
   <!-- replaced with the svg version one -->
   <xi:include href="/++theme++ploneorg.theme/svglogo.xml"/>
 
+  <!-- The log in link -->
+  <append css:theme="#navbar-plonetheme ul.nav" css:content="#anon-personalbar"/>
+
   <!-- Central column -->
   <xsl:variable name="central">
     <xsl:if test="//*[@id='portal-column-one'] and //*[@id='portal-column-two']">col-xs-12 col-sm-6</xsl:if>
