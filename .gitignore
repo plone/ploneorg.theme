@@ -17,3 +17,4 @@ data
 docs/_build
 *.mo
 node_modules
+ploneorg/theme/diazo_resources/stylesheets/main.css.map
