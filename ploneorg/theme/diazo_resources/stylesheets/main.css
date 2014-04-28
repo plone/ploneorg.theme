@@ -1970,7 +1970,7 @@ footer {
   padding-top: 1em;
 }
 footer p {
-  font-family: DinRegular;
+  font-family: 'Roboto', sans-serif;
   font-size: 12px;
 }
 footer p a {

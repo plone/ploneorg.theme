@@ -48,6 +48,7 @@
 
   <!-- The log in link -->
   <append css:theme="#navbar-plonetheme ul.nav" css:content="#anon-personalbar"/>
+  <append css:theme="#navbar-plonetheme ul.nav" css:content="#portal-personaltools"/>
 
   <!-- Central column -->
   <xsl:variable name="central">
