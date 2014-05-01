@@ -363,7 +363,7 @@ footer {
     ul li {
         list-style: none;
         line-height: 20px;
-    } 
+    }
 }
 
 .download { width: 20% !important; font-family: DINBlack; }
@@ -403,10 +403,63 @@ textarea { resize:vertical; }
 .label {color:@gray-dark; font-size: 100%;}
 /*provisional fixar columnes */
 
+.user_bar_portrait {
+  width: 50px;
+}
 
+/*frontpage*/
+.section-homepage h2 {font-size: 18px; text-transform: uppercase; font-weight: 200;}
+.section-homepage h3 {font-size: 16px; color: #abbac1; text-transform: uppercase; font-weight: 200;}
+.medium-link {font-size: 18px; font-weight: 700; color: #39c;}
+.medium-link  + time {font-size: 18px; color: #333; display: block; margin-bottom: 20px; font-weight: 200;}
+.large-link {font-size: 24px; color: #39c; font-weight: 700;line-height: 24px;display: block;margin: 10px 0;}
+.link-arrow:after {content:" →";} /*canvi de tipo de DIN falta fletxa*/
+.list-arrows {
+    margin: 0; padding: 0;
+    li{ list-style: none; margin:0; padding: 0; font-size: 16px; }
+    li:after {content:" →";}
+}
+.large-paragraph {font-size: 30px; font-weight: 200; color: #666;
+  strong {font-weight: 400; color: #333;}
+}
 
+.boxed {
+  background: #f3f5f4;
+  border-radius: 4px;
+  padding: 20px;
+  height: 265px;
+  /*
+  vertical-align: middle;
+  display: table-cell;
+  */
+  margin-bottom: 40px;
+  h3 {font-size: 14px; margin: 0;}
+  p { margin:0}
 
-
-
-
-
+  &.boxed-primary {
+    background: #3094c8;
+    h3, a, p {color: white;}
+  }
+  &.boxed-pill {
+    background: #069;
+    height: 100px;
+    h3 {font-size: 9px;}
+    p {font-size: 46px; font-weight: 700;}
+  }
+  &.boxed-pill.boxed-primary {
+    h3, a, p {color: white;}
+    .large-paragraph strong {color: white; font-weight: 700;}
+  }
+  &.boxed-stripes {
+    height: 80px;
+    font-size: 24px;
+    background-color: #3094c8;
+    background-image: -moz-linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 14%, transparent 14%, transparent 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 64%, transparent 64%, transparent);
+    background-image: -o-linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 14%, transparent 14%, transparent 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 64%, transparent 64%, transparent);
+    background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 14%, transparent 14%, transparent 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 64%, transparent 64%, transparent);
+    -webkit-background-size: 18px 18px;
+    -moz-background-size: 18px 18px;
+    background-size: 18px 18px;
+  }
+  &:after {content:""; margin-bottom: 40px;}
+}
