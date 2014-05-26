@@ -1704,6 +1704,32 @@ div.overlay .formControls a {
 .template-addon #formfield-form-widgets-certification .option {
   display: block;
 }
+#topbar {
+  background: #333333;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #333333 0%, #101010 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333333), color-stop(100%, #101010));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #333333 0%, #101010 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #333333 0%, #101010 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #333333 0%, #101010 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #333333 0%, #101010 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#101010', GradientType=0);
+  /* IE6-9 */
+}
+#topbar .container {
+  height: 40px;
+}
+#topbarcontainer.navbar {
+  margin-bottom: 0;
+  min-height: 0px;
+  border: 0;
+}
 html,
 body {
   /* Sticky footer */
@@ -1795,12 +1821,16 @@ header {
   -moz-background-size: 18px 18px;
   background-size: 18px 18px;
 }
+#navbar-plonetheme {
+  overflow-x: hidden;
+}
 .header-wrapper .row,
 .navbar-plonetheme {
   background-color: transparent;
   margin-bottom: 0;
   border: 0;
   border-radius: 0;
+  overflow-x: hidden;
   /*fem que el menú ocupi el 100%*/
 }
 .header-wrapper .row .navbar-nav > li > a,
@@ -1862,6 +1892,7 @@ header {
 .dropdown-plonetheme ul {
   margin: 0;
   padding: 0;
+  float: right;
 }
 .dropdown-plonetheme ul li {
   list-style: none;
@@ -2008,41 +2039,6 @@ footer sup {
   clear: both;
   padding-top: 1em;
 }
-@media (max-width: 767px) {
-  .five-col > * {
-    display: inline-block;
-    float: left;
-  }
-  .five-col > dt {
-    clear: left;
-    margin-top: 0.5em;
-  }
-  .five-col > dt + dd {
-    clear: left;
-  }
-}
-@media (min-width: 768px) {
-  .csscolumns .five-col {
-    -webkit-column-count: 5;
-    -moz-column-count: 5;
-    -o-column-count: 5;
-    column-count: 5;
-    -webkit-column-gap: 20px;
-    -moz-column-gap: 20px;
-    -o-column-gap: 20px;
-    column-gap: 20px;
-  }
-  .csscolumns .five-col dt {
-    -webkit-column-break-before: always;
-    -moz-column-break-before: always;
-    -o-column-break-before: always;
-    column-break-before: always;
-  }
-  .col-no-css {
-    width: 20%;
-    float: left;
-  }
-}
 #sitemap dl a {
   font-size: 11px;
   color: #3094c8;
@@ -2156,8 +2152,30 @@ textarea {
   font-size: 100%;
 }
 /*provisional fixar columnes */
+#portal-personaltools ul {
+  padding-top: 27px;
+}
+#portal-personaltools li {
+  display: inline-block;
+  color: #fff;
+}
+#portal-personaltools li:after {
+  content: " | ";
+}
+#portal-personaltools li:last-child:after {
+  content: "";
+}
+#portal-personaltools li a {
+  font-size: 14px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .user_bar_portrait {
-  width: 50px;
+  width: 45px;
+  float: left;
+  position: relative;
+  top: -12px;
+  border-radius: 50%;
 }
 /*frontpage*/
 .section-homepage h2 {
@@ -2277,5 +2295,64 @@ textarea {
 .boxed:after {
   content: "";
   margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .five-col > * {
+    display: inline-block;
+    float: left;
+  }
+  .five-col > dt {
+    clear: left;
+    margin-top: 0.5em;
+  }
+  .five-col > dt + dd {
+    clear: left;
+  }
+  .navbar-nav .open .dropdown-menu {
+    background: rgba(11, 66, 88, 0.95);
+    padding-left: 25px;
+  }
+  .navbar-plonetheme .navbar-nav > li > a {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  .navbar-plonetheme .dropdown-menu {
+    padding: 5px;
+  }
+  .dropdown-plonetheme ul {
+    float: none;
+  }
+  #portal-personaltools ul {
+    padding-top: 0px;
+  }
+  #portal-personaltools li {
+    padding: 5px;
+    display: block;
+  }
+  #portal-personaltools li:after {
+    content: "";
+  }
+}
+@media (min-width: 768px) {
+  .csscolumns .five-col {
+    -webkit-column-count: 5;
+    -moz-column-count: 5;
+    -o-column-count: 5;
+    column-count: 5;
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    -o-column-gap: 20px;
+    column-gap: 20px;
+  }
+  .csscolumns .five-col dt {
+    -webkit-column-break-before: always;
+    -moz-column-break-before: always;
+    -o-column-break-before: always;
+    column-break-before: always;
+  }
+  .col-no-css {
+    width: 20%;
+    float: left;
+  }
 }
 /*# sourceMappingURL=/++theme++ploneorg.theme/stylesheets/main.css.map */

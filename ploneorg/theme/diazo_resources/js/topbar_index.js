@@ -1,6 +1,7 @@
 var html = [
     '<div id="plone-global-topbar-wrapper">',
       '<div id="plone-global-topbar-iframe">',
+        '<a href="#" id="display_mobile">MENU</a>',
         '<!-- Logo -->',
         '<div id="plone-global-topbar-logo">',
           '<img alt="Plone" src="{{ BASE_URL }}/img/logo_plone_30.png"/>',
@@ -82,7 +83,7 @@ var html = [
             '<li>',
             '<a href="http://community.plone.org" title="Discussion groups">DISCUSSION</a>',
             '</li>',
-            '<li class="separador"></li>',
+            '<li class="separador hidden-xs"></li>',
           '</ul>',
         '</div>',
       '</div>',
