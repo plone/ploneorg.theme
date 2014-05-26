@@ -40,13 +40,12 @@ module.exports = function (grunt) {
         browserSync: {
             dev: {
                 bsFiles: {
-                    src : ['ploneorg/theme/diazo_resources/stylesheets/*.css',
-                           '../genweb.portlets/genweb/portlets/browser/*.css']
+                    src : ['ploneorg/theme/diazo_resources/stylesheets/*.css']
                 },
                 options: {
                     watchTask: true,
                     debugInfo: true,
-                    proxy: "http://localhost:8081"
+                    proxy: "http://localhost:8080"
                 }
             }
         }
