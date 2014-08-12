@@ -11,19 +11,19 @@
        data-toggle="dropdown"
        tal:attributes="href view/homelink_url;
                        title view/user_name">
-        <img class="visible-lg visible-md user_bar_portrait"
+        <img class="hidden-xs hidden-sm user_bar_portrait"
              tal:attributes="src python:view.get_member_portrait().absolute_url()" />
         <span class="hidden-md hidden-lg" tal:content="view/user_name">Username</span>
         <span class="caret"></span>
     </a>
     <div class="dropdown-menu dropdown-plonetheme">
       <div class="row" style="margin:0;"><!-- albertcasado-->
-        <div class="visible-lg visible-md col-xs-12 col-md-6">
+        <div class="hidden-xs hidden-sm col-xs-12 col-md-6">
           <h2 class="" tal:content="view/user_name">Username</h2>
         </div>
         <div class="col-xs-12 col-md-6">
           <ul>
-            <li><a tal:attributes="href string:${view/portal_url}/profile/${view/user_name}">
+            <li><a tal:attributes="href string:${view/portal_url}/profile/${view/get_username}">
               Community profile</a></li>
             <li tal:repeat="action view/user_actions"
                 tal:attributes="id string:personaltools-${action/id}">

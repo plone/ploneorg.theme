@@ -58,6 +58,19 @@
     <xsl:if test="not(//*[@id='portal-column-one']) and not(//*[@id='portal-column-two'])">col-xs-12 col-sm-12</xsl:if>
   </xsl:variable>
 
+  <!-- Above content -->
+<!--   <rules if-content="//*[@id='viewlet-above-content']">
+    <replace css:theme="#above-content" css:content="#viewlet-above-content" />
+  </rules> -->
+
+  <!-- Hero Image -->
+  <rules if-content="//*[@class='heroimage']">
+    <replace css:theme="#heroimage">
+      <xsl:apply-templates css:select=".heroimage" mode="raw" />
+    </replace>
+  </rules>
+  <drop css:theme="#heroimage-wrapper" if-content="not(//*[@class='heroimage'])" />
+
   <!-- Edit bar -->
   <rules if-content="//*[@id='edit-bar']">
     <append css:theme="#edit-bar" css:content-children="#edit-bar" />
@@ -175,6 +188,9 @@
           </div>
       </div><!--/row-->
   </replace>
+
+  <!-- Complete heroimage "move" -->
+  <xsl:template css:match="#content .heroimage" />
 
   <!-- Left column -->
   <rules if-content="//*[@id='portal-column-one']">

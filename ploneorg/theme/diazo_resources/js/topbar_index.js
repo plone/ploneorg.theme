@@ -83,7 +83,7 @@ var html = [
             '<li>',
             '<a href="http://community.plone.org" title="Discussion groups">DISCUSSION</a>',
             '</li>',
-            '<li class="separador hidden-xs"></li>',
+            '<li class="separador hidden-xs hidden-sm"></li>',
           '</ul>',
         '</div>',
       '</div>',

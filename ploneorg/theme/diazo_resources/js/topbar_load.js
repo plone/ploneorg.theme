@@ -39,11 +39,15 @@
     })();
   }
   function loadMobileJS(){
-    jQuery('#sites-select', target).click(function(){
+    jQuery('#sites-select', target).click(function(event){
+      event.preventDefault();
+      event.stopPropagation();
       location.url = jQuery(this).val;
     });
 
-    jQuery('#display_mobile', target).click(function(evt){
+    jQuery('#display_mobile', target).click(function(event){
+      event.preventDefault();
+      event.stopPropagation();
       jQuery('#plone-global-topbar-mainlinks', target).toggleClass('mostrar_mobile');
     });
   }

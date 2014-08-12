@@ -14,3 +14,7 @@ class customPersonalBarViewlet(PersonalBarViewlet):
         pm = plone.api.portal.get_tool('portal_membership')
 
         return pm.getPersonalPortrait(username.id)
+
+    def get_username(self):
+        username = plone.api.user.get_current()
+        return username.id

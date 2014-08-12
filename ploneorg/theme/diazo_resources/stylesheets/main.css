@@ -1830,7 +1830,6 @@ header {
   margin-bottom: 0;
   border: 0;
   border-radius: 0;
-  overflow-x: hidden;
   /*fem que el menú ocupi el 100%*/
 }
 .header-wrapper .row .navbar-nav > li > a,
@@ -1892,7 +1891,6 @@ header {
 .dropdown-plonetheme ul {
   margin: 0;
   padding: 0;
-  float: right;
 }
 .dropdown-plonetheme ul li {
   list-style: none;
@@ -2296,6 +2294,37 @@ textarea {
   content: "";
   margin-bottom: 40px;
 }
+.contributor-image-headline {
+  position: relative;
+  margin-left: -30px;
+  margin-right: -30px;
+  margin-top: -10px;
+}
+.contributor-image-headline img {
+  width: 100%;
+}
+.contributor-image-headline blockquote.put-left {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  border: 0;
+  color: white;
+  font-size: 32px;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+.contributor-image-headline blockquote.put-right {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  border: 0;
+  color: white;
+  font-size: 32px;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
 @media (max-width: 767px) {
   .five-col > * {
     display: inline-block;
@@ -2311,6 +2340,9 @@ textarea {
   .navbar-nav .open .dropdown-menu {
     background: rgba(11, 66, 88, 0.95);
     padding-left: 25px;
+  }
+  .navbar-plonetheme {
+    overflow-x: hidden;
   }
   .navbar-plonetheme .navbar-nav > li > a {
     padding-bottom: 10px;
@@ -2331,6 +2363,10 @@ textarea {
   }
   #portal-personaltools li:after {
     content: "";
+  }
+  .contributor-image-headline blockquote {
+    position: relative;
+    background: black;
   }
 }
 @media (min-width: 768px) {
@@ -2353,6 +2389,9 @@ textarea {
   .col-no-css {
     width: 20%;
     float: left;
+  }
+  #portal-personaltools .dropdown-plonetheme ul {
+    float: right;
   }
 }
 /*# sourceMappingURL=/++theme++ploneorg.theme/stylesheets/main.css.map */
