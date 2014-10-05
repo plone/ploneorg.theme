@@ -28,7 +28,7 @@
     enabled="True" expression=""  inline="False" />
 
  <javascript
-    id="++theme++ploneorg.theme/js/icheck.min.js"
+    id="++theme++ploneorg.theme/components/iCheck/icheck.min.js"
     cacheable="False" compression="none" cookable="False"
     enabled="True" expression=""  inline="False" />
 

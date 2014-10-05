@@ -1,0 +1,25 @@
+{
+    "name": "zAccordion",
+    "version": "2.1.0",
+    "description": "A horizontal accordion plugin for jQuery.",
+    "license": "MIT",
+    "main": [
+        "./js/jquery.zaccordion.js",
+        "./js/jquery.zaccordion.min.js"
+    ],
+    "ignore": [
+        "README",
+        "examples.html",
+        "percentage.html",
+        "responsive.html",
+        "images"
+    ],
+    "dependencies": {
+        "jquery": ">= 1.6.1"
+    },
+    "keywords": [
+        "jquery",
+        "zaccordion",
+        "accordion"
+    ]
+}

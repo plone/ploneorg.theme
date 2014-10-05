@@ -4,7 +4,8 @@
 @import "plone";
 @import "overlays";
 @import "templates";
-@import "icheck-square/blue.css";
+@import "++theme++ploneorg.theme/components/iCheck/skins/square/blue.css";
+
 
 #topbar {
     .gradient-background(@darkGrey, @black);
@@ -481,9 +482,9 @@ textarea { resize:vertical; }
 // Profile
 .contributor-image-headline {
     position: relative;
-    margin-left: -30px;
-    margin-right: -30px;
-    margin-top: -10px; // aquest ajusta'l perquè s'enganxi al breadcrumbs
+    // margin-left: -30px;
+    // margin-right: -30px;
+    // margin-top: -10px; // aquest ajusta'l perquè s'enganxi al breadcrumbs
 }
 .contributor-image-headline img {width:100%;}
 .contributor-image-headline blockquote.put-left {
@@ -508,6 +509,8 @@ textarea { resize:vertical; }
     margin: 0;
     padding: 0;
 }
+
+.template-profile #portal-breadcrumbs { display: none; }
 
 //under 768px with lines
 @media (max-width: 767px) {

@@ -1,0 +1,33 @@
+{
+  "name": "ploneorg.theme.components",
+  "version": "0.0.1",
+  "homepage": "https://github.com/plone/ploneorg.theme",
+  "authors": [
+    "Victor Fernandez de Alba <sneridagh@gmail.com>"
+  ],
+  "description": "plone.org theme third party web-components",
+  "keywords": [
+    "ploneorg",
+    "components",
+    "core",
+    "theme"
+  ],
+  "license": "GPL",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "latest",
+    "fontawesome": "latest",
+    "modernizr": "latest",
+    "underscore": "~1.6.0",
+    "select2": "https://github.com/ivaynberg/select2.git#master",
+    "zaccordion": "latest",
+    "iCheck": "latest"
+  }
+}

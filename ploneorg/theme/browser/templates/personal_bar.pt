@@ -45,7 +45,7 @@
 <tal:anon condition="python:view.user_actions and view.anonymous">
   <li id="anon-personalbar">
     <tal:actions repeat="action view/user_actions">
-        <a href="" class="pat-modal"
+        <a href=""
            tal:attributes="href action/url;
                            id string:personaltools-${action/id};
                            target action/link_target|nothing;"

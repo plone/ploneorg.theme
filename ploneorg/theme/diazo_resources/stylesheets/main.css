@@ -1,4 +1,4 @@
-@import "icheck-square/blue.css";
+@import "++theme++ploneorg.theme/components/iCheck/skins/square/blue.css";
 @media print {
   .listing td,
   .listing th,
@@ -15,6 +15,9 @@
   .standalone > .caret,
   .dropup > .standalone > .caret {
     border-top-color: #000 !important;
+  }
+  li > span.subMenuTitle {
+    border: 1px solid #000;
   }
   .listing,
   .listing {
@@ -1254,12 +1257,41 @@ select[multiple].input-group-sm > .input-group-btn > .standalone {
   margin: 20px 0;
   border-radius: 4px;
 }
+li > span.subMenuTitle {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+li > span.subMenuTitle[href]:hover,
+li > span.subMenuTitle[href]:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+li > span.subMenuTitle:empty {
+  display: none;
+}
 button .label,
 [type="submit"] .label,
 .context .label,
-.standalone .label {
+.standalone .label,
+.btn li > span.subMenuTitle {
   position: relative;
   top: -1px;
+}
+li > span.subMenuTitle {
+  background-color: #5bc0de;
+}
+li > span.subMenuTitle[href]:hover,
+li > span.subMenuTitle[href]:focus {
+  background-color: #31b0d5;
 }
 button .badge,
 [type="submit"] .badge,
@@ -1598,6 +1630,11 @@ textarea {
   display: none !important;
 }
 .subMenuTitle {
+  padding-left: 5px;
+}
+li > span.subMenuTitle {
+  margin-left: 23px;
+  color: white !important;
   padding-left: 5px;
 }
 /* @group Plone 4.3 original Overlay windows */
@@ -1980,7 +2017,8 @@ select[multiple].dropdown-plonetheme input {
   margin: 0;
 }
 #edit-bar .dropdown-toggle .label,
-#edit-bar .dropdown-toggle .badge {
+#edit-bar .dropdown-toggle .badge,
+#edit-bar .dropdown-toggle li > span.subMenuTitle {
   font-size: 100%;
 }
 #viewlet-below-content {
@@ -2145,7 +2183,8 @@ footer sup {
 textarea {
   resize: vertical;
 }
-.label {
+.label,
+li > span.subMenuTitle {
   color: #333333;
   font-size: 100%;
 }
@@ -2296,9 +2335,6 @@ textarea {
 }
 .contributor-image-headline {
   position: relative;
-  margin-left: -30px;
-  margin-right: -30px;
-  margin-top: -10px;
 }
 .contributor-image-headline img {
   width: 100%;
@@ -2324,6 +2360,9 @@ textarea {
   width: 50%;
   margin: 0;
   padding: 0;
+}
+.template-profile #portal-breadcrumbs {
+  display: none;
 }
 @media (max-width: 767px) {
   .five-col > * {

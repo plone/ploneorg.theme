@@ -2,18 +2,25 @@
 <object name="portal_css">
 
   <stylesheet
-    id="++theme++ploneorg.theme/stylesheets/bootstrap.css"
+    id="++theme++ploneorg.theme/components/bootstrap/dist/css/bootstrap.css"
     applyPrefix="True"
     media="" rel="stylesheet" rendering="link"
     cacheable="True" compression="safe" cookable="False"
     enabled="1" expression="request/HTTP_X_THEME_ENABLED | nothing"/>
 
   <stylesheet title=""
-    id="++theme++ploneorg.theme/stylesheets/font-awesome.min.css"
+    id="++theme++ploneorg.theme/fontello/css/fontello.css"
     applyPrefix="True"
     media="" rel="stylesheet" rendering="link"
     cacheable="True" compression="safe" cookable="False"
     enabled="1" expression="request/HTTP_X_THEME_ENABLED | nothing"/>
+
+<!--   <stylesheet title=""
+    id="++theme++ploneorg.theme/components/fontawesome/css/font-awesome.min.css"
+    applyPrefix="True"
+    media="" rel="stylesheet" rendering="link"
+    cacheable="True" compression="safe" cookable="False"
+    enabled="1" expression="request/HTTP_X_THEME_ENABLED | nothing"/> -->
 
   <stylesheet title=""
     id="++theme++ploneorg.theme/stylesheets/main.css"

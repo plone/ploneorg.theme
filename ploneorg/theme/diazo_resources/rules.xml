@@ -59,9 +59,9 @@
   </xsl:variable>
 
   <!-- Above content -->
-<!--   <rules if-content="//*[@id='viewlet-above-content']">
+  <rules if-content="//*[@id='viewlet-above-content']">
     <replace css:theme="#above-content" css:content="#viewlet-above-content" />
-  </rules> -->
+  </rules>
 
   <!-- Hero Image -->
   <rules if-content="//*[@class='heroimage']">
@@ -94,23 +94,28 @@
               </a>
               <ul class="dropdown-menu pull-right actionMenuContent">
                 <xsl:for-each select=".//dd/ul/li">
-                  <xsl:if css:test=".actionSeparator">
-                    <li class="divider"></li>
-                    <xsl:copy-of select="./div/span"/>
-                  </xsl:if>
-                  <xsl:if test="not(./actionSeparator)">
-                  <li>
-                    <a>
-                      <xsl:copy-of select="./a/@*" />
-                      <xsl:value-of select="./a/text()"/>
-                      <i>
-                        <xsl:attribute name="class"><xsl:value-of select="concat('fa icon-', ./a/@id)"/></xsl:attribute>
-                      </i>
-                      <xsl:copy-of select="./a/span"/>
-                    </a>
-                    <!-- <xsl:apply-templates select="./*"/> -->
-                  </li>
-                  </xsl:if>
+                  <xsl:choose>
+                    <xsl:when css:test=".actionSeparator">
+                      <li class="divider"></li>
+                      <li>
+                        <xsl:copy-of select="./div/span"/>
+                        <xsl:copy-of select="./a"/>
+                      </li>
+                    </xsl:when>
+                    <xsl:otherwise>
+                              <li>
+                                <a>
+                                  <xsl:copy-of select="./a/@*" />
+                                  <xsl:value-of select="./a/text()"/>
+                                  <i>
+                                    <xsl:attribute name="class"><xsl:value-of select="concat('fontello-icon-', ./a/@id)"/></xsl:attribute>
+                                  </i>
+                                  <xsl:copy-of select="./a/span"/>
+                                </a>
+                                <!-- <xsl:apply-templates select="./*"/> -->
+                              </li>
+                     </xsl:otherwise>
+                   </xsl:choose>
                 </xsl:for-each>
               </ul>
             </li>
