@@ -27,6 +27,7 @@ setup(name='ploneorg.theme',
       install_requires=[
           'setuptools',
           'z3c.jbot',
+          'plone.api'
       ],
       entry_points="""
       # -*- Entry points: -*-
