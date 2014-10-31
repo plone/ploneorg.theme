@@ -18,5 +18,24 @@ $( document ).ready(function() {
     target_id = $(this).attr('id').replace('replace', 'input')
     document.getElementById(target_id).disabled=true;
   });
+
+
+  $("#slider").zAccordion({
+    tabWidth: 100,
+    speed: 650,
+    slideClass: 'slider',
+    animationStart: function () {
+      $('#slider').find('li.slider-open div').css('display', 'none');
+      $('#slider').find('li.slider-previous div').css('display', 'none');
+    },
+    animationComplete: function () {
+      $('#slider').find('li div').fadeIn(600);
+    },
+    width: 1200,
+    height: 500
+  });
+
+
+
 });
 

@@ -183,6 +183,7 @@
           <div class="row">
             <div class="col-xs-12 col-sm-12">
                <xsl:apply-templates select="//div[@id='content']"/>
+               <xsl:apply-templates select="//div[@id='content-core']"/>
                <!-- <xsl:copy-of select="//div[@id='content']"/> -->
             </div>
           </div>
