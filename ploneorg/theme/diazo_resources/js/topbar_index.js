@@ -37,7 +37,7 @@ var html = [
           '<!-- Planet -->',
           '<ul id="links-select">',
             '<li>',
-            '<a href="http://plone.org" title="Plone community site">COMMUNITY</a>',
+            '<a href="http://plone.org" title="Plone community site">PLONE.ORG</a>',
             /*
             '<div class="caixa-desplegada">',
               '<h2>Thank\'s to collaborate with us!</h2>',

@@ -513,14 +513,14 @@ textarea { resize:vertical; }
 .template-profile #portal-breadcrumbs { display: none; }
 
 // HOMEPAGE
-#slider {background-color:rgba(0,0,0,0.5);bottom:0;height:100px;left:0;position:absolute;width:100%;z-index:10;}
-#slider .slider-closed {width:100px;}
-#slider strong {color:#fff;display:block;margin-bottom:5px;padding:10px 10px 0;text-shadow:none;}
-#slider p {color:#fff;display:block;font-size:14px;padding:0 10px;text-shadow:none;}
-#slider .slider-open strong {color:#fff;font-size:22px;}
-#slider .slider-closed strong {font-size:18px;margin-bottom:5px;}
-#slider .slider-closed p {display:none;}
-
+#slider li {position:relative;}
+#slider div.slider-bg {background:#000;top:300px;height:102px;width:800px;left:0;position:absolute;z-index:10;opacity:.5;}
+#slider div.slider-info {top:300px;height:72px;left:0;position:absolute;width:65px;z-index:15;padding:15px;}
+#slider div.slider-info strong {font-size:18px;color:#fff;margin-bottom:5px;}
+#slider div.slider-info p {display:none;font-size:12px;line-height:14px;color:#fff;margin:0 !important;}
+#slider li.slider-open div.slider-info {width:570px;}
+#slider li.slider-open div.slider-info strong {font-size:22px;}
+#slider li.slider-open div.slider-info p {display:block;}
 
 
 //under 768px with lines
