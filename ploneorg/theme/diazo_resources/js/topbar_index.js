@@ -77,7 +77,7 @@ var html = [
             '</li>',
             '<!-- Documentation -->',
             '<li>',
-            '<a href="http://docs.plone.com" title="Plone documentation">DOCUMENTATION</a>',
+            '<a href="http://docs.plone.org" title="Plone documentation">DOCUMENTATION</a>',
             '</li>',
             '<!-- Discussion -->',
             '<li>',
