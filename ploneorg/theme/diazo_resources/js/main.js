@@ -19,13 +19,13 @@ $( document ).ready(function() {
     document.getElementById(target_id).disabled=true;
   });
 
-  $("#slider").zAccordion({
-    width: 1140,
-    speed: 600,
-    slideClass: "slider",
-    slideWidth: 800,
-    height: 400
-  });
+  // $("#slider").zAccordion({
+  //   width: 1140,
+  //   speed: 600,
+  //   slideClass: "slider",
+  //   slideWidth: 800,
+  //   height: 400
+  // });
 
 });
 
