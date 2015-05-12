@@ -1873,7 +1873,7 @@ header {
 .navbar-plonetheme .navbar-nav > li > a {
   color: #fff;
   text-transform: uppercase;
-  padding-bottom: 35px;
+  padding-bottom: 39px;
   padding-top: 34px;
 }
 .header-wrapper .row .navbar-nav > li,
@@ -1912,7 +1912,7 @@ header {
 }
 .dropdown-plonetheme h2 {
   color: #4b7387;
-  font-weight: bold;
+  font-weight: bold !important;
   font-family: 'Roboto', sans-serif;
 }
 .dropdown-plonetheme h3 {
@@ -2004,7 +2004,7 @@ select[multiple].dropdown-plonetheme input {
 #edit-bar {
   margin-top: 10px;
   border-bottom: 1px solid #CCCCCC;
-  box-shadow: 0 -10px 12px -18px #000000 inset;
+  box-shadow: 0 -10px 12px -18px black inset;
 }
 #edit-bar .nav-tabs,
 #edit-bar .configlets {
@@ -2204,8 +2204,8 @@ li > span.subMenuTitle {
 }
 #portal-personaltools li a {
   font-size: 14px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 .user_bar_portrait {
   width: 45px;
