@@ -31,30 +31,24 @@
 
 
   <stylesheet id="authoring.css" enabled="True" expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
-  <stylesheet id="reset.css" enabled="False" />
-  <stylesheet id="member.css" enabled="False" />
-  <stylesheet id="base.css" enabled="False" />
-  <stylesheet id="public.css" enabled="False" />
-  <stylesheet id="columns.css" enabled="False" />
+  <stylesheet id="reset.css" enabled="True" expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
+  <stylesheet id="member.css" enabled="True" expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
+  <stylesheet id="base.css" enabled="True" expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
+  <stylesheet id="public.css" enabled="True" expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
+  <stylesheet id="columns.css" enabled="True" expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
 
-  <stylesheet id="portlets.css" enabled="False" />
-  <stylesheet id="controlpanel.css" enabled="False" />
-  <stylesheet id="deprecated.css" enabled="False" />
-  <stylesheet id="navtree.css" enabled="False" />
-  <stylesheet id="invisibles.css" enabled="False" />
-  <stylesheet id="forms.css" enabled="False" />
-  <stylesheet id="print.css" enabled="False" />
-  <stylesheet id="mobile.css" enabled="False" />
-  <stylesheet id="RTL.css" enabled="False" />
-  <stylesheet id="++resource++plone.app.jquerytools.overlays.css" enabled="False" />
-  <stylesheet id="IEFixes.css" enabled="False" />
-  <stylesheet id="ploneCustom.css" enabled="False" />
+  <stylesheet id="portlets.css" enabled="True" expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
+  <stylesheet id="controlpanel.css" enabled="True" expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
+  <stylesheet id="deprecated.css" enabled="True" expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
+  <stylesheet id="navtree.css" enabled="True" expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
+  <stylesheet id="invisibles.css" enabled="True" expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
+  <stylesheet id="forms.css" enabled="True" expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
+  <stylesheet id="print.css" enabled="True" />
+  <stylesheet id="mobile.css" enabled="True" expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
+  <stylesheet id="RTL.css" enabled="True" expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
+  <!-- <stylesheet id="++resource++plone.app.jquerytools.overlays.css" enabled="True" /> -->
+  <stylesheet id="IEFixes.css" enabled="True" expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
+  <stylesheet id="++resource++plone.formwidget.contenttree/contenttree.css" rendering="link" enabled="True" />
+  <stylesheet id="ploneCustom.css" enabled="True" />
 
-<!--
- <stylesheet title=""
-    id="++theme++ploneorg.theme/static/main.css"
-    media="screen" rel="stylesheet" rendering="import"
-    cacheable="True" compression="safe" cookable="True"
-    enabled="1" expression="" />
- -->
 </object>

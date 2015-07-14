@@ -1789,7 +1789,6 @@ body {
   max-width: 100%;
 }
 #portal-breadcrumbs {
-  border-top: 1px solid #CDCDCD;
   color: #9A9A9A;
   font-size: 92.5%;
   padding-left: 0.25em;
@@ -2004,7 +2003,7 @@ select[multiple].dropdown-plonetheme input {
 #edit-bar {
   margin-top: 10px;
   border-bottom: 1px solid #CCCCCC;
-  box-shadow: 0 -10px 12px -18px black inset;
+  box-shadow: 0 -10px 12px -18px #000000 inset;
 }
 #edit-bar .nav-tabs,
 #edit-bar .configlets {
@@ -2189,8 +2188,9 @@ li > span.subMenuTitle {
   font-size: 100%;
 }
 /*provisional fixar columnes */
-#portal-personaltools ul {
-  padding-top: 27px;
+#portal-personaltools h2 {
+  margin: 0px;
+  font-size: 18px;
 }
 #portal-personaltools li {
   display: inline-block;
