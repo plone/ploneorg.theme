@@ -340,7 +340,7 @@ footer {
     font-family: Roboto, sans-serif;
     font-size: 20px;
     color: white;
-    width: 320px;
+    width: 315px;
     ul {
         margin:0 0 0 10px;
         padding: 0;
@@ -357,6 +357,7 @@ footer {
     vertical-align: middle;
     font-family: Roboto, sans-serif;
     font-size: 18px;
+    width: 360px;
     a {color: white; text-decoration: none}
     ul {
         margin:0 0 0 10px;
@@ -451,7 +452,12 @@ textarea { resize:vertical; }
     li{ list-style: none; margin:0; padding: 0; font-size: 16px; }
     li:after {content:" →";}
 }
-.large-paragraph {font-size: 30px; font-weight: 200; color: #666;
+.large-paragraph {
+  font-family: Roboto, sans-serif;
+  font-size: 30px;
+  font-weight: 200;
+  color: #666;
+  text-align: center;
   strong {font-weight: 400; color: #333;}
 }
 
@@ -474,8 +480,8 @@ textarea { resize:vertical; }
   }
   &.boxed-pill {
     background: #069;
-    height: 100px;
-    h3 {font-size: 9px;}
+    height: inherit;
+    h3 {font-size: 11px; text-align: center; height: 22px;}
     p {font-size: 46px; font-weight: 700;}
   }
   &.boxed-pill.boxed-primary {
@@ -496,6 +502,12 @@ textarea { resize:vertical; }
     background-size: 18px 18px;
   }
   &:after {content:""; margin-bottom: 40px;}
+}
+
+.the_community {
+  font-weight: 500 !important;
+  color: #39c;
+  margin-top: 0;
 }
 
 // Profile

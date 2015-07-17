@@ -2116,7 +2116,7 @@ footer sup {
   font-family: Roboto, sans-serif;
   font-size: 20px;
   color: white;
-  width: 320px;
+  width: 315px;
 }
 .features ul {
   margin: 0 0 0 10px;
@@ -2131,6 +2131,7 @@ footer sup {
   vertical-align: middle;
   font-family: Roboto, sans-serif;
   font-size: 18px;
+  width: 360px;
 }
 .info a {
   color: white;
@@ -2281,9 +2282,11 @@ li > span.subMenuTitle {
   content: " →";
 }
 .large-paragraph {
+  font-family: Roboto, sans-serif;
   font-size: 30px;
   font-weight: 200;
   color: #666;
+  text-align: center;
 }
 .large-paragraph strong {
   font-weight: 400;
@@ -2317,10 +2320,12 @@ li > span.subMenuTitle {
 }
 .boxed.boxed-pill {
   background: #069;
-  height: 100px;
+  height: inherit;
 }
 .boxed.boxed-pill h3 {
-  font-size: 9px;
+  font-size: 11px;
+  text-align: center;
+  height: 22px;
 }
 .boxed.boxed-pill p {
   font-size: 46px;
@@ -2351,6 +2356,11 @@ li > span.subMenuTitle {
 .boxed:after {
   content: "";
   margin-bottom: 40px;
+}
+.the_community {
+  font-weight: 500 !important;
+  color: #39c;
+  margin-top: 0;
 }
 .contributor-image-headline {
   position: relative;
