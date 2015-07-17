@@ -316,53 +316,69 @@ footer {
 }
 
 .getplone {
-    font-family: DINMedium;
-    font-size: 24px;
-    width:13% !important;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: Roboto, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    width: 170px;
 }
 
 .currentversion {
+    display: table-cell;
+    vertical-align: middle;
+    font-family: Roboto, sans-serif;
     font-size: 60px;
+    font-weight: 700;
+    color: white;
+    width: 100px;
 }
 
 .features {
-    width:30% !important;
-    font-family: DINBold;
-    font-size: 17px;
-    color: #3399cc;
-
+    display: table-cell;
+    vertical-align: middle;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    color: white;
+    width: 320px;
     ul {
         margin:0 0 0 10px;
+        padding: 0;
     }
 
     ul li {
         list-style: none;
-        line-height: 20px;
+        line-height: 25px;
     }
 }
 
 .info {
-    width:30% !important;
-    font-size: 14px;
-    a { font-family: DINMedium; text-decoration: none }
-
+    display: table-cell;
+    vertical-align: middle;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    a {color: white; text-decoration: none}
+    ul {
+        margin:0 0 0 10px;
+        padding: 0;
+    }
     li {
         display: inline-block;
+        color: white;
         &:after { content: " /"; }
         &:last-child:after { content: ""; }
     }
-
-    ul {
-        margin:0 0 0 10px;
-    }
-
     ul li {
         list-style: none;
         line-height: 20px;
     }
 }
 
-.download { width: 20% !important; font-family: DINBlack; }
+.download {
+  display: table-cell;
+  vertical-align: middle;
+  font-family: Roboto, sans-serif; }
+  // width: 20% !important;
 
 .member-info { list-style: none; }
 
@@ -467,7 +483,9 @@ textarea { resize:vertical; }
     .large-paragraph strong {color: white; font-weight: 700;}
   }
   &.boxed-stripes {
-    height: 80px;
+    display: table;
+    width: 100%;
+    height: inherit;
     font-size: 24px;
     background-color: #3094c8;
     background-image: -moz-linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 14%, transparent 14%, transparent 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 64%, transparent 64%, transparent);
