@@ -2165,7 +2165,7 @@ footer sup {
 }
 .fact-data {
   float: left;
-  width: 250px;
+  width: 225px;
   height: 115px;
   margin: 5px 5px;
   border-radius: 3px;
@@ -2392,6 +2392,27 @@ li > span.subMenuTitle {
 }
 .template-profile #portal-breadcrumbs {
   display: none;
+}
+.contributor-info div {
+  border-top: 1px #abbac1 solid;
+}
+.contributor-info h3 {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  color: #abbac1;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+.contributor-info ul {
+  margin: 0;
+  padding: 0;
+}
+.contributor-info li {
+  padding-bottom: 10px;
+}
+.contributor-info li a,
+.contributor-info li i {
+  font-size: 16px;
 }
 #slider li {
   position: relative;
