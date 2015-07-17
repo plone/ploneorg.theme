@@ -2275,7 +2275,7 @@ li > span.subMenuTitle {
 .list-arrows li {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0 6px 0;
   font-size: 16px;
 }
 .list-arrows li:after {
