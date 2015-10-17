@@ -38,7 +38,8 @@
       s.parentNode.insertBefore(gcse, s);
     })();
   }
-  function loadMobileJS(){
+  function loadMobileJS(){ 
+
     jQuery('#sites-select', target).click(function(event){
       event.preventDefault();
       event.stopPropagation();
@@ -51,6 +52,13 @@
       jQuery('#plone-global-topbar-mainlinks', target).toggleClass('mostrar_mobile');
     });
   }
+  function mobileNav () {
+    if (jQuery(".navbar-default .navbar-toggle").css("display") == "none" ) {  
+        if ( jQuery("#navbar-plonetheme #links-select").length == 1 ) {
+          jQuery('#links-select').prependTo('#plone-global-topbar-mainlinks');    
+        }
+    }
+  }
   jQuery(document).ready(function(){
     target.hide();
     loadWidgetHTML(function(){
@@ -58,6 +66,16 @@
       loadSearchBox();
       loadMobileJS();
       target.show();
+    });
+
+    jQuery(window).resize(function() {
+      mobileNav();
+      if (jQuery(".navbar-default .navbar-toggle").css("display") == "block" ) { 
+         if ( jQuery("#navbar-plonetheme #links-select").length == 0 ) {
+          jQuery('#links-select').prependTo('#navbar-plonetheme');
+        }
+      }
+
     });
   });
 })();

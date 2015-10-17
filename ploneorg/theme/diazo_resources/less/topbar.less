@@ -405,7 +405,6 @@
             background-color: #333!important;
             color: #fff;
         }
-
     }
 }
 
@@ -430,38 +429,66 @@
 //********************//
 
 
-.navbar-default .navbar-toggle {
-    border: none;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    border-radius: 0px;
-    color: white;
-    .icon-bar {
-        background-color: white !important;
-    }
-    &:hover, &:focus {
-        background-color: transparent;
-    }
-    .menuname, .icon-block{
-        float: left;
-        display: block;
-    }
-    .menuname {
-        margin-right: 0.625em;
-        line-height: 1.7;
-        font-size: 1.4em;
-
-    }
-    .icon-block {
-        border: 1px solid white;
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        border-radius: 4px;
-        padding: 9px 10px;
-    }
-    button:active, button.active {
-        box-shadow: none;
+@media only screen and (min-width:781px) {
+    .navbar-default .navbar-toggle {
+        display: none;
     }
 }
 
+@media only screen and (max-width:780px) {
+    .navbar-default .navbar-toggle {
+        border: none;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
+        color: white;
+        display: block;
+        .icon-bar {
+            background-color: white !important;
+        }
+        &:hover, &:focus {
+            background-color: transparent;
+        }
+        .menuname, .icon-block{
+            float: left;
+            display: block;
+        }
+        .menuname {
+            margin-right: 0.625em;
+            line-height: 1.7;
+            font-size: 1.4em;
+        }
+        .icon-block {
+            border: 1px solid white;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            padding: 9px 10px;
+        }
+        button:active {
+            box-shadow: none;
+        }
+    }
 
+    .header-wrapper #navbar-plonetheme {
+        ul#links-select {
+            list-style-type: none;
+            padding-left: 0px; 
+            li {
+                padding: 0.625em 0;
+                a {
+                    color: white;
+                    &:hover {
+                        color: #333;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* STOP DON'T CHECK IN.. TAKE OUT THIS PART */
+ul#slider {
+    display: none !important;
+}

@@ -516,39 +516,64 @@
 .gsc-inline-block {
   margin-left: 5px !important;
 }
-.navbar-default .navbar-toggle {
-  border: none;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  color: white;
+@media only screen and (min-width: 781px) {
+  .navbar-default .navbar-toggle {
+    display: none;
+  }
 }
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: white !important;
+@media only screen and (max-width: 780px) {
+  .navbar-default .navbar-toggle {
+    border: none;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    color: white;
+    display: block;
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: white !important;
+  }
+  .navbar-default .navbar-toggle:hover,
+  .navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+  }
+  .navbar-default .navbar-toggle .menuname,
+  .navbar-default .navbar-toggle .icon-block {
+    float: left;
+    display: block;
+  }
+  .navbar-default .navbar-toggle .menuname {
+    margin-right: 0.625em;
+    line-height: 1.7;
+    font-size: 1.4em;
+  }
+  .navbar-default .navbar-toggle .icon-block {
+    border: 1px solid white;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 9px 10px;
+  }
+  .navbar-default .navbar-toggle button:active {
+    box-shadow: none;
+  }
+  .header-wrapper #navbar-plonetheme ul#links-select {
+    list-style-type: none;
+    padding-left: 0px;
+  }
+  .header-wrapper #navbar-plonetheme ul#links-select li {
+    padding: 0.625em 0;
+  }
+  .header-wrapper #navbar-plonetheme ul#links-select li a {
+    color: white;
+  }
+  .header-wrapper #navbar-plonetheme ul#links-select li a:hover {
+    color: #333;
+    text-decoration: none;
+  }
 }
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-  background-color: transparent;
-}
-.navbar-default .navbar-toggle .menuname,
-.navbar-default .navbar-toggle .icon-block {
-  float: left;
-  display: block;
-}
-.navbar-default .navbar-toggle .menuname {
-  margin-right: 0.625em;
-  line-height: 1.7;
-  font-size: 1.4em;
-}
-.navbar-default .navbar-toggle .icon-block {
-  border: 1px solid white;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  padding: 9px 10px;
-}
-.navbar-default .navbar-toggle button:active,
-.navbar-default .navbar-toggle button.active {
-  box-shadow: none;
+/* STOP DON'T CHECK IN.. TAKE OUT THIS PART */
+ul#slider {
+  display: none !important;
 }
 /*# sourceMappingURL=/++theme++ploneorg.theme/stylesheets/topbar.css.map */
