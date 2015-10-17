@@ -1872,8 +1872,8 @@ header {
 .navbar-plonetheme .navbar-nav > li > a {
   color: #fff;
   text-transform: uppercase;
-  padding-bottom: 39px;
-  padding-top: 34px;
+  padding-bottom: 0.625em;
+  padding-top: 0.625em;
 }
 .header-wrapper .row .navbar-nav > li,
 .navbar-plonetheme .navbar-nav > li {
@@ -2003,7 +2003,7 @@ select[multiple].dropdown-plonetheme input {
 #edit-bar {
   margin-top: 10px;
   border-bottom: 1px solid #CCCCCC;
-  box-shadow: 0 -10px 12px -18px #000000 inset;
+  box-shadow: 0 -10px 12px -18px black inset;
 }
 #edit-bar .nav-tabs,
 #edit-bar .configlets {
@@ -2456,74 +2456,5 @@ li > span.subMenuTitle {
 }
 #slider li.slider-open div.slider-info p {
   display: block;
-}
-@media (max-width: 767px) {
-  .five-col > * {
-    display: inline-block;
-    float: left;
-  }
-  .five-col > dt {
-    clear: left;
-    margin-top: 0.5em;
-  }
-  .five-col > dt + dd {
-    clear: left;
-  }
-  .navbar-nav .open .dropdown-menu {
-    background: rgba(11, 66, 88, 0.95);
-    padding-left: 25px;
-  }
-  .navbar-plonetheme {
-    overflow-x: hidden;
-  }
-  .navbar-plonetheme .navbar-nav > li > a {
-    padding-bottom: 10px;
-    padding-top: 10px;
-  }
-  .navbar-plonetheme .dropdown-menu {
-    padding: 5px;
-  }
-  .dropdown-plonetheme ul {
-    float: none;
-  }
-  #portal-personaltools ul {
-    padding-top: 0px;
-  }
-  #portal-personaltools li {
-    padding: 5px;
-    display: block;
-  }
-  #portal-personaltools li:after {
-    content: "";
-  }
-  .contributor-image-headline blockquote {
-    position: relative;
-    background: black;
-  }
-}
-@media (min-width: 768px) {
-  .csscolumns .five-col {
-    -webkit-column-count: 5;
-    -moz-column-count: 5;
-    -o-column-count: 5;
-    column-count: 5;
-    -webkit-column-gap: 20px;
-    -moz-column-gap: 20px;
-    -o-column-gap: 20px;
-    column-gap: 20px;
-  }
-  .csscolumns .five-col dt {
-    -webkit-column-break-before: always;
-    -moz-column-break-before: always;
-    -o-column-break-before: always;
-    column-break-before: always;
-  }
-  .col-no-css {
-    width: 20%;
-    float: left;
-  }
-  #portal-personaltools .dropdown-plonetheme ul {
-    float: right;
-  }
 }
 /*# sourceMappingURL=/++theme++ploneorg.theme/stylesheets/main.css.map */

@@ -516,4 +516,39 @@
 .gsc-inline-block {
   margin-left: 5px !important;
 }
+.navbar-default .navbar-toggle {
+  border: none;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  color: white;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white !important;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: transparent;
+}
+.navbar-default .navbar-toggle .menuname,
+.navbar-default .navbar-toggle .icon-block {
+  float: left;
+  display: block;
+}
+.navbar-default .navbar-toggle .menuname {
+  margin-right: 0.625em;
+  line-height: 1.7;
+  font-size: 1.4em;
+}
+.navbar-default .navbar-toggle .icon-block {
+  border: 1px solid white;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  padding: 9px 10px;
+}
+.navbar-default .navbar-toggle button:active,
+.navbar-default .navbar-toggle button.active {
+  box-shadow: none;
+}
 /*# sourceMappingURL=/++theme++ploneorg.theme/stylesheets/topbar.css.map */
