@@ -7,15 +7,15 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="diazotheme.test">
 
-  <i18n:registerTranslations directory="locales" />
+  <!-- <i18n:registerTranslations directory="locales" /> -->
 
   <include package=".browser" />
 
-  <cmf:registerDirectory name="skins" directory="skins" recursive="True" />
+  <!-- <cmf:registerDirectory name="skins" directory="skins" recursive="True" /> -->
 
   <genericsetup:registerProfile
       name="default"
-      title="plone.org 2014 Theme Package (ploneorg.theme)"
+      title="plone.org 2015 Theme Package (ploneorg.theme)"
       directory="profiles/default"
       description="Extension profile for Example Diazo Theme Package"
       provides="Products.GenericSetup.interfaces.EXTENSION"

@@ -6,11 +6,8 @@
     xmlns:xi="http://www.w3.org/2001/XInclude">
 
   <theme href="index.html" />
-  <notheme if="$ajax_load" />
-  <notheme if-path="@@faceted_query" />
-  <notheme if-path="@@updatetilecontent" />
-  <notheme if-path="@@faceted_widgets" />
-  <notheme if-path="@@faceted.catalog.types.json" />
+  <!-- <notheme if="$ajax_load" /> -->
+  <notheme css:if-not-content="#visual-portal-wrapper" />
 
   <rules if-content="//*[@id='portal-top']">
     <!-- Attributes -->
@@ -36,10 +33,8 @@
   <drop css:content="body script" />
   <after css:theme-children="html body" css:content="html body script" method="raw" />
 
-  <!-- Copy over the id/class attributes on the body tag.
-       This is important for per-section styling -->
-  <copy attributes="class" css:content="body" css:theme="body" />
-  <copy attributes="id dir" css:content="body" css:theme="body" />
+  <!-- Copy over the id/class attributes on the body tag. This is important for per-section styling -->
+  <copy attributes="*" css:content="body" css:theme="body" />
 
   <!-- The standard logo -->
   <replace css:theme="#portal-logo" css:content="#portal-logo" />
@@ -63,118 +58,6 @@
     <replace css:theme="#above-content" css:content="#viewlet-above-content" />
   </rules>
 
-  <!-- Hero Image -->
-  <rules if-content="//*[@class='heroimage']">
-    <replace css:theme="#heroimage">
-      <xsl:apply-templates css:select=".heroimage" mode="raw" />
-    </replace>
-  </rules>
-  <drop css:theme="#heroimage-wrapper" if-content="not(//*[@class='heroimage'])" />
-
-  <!-- Edit bar -->
-  <rules if-content="//*[@id='edit-bar']">
-    <append css:theme="#edit-bar" css:content-children="#edit-bar" />
-
-    <replace css:content="#content-views">
-      <ul class="nav nav-tabs pull-left clearfix">
-          <xsl:apply-templates select="./*"/>
-      </ul>
-    </replace>
-
-    <replace css:content="#edit-bar > .contentActions">
-      <div class="contentActions">
-        <ul class="nav nav-pills pull-right clearfix actionItems">
-          <xsl:for-each select="./ul/li">
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                <xsl:attribute name="title"><xsl:value-of select="./dl/dt/a/@title"/></xsl:attribute>
-                <xsl:attribute name="id"><xsl:value-of select="./dl/dt/a/@id"/></xsl:attribute>
-                <xsl:apply-templates select="./dl/dt/a/*"/>
-                <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu pull-right actionMenuContent">
-                <xsl:for-each select=".//dd/ul/li">
-                  <xsl:choose>
-                    <xsl:when css:test=".actionSeparator">
-                      <li class="divider"></li>
-                      <li>
-                        <xsl:copy-of select="./div/span"/>
-                        <xsl:copy-of select="./a"/>
-                      </li>
-                    </xsl:when>
-                    <xsl:otherwise>
-                              <li>
-                                <a>
-                                  <xsl:copy-of select="./a/@*" />
-                                  <xsl:value-of select="./a/text()"/>
-                                  <i>
-                                    <xsl:attribute name="class"><xsl:value-of select="concat('fontello-icon-', ./a/@id)"/></xsl:attribute>
-                                  </i>
-                                  <xsl:copy-of select="./a/span"/>
-                                </a>
-                                <!-- <xsl:apply-templates select="./*"/> -->
-                              </li>
-                     </xsl:otherwise>
-                   </xsl:choose>
-                </xsl:for-each>
-              </ul>
-            </li>
-          </xsl:for-each>
-        </ul>
-      </div>
-    </replace>
-
-    <replace content="//*[@class='selected']/@class">
-        <xsl:attribute name="class">active</xsl:attribute>
-    </replace>
-
-    <drop css:content=".contentActions .arrowDownAlternative"/>
-
-    <replace css:content=".actionSeparator">
-        <li class="divider"></li>
-        <li><xsl:apply-templates select="./*"/></li>
-    </replace>
-  </rules>
-  <drop css:theme="#edit-bar" if-content="not(//*[@id='edit-bar'])" />
-
-  <!-- Alert message -->
-  <strip css:content=".portalMessage dd"/>
-  <drop css:content=".portalMessage dt"/>
-  <replace css:content=".portalMessage">
-    <xsl:choose>
-        <xsl:when css:test=".portalMessage[style]"/>
-        <xsl:when css:test=".portalMessage.info">
-            <div class="alert alert-dismissable alert-info">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                <strong><xsl:apply-templates select="./dt/text()"/></strong>
-                <!-- <xsl:if test="not(./dd/)">body node missing</xsl:if> -->
-                <xsl:apply-templates select="./*"/>
-            </div>
-        </xsl:when>
-        <xsl:when css:test=".portalMessage.error">
-            <div class="alert alert-dismissable alert-danger">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                <strong><xsl:apply-templates select="./dt/text()"/></strong>
-                <xsl:apply-templates select="./dd/text()"/>
-            </div>
-        </xsl:when>
-        <xsl:when css:test=".portalMessage.success">
-            <div class="alert alert-dismissable alert-warning">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                <strong><xsl:apply-templates select="./dt/text()"/></strong>
-                <xsl:apply-templates select="./dd/text()"/>
-            </div>
-        </xsl:when>
-        <xsl:otherwise>
-            <div class="alert alert-dismissable alert-info">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                <strong><xsl:apply-templates select="./dt/text()"/></strong>
-                <xsl:apply-templates select="./dd/text()"/>
-            </div>
-        </xsl:otherwise>
-    </xsl:choose>
-  </replace>
-
   <append css:theme="#globalstatusmessage" css:content=".portalMessage" if-content="not(//*[@id='content']/dl)" />
 
   <!-- Main content -->
@@ -194,9 +77,6 @@
           </div>
       </div><!--/row-->
   </replace>
-
-  <!-- Complete heroimage "move" -->
-  <xsl:template css:match="#content .heroimage" />
 
   <!-- Left column -->
   <rules if-content="//*[@id='portal-column-one']">
@@ -219,4 +99,9 @@
         </div>
     </replace>
   </rules>
+
+  <!-- toolbar -->
+  <replace css:theme="#portal-toolbar" css:content-children="#edit-bar" css:if-not-content=".ajax_load" css:if-content=".userrole-authenticated" />
+  <replace css:theme="#anonymous-actions" css:content-children="#portal-personaltools-wrapper" css:if-not-content=".ajax_load" css:if-content=".userrole-anonymous" />
+
 </rules>
