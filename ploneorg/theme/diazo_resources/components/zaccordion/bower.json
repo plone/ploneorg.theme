@@ -4,14 +4,11 @@
     "description": "A horizontal accordion plugin for jQuery.",
     "license": "MIT",
     "main": [
-        "./js/jquery.zaccordion.js",
-        "./js/jquery.zaccordion.min.js"
+        "./js/jquery.zaccordion.js"
     ],
     "ignore": [
         "README",
-        "examples.html",
-        "percentage.html",
-        "responsive.html",
+        "examples",
         "images"
     ],
     "dependencies": {

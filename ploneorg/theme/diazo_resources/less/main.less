@@ -1,10 +1,87 @@
-@import (reference) "bootstrap";
+// @import (reference) "bootstrap";
+
+//*// PLONE 5 BARCELONETA LESS //*//
+// Get the proper variables from Plone
+// @import url("https://raw.githubusercontent.com/plone/Products.CMFPlone/master/Products/CMFPlone/static/patterns/toolbar/src/css/variables.less");
+@import "../barceloneta/toolbar.variables.less";
+
+//*// Font families
+@import "../barceloneta/fonts.plone.less";
+
+//*// Core variables and mixins
+@import "../barceloneta/variables.plone.less";
+  @import "../barceloneta/mixin.prefixes.plone.less";
+  @import "../barceloneta/mixin.tabfocus.plone.less";
+  @import "../barceloneta/mixin.images.plone.less";
+  @import "../barceloneta/mixin.forms.plone.less";
+  @import "../barceloneta/mixin.borderradius.plone.less";
+  @import "../barceloneta/mixin.buttons.plone.less";
+  @import "../barceloneta/mixin.clearfix.plone.less";
+  @import "../barceloneta/mixin.gridframework.plone.less"; //grid Bootstrap
+  @import "../barceloneta/mixin.grid.plone.less"; //grid Bootstrap
+
+
+//*// Reset and dependencies
+@import "../barceloneta/normalize.plone.less";
+@import "../barceloneta/print.plone.less";
+
+//*// Core CSS
+@import "../barceloneta/scaffolding.plone.less";
+@import "../barceloneta/type.plone.less";
+@import "../barceloneta/code.plone.less";
+//@import "../barceloneta/deco.plone.less"; //uncomment for deco variant
+@import "../barceloneta/grid.plone.less"; //grid Bootstrap
+@import "../barceloneta/tables.plone.less";
+@import "../barceloneta/forms.plone.less";
+@import "../barceloneta/buttons.plone.less";
+@import "../barceloneta/states.plone.less";
+
+//*// Components
+@import "../barceloneta/breadcrumbs.plone.less";
+@import "../barceloneta/pagination.plone.less";
+@import "../barceloneta/formtabbing.plone.less"; //pattern
+@import "../barceloneta/views.plone.less";
+@import "../barceloneta/thumbs.plone.less";
+@import "../barceloneta/alerts.plone.less";
+@import "../barceloneta/portlets.plone.less";
+@import "../barceloneta/controlpanels.plone.less";
+@import "../barceloneta/tags.plone.less";
+@import "../barceloneta/contents.plone.less";
+
+//*// Patterns
+@import "../barceloneta/accessibility.plone.less";
+@import "../barceloneta/toc.plone.less";
+@import "../barceloneta/dropzone.plone.less";
+@import "../barceloneta/modal.plone.less";
+@import "../barceloneta/pickadate.plone.less";
+@import "../barceloneta/sortable.plone.less";
+@import "../barceloneta/tablesorter.plone.less";
+@import "../barceloneta/tooltip.plone.less";
+@import "../barceloneta/tree.plone.less";
+
+//*// Structure
+@import "../barceloneta/header.plone.less";
+@import "../barceloneta/sitenav.plone.less";
+@import "../barceloneta/main.plone.less";
+@import "../barceloneta/footer.plone.less";
+@import "../barceloneta/loginform.plone.less";
+@import "../barceloneta/sitemap.plone.less";
+
+//*// Products
+@import "../barceloneta/event.plone.less";
+@import "../barceloneta/image.plone.less";
+@import "../barceloneta/behaviors.plone.less";
+@import "../barceloneta/discussion.plone.less";
+@import "../barceloneta/search.plone.less";
+
+//*// End Barceloneta
+
 @import "fonts";
 @import "topbar_mixins";
-@import "plone";
-@import "overlays";
-@import "templates";
-@import "++theme++ploneorg.theme/components/iCheck/skins/square/blue.css";
+// @import "plone";
+// @import "overlays";
+// @import "templates";
+// @import "++theme++ploneorg.theme/components/iCheck/skins/square/blue.css";
 
 
 #topbar {
@@ -19,7 +96,7 @@
 html, body {
 /* Sticky footer */
   height: 100%;
-  font-family: @font-family-sans-serif;
+  font-family: @plone-font-family-sans-serif;
 }
 
 // Victor dont't sure about it
@@ -36,6 +113,8 @@ html, body {
 
 //container al 100% perquè vagi de banda a banda les barres
 .container {max-width:100%;}
+
+.navbar-brand { height: 100px; padding: 15px 0px;}
 
 #portal-breadcrumbs {
     // border-top: 1px solid #CDCDCD; why is this?
@@ -99,7 +178,7 @@ h2, .h2 {
 }
 */
 
-header{
+header.header-wrapper {
   background-color: #3094c8;
   // Victor ??
   // margin-bottom: 50px;
@@ -123,7 +202,7 @@ header{
   .navbar-nav > li > a {
     color:#fff;
     text-transform: uppercase;
-    
+
   }
   /*fem que el menú ocupi el 100%*/
   .navbar-nav > li {position:inherit;}
@@ -153,13 +232,14 @@ header{
     -webkit-column-count: 2; -moz-column-count: 2; -o-column-count: 2; column-count: 2;
     -webkit-column-gap : 20px; -moz-column-gap: 20px; -o-column-gap: 20px; column-gap: 20px;
   }
-  input {.input-sm; width: 185px;}
-  button {.btn-sm;}
+  // XXX
+  // input {.input-sm; width: 185px;}
+  // button {.btn-sm;}
 }
 
 #portal-logo {
-  margin: 22px 0;
-  float: left;
+  // margin: 22px 0;
+  // float: left;
 }
 
 .motto {
@@ -186,10 +266,10 @@ header{
   }
 }
 
-#globalstatusmessage {
-  margin-top: 10px;
-  .alert {margin-bottom: 0px}
-}
+// #globalstatusmessage {
+//   margin-top: 10px;
+//   .alert {margin-bottom: 0px}
+// }
 
 #edit-bar {
   margin-top: 10px;
@@ -351,7 +431,7 @@ footer {
     }
 }
 
-.info {
+.information {
     display: table-cell;
     vertical-align: middle;
     font-family: Roboto, sans-serif;
@@ -408,28 +488,28 @@ footer {
 
 #content {margin-bottom: 2em;}
 .colophon p {margin-bottom: 2px; }
-.documentByLine {color: @gray-light;}
+.documentByLine {color: @plone-gray-light;}
 .alert strong:after {content:" ";}
 
 textarea { resize:vertical; }
-.label {color:@gray-dark; font-size: 100%;}
+.label {color:@plone-gray-dark; font-size: 100%;}
 /*provisional fixar columnes */
 
-#portal-personaltools {
-  // ul { padding-top: 27px; }
-  h2 {margin: 0px;font-size: 18px;}
-  li {
-    display: inline-block;
-    color: #fff;
-    &:after { content: " | "; }
-    &:last-child:after { content: ""; }
-    a {
-      font-size: 14px;
-      padding-left: 12px;
-      padding-right: 12px;
-    }
-  }
-}
+// #portal-personaltools {
+//   // ul { padding-top: 27px; }
+//   h2 {margin: 0px;font-size: 18px;}
+//   li {
+//     display: inline-block;
+//     color: #fff;
+//     &:after { content: " | "; }
+//     &:last-child:after { content: ""; }
+//     a {
+//       font-size: 14px;
+//       padding-left: 12px;
+//       padding-right: 12px;
+//     }
+//   }
+// }
 
 .user_bar_portrait {
   width: 45px;
@@ -588,20 +668,20 @@ textarea { resize:vertical; }
 .dropdown-plonetheme {
   ul {float: none;}
 }
-#portal-personaltools {
-  ul { padding-top: 0px; }
-  li {
-    padding: 5px;
-    display: block;
-    &:after {
-      content: "";
-    }
-  }
-}
+// #portal-personaltools {
+//   ul { padding-top: 0px; }
+//   li {
+//     padding: 5px;
+//     display: block;
+//     &:after {
+//       content: "";
+//     }
+//   }
+// }
 .contributor-image-headline blockquote {
     position:relative; background:black;
 }
-
+}
 
 
 @media (min-width: 768px) {
@@ -614,11 +694,11 @@ textarea { resize:vertical; }
   }
   .col-no-css {width:20%; float:left;}
 
-  #portal-personaltools {
-    .dropdown-plonetheme ul {
-      float: right;
-    }
-  }
+  // #portal-personaltools {
+  //   .dropdown-plonetheme ul {
+  //     float: right;
+  //   }
+  // }
 }
 
 

@@ -3,14 +3,11 @@
   "description": "A horizontal accordion plugin for jQuery.",
   "license": "MIT",
   "main": [
-    "./js/jquery.zaccordion.js",
-    "./js/jquery.zaccordion.min.js"
+    "./js/jquery.zaccordion.js"
   ],
   "ignore": [
     "README",
-    "examples.html",
-    "percentage.html",
-    "responsive.html",
+    "examples",
     "images"
   ],
   "dependencies": {
@@ -22,11 +19,11 @@
     "accordion"
   ],
   "homepage": "https://github.com/natearmagost/zAccordion",
-  "_release": "44114d2f7e",
+  "_release": "38940e9d6b",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "44114d2f7ef4552b99adb32d28cefe349e5d04eb"
+    "commit": "38940e9d6b4a8d76bbc7c3eefd615e3fb1c2a61a"
   },
   "_source": "git://github.com/natearmagost/zAccordion.git",
   "_target": "*",

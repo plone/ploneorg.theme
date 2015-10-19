@@ -1,4 +1,6 @@
-﻿/*
+/*globals window, jQuery*/
+/*jslint white: true */
+/*
 	jQuery zAccordion Plugin v2.1.0
 	Copyright (c) 2010 - 2012 Nate Armagost, http://www.armagost.com/zaccordion
 	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -22,14 +24,14 @@
 			trigger: "click", /* Event type that will bind to the "tab" (click, mouseover, etc.). */
 			pause: true, /* Pause on hover. */
 			invert: false, /* Whether or not to invert the slideshow, so the last slide stays in the same position, rather than the first slide. */
-			animationStart: function () {}, /* Function called when animation starts. */
-			animationComplete: function () {}, /* Function called when animation completes. */
-			buildComplete: function () {}, /* Function called after the accordion is finished building. */
+			animationStart: $.noop, /* Function called when animation starts. */
+			animationComplete: $.noop, /* Function called when animation completes. */
+			buildComplete: $.noop, /* Function called after the accordion is finished building. */
 			errors: false /* Display zAccordion specific errors. */
 		}, helpers = {
 			displayError: function (msg, e) {
 				if (window.console && e) {
-					console.log("zAccordion: " + msg + ".");
+					window.console.log("zAccordion: " + msg + ".");
 				}
 			},
 			findChildElements: function (t) { /* Function to find the number of child elements. */
@@ -164,20 +166,20 @@
 				var n = obj.data("next") + 1;
 				if (obj.data("pause") && obj.data("inside") && obj.data("auto")) {
 					try {
-						clearTimeout(obj.data("interval"));
+						window.clearTimeout(obj.data("interval"));
 					} catch (e) {}
 				} else if (obj.data("pause") && !obj.data("inside") && obj.data("auto")) {
 					try {
-						clearTimeout(obj.data("interval"));
+						window.clearTimeout(obj.data("interval"));
 					} catch (f) {}
-					obj.data("interval", setTimeout(function () {
+					obj.data("interval", window.setTimeout(function () {
 						obj.children(obj.children().get(0).tagName + ":nth-child(" + n + ")").trigger(obj.data("trigger"));
 					}, obj.data("timeout")));
 				} else if (!obj.data("pause") && obj.data("auto")) {
 					try {
-						clearTimeout(obj.data("interval"));
+						window.clearTimeout(obj.data("interval"));
 					} catch (g) {}
-					obj.data("interval", setTimeout(function () {
+					obj.data("interval", window.setTimeout(function () {
 						obj.children(obj.children().get(0).tagName + ":nth-child(" + n + ")").trigger(obj.data("trigger"));
 					}, obj.data("timeout")));
 				}
@@ -250,7 +252,7 @@
 							/* Loop through each of the slides and set the layers. */
 							obj.children().each(function (childindex) {
 								var zindex, xpos, y;
-								xpos = o.invert ? xpos = ((size - 1) * o.tabWidth) - (childindex * o.tabWidth) : childindex * o.tabWidth; /* Used for the position of each slide. */
+								xpos = o.invert ? ((size - 1) * o.tabWidth) - (childindex * o.tabWidth) : childindex * o.tabWidth; /* Used for the position of each slide. */
 								originals[childindex] = xpos; /* px position of each open slide. */
 								zindex = o.invert ? ((size - 1) - childindex) * 10 : childindex * 10; /* Increase each slide's z-index by 10 so they sit on top of each other. */
 								if (o.slideClass !== null) {
@@ -321,7 +323,7 @@
 								/* If pause on hover, clear the timer. */
 								if (obj.data("pause")) {
 									try {
-										clearTimeout(obj.data("interval"));
+										window.clearTimeout(obj.data("interval"));
 									} catch (e) {}
 								}
 							}, function () {
@@ -333,81 +335,90 @@
 							});
 							/* Set up the listener to change slides when triggered. */
 							obj.children().bind(o.trigger, function () {
+								var triggeredEl = $(this),
+									i,
+									j,
+									p,  /* 1-index */
+									c,  /* 1-index */
+									animateProperties,
+									finalXPosition;
 								/* Don't do anything if the slide is already open. */
-								if ($(this).index() !== obj.data("current")) {
-									var i, j, p, c; /* p and c are 1-indexes */
-									p = previous + 1; /* Using the 1-index for nth selector. */
-									c = obj.data("current") + 1; /* Using the 1-index for nth selector. */
-									if ((p !== 0) && (o.slideClass !== null)) {
-										obj.children(childtag + ":nth-child(" + p + ")").removeClass(o.slidePreviousClass); /* Remove class for previous slide if previous slide exists. */
-									}
-									obj.children(childtag + ":nth-child(" + c + ")");
-									if (o.slideClass !== null) {
-										obj.children(childtag + ":nth-child(" + c + ")").addClass(o.slidePreviousClass);
-									}
-									previous = obj.data("current");
-									obj.data("previous", obj.data("current"));
-									p = previous;
-									p += 1;
-									obj.data("current", $(this).index());
-									c = obj.data("current");
-									c += 1;
-									obj.children().css("cursor", "pointer");
-									$(this).css("cursor", "default"); /* Add the open class to the slide tab that was just triggered */
-									if (o.slideClass !== null) {
-										obj.children().addClass(o.slideClosedClass).removeClass(o.slideOpenClass);
-										$(this).addClass(o.slideOpenClass).removeClass(o.slideClosedClass); /* Add the open class to the slide tab that was just triggered */
-									}
-									obj.data("next", helpers.getNext(size, $(this).index()));
-									/* If the slide is not open... */
-									helpers.timer(obj);
-									o.animationStart();
-									if (o.invert) {
-										obj.children(childtag + ":nth-child(" + c + ")").stop().animate({ right: originals[obj.data("current")] + o.widthUnits }, o.speed, o.easing, o.animationComplete);
-									} else {
-										obj.children(childtag + ":nth-child(" + c + ")").stop().animate({ left: originals[obj.data("current")] + o.widthUnits }, o.speed, o.easing, o.animationComplete);
-									}
-									/* Closing other slides. */
-									for (i = 0; i < size; i += 1) {
-										j = i + 1;
-										if (i < obj.data("current")) {
-											if (o.invert) {
-												obj.children(childtag + ":nth-child(" + j + ")").stop().animate({
-													right: o.width - (j * o.tabWidth) + o.widthUnits
-												}, o.speed, o.easing);
-											} else {
-												obj.children(childtag + ":nth-child(" + j + ")").stop().animate({
-													left: originals[i] + o.widthUnits
-												}, o.speed, o.easing);
-											}
-										}
-										if (i > obj.data("current")) {
-											if (o.invert) {
-												obj.children(childtag + ":nth-child(" + j + ")").stop().animate({
-													right: (size - j) * o.tabWidth + o.widthUnits
-												}, o.speed, o.easing);
-											} else {
-												obj.children(childtag + ":nth-child(" + j + ")").stop().animate({
-													left: originals[i] + animate + o.widthUnits
-												}, o.speed, o.easing);
-											}
-										}
-									}
-									return false; /* This is important. If a visible link is clicked within the slide, it will open the slide instead of redirecting the link. */
+								if (triggeredEl.index() === obj.data("current")) {
+									return;
 								}
+								p = previous + 1; /* Using the 1-index for nth selector. */
+								c = obj.data("current") + 1; /* Using the 1-index for nth selector. */
+								if ((p !== 0) && (o.slideClass !== null)) {
+									obj.children(childtag + ":nth-child(" + p + ")").removeClass(o.slidePreviousClass); /* Remove class for previous slide if previous slide exists. */
+								}
+								obj.children(childtag + ":nth-child(" + c + ")");
+								if (o.slideClass !== null) {
+									obj.children(childtag + ":nth-child(" + c + ")").addClass(o.slidePreviousClass);
+								}
+								previous = obj.data("current");
+								obj.data("previous", obj.data("current"));
+								p = previous;
+								p += 1;
+								obj.data("current", triggeredEl.index());
+								c = obj.data("current");
+								c += 1;
+								obj.children().css("cursor", "pointer");
+								triggeredEl.css("cursor", "default");
+								if (o.slideClass !== null) {
+									obj.children().addClass(o.slideClosedClass).removeClass(o.slideOpenClass);
+									triggeredEl.addClass(o.slideOpenClass).removeClass(o.slideClosedClass);
+								}
+								obj.data("next", helpers.getNext(size, triggeredEl.index()));
+								/* If the slide is not open... */
+								helpers.timer(obj);
+								o.animationStart.call(obj.get(0), triggeredEl.get(0));
+								finalXPosition = originals[obj.data("current")] + o.widthUnits;
+								animateProperties = o.invert ? {right: finalXPosition} : {left: finalXPosition};
+								obj.children(childtag + ":nth-child(" + c + ")")
+									.stop()
+									.animate(animateProperties, o.speed, o.easing, function () {
+										o.animationComplete.call(obj.get(0), this);
+									});
+								/* Closing other slides. */
+								for (i = 0; i < size; i += 1) {
+									j = i + 1;
+									if (i < obj.data("current")) {
+										if (o.invert) {
+											obj.children(childtag + ":nth-child(" + j + ")").stop().animate({
+												right: o.width - (j * o.tabWidth) + o.widthUnits
+											}, o.speed, o.easing);
+										} else {
+											obj.children(childtag + ":nth-child(" + j + ")").stop().animate({
+												left: originals[i] + o.widthUnits
+											}, o.speed, o.easing);
+										}
+									}
+									if (i > obj.data("current")) {
+										if (o.invert) {
+											obj.children(childtag + ":nth-child(" + j + ")").stop().animate({
+												right: (size - j) * o.tabWidth + o.widthUnits
+											}, o.speed, o.easing);
+										} else {
+											obj.children(childtag + ":nth-child(" + j + ")").stop().animate({
+												left: originals[i] + animate + o.widthUnits
+											}, o.speed, o.easing);
+										}
+									}
+								}
+								return false; /* This is important. If a visible link is clicked within the slide, it will open the slide instead of redirecting the link. */
 							});
 							/* Set up the original timer. */
 							if (obj.data("auto")) {
 								helpers.timer(obj);
 							}
-							o.buildComplete();
+							o.buildComplete.call(obj.get(0));
 						});
 					}
 				}
 			},
 			stop: function () { /* This will stop the accordion unless the slides are clicked, however, it will not resume the autoplay. */
 				if ($(this).data("auto")) {
-					clearTimeout($(this).data("interval"));
+					window.clearTimeout($(this).data("interval"));
 					$(this).data("auto", false);
 				}
 			},
@@ -419,6 +430,7 @@
 				}
 			},
 			trigger: function (x) {
+				x = parseInt(x, 10);
 				if ((x >= $(this).children().size()) || (x < 0)) { /* If the triggered slide is out of range, trigger the first slide. */
 					x = 0;
 				}
@@ -431,7 +443,7 @@
 					removestyle = (o.removeStyleAttr !== undefined) ? o.removeStyleAttr : true;
 					removeclasses = (o.removeClasses !== undefined) ? o.removeClasses : false;
 				}
-				clearTimeout($(this).data("interval"));
+				window.clearTimeout($(this).data("interval"));
 				$(this).children().stop().unbind($(this).data("trigger"));
 				$(this).unbind("mouseenter mouseleave mouseover mouseout");
 				if (removestyle) {

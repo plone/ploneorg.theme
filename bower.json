@@ -21,7 +21,7 @@
     "test",
     "tests"
   ],
-  "devDependencies": {
+  "dependencies": {
     "bootstrap": "latest",
     "fontawesome": "latest",
     "modernizr": "latest",

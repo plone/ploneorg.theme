@@ -6,27 +6,24 @@
     xmlns:xi="http://www.w3.org/2001/XInclude">
 
   <theme href="index.html" />
-  <!-- <notheme if="$ajax_load" /> -->
   <notheme css:if-not-content="#visual-portal-wrapper" />
 
-  <rules if-content="//*[@id='portal-top']">
+  <rules css:if-content="#portal-top">
     <!-- Attributes -->
-    <copy attributes="*" theme="/html" content="/html"/>
+    <copy attributes="*" css:theme="html" css:content="html" />
     <!-- Base tag -->
-    <before theme="/html/head/title" content="/html/head/base"/>
+    <before css:theme="title" css:content="base" />
     <!-- Title -->
-    <replace theme="/html/head/title" content="/html/head/title" />
+    <replace css:theme="title" css:content="title" />
     <!-- Pull in Plone Meta -->
-    <after theme-children="/html/head" content="/html/head/meta" />
-    <!-- dont use Plone icons, use the theme -->
+    <after css:theme-children="head" css:content="head meta" />
+    <!-- Don't use Plone icons, use the theme's -->
     <drop css:content="head link[rel='apple-touch-icon']" />
     <drop css:content="head link[rel='shortcut icon']" />
-    <!-- Drop w.fc custom css -->
-    <!-- <drop css:content="link[href*='bootstrap-fixed.css']" /> -->
-    <!-- Script -->
-    <after theme="/html/body/footer" content="/html/head/script" />
     <!-- CSS -->
-    <before theme-children="/html/head" content="/html/head/link" />
+    <after css:theme-children="head" css:content="head link" />
+    <!-- Script -->
+    <after css:theme-children="head" css:content="head script" />
   </rules>
 
   <!-- Move inline scripts in content to end of body -->
@@ -43,39 +40,39 @@
 
   <!-- The log in link -->
   <append css:theme="#navbar-plonetheme ul.nav" css:content="#anon-personalbar"/>
-  <append css:theme="#navbar-plonetheme ul.nav" css:content="#portal-personaltools"/>
-
-  <!-- Central column -->
-  <xsl:variable name="central">
-    <xsl:if test="//*[@id='portal-column-one'] and //*[@id='portal-column-two']">col-xs-12 col-sm-6</xsl:if>
-    <xsl:if test="//*[@id='portal-column-two'] and not(//*[@id='portal-column-one'])">col-xs-12 col-sm-9</xsl:if>
-    <xsl:if test="//*[@id='portal-column-one'] and not(//*[@id='portal-column-two'])">col-xs-12 col-sm-9</xsl:if>
-    <xsl:if test="not(//*[@id='portal-column-one']) and not(//*[@id='portal-column-two'])">col-xs-12 col-sm-12</xsl:if>
-  </xsl:variable>
+  <!-- <append css:theme="#navbar-plonetheme ul.nav" css:content="#portal-personaltools"/> -->
 
   <!-- Above content -->
-  <rules if-content="//*[@id='viewlet-above-content']">
-    <replace css:theme="#above-content" css:content="#viewlet-above-content" />
-  </rules>
+  <replace css:content="#viewlet-above-content" css:theme="#above-content" />
 
-  <append css:theme="#globalstatusmessage" css:content=".portalMessage" if-content="not(//*[@id='content']/dl)" />
+  <!-- Alert message -->
+  <replace css:theme-children="#global_statusmessage" css:content-children="#global_statusmessage" />
 
-  <!-- Main content -->
+  <!-- Central column -->
   <replace css:theme="#content-container" method="raw">
-      <div class="{$central}">
-          <div class="row">
-            <div class="col-xs-12 col-sm-12">
-               <xsl:apply-templates select="//div[@id='content']"/>
-               <xsl:apply-templates select="//article[@id='content']"/>
-               <!-- <xsl:copy-of select="//div[@id='content']"/> -->
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12 col-sm-12">
-             <xsl:copy-of select="//div[@id='viewlet-below-content']"/>
-            </div>
-          </div>
-      </div><!--/row-->
+
+    <xsl:variable name="central">
+      <xsl:if test="//aside[@id='portal-column-one'] and //aside[@id='portal-column-two']">col-xs-12 col-sm-6</xsl:if>
+      <xsl:if test="//aside[@id='portal-column-two'] and not(//aside[@id='portal-column-one'])">col-xs-12 col-sm-9</xsl:if>
+      <xsl:if test="//aside[@id='portal-column-one'] and not(//aside[@id='portal-column-two'])">col-xs-12 col-sm-9</xsl:if>
+      <xsl:if test="not(//aside[@id='portal-column-one']) and not(//aside[@id='portal-column-two'])">col-xs-12 col-sm-12</xsl:if>
+    </xsl:variable>
+
+    <div class="{$central}">
+      <!-- <p class="pull-right visible-xs">
+        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+      </p> -->
+      <div class="row">
+        <div class="col-xs-12 col-sm-12">
+          <xsl:apply-templates css:select="#content" />
+        </div>
+      </div>
+      <footer class="row">
+        <div class="col-xs-12 col-sm-12">
+          <xsl:copy-of css:select="#viewlet-below-content" />
+        </div>
+      </footer>
+    </div>
   </replace>
 
   <!-- Left column -->
