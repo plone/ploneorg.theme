@@ -27,7 +27,6 @@
     "modernizr": "latest",
     "underscore": "~1.6.0",
     "select2": "https://github.com/ivaynberg/select2.git#master",
-    "zaccordion": "latest",
     "iCheck": "latest"
   }
 }

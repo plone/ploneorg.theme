@@ -4925,7 +4925,7 @@ header.header-wrapper {
 #edit-bar {
   margin-top: 10px;
   border-bottom: 1px solid #CCCCCC;
-  box-shadow: 0 -10px 12px -18px #000000 inset;
+  box-shadow: 0 -10px 12px -18px black inset;
 }
 #edit-bar .nav-tabs {
   border-bottom: 0;
@@ -5409,6 +5409,50 @@ textarea {
   .col-no-css {
     width: 20%;
     float: left;
+  }
+}
+#accordion {
+  margin: 0;
+  padding: 0;
+}
+#accordion li {
+  margin: 0;
+  float: left;
+  overflow: hidden;
+  list-style: none;
+  position: relative;
+}
+#accordion li.active .carousel-info {
+  font-size: 22px;
+}
+#accordion li.active .carousel-text {
+  display: block;
+}
+#accordion li .carousel-info {
+  font-size: 18px;
+  color: #fff;
+  position: absolute;
+  bottom: 0px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 102px;
+}
+#accordion li .carousel-text {
+  display: none;
+  font-size: 12px;
+  line-height: 14px;
+  color: #fff;
+  margin: 0 !important;
+}
+#accordion:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+@media (min-width: 768px) {
+  .carousel-control {
+    display: none;
   }
 }
 /*# sourceMappingURL=/++theme++ploneorg.theme/stylesheets/main.css.map */
