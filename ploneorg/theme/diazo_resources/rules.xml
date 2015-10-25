@@ -23,10 +23,7 @@
     <!-- CSS -->
     <after css:theme-children="head" css:content="head link" />
     <!-- Script -->
-    <!-- <after css:theme-children="head" css:content="head script" /> -->
-    <before theme="/html/head/script[1]">    <!-- ... before your own scripts -->
-        <xsl:apply-templates select="/html/head/script" />    <!-- include the Plone scripts -->
-    </before>
+    <after css:theme-children="head" css:content="head script" />
   </rules>
 
   <!-- Move inline scripts in content to end of body -->

@@ -4693,7 +4693,7 @@ h2,
 #content .documentDescription,
 #content #description {
   color: #000;
-  font-weight: 200;
+  font-weight: 400;
 }
 /*
 .inner-container {
@@ -5062,13 +5062,13 @@ textarea {
 .section-homepage h2 {
   font-size: 18px;
   text-transform: uppercase;
-  font-weight: 200;
+  font-weight: 400;
 }
 .section-homepage h3 {
   font-size: 16px;
   color: #abbac1;
   text-transform: uppercase;
-  font-weight: 200;
+  font-weight: 400;
 }
 .medium-link {
   font-size: 18px;
@@ -5080,7 +5080,7 @@ textarea {
   color: #333;
   display: block;
   margin-bottom: 20px;
-  font-weight: 200;
+  font-weight: 400;
 }
 .large-link {
   font-size: 24px;
@@ -5110,7 +5110,7 @@ textarea {
 .large-paragraph {
   font-family: Roboto, sans-serif;
   font-size: 30px;
-  font-weight: 200;
+  font-weight: 400;
   color: #666;
   text-align: center;
 }
@@ -5130,7 +5130,7 @@ textarea {
   margin-bottom: 40px;
 }
 .boxed h3 {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
 }
 .boxed p {
@@ -5227,7 +5227,7 @@ textarea {
   font-size: 16px;
   color: #abbac1;
   text-transform: uppercase;
-  font-weight: 200;
+  font-weight: 400;
 }
 .contributor-info ul {
   margin: 0;
