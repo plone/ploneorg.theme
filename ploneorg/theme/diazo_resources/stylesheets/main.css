@@ -4668,10 +4668,6 @@ body {
   padding: 15px 0px;
 }
 #portal-breadcrumbs {
-  color: #9A9A9A;
-  font-size: 92.5%;
-  padding-left: 0.25em;
-  padding-top: 0.5em;
   text-transform: uppercase;
 }
 h1,
@@ -5215,9 +5211,6 @@ textarea {
   width: 50%;
   margin: 0;
   padding: 0;
-}
-.template-profile #portal-breadcrumbs {
-  display: none;
 }
 .contributor-info div {
   border-top: 1px #abbac1 solid;
