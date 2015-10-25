@@ -23,7 +23,10 @@
     <!-- CSS -->
     <after css:theme-children="head" css:content="head link" />
     <!-- Script -->
-    <after css:theme-children="head" css:content="head script" />
+    <!-- <after css:theme-children="head" css:content="head script" /> -->
+    <before theme="/html/head/script[1]">    <!-- ... before your own scripts -->
+        <xsl:apply-templates select="/html/head/script" />    <!-- include the Plone scripts -->
+    </before>
   </rules>
 
   <!-- Move inline scripts in content to end of body -->
@@ -67,11 +70,6 @@
           <xsl:apply-templates css:select="#content" />
         </div>
       </div>
-      <footer class="row">
-        <div class="col-xs-12 col-sm-12">
-          <xsl:copy-of css:select="#viewlet-below-content" />
-        </div>
-      </footer>
     </div>
   </replace>
 

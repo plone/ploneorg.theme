@@ -3986,84 +3986,6 @@ ul.picker__list {
     width: 1170px;
   }
 }
-#portal-footer-wrapper {
-  padding: 30px 15px;
-  background-color: #2e3133;
-  color: #cccccc;
-  text-align: center;
-  clear: both;
-}
-#portal-footer-wrapper p {
-  border-bottom: 1px solid #cccccc;
-  padding-bottom: 28px;
-}
-#portal-footer-wrapper a {
-  color: #16a1e3;
-}
-#portal-footer-wrapper a:hover {
-  color: #57beef;
-}
-#portal-footer-wrapper .portletWrapper {
-  display: inline-block;
-}
-#portal-footer-wrapper .portletWrapper:first-child {
-  display: block;
-  border-bottom: 1px solid #4d4d4d;
-  padding-bottom: 1em;
-  margin-bottom: .5em;
-}
-#portal-footer-wrapper .portlet {
-  background: transparent;
-  border: 0;
-  font-weight: 100;
-  box-shadow: none;
-  margin-bottom: 0;
-}
-#portal-footer-wrapper .portlet .portletContent {
-  padding: 0;
-  background: transparent;
-  border: 0;
-}
-#portal-footer-wrapper .portlet .portletContent > * {
-  padding: inherit;
-}
-#portal-footer-wrapper .portlet .portletContent li {
-  background: transparent;
-  display: inline-block;
-  border: 0;
-  white-space: nowrap;
-  padding: 10px 30px;
-}
-#portal-footer-wrapper .portlet#portal-colophon .portletContent a {
-  padding: 10px 30px;
-}
-#portal-footer-wrapper .portlet .portletItem:before,
-#portal-footer-wrapper .portlet .portletItem a:before {
-  content: "";
-}
-#portal-footer-wrapper .portlet .portletItem a {
-  padding: 0;
-  border: 0;
-}
-#portal-footer-wrapper .portlet .portletActions {
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 500;
-  margin-right: 15px;
-}
-#portal-siteactions {
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: 12px;
-}
-#portal-siteactions li {
-  font-weight: bold;
-  display: inline-block;
-  margin-left: 30px;
-}
-#portal-siteactions li:first-child {
-  margin-left: 0;
-}
 body.template-login_form #content-core,
 body.template-logged_out #content-core {
   border: 1px solid #e5e5e5;
@@ -4825,10 +4747,16 @@ header.header-wrapper {
   border-radius: 0;
   /*fem que el menú ocupi el 100%*/
 }
+.header-wrapper .row .navbar-toggle,
+.navbar-plonetheme .navbar-toggle {
+  margin-top: 20px;
+}
 .header-wrapper .row .navbar-nav > li > a,
 .navbar-plonetheme .navbar-nav > li > a {
   color: #fff;
   text-transform: uppercase;
+  padding-top: 31px;
+  padding-bottom: 50px;
 }
 .header-wrapper .row .navbar-nav > li,
 .navbar-plonetheme .navbar-nav > li {
@@ -5388,6 +5316,12 @@ textarea {
     position: relative;
     background: black;
   }
+  .navbar-nav {
+    margin-top: 15px;
+    margin-right: -15px;
+    margin-bottom: 25px;
+    margin-left: -15px;
+  }
 }
 @media (min-width: 768px) {
   .csscolumns .five-col {
@@ -5455,4 +5389,4 @@ textarea {
     display: none;
   }
 }
-/*# sourceMappingURL=/++theme++ploneorg.theme/stylesheets/main.css.map */
+/*# sourceMappingURL=++theme++ploneorg.theme/stylesheets/main.css.map */

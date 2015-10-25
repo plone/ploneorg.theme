@@ -1,6 +1,6 @@
 (function(){
   var target = jQuery('#topbarcontainer');
-  var baseURL = portal_url + '/++theme++ploneorg.theme';
+  var baseURL = '/++theme++ploneorg.theme';
   function loadWidgetHTML(callback) {
     jQuery.ajax({
       url: baseURL + "/js/topbar_index.js",
@@ -38,7 +38,7 @@
       s.parentNode.insertBefore(gcse, s);
     })();
   }
-  function loadMobileJS(){ 
+  function loadMobileJS(){
 
     jQuery('#sites-select', target).click(function(event){
       event.preventDefault();
@@ -53,9 +53,9 @@
     });
   }
   function mobileNav () {
-    if (jQuery(".navbar-default .navbar-toggle").css("display") == "none" ) {  
+    if (jQuery(".navbar-default .navbar-toggle").css("display") == "none" ) {
         if ( jQuery("#navbar-plonetheme #links-select").length == 1 ) {
-          jQuery('#links-select').prependTo('#plone-global-topbar-mainlinks');    
+          jQuery('#links-select').prependTo('#plone-global-topbar-mainlinks');
         }
     }
   }
@@ -70,7 +70,7 @@
 
     jQuery(window).resize(function() {
       mobileNav();
-      if (jQuery(".navbar-default .navbar-toggle").css("display") == "block" ) { 
+      if (jQuery(".navbar-default .navbar-toggle").css("display") == "block" ) {
          if ( jQuery("#navbar-plonetheme #links-select").length == 0 ) {
           jQuery('#links-select').prependTo('#navbar-plonetheme');
         }

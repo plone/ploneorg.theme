@@ -30,7 +30,7 @@ $( document ).ready(function() {
 });
 
 
-/* Writen by L.Huiskes ZestSoftware */ 
+/* Writen by L.Huiskes ZestSoftware */
 (function(){
     "use strict";
 

@@ -10,7 +10,7 @@ module.exports = function (grunt) {
                   strictMath: false,
                   sourceMap: true,
                   outputSourceFiles: true,
-                  sourceMapURL: '/++theme++ploneorg.theme/stylesheets/main.css.map',
+                  sourceMapURL: '++theme++ploneorg.theme/stylesheets/main.css.map',
                   sourceMapFilename: 'ploneorg/theme/diazo_resources/stylesheets/main.css.map'
                 },
                 files: {
