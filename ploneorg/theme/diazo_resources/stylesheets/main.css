@@ -5086,10 +5086,6 @@ textarea {
   display: block;
   margin: 10px 0;
 }
-.link-arrow:after {
-  content: " →";
-}
-/*canvi de tipo de DIN falta fletxa*/
 .list-arrows {
   margin: 0;
   padding: 0;
@@ -5099,9 +5095,6 @@ textarea {
   margin: 0;
   padding: 0 0 6px 0;
   font-size: 16px;
-}
-.list-arrows li:after {
-  content: " →";
 }
 .large-paragraph {
   font-family: Roboto, sans-serif;
