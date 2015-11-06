@@ -1,0 +1,67 @@
+//
+// Footer
+// --------------------------------------------------
+//
+// The footer elements.
+
+
+// -----------------------------------------------------------------------------
+// Mobile first
+// -----------------------------------------------------------------------------
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 200px;
+}
+#portal-footer-wrapper {
+
+}
+
+
+// -----------------------------------------------------------------------------
+// Small screen / tablet
+// -----------------------------------------------------------------------------
+
+@media (min-width: $screen-sm-min) {
+
+  body {
+    /* Margin bottom by footer height */
+    margin-bottom: 100px;
+  }
+  #portal-footer-wrapper {
+
+  }
+
+}
+
+
+// -----------------------------------------------------------------------------
+// Medium screen / desktop
+// -----------------------------------------------------------------------------
+
+@media (min-width: $screen-md-min) {
+
+  body {
+    /* Margin bottom by footer height */
+    margin-bottom: 100px;
+  }
+  #portal-footer-wrapper {
+    
+  }
+
+}
+
+// -----------------------------------------------------------------------------
+// Large screen / wide desktop
+// -----------------------------------------------------------------------------
+
+@media (min-width: $screen-lg-min) {
+
+
+
+}

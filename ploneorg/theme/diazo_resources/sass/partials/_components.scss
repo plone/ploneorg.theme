@@ -1,0 +1,96 @@
+//
+// Components
+// --------------------------------------------------
+//
+// Components are project specific building blocks.
+
+
+// -----------------------------------------------------------------------------
+// Mobile first
+// -----------------------------------------------------------------------------
+
+
+#parent-fieldname-text img{
+  @extend .img-responsive;
+}
+
+.error{
+  color: red;
+}
+
+h5{
+  font-weight: bold;
+}
+
+video {
+  margin-bottom: 15px;
+}
+
+dt, dd {
+  line-height: 1.9em!important;
+}
+
+#content {
+  line-height: normal;
+  font-size: 100%;
+  margin: 0;
+  p,li {
+    line-height:1.5em;
+  }
+}
+
+.tileItem {
+  a{
+    text-decoration: none;
+  }
+  .tileImage{
+    float: right;
+  }
+}
+
+.state-published{
+  color: $brand-primary !important;
+}
+
+.portalMessage{
+  @extend .alert;
+  &.success{
+    @extend .alert-success;
+  }
+  &.info{
+    @extend .alert-info;
+  }
+  &.error{
+    @extend .alert-danger;
+  }
+  &.warning{
+    @extend .alert-warning;
+  }
+}
+
+
+
+// -----------------------------------------------------------------------------
+// Small screen / tablet
+// -----------------------------------------------------------------------------
+
+@media (min-width: $screen-sm-min) {
+
+}
+
+
+// -----------------------------------------------------------------------------
+// Medium screen / desktop
+// -----------------------------------------------------------------------------
+
+@media (min-width: $screen-md-min) {
+
+}
+
+// -----------------------------------------------------------------------------
+// Large screen / wide desktop
+// -----------------------------------------------------------------------------
+
+@media (min-width: $screen-lg-min) {
+
+}

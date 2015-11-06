@@ -1,0 +1,3 @@
+/*! */
+/*! ${project} */
+!function(){"use strict"}();
