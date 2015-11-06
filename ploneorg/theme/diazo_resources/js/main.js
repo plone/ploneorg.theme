@@ -82,6 +82,7 @@ $( document ).ready(function() {
       }
 
       // Set active state on first slide
+      slides.removeClass();
       slides.first().addClass("active");
       var slide_active = $('#accordion li.active')
 
@@ -102,7 +103,7 @@ $( document ).ready(function() {
         $(this).animate({ width: width_active_slide + 'px' }, speed);
 
         // Set new classes and width's
-        $('#accordion li.active').removeClass("active");
+        $('#accordion li').removeClass();
         $(this).addClass("active");
 
         // Set new var
