@@ -60,8 +60,7 @@ $( document ).ready(function() {
       // Slide li
       var slides = $('#accordion li')
 
-      $('#accordion').removeAttr('width');
-      $('#accordion').removeAttr('height');
+      $('#accordion li').removeAttr('width');
 
       // Container width
       var total_width = $('#accordion').width();
@@ -150,11 +149,10 @@ $( document ).ready(function() {
 
       // Set a timer.
       function set_timer() {
+        remove_timers(); // Make sure we really really have one timer
         timers.push(setInterval(slide_to_next, interval));
       }
 
-      // Remove all old timers and set a new one.
-      remove_timers();
       set_timer();
 
       // When Mouse enter on the accordion stop autoplay
