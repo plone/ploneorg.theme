@@ -58,7 +58,9 @@ $( document ).ready(function() {
       var interval = 7000;
 
       // Slide li
-      var slides = $('#accordion li')
+      var slides = $('#accordion li');
+      
+      console.log('aie!');
 
       $('#accordion li').removeAttr('width');
 
@@ -68,15 +70,12 @@ $( document ).ready(function() {
       var slide_length = slides.length;
       // How much is 10% for the close slides
       var width_close_slide = Math.floor(total_width / 10);
-
-      // width for the active slide = rest width - 1 closed slide since its open
-      var width_close_slides = Math.floor(width_close_slide);
-      var width_active_slide = Math.floor(total_width - (width_close_slides * (slide_length - 1) ));
+      var width_active_slide = Math.floor(total_width - (width_close_slide * (slide_length - 1) ));
 
       // if screen is smaller then 768 (mobile only)
       if ($(window).width() < 768) {
         // Remove closed slides
-        var width_close_slides = 0;
+        var width_close_slide = 0;
         // Set the active slide on full width
         var width_active_slide = total_width;
       }
@@ -89,17 +88,18 @@ $( document ).ready(function() {
       $('#accordion img').width(width_active_slide);
 
       // Set width's on the li
-      slides.not(".active").width(width_close_slides);
+      slides.not(".active").width(width_close_slide);
       // Set width on the active slide
       slide_active.width(width_active_slide);
 
+      $(slides).unbind('click');
       $(slides).click(function() {
         // If this is already the active stop
         if ($(this).hasClass("active")){
           return false
         }
 
-        $(slides).not($(this)).animate({ width: width_close_slides + 'px' }, speed);
+        $(slides).not($(this)).animate({ width: width_close_slide + 'px' }, speed);
         $(this).animate({ width: width_active_slide + 'px' }, speed);
 
         // Set new classes and width's
