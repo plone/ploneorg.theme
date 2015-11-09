@@ -1,0 +1,162 @@
+//
+// Components
+// --------------------------------------------------
+//
+// Components are project specific building blocks.
+
+
+// -----------------------------------------------------------------------------
+// Mobile first
+// -----------------------------------------------------------------------------
+
+//
+// Animate all links.
+//
+
+a {
+  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s; // Safari
+}
+
+//
+// (Text) selection color
+//
+
+$selection-color: desaturate(lighten($plone-orange, 10), 30);
+::selection {
+  background: $selection-color;
+}
+::-moz-selection {
+  background: $selection-color;
+}
+
+//
+// Some extra buttons
+//
+//  - `.btn-prime`, a orange button for primary actions.
+//     I don't want to overwrite the BS `.btn-primary`.
+//  - `.btn-secondary`, a green button.
+
+.btn-prime {
+  @include button-variant(white, $plone-orange, $plone-orange);
+}
+.btn-secondary {
+  @include button-variant(white, $plone-green, $plone-green);
+}
+
+//
+// Jumbotron
+//
+
+// TODO check if this can be set in _variables.
+.jumbotron {
+  color: white;
+  background: $plone-dark-blue;
+}
+
+.jumbotron-home {
+  padding-top: 68px;
+  text-align: center;
+  p.lead {
+    font-weight: 400;
+    margin-bottom: 12px;
+
+  }
+  h1 {
+    margin-top: 0;
+    font-weight: 300;
+    font-size: 48px;
+    margin-bottom: 24px;
+  }
+  .btn {
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
+
+
+//#parent-fieldname-text img{
+//  @extend .img-responsive;
+//}
+//
+//.error{
+//  color: red;
+//}
+//
+//h5{
+//  font-weight: bold;
+//}
+//
+//video {
+//  margin-bottom: 15px;
+//}
+//
+//dt, dd {
+//  line-height: 1.9em!important;
+//}
+//
+//#content {
+//  line-height: normal;
+//  font-size: 100%;
+//  margin: 0;
+//  p,li {
+//    line-height:1.5em;
+//  }
+//}
+//
+//.tileItem {
+//  a{
+//    text-decoration: none;
+//  }
+//  .tileImage{
+//    float: right;
+//  }
+//}
+//
+//.state-published{
+//  color: $brand-primary !important;
+//}
+//
+//.portalMessage{
+//  @extend .alert;
+//  &.success{
+//    @extend .alert-success;
+//  }
+//  &.info{
+//    @extend .alert-info;
+//  }
+//  &.error{
+//    @extend .alert-danger;
+//  }
+//  &.warning{
+//    @extend .alert-warning;
+//  }
+//}
+
+
+
+// -----------------------------------------------------------------------------
+// Small screen / tablet
+// -----------------------------------------------------------------------------
+
+@media (min-width: $screen-sm-min) {
+
+}
+
+
+// -----------------------------------------------------------------------------
+// Medium screen / desktop
+// -----------------------------------------------------------------------------
+
+@media (min-width: $screen-md-min) {
+
+}
+
+// -----------------------------------------------------------------------------
+// Large screen / wide desktop
+// -----------------------------------------------------------------------------
+
+@media (min-width: $screen-lg-min) {
+
+}

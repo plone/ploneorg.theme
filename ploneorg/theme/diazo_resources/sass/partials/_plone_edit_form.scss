@@ -1,0 +1,60 @@
+// Clean up the Plone 5 edit form.
+
+#global_statusmessage {
+  margin-top: 1em;
+}
+
+.template-homepage #global_statusmessage {
+  margin-top: 0;
+}
+
+.userrole-authenticated form {
+  label {
+    padding-right: 5px;
+
+  }
+  .label {
+    color: #333333;
+  }
+
+  input[type="text"], textarea {
+    width: 100%;
+  }
+
+  input[type=radio] {
+    width: auto;
+  }
+  input[type=submit] {
+    width: auto;
+  }
+
+  .field, .formControls {
+    width: auto;
+  }
+
+  .bool-field {
+    width: auto;
+  }
+
+  #form-widgets-IDublinCore-title {
+    @extend .input-lg;
+    font-weight: bold;
+  }
+
+  #form-widgets-IDublinCore-description {
+    width: 100%;
+    height: 100px;
+  }
+
+  #form-buttons-save, #form-buttons-cancel {
+    width: auto;
+  }
+
+  #form-buttons-save {
+    @extend .btn-success;
+  }
+
+  #form-buttons-cancel {
+    @extend .btn-default;
+  }
+}

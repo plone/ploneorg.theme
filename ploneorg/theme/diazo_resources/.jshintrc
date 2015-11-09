@@ -1,0 +1,16 @@
+// https://github.com/jshint/jshint/blob/master/examples/.jshintrc
+{
+    "maxerr"        : 100,       // {int} Maximum error before stopping
+    // Environments
+    "browser"       : true,     // Web Browser (window, document, etc)
+    "jquery"        : true,    // jQuery
+
+    // Custom Globals
+    // additional predefined global variables
+    "globals": {
+        "$": false,
+        "google": false
+    }
+}
+
+

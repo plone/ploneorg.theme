@@ -1,0 +1,90 @@
+//
+// Footer
+// --------------------------------------------------
+//
+// The footer elements.
+
+
+// -----------------------------------------------------------------------------
+// Mobile first
+// -----------------------------------------------------------------------------
+
+
+.footer-doormat {
+  margin:0;
+  color: desaturate(lighten($plone-light-blue, 10%), 25%);
+  background: $plone-dark-blue;
+  font-size: 11.5px;
+  line-height: 11.5 * 1.6px;
+  padding: 2em 0 5em 0;
+
+}
+
+.footer-legal {
+  margin:0;
+  color: desaturate(lighten($plone-light-blue, 10%), 25%);
+  background: $plone-dark-purple;
+  font-size: 11.5px;
+  line-height: 11.5 * 1.6px;
+  padding: 2em 0 5em 0;
+}
+
+
+
+
+//html {
+//  position: relative;
+//  min-height: 100%;
+//}
+//
+//body {
+//  /* Margin bottom by footer height */
+//  margin-bottom: 200px;
+//}
+//#portal-footer-wrapper {
+//
+//}
+
+
+// -----------------------------------------------------------------------------
+// Small screen / tablet
+// -----------------------------------------------------------------------------
+
+@media (min-width: $screen-sm-min) {
+
+  //body {
+  //  /* Margin bottom by footer height */
+  //  margin-bottom: 100px;
+  //}
+  //#portal-footer-wrapper {
+  //
+  //}
+
+}
+
+
+// -----------------------------------------------------------------------------
+// Medium screen / desktop
+// -----------------------------------------------------------------------------
+
+@media (min-width: $screen-md-min) {
+
+  //body {
+  //  /* Margin bottom by footer height */
+  //  margin-bottom: 100px;
+  //}
+  //#portal-footer-wrapper {
+  //
+  //}
+
+}
+
+// -----------------------------------------------------------------------------
+// Large screen / wide desktop
+// -----------------------------------------------------------------------------
+
+@media (min-width: $screen-lg-min) {
+
+
+
+}
