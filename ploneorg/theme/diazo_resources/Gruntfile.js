@@ -60,15 +60,22 @@ module.exports = function(grunt) {
                 files: [
                   {
                       src: [
-                            // Only uncomment required js. 
+                        //
+                        // Only uncomment required js.
+                        //
+
+                        // TODO: We don't need jQuery in the theme if we use Plone.
+                        // This jquery only during theme development.
+                        'bower_components/jquery/dist/jquery.js',
+
 //                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js',
 //                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js',
 //                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js',
 //                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js',
-//                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js',
+                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js', // .nav-bar
 //                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js',
 //                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js',
-//                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js',
+                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js', // .nav-bar
 //                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js',
 //                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js',
 //                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js',
@@ -85,15 +92,32 @@ module.exports = function(grunt) {
         copy: {
           main: {
             files: [
+              //
               // Copy fontawesome fonts.
+              //
               // Will fail silently if source files are missing due to wildcard.
+
               {
                   expand: true,
                   cwd: 'bower_components/',
                   src: ['fontawesome/fonts/*'],
                   dest: 'static/',
                   filter: 'isFile'
+              },
+
+              //
+              // Copy Roboto fonts.
+              //
+              // Will fail silently if source files are missing due to wildcard.
+
+              {
+                  expand: true,
+                  cwd: 'bower_components/roboto-fontface/fonts',
+                  src: ['*'],
+                  dest: 'static/roboto/',
+                  filter: 'isFile'
               }
+
             ]
           }
         },

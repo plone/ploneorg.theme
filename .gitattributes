@@ -1,5 +1,5 @@
- diazo_resources/static/editor.css -diff
-diazo_resources/static/editor.css.map -diff
-diazo_resources/static/main.css -diff
-diazo_resources/static/main.css.map -diff
-diazo_resources/static/main.js -diff
+ploneorg/theme/diazo_resources/static/editor.css -diff
+ploneorg/theme/diazo_resources/static/editor.css.map -diff
+ploneorg/theme/diazo_resources/static/main.css -diff
+ploneorg/theme/diazo_resources/static/main.css.map -diff
+ploneorg/theme/diazo_resources/static/main.js -diff

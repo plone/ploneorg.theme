@@ -4,8 +4,18 @@
 //
 // Combining custom bootstrap and partials to one file.
 
-// Font path
-@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
+//
+// Fonts
+//
+
+// TODO: Load only the used fonts.
+// At the moment we load to many fonts.
+$roboto-font-path: 'roboto' !default;
+@import "../bower_components/roboto-fontface/css/roboto-fontface.scss";
+
+// TODO: We also might enjoy the benefits of a CDN.
+//@import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700,700italic,500italic,500,400italic,300italic,300,100italic,100&subset=latin,latin-ext);
+
 
 // Set asset path
 $bootstrap-sass-asset-helper: "bootstrap-sass-official/assets/";
