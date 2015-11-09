@@ -1,4 +1,0 @@
-recursive-include ploneorg *
-recursive-include docs *
-include *
-global-exclude *.pyc
