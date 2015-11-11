@@ -19,21 +19,20 @@
 // TODO: Check all colors with the OSX color picker. Indesign applies a display
 // profile and colors are picked with this profile on! :(
 
-// TODO: this is the true Plone blue.
 $plone-blue: rgb(0, 131, 190);
-
-//$plone-blue: rgb(48, 148, 200);       // The standard Plone (grayish) blue.
-$plone-dark-blue: rgba(17,49,86,1); //rgb(19, 65, 107);   // Dark blue matching the standard Plone blue.
+$plone-dark-blue: rgba(17,49,86,1); // Dark blue matching the standard Plone blue.
 $plone-light-blue: lighten($plone-blue, 30);
-$plone-green: rgb(32, 109, 109);      // Sea green.
-$plone-orange: rgb(255, 75, 0);       // Orange signal color for primary buttons. Use sparingly).
-$plone-dark-purple: rgb(33, 5, 39);  // A very dark purple, almost black. Background for topbar and footer.
+$plone-green: rgb(23, 87, 88);      // Sea green.
+$plone-orange: rgb(255, 54, 0);       // Orange signal color for primary buttons. Use sparingly).
+$plone-dark-purple: rgb(31, 18, 56);  // A very dark purple, almost black. Background for topbar and footer.
+
+$plone-light-grey-bg: rgb(232, 238, 242);
 
 // Selections.
 $plone-purple: rgb(39, 19, 72);
 
 // $light-grey: rgb(243, 245, 244);      // Very light gray. Background for articles / wells.
-$light-grey: rgb(238, 242, 245);      // Very light gray (blueish). Background for articles / wells.
+$light-grey: rgb(238, 242, 245);      // Very light grey (blueish). Background for articles / wells.
 
 
 // Colors used in the top bar.

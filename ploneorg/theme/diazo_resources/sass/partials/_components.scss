@@ -9,6 +9,7 @@
 // Mobile first
 // -----------------------------------------------------------------------------
 
+
 //
 // Animate all links.
 //
@@ -44,37 +45,37 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
   @include button-variant(white, $plone-green, $plone-green);
 }
 
-//
-// Jumbotron
-//
 
-// TODO check if this can be set in _variables.
-.jumbotron {
-  color: white;
-  background: $plone-dark-blue;
+//
+// Plone items
+// --------------------------------------------------
+//
+// Styling of typical Plone classes.
+
+.state-published{
+  color: $brand-primary !important;
 }
 
-.jumbotron-home {
-  padding-top: 68px;
-  text-align: center;
-  p.lead {
-    font-weight: 400;
-    margin-bottom: 12px;
+//
+// Messages
+//
+// Map Bootstrap message classes to Plone message classes.
 
+.portalMessage{
+  @extend .alert;
+  &.success{
+    @extend .alert-success;
   }
-  h1 {
-    margin-top: 0;
-    font-weight: 300;
-    font-size: 48px;
-    margin-bottom: 24px;
+  &.info{
+    @extend .alert-info;
   }
-  .btn {
-    font-size: 12px;
-    font-weight: 500;
+  &.error{
+    @extend .alert-danger;
+  }
+  &.warning{
+    @extend .alert-warning;
   }
 }
-
-
 
 //#parent-fieldname-text img{
 //  @extend .img-responsive;
@@ -113,27 +114,233 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 //    float: right;
 //  }
 //}
-//
-//.state-published{
-//  color: $brand-primary !important;
-//}
-//
-//.portalMessage{
-//  @extend .alert;
-//  &.success{
-//    @extend .alert-success;
-//  }
-//  &.info{
-//    @extend .alert-info;
-//  }
-//  &.error{
-//    @extend .alert-danger;
-//  }
-//  &.warning{
-//    @extend .alert-warning;
-//  }
-//}
 
+
+//
+// Sections
+// --------------------------------------------------
+//
+// A section is what it says it is. A block of content.
+
+
+//
+// General section styles.
+//
+
+//
+// Full width
+//
+
+.section-full-width {
+  width: 100%;
+  padding: 36px 0 54px 0;
+}
+
+.section-spacer {
+  margin-bottom: 4em;
+}
+
+//
+// Section in order of appearance on the homepage.
+//
+
+//
+// Jumbotron
+//
+
+// TODO check if this can be set in _variables.
+.jumbotron {
+  color: white;
+  background: $plone-dark-blue;
+}
+
+.jumbotron-home {
+  @extend .section-spacer;
+  margin: 0;
+  padding-top: 68px;
+  text-align: center;
+  p.lead {
+    font-weight: 400;
+    margin-bottom: 12px;
+
+  }
+  h1 {
+    margin-top: 0;
+    font-weight: 300;
+    font-size: 48px;
+    margin-bottom: 24px;
+  }
+  .btn {
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
+//
+// Search
+//
+
+.section-search {
+  margin:0;
+  background: rgb(24, 77, 114);
+  color: rgb(200, 218, 218);
+  padding-bottom: 1.25em;
+  .column {
+    @extend .col-xs-10, .col-xs-offset-1, .col-md-6, .col-md-offset-3;
+  }
+  label {
+    font-weight: 300;
+  }
+}
+
+//
+// Totals
+//
+
+.section-totals {
+  padding: 1em 0 1em 0;
+  font-size: 1.75em;
+  font-weight: 500;
+  text-align: center;
+  color: $plone-blue;
+  span {
+    color: $plone-dark-purple;
+  }
+}
+
+//
+// Download
+//
+
+.section-download {
+  @extend .section-spacer;
+  .about {
+    @extend .col-xs-8, .col-xs-offset-2;
+    @extend .col-sm-6, .col-sm-offset-0;
+    @extend .col-md-4, .col-md-offset-2;
+  }
+  .links {
+    @extend .col-xs-8, .col-xs-offset-2;
+    @extend .col-sm-6, .col-sm-offset-0;
+    @extend .col-md-4;
+  }
+  .container {
+    background: $plone-light-grey-bg;
+    // Keep padding left and right as is!
+    padding-top: 2em;
+    padding-bottom: 2em;
+    border-radius: 4px;
+    margin-bottom: 2em;
+    color: $plone-dark-purple;
+    .btn-prime {
+      margin-top: 1.25em;
+    }
+  }
+}
+
+//
+// News
+//
+
+.section-news {
+  @extend .section-spacer;
+  article {
+    @extend .col-md-6;
+  }
+}
+
+
+//
+// Events
+//
+
+.section-events {
+  @extend .section-spacer;
+  background: $plone-light-grey-bg;
+  .about {
+    @extend .col-md-3;
+    margin-top: -41px;
+    background: #D8E2E9;
+  }
+  .column {
+    @extend .col-xs-4, .col-sm-2;
+    padding: 20px;
+    img {
+      opacity: 0.4;
+    }
+  }
+  .events {
+    @extend .col-md-8, .col-md-offset-1;
+  }
+}
+
+
+//
+// Github totals
+//
+
+.section-github-totals {
+  @extend .section-spacer;
+  .column {
+    @extend .col-xs-6, .col-sm-4, .col-md-2;
+    .well {
+      color: white;
+      background: $plone-dark-blue;
+      border: 0;
+      border-radius: 4px;
+
+      i {
+        font-size: 5em;
+        margin-bottom: .35em;
+      }
+      h3 {
+        margin:0;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 42px;
+        font-weight: 300;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
+//
+// Sponsors
+//
+
+.section-sponsors {
+  // No section spacer because it snaps snug against the footer.
+  background: $plone-light-grey-bg;
+  .about {
+    @extend .col-sm-4, .col-md-3;
+    margin-top: -41px;
+    background: #D8E2E9;
+    padding-top: 1em;
+    padding-bottom: 1.5em;
+
+  }
+  a.logos {
+    @extend .col-xs-12, .col-sm-8, .col-md-8, .col-md-offset-1;
+    opacity: 0.4;
+    overflow: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  .column {
+    @extend .col-xs-4, .col-sm-3, .col-md-3;
+    padding: 30px;
+  }
+  img {
+    @extend .img-responsive;
+  }
+}
 
 
 // -----------------------------------------------------------------------------
@@ -141,7 +348,9 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 // -----------------------------------------------------------------------------
 
 @media (min-width: $screen-sm-min) {
-
+  .section-totals {
+    font-size: 2.25em;
+  }
 }
 
 
@@ -150,7 +359,9 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 // -----------------------------------------------------------------------------
 
 @media (min-width: $screen-md-min) {
-
+  .section-totals {
+    font-size: 3em;
+  }
 }
 
 // -----------------------------------------------------------------------------

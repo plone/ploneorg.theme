@@ -12,21 +12,47 @@
 
 .footer-doormat {
   margin:0;
-  color: desaturate(lighten($plone-light-blue, 10%), 25%);
+  color: rgb(23,30,36);
   background: $plone-dark-blue;
-  font-size: 11.5px;
-  line-height: 11.5 * 1.6px;
+  font-size: 12.5px;
+  line-height: 12.5 * 1.6px;
   padding: 2em 0 5em 0;
+  .column {
+    @extend .col-xs-6, .col-sm-4, .col-md-2;
+  }
+  h3 {
+    font-size: 15px;
+    margin-bottom: 1.5 * 12.5px;
+  }
+  ul {
+    padding:0;
+    list-style-type: none;
+    > li {
+      margin-bottom: 6px;
+    }
+  }
+  a {
+    color: rgb(223,230,236);
 
+  }
 }
 
 .footer-legal {
   margin:0;
-  color: desaturate(lighten($plone-light-blue, 10%), 25%);
+  color: rgb(223, 230, 236);
   background: $plone-dark-purple;
   font-size: 11.5px;
   line-height: 11.5 * 1.6px;
   padding: 2em 0 5em 0;
+  .column {
+    @extend .col-sm-3;
+  }
+  a {
+    color: rgb(223,230,236);
+  }
+  svg {
+    margin-bottom: 1.5em;
+  }
 }
 
 

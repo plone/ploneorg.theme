@@ -71,7 +71,7 @@ module.exports = function(grunt) {
 //                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js',
 //                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js',
 //                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js',
-//                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js',
+                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js',
                         'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js', // .nav-bar
 //                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js',
 //                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js',
