@@ -136,10 +136,11 @@
               </div>
               <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
+                  <!-- TODO: remove class active. -->
                   <li class="active"><a href="#">Getting started</a></li>
-                  <li><a href="#about">Community</a></li>
-                  <li><a href="#about">Add-ons</a></li>
-                  <li><a href="#about">Foundation</a></li>
+                  <li><a href="#">Community</a></li>
+                  <li><a href="#">Add-ons</a></li>
+                  <li><a href="#">Foundation</a></li>
                   <li>
                     <a href="#" class="btn-search">
                       <i class="fa fa-search"></i>
@@ -176,7 +177,7 @@
                 </div>
                 <div class="input-group-sm">
                   <!--TODO: Fix label text. Use Plone default txt. -->
-                  <label><input type="checkbox"> Search this section only.</label>
+                  <label><input type="checkbox"> Only in current section.</label>
                 </div>
               </div>
           </div>
@@ -235,44 +236,51 @@
           </div>
         </section>
 
-        <section class="section-news">
           <div class="container">
             <div class="row">
 
-              <!-- TODO: Add news title (h2) -->
-              <!-- current h2 > h3 -->
-
-              <!-- TODO: Add news images. -->
-
-              <div class="col-md-8">
+              <section class="section-news">
+                <div class="page-header">
+                  <h2><a href="#">Latest news</a></h2>
+                </div>
                 <div class="row">
                   <article>
-                    <h2>Heading</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-                  </article>
-
-                  <article>
-                    <h2>Heading</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+                    <a href="#">
+                      <img src="static/news/business-q-c-800-450-1.jpg" alt="Lorem pixel image">
+                      <h3>Donec id elit</h3>
+                      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus...</p>
+                    </a>
                   </article>
                   <article>
-                    <h2>Heading</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-                  </article>
-
-                  <article>
-                    <h2>Heading</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+                    <a href="#">
+                      <img src="static/news/business-q-c-800-450-2.jpg" alt="Lorem pixel image">
+                      <h3>Donec id elit</h3>
+                      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus...</p>
+                    </a>
                   </article>
                 </div>
-              </div>
+                <div class="row">
+                  <article>
+                    <a href="#">
+                      <img src="static/news/business-q-c-800-450-3.jpg" alt="Lorem pixel image">
+                      <h3>Donec id elit</h3>
+                      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus...</p>
+                    </a>
+                  </article>
+                  <article>
+                    <a href="#">
+                      <img src="static/news/business-q-c-800-450-4.jpg" alt="Lorem pixel image">
+                      <h3>Donec id elit</h3>
+                      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus...</p>
+                    </a>
+                  </article>
+                </div>
+              </section>
 
-              <div class="col-md-4">
-                <h2>Plone websites</h2>
+              <section class="section-related-websites">
+                <div class="page-header">
+                  <h2>Related websites</h2>
+                </div>
                 <div class="list-group">
                   <a href="#" class="list-group-item">
                     <h4 class="list-group-item-heading">plone.com</h4>
@@ -287,11 +295,11 @@
                     <p class="list-group-item-text">A overview of Plone and it's features. It the online Plone brochure.</p>
                   </a>
                 </div>
-              </div>
+              </section>
 
             </div>
           </div>
-        </section>
+
 
         <section class="section-full-width section-events">
           <div class="container">
@@ -302,12 +310,54 @@
                 <h2>
                   <a href="#" title="Sponsors">Upcoming events</a>
                 </h2>
-                <p>Something about sprints, userdays, conferences. Plura mihi bona sunt, inclinet, amari petere vellent. At nos hinc posthac, sitientis piros Afros.</p>
+                <p class="lead">Something about sprints, userdays, conferences. Plura mihi bona sunt, inclinet, amari petere vellent. At nos hinc posthac, sitientis piros Afros.</p>
+                <p>
+                  <a href="#" class="btn btn-primary">
+                    <i class="fa fa-chevron-circle-right"></i>
+                    Add an event
+                  </a>
+                </p>
+                <p>
+                  <a href="#" class="btn btn-primary">
+                    <i class="fa fa-chevron-circle-right"></i>
+                    All events
+                  </a>
+                </p>
               </div>
 
               <div class="events">
                 <div class="row">
-                  <!-- TODO: Add events. -->
+                  <div class="event">
+                    <a href="#">
+                    <article class="panel panel-default">
+                      <div class="panel-heading">
+                        <time date="2016-01-25">Jan 25</time>
+                      </div>
+                      <div class="panel-body">
+                        <img src="static/profile/jens-klein.jpg">
+                        <h3>Alpine City Sprint</h3>
+                        <p>Innsbruck, Austria</p>
+                      </div>
+                    </article>
+                    </a>
+                  </div>
+
+                  <div class="event">
+                    <a href="#">
+                    <article class="panel panel-default">
+                      <div class="panel-heading">
+                        <time date="2016-01-25">September 25</time>
+                      </div>
+                      <div class="panel-body">
+                        <img src="static/profile/manabu-terada.jpg">
+                        <h3>Plone Symposium Tokyo 2016</h3>
+                        <p>Ochanomizu University, Tokyo, Japan</p>
+
+                      </div>
+                    </article>
+                    </a>
+                  </div>
+
                 </div>
               </div>
 
@@ -319,22 +369,24 @@
 
         <section class="section-github-totals">
           <div class="container">
-            <h2>
-              Community activity
-              <a href="#" class="btn btn-sm btn-default">
-                <i class="fa fa-star"></i>
-                PyPI
-              </a>
-              <a href="#" class="btn btn-sm btn-default">
-                <i class="fa fa-github-alt"></i>
-                Plone
-              </a>
-              <a href="#" class="btn btn-sm btn-default">
-                <i class="fa fa-github-alt"></i>
-                Collective
-              </a>
-            </h2>
-            <p class="lead">Something here that explains where those numbers are form and over what period of time.</p>
+            <div class="page-header">
+              <h2>
+                Community activity
+                <a href="#" class="btn btn-sm btn-default">
+                  <i class="fa fa-star"></i>
+                  PyPI
+                </a>
+                <a href="#" class="btn btn-sm btn-default">
+                  <i class="fa fa-github-alt"></i>
+                  Plone
+                </a>
+                <a href="#" class="btn btn-sm btn-default">
+                  <i class="fa fa-github-alt"></i>
+                  Collective
+                </a>
+              </h2>
+            </div>
+            <p class="lead">Text that explains where those numbers are from. Mention the period. E.g: The actvity in the past seven days.</p>
             <div class="row">
 
               <div class="column">

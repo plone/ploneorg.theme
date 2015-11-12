@@ -213,7 +213,6 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 //
 
 .section-download {
-  @extend .section-spacer;
   .about {
     @extend .col-xs-8, .col-xs-offset-2;
     @extend .col-sm-6, .col-sm-offset-0;
@@ -230,7 +229,6 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
     padding-top: 2em;
     padding-bottom: 2em;
     border-radius: 4px;
-    margin-bottom: 2em;
     color: $plone-dark-purple;
     .btn-prime {
       margin-top: 1.25em;
@@ -239,28 +237,53 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 }
 
 //
-// News
+// News and related websites
 //
 
 .section-news {
-  @extend .section-spacer;
+  @extend .col-md-8;
   article {
-    @extend .col-md-6;
+    @extend .section-spacer;
+    @extend .col-xs-6;
+    a {
+      display:block;
+      text-decoration: none;
+      &:hover, &:focus {
+        h3 {
+          text-decoration: underline;
+        }
+      }
+      p {
+        color: $text-color;
+      }
+    }
+    img {
+      @extend .img-responsive;
+    }
   }
 }
 
+.section-related-websites {
+  @extend .col-xs-10, .col-xs-offset-1, .col-md-4, .col-md-offset-0;
+  @extend .section-spacer;
+  .list-group-item:hover {
+    background: $plone-light-grey-bg;
+  }
+}
 
 //
 // Events
 //
 
 .section-events {
-  @extend .section-spacer;
   background: $plone-light-grey-bg;
   .about {
-    @extend .col-md-3;
+    @extend .col-sm-4, .col-md-3;
     margin-top: -41px;
     background: #D8E2E9;
+    padding-top: 1em;
+    padding-bottom: 1.5em;
+    margin-bottom: 1.5em;
   }
   .column {
     @extend .col-xs-4, .col-sm-2;
@@ -271,7 +294,41 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
   }
   .events {
     @extend .col-md-8, .col-md-offset-1;
+    .event {
+      @extend .col-xs-6;
+      > a {
+        text-decoration: none;
+        &:hover, &:focus {
+          .panel-body h3 {
+            text-decoration: underline;
+          }
+        }
+      }
+      .panel-heading {
+        color: white;
+        background: $plone-dark-purple;
+        text-transform: uppercase;
+        text-align: right;
+        font-weight: 600;
+        font-size: 20px;
+        padding: .2em .5em;
+      }
+      .panel-body {
+        h3 {
+          margin-top: 0;
+        }
+        img {
+          width: 75px;
+          float:right;
+          @extend .img-circle;
+        }
+        p {
+          color: $text-color;
+        }
+      }
+    }
   }
+
 }
 
 
@@ -281,6 +338,9 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 
 .section-github-totals {
   @extend .section-spacer;
+  h2 > a:first-child {
+    margin-left: 1.5em;
+  }
   .column {
     @extend .col-xs-6, .col-sm-4, .col-md-2;
     .well {
@@ -321,7 +381,6 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
     background: #D8E2E9;
     padding-top: 1em;
     padding-bottom: 1.5em;
-
   }
   a.logos {
     @extend .col-xs-12, .col-sm-8, .col-md-8, .col-md-offset-1;
