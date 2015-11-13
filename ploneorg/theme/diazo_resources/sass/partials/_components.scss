@@ -9,6 +9,14 @@
 // Mobile first
 // -----------------------------------------------------------------------------
 
+//
+// Set smooth font rendering.
+//
+
+body{
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 //
 // Animate all links.
@@ -152,6 +160,17 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 .jumbotron {
   color: white;
   background: $plone-dark-blue;
+
+  h1 {
+    font-size: 32px;
+  }
+  .lead {
+    font-size: 26px;
+    font-weight: 300;
+  }
+  .intro {
+    @extend .col-lg-6;
+  }
 }
 
 .jumbotron-home {
@@ -209,10 +228,10 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 }
 
 //
-// Download
+// Download and Report issues
 //
 
-.section-download {
+.section-download, .section-report-issues {
   .about {
     @extend .col-xs-8, .col-xs-offset-2;
     @extend .col-sm-6, .col-sm-offset-0;
@@ -230,11 +249,12 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
     padding-bottom: 2em;
     border-radius: 4px;
     color: $plone-dark-purple;
-    .btn-prime {
+    .btn-prime, .btn-secondary {
       margin-top: 1.25em;
     }
   }
 }
+
 
 //
 // News and related websites
@@ -295,7 +315,7 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
   .events {
     @extend .col-md-8, .col-md-offset-1;
     .event {
-      @extend .col-xs-6;
+      @extend .col-xs-12, .col-sm-6;
       > a {
         text-decoration: none;
         &:hover, &:focus {
@@ -402,6 +422,47 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 }
 
 
+//
+// Getting started
+//
+// We don't want to make the whole block article block a link because
+// we want to be able to add multiple links per block.
+
+.section-getting-started {
+  .container {
+    @extend .section-spacer;
+  }
+  article {
+    .image {
+      @extend .col-xs-3, .col-sm-1;
+      img {
+        width: 72px;
+        float: right;
+        margin-right: -12px;
+      }
+    }
+    .text {
+      @extend .col-xs-8, .col-sm-5;
+    }
+  }
+}
+
+//
+// Community
+//
+// The community/team overview.
+
+.section-community {
+  .container {
+    @extend .section-spacer;
+  }
+  article {
+    @extend .col-xs-12;
+    @extend .col-sm-6;
+    @extend .col-md-4;
+  }
+}
+
 // -----------------------------------------------------------------------------
 // Small screen / tablet
 // -----------------------------------------------------------------------------
@@ -409,6 +470,9 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 @media (min-width: $screen-sm-min) {
   .section-totals {
     font-size: 2.25em;
+  }
+  .section-report-issues {
+    margin-bottom: 4em;
   }
 }
 
