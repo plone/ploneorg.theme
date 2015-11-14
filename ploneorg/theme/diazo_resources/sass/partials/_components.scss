@@ -389,10 +389,10 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 
 
 //
-// Sponsors
+// Sponsors home
 //
 
-.section-sponsors {
+.section-sponsors-home {
   // No section spacer because it snaps snug against the footer.
   background: $plone-light-grey-bg;
   .about {
@@ -421,6 +421,62 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
   }
 }
 
+//
+// Sponsors
+//
+
+.section-sponsors-premium {
+  .sponsor {
+    @extend .col-sm-6;
+    @extend .section-spacer;
+    a {
+      display: inline-block;
+      &:hover, &:focus {
+        text-decoration: none;
+      }
+    }
+    .logo {
+      @extend .col-md-4;
+      margin-bottom: 1em;
+    }
+    .body {
+      @extend .col-md-8;
+      color: $text-color;
+    }
+  }
+  .break {
+    @extend .col-sm-12;
+    @extend .hidden-xs;
+  }
+}
+
+.section-sponsors-standard {
+  @extend .section-spacer;
+  .sponsor {
+    @extend .col-xs-6;
+    @extend .col-sm-4;
+    @extend .col-md-3;
+    @extend .col-lg-2;
+    height: 120px;
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+    text-align: center;
+  }
+}
+
+.section-sponsors-university {
+  @extend .section-sponsors-standard;
+}
+
+.section-sponsors-foundation-heros {
+  @extend .col-md-6;
+  @extend .section-spacer;
+}
+
+.section-sponsors-about {
+  @extend .col-md-6;
+  @extend .section-spacer;
+}
 
 //
 // Getting started
