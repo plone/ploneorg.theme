@@ -6,9 +6,9 @@
        xmlns:xi="http://www.w3.org/2001/XInclude">
 
 
-  <theme href="/++theme++ploneorg/index.html" css:if-content="body.template-homepage"/>
+  <theme href="++theme++ploneorg/index.html" css:if-content="body.template-homepage"/>
 
-  <theme href="/++theme++ploneorg/page.html" if-not-path="/"/>
+  <theme href="++theme++ploneorg/page.html" if-not-path="/"/>
   <notheme css:if-not-content="#visual-portal-wrapper" />
 
   <rules if-content="//*[@id='portal-top']">
