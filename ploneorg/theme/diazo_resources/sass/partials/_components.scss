@@ -519,6 +519,26 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
   }
 }
 
+//
+// Profile
+//
+
+.section-profile {
+  .image {
+    @extend .col-xs-3;
+    text-align: right;
+  }
+  img {
+    width: 180px;
+    height: 180px;
+    margin-right: 2em;
+    border: 4px solid white;
+  }
+  .text {
+    margin-top: 3.75em;
+  }
+}
+
 // -----------------------------------------------------------------------------
 // Small screen / tablet
 // -----------------------------------------------------------------------------
