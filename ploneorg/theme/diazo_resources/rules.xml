@@ -10,7 +10,7 @@
   <rules css:if-content="body.viewpermission-view, body.viewpermission-none">
 
     <!--<theme href="/++theme++ploneorg/index.html" css:if-content="body.portaltype-homepage"/>-->
-    <theme href="/++theme++ploneorg/base.html" if-not-path="/" />
+    <theme href="/++theme++ploneorg/base.html" />
 
     <!-- TODO: Apply appropriate pages if any.
          Don't know if we have variations. Maybe duplicate index.html to
@@ -18,7 +18,7 @@
 
          I'd like the static html's to function as a fully styled site.
          If Diazo rules respect the theme html structure than it is easier to
-         debug and build the theme.
+         debug and modify the theme.
     -->
 
     <!--<theme href="/++theme++ploneorg/getting-started.html" css:if-content="body.section-getting-started"/>-->

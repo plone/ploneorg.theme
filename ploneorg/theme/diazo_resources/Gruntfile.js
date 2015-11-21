@@ -52,8 +52,8 @@ module.exports = function(grunt) {
 
         uglify: {
             options: {
-                mangle: false,
-                // beautify: true,   // Default false.
+//                mangle: false,
+                beautify: false,   // Default false.
                 preserveComments: 'some'  // https://github.com/gruntjs/grunt-contrib-uglify#preservecomments
             },
             my_target: {
