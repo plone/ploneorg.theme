@@ -9,17 +9,15 @@
 
   <rules css:if-content="body.viewpermission-view, body.viewpermission-none">
 
-    <!--<theme href="/++theme++ploneorg/index.html" css:if-content="body.portaltype-homepage"/>-->
+
     <theme href="/++theme++ploneorg/base.html" />
 
-    <!-- TODO: Apply appropriate pages if any.
-         Don't know if we have variations. Maybe duplicate index.html to
-         a base.html and drop the content area. As a base theme.
-
-         I'd like the static html's to function as a fully styled site.
-         If Diazo rules respect the theme html structure than it is easier to
-         debug and modify the theme.
-    -->
+    <!-- Homepage rules -->
+    <rules css:if-content="body.portaltype-homepage">
+         <!--<replace css:theme="body">-->
+           <!--<h1>Hello homepage!</h1>-->
+         <!--</replace>-->
+    </rules>
 
     <!--<theme href="/++theme++ploneorg/getting-started.html" css:if-content="body.section-getting-started"/>-->
     <!--<theme href="/++theme++ploneorg/community.html" css:if-content="body.section-community"/>-->
@@ -119,7 +117,7 @@
          Maybe just define the global nav hrefs in the theme. But how to prepend
          the portal_root? A fancy diazo rule maybe?
      -->
-    <!--<replace css:theme-children=".navbar-collapse" css:content="#portal-globalnav" />-->
+    <replace css:theme-children=".navbar-nav" css:content-children="#portal-globalnav" />
     <copy attributes="href" css:content='#portal-logo' css:theme=".navbar-brand" />
 
     <replace css:theme-children="#portal-footer" css:content-children="#portal-footer-wrapper" />
