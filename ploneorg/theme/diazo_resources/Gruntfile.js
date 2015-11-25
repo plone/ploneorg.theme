@@ -77,7 +77,7 @@ module.exports = function(grunt) {
 //                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js',
                         'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js', // .nav-bar
 //                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js',
-//                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js',
+                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js',
 //                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js',
 //                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js',
                         'js/ploneorg.js'
