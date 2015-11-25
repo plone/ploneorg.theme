@@ -68,16 +68,34 @@
   // Uppercase the text.
   text-transform: uppercase;
   font-weight: 500; // medium
-  // Search and login styling.
-  li:nth-last-of-type(-n+2) {
-    text-transform: capitalize;
+  // More, search and login styling.
+  .btn-more i {
+    line-height: 1.25em;
+  }
+  li:nth-last-child(-n+3) {
+    text-transform: none;
     i {
       font-size: 110%;
     }
-    a {
+    > a {
       color: $plone-light-blue;
     }
   }
+  .dropdown-menu {
+    background-color: darken($plone-blue, 3);
+    >li>a {
+      color: $navbar-default-link-color;
+      font-weight: 500;
+      &:hover, &:focus {
+        color: $navbar-default-link-active-color;
+        background-color: $navbar-default-link-hover-bg;
+      }
+    }
+  }
+}
+
+.navbar-nav>li>.dropdown-menu {
+  border-radius: 4px;
 }
 
 .navbar-default .navbar-toggle {
