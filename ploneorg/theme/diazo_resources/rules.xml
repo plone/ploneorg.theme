@@ -106,21 +106,32 @@
     </rules>
 
     <!-- Content header -->
-    <!-- FIXME: How do we build global nav?
-         I'd like a restricted set of items in portal tabs (show only the really,
-         really important). Top level items not in global nav should be
-         accessible threw the homepage content and footer links.
 
-         Let's not use exclude from nav to exclude these items form global tabs
-         because exclude from nav will exclude these items from any nav.
-
-         Maybe just define the global nav hrefs in the theme. But how to prepend
-         the portal_root? A fancy diazo rule maybe?
-     -->
-    <replace css:theme-children=".navbar-nav" css:content-children="#portal-globalnav" />
     <copy attributes="href" css:content='#portal-logo' css:theme=".navbar-brand" />
 
-    <replace css:theme-children="#portal-footer" css:content-children="#portal-footer-wrapper" />
+    <!-- Global nav -->
+    <!--
+    The contents of the global nav is: "Home A B C D E F" I do not want 'Home'
+    in the navigation and I only want the first three items (A, B and C) due to
+    the limited amount of space available at Bootstrap md viewport size. Also
+    because this gives focus to the really important items (communication).
+
+    This is why:
+      - the rules for copying the first three global nav items have an offset
+        of 1 (to compensate for home).
+      - All other items are copied to the more menu.
+    -->
+    <replace content='//*[@id="portal-globalnav"]/li[2]'
+             theme='//*[@id="navbar"]/ul/li[1]' />
+    <replace theme='//*[@id="navbar"]/ul/li[2]'
+             content='//*[@id="portal-globalnav"]/li[3]' />
+    <replace theme='//*[@id="navbar"]/ul/li[3]'
+             content='//*[@id="portal-globalnav"]/li[4]' />
+    <replace css:theme-children=".dropdown-menu"
+             css:content='#portal-globalnav > li:nth-child(n+5)' />
+
+    <!-- TODO: Copy footer -->
+    <!--<replace css:theme-children="#portal-footer" css:content-children="#portal-footer-wrapper" />-->
 
     <!-- toolbar -->
     <!--<replace css:theme="#anonymous-actions" css:content-children="#portal-personaltools-wrapper" css:if-not-content=".ajax_load" css:if-content=".userrole-anonymous"/>-->

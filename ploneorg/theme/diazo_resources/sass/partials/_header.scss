@@ -92,6 +92,11 @@
       }
     }
   }
+  // Style the Plone class `selected` like `active.`
+  // TODO: Write a diazo rule that replaces 'selected' with 'active'.
+  .selected {
+    @extend .active;
+  }
 }
 
 .navbar-nav>li>.dropdown-menu {
