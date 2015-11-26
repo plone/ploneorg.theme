@@ -148,12 +148,12 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 // Full width
 //
 
-.section-full-width {
+.sec-full-width {
   width: 100%;
   padding: 36px 0 54px 0;
 }
 
-.section-spacer {
+.sec-spacer {
   margin-bottom: 4em;
 }
 
@@ -183,7 +183,7 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 }
 
 .jumbotron-home {
-  @extend .section-spacer;
+  @extend .sec-spacer;
   margin: 0;
   padding-top: 68px;
   text-align: center;
@@ -208,7 +208,7 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 // Search
 //
 
-.section-search {
+.sec-search {
   margin:0;
   background: rgb(24, 77, 114);
   color: rgb(200, 218, 218);
@@ -225,7 +225,7 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 // Totals
 //
 
-.section-totals {
+.sec-totals {
   padding: 1em 0 1em 0;
   font-size: 1.75em;
   font-weight: 500;
@@ -240,7 +240,7 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 // Download and Report issues
 //
 
-.section-download, .section-report-issues {
+.sec-download, .sec-report-issues {
   .about {
     @extend .col-xs-8, .col-xs-offset-2;
     @extend .col-sm-6, .col-sm-offset-0;
@@ -269,10 +269,10 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 // News and related websites
 //
 
-.section-news {
+.sec-news {
   @extend .col-md-8;
   article {
-    @extend .section-spacer;
+    @extend .sec-spacer;
     @extend .col-xs-6;
     a {
       display:block;
@@ -292,9 +292,9 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
   }
 }
 
-.section-related-websites {
+.sec-related-websites {
   @extend .col-xs-10, .col-xs-offset-1, .col-md-4, .col-md-offset-0;
-  @extend .section-spacer;
+  @extend .sec-spacer;
   .list-group-item:hover {
     background: $plone-light-grey-bg;
   }
@@ -304,7 +304,7 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 // Events
 //
 
-.section-events {
+.sec-events {
   background: $plone-light-grey-bg;
   .about {
     @extend .col-sm-4, .col-md-3;
@@ -365,8 +365,8 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 // Github totals
 //
 
-.section-github-totals {
-  @extend .section-spacer;
+.sec-github-totals {
+  @extend .sec-spacer;
   h2 > a:first-child {
     margin-left: 1.5em;
   }
@@ -401,7 +401,7 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 // Sponsors home
 //
 
-.section-sponsors-home {
+.sec-sponsors-home {
   // No section spacer because it snaps snug against the footer.
   background: $plone-light-grey-bg;
   .about {
@@ -434,10 +434,10 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 // Sponsors
 //
 
-.section-sponsors-premium {
+.sec-sponsors-premium {
   .sponsor {
     @extend .col-sm-6;
-    @extend .section-spacer;
+    @extend .sec-spacer;
     a {
       display: inline-block;
       &:hover, &:focus {
@@ -459,8 +459,8 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
   }
 }
 
-.section-sponsors-standard {
-  @extend .section-spacer;
+.sec-sponsors-standard {
+  @extend .sec-spacer;
   .sponsor {
     @extend .col-xs-6;
     @extend .col-sm-4;
@@ -473,18 +473,18 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
   }
 }
 
-.section-sponsors-university {
-  @extend .section-sponsors-standard;
+.sec-sponsors-university {
+  @extend .sec-sponsors-standard;
 }
 
-.section-sponsors-foundation-heros {
+.sec-sponsors-foundation-heros {
   @extend .col-md-6;
-  @extend .section-spacer;
+  @extend .sec-spacer;
 }
 
-.section-sponsors-about {
+.sec-sponsors-about {
   @extend .col-md-6;
-  @extend .section-spacer;
+  @extend .sec-spacer;
 }
 
 //
@@ -493,9 +493,9 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 // We don't want to make the whole block article block a link because
 // we want to be able to add multiple links per block.
 
-.section-getting-started {
+.sec-getting-started {
   .container {
-    @extend .section-spacer;
+    @extend .sec-spacer;
   }
   article {
     .image {
@@ -517,9 +517,9 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 //
 // The community/team overview.
 
-.section-community {
+.sec-community {
   .container {
-    @extend .section-spacer;
+    @extend .sec-spacer;
   }
   article {
     @extend .col-xs-12;
@@ -532,7 +532,7 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 // Profile
 //
 
-.section-profile {
+.sec-profile {
   .image {
     @extend .col-xs-3;
     text-align: right;
@@ -553,10 +553,10 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 // -----------------------------------------------------------------------------
 
 @media (min-width: $screen-sm-min) {
-  .section-totals {
+  .sec-totals {
     font-size: 2.25em;
   }
-  .section-report-issues {
+  .sec-report-issues {
     margin-bottom: 4em;
   }
 }
@@ -567,7 +567,7 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 // -----------------------------------------------------------------------------
 
 @media (min-width: $screen-md-min) {
-  .section-totals {
+  .sec-totals {
     font-size: 3em;
   }
 }
