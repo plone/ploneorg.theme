@@ -7,7 +7,7 @@
     "use strict";
 
     $(".btn-search").click(function() {
-       $(".section-search").slideToggle(
+       $(".sec-search").slideToggle(
          "fast",
          function() {
             // TODO: only on slide open.

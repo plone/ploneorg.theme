@@ -5,27 +5,34 @@
        xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
        xmlns:xi="http://www.w3.org/2001/XInclude">
 
-  <xi:include href="++theme++barceloneta/backend.xml" />
+    <!-- Plone Barcaloneta toolbar and forms -->
+    <xi:include href="++theme++barceloneta/backend.xml" />
 
-  <rules css:if-content="body.viewpermission-view, body.viewpermission-none">
+    <!-- Change Plone global nav `selected` class to bootstrap `active`-->
+    <xsl:template match="//ul//@class[contains(., 'selected')]">
+      <xsl:attribute name="class">active</xsl:attribute>
+    </xsl:template>
 
+    <!-- Change Plone portalMessage classes to Bootstrap message classes. -->
+    <xsl:template match="//@class[contains(., 'success')]">
+        <xsl:attribute name="class">alert-success</xsl:attribute>
+    </xsl:template>
+    <xsl:template match="//@class[contains(., 'info')]">
+        <xsl:attribute name="class">alert-info</xsl:attribute>
+    </xsl:template>
+    <xsl:template match="//@class[contains(., 'error')]">
+        <xsl:attribute name="class">alert-danger</xsl:attribute>
+    </xsl:template>
+    <xsl:template match="//@class[contains(., 'warning')]">
+        <xsl:attribute name="class">alert-warning</xsl:attribute>
+    </xsl:template>
 
+    <!-- Use base.html as default theme page. -->
     <theme href="/++theme++ploneorg/base.html" />
-
-    <!-- Homepage rules -->
-    <rules css:if-content="body.portaltype-homepage">
-         <!--<replace css:theme="body">-->
-           <!--<h1>Hello homepage!</h1>-->
-         <!--</replace>-->
-    </rules>
-
-    <!--<theme href="/++theme++ploneorg/getting-started.html" css:if-content="body.section-getting-started"/>-->
-    <!--<theme href="/++theme++ploneorg/community.html" css:if-content="body.section-community"/>-->
-    <!--<theme href="/++theme++ploneorg/sponsors.html" css:if-content="body.section-sponsors"/>-->
-    <!--<theme href="/++theme++ploneorg/page.html" if-not-path="/"/>-->
 
     <notheme css:if-not-content="#visual-portal-wrapper" />
 
+    <!-- Head -->
     <rules if-content="//*[@id='portal-top']">
       <!-- Attributes -->
       <copy attributes="*" theme="/html" content="/html"/>
@@ -48,16 +55,19 @@
          This is important for per-section styling -->
     <copy attributes="*" css:content="body" css:theme="body" />
 
-    <!-- full-width breadcrumb -->
-    <replace css:theme="#above-content" css:content="#viewlet-above-content"/>
+    <!-- Full-width breadcrumb -->
+    <!--<replace css:theme="#above-content" css:content="#viewlet-above-content"/>-->
 
-    <replace css:theme="#content-container">
-      <xsl:copy-of select="//article[@id='content']"/>
-      <xsl:copy-of select="//div[@id='content']"/>
-      <xsl:copy-of select="//div[@id='viewlet-below-content']"/>
-    </replace>
+    <!-- If homepage replace the whole bock. -->
+    <!-- Home has multiple full viewport width sections, the custom home
+         template takes care of the correct Boostrap row styling. -->
+    <rules css:if-content="body.portaltype-homepage">
+      <replace content='//*[@id="content"]' theme='//*[@id="main-container"]' />
+    </rules>
 
-   <replace css:theme="#content-container">
+    <!-- If any other page respect the Plone columns -->
+    <rules css:if-not-content="body.portaltype-homepage">
+      <replace css:theme="#content-container">
          <!-- Central column -->
         <xsl:variable name="central">
           <xsl:if test="//aside[@id='portal-column-one'] and //aside[@id='portal-column-two']">col-xs-12 col-sm-6</xsl:if>
@@ -78,9 +88,11 @@
               </div>
             </footer>
         </div>
-    </replace>
+      </replace>
+    </rules>
 
     <!-- Alert message -->
+    <!--TODO: needs some work when there is a full width jumbotron.-->
     <replace css:theme-children="#global_statusmessage" css:content-children="#global_statusmessage" />
 
     <!-- Left column -->
@@ -106,20 +118,15 @@
     </rules>
 
     <!-- Content header -->
-
     <copy attributes="href" css:content='#portal-logo' css:theme=".navbar-brand" />
 
     <!-- Global nav -->
     <!--
     The contents of the global nav is: "Home A B C D E F" I do not want 'Home'
-    in the navigation and I only want the first three items (A, B and C) due to
+    in the navigation and I only want the next three items (A, B and C) due to
     the limited amount of space available at Bootstrap md viewport size. Also
     because this gives focus to the really important items (communication).
-
-    This is why:
-      - the rules for copying the first three global nav items have an offset
-        of 1 (to compensate for home).
-      - All other items are copied to the more menu.
+    Items 'D, E, F ...' are copied to the more menu.
     -->
     <replace content='//*[@id="portal-globalnav"]/li[2]'
              theme='//*[@id="navbar"]/ul/li[1]' />
@@ -143,4 +150,3 @@
     <!--<after theme-children="/html/body" content="//*[@id='portal-footer-wrapper']/script" />-->
 
   </rules>
-</rules>

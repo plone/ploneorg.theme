@@ -192,13 +192,19 @@
           </div>
         </section>
 
-        <aside id="global_statusmessage">
-          Placeholder for status messages.
-        </aside>
-
-        <div id="content-container" role="main">
-          Placeholder for main content.
+        <div class="container">
+          <div class="row">
+            <aside id="global_statusmessage"></aside>
+          </div>
         </div>
+
+        <main role="main" id="main-container" class="row row-offcanvas row-offcanvas-right">
+          <div class="container">
+            <div id="column1-container"></div>
+            <div id="content-container"></div>
+            <div id="column2-container"></div>
+          </div>
+        </main>
 
         <!-- Modal -->
         <div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

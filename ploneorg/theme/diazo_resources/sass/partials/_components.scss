@@ -69,29 +69,29 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 //
 // Map Bootstrap message classes to Plone message classes.
 
-.portalMessage {
-  @extend .alert;
-  margin-bottom: 0;
-  border-radius: 0px;
+//.portalMessage {
+//  @extend .alert;
+//  margin-bottom: 0;
+//  border-radius: 0px;
+//
+//  &.success{
+//    @extend .alert-success;
+//  }
+//  &.info{
+//    @extend .alert-info;
+//  }
+//  &.error{
+//    @extend .alert-danger;
+//  }
+//  &.warning{
+//    @extend .alert-warning;
+//  }
+//}
 
-  &.success{
-    @extend .alert-success;
-  }
-  &.info{
-    @extend .alert-info;
-  }
-  &.error{
-    @extend .alert-danger;
-  }
-  &.warning{
-    @extend .alert-warning;
-  }
-}
-
-.template-edit #global_statusmessage .portalMessage {
-  margin-bottom: 1.5em;
-  border-radius: 4px;
-}
+//.template-edit #global_statusmessage .portalMessage {
+//  margin-bottom: 1.5em;
+//  border-radius: 4px;
+//}
 
 
 //#parent-fieldname-text img{
