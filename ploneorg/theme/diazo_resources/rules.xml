@@ -58,6 +58,9 @@
     <!-- Full-width breadcrumb -->
     <!--<replace css:theme="#above-content" css:content="#viewlet-above-content"/>-->
 
+    <!-- Related sites in topbar -->
+    <replace theme='//*[@id="links-select"]' content='//*[@id="links-select"]' />
+
     <!-- If homepage replace the whole bock. -->
     <!-- Home has multiple full viewport width sections, the custom home
          template takes care of the correct Boostrap row styling. -->
