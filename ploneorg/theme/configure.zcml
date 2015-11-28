@@ -6,11 +6,9 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="ploneorg.theme">
 
-  <i18n:registerTranslations directory="locales" />
-
   <genericsetup:registerProfile
       name="default"
-      title="Diazo Theme Package for ploneorg "
+      title="Diazo Theme Package for Plone.org"
       directory="profiles/default"
       description="Extension profile for ploneorg Diazo Theme Package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
@@ -21,10 +19,5 @@
     directory="diazo_resources"
     type="theme"
     />
-
-  <browser:jbot
-      directory="overrides"
-      layer=".interfaces.ICustomTheme"
-      />
 
 </configure>
