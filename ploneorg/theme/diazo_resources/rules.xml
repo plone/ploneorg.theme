@@ -6,25 +6,43 @@
        xmlns:xi="http://www.w3.org/2001/XInclude">
 
     <!-- Plone Barcaloneta toolbar and forms -->
-    <xi:include href="++theme++barceloneta/backend.xml" />
+    <xi:include href="++theme++ploneorg/backend.xml" />
+
+    <!-- Add `/folder_contents` to main nav in admin. -->
+    <!--<xsl:if test="//body/@class['frontend']">-->
+      <!--<xsl:template match="//a//@href[contains(., *)]">-->
+        <!--<xsl:attribute name="href"><xsl:value-of select="." />/folder_contents</xsl:attribute>-->
+      <!--</xsl:template>-->
+    <!--</xsl:if>-->
 
     <!-- Change Plone global nav `selected` class to bootstrap `active`-->
     <xsl:template match="//ul//@class[contains(., 'selected')]">
-      <xsl:attribute name="class">active</xsl:attribute>
+      <xsl:attribute name="class"><xsl:value-of select="." /> active</xsl:attribute>
     </xsl:template>
 
-    <!-- Change Plone portalMessage classes to Bootstrap message classes. -->
+    <!-- Add Bootstrap message classes to Plone portalMessage classes -->
+    <!--TODO: This maches to much! After login there is a `login-success`
+        body class turning the complete page green...
+    -->
     <xsl:template match="//@class[contains(., 'success')]">
-        <xsl:attribute name="class">alert-success</xsl:attribute>
+        <xsl:attribute name="class">
+          <xsl:value-of select="." /> alert alert-success
+        </xsl:attribute>
     </xsl:template>
     <xsl:template match="//@class[contains(., 'info')]">
-        <xsl:attribute name="class">alert-info</xsl:attribute>
+        <xsl:attribute name="class">
+          <xsl:value-of select="." /> alert alert-info
+        </xsl:attribute>
     </xsl:template>
     <xsl:template match="//@class[contains(., 'error')]">
-        <xsl:attribute name="class">alert-danger</xsl:attribute>
+        <xsl:attribute name="class">
+          <xsl:value-of select="." /> alert alert-danger
+        </xsl:attribute>
     </xsl:template>
     <xsl:template match="//@class[contains(., 'warning')]">
-        <xsl:attribute name="class">alert-warning</xsl:attribute>
+        <xsl:attribute name="class">
+          <xsl:value-of select="." /> alert alert-warning
+        </xsl:attribute>
     </xsl:template>
 
     <!-- Use base.html as default theme page. -->
@@ -60,6 +78,11 @@
 
     <!-- Related sites in topbar -->
     <replace theme='//*[@id="links-select"]' content='//*[@id="links-select"]' />
+    <!-- TODO: At the moment we drop the site links with the following rule. -->
+    <!-- These links shouldn't even load when in edit page. -->
+    <rules css:if-not-content="body.frontend">
+      <drop content='//*[@id="links-select"]' />
+    </rules>
 
     <!-- If homepage replace the whole bock. -->
     <!-- Home has multiple full viewport width sections, the custom home

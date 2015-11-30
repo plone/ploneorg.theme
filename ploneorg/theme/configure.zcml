@@ -20,4 +20,10 @@
     type="theme"
     />
 
+  <interface
+    interface=".interfaces.IThemeSpecific"
+    type="zope.publisher.interfaces.browser.IBrowserSkinType"
+    name="ploneorg.theme"
+    />
+
 </configure>
