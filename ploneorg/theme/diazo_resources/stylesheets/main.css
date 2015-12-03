@@ -5226,6 +5226,9 @@ textarea {
 .contributor-info li i {
   font-size: 16px;
 }
+.contributor-badges img {
+  max-width: 100px;
+}
 #slider li {
   position: relative;
 }
