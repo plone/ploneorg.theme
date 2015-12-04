@@ -1,0 +1,116 @@
+//
+// Footer
+// --------------------------------------------------
+//
+// The footer elements.
+
+
+// -----------------------------------------------------------------------------
+// Mobile first
+// -----------------------------------------------------------------------------
+
+
+.footer-doormat {
+  margin:0;
+  color: rgb(23,30,36);
+  background: $plone-dark-blue;
+  font-size: 12.5px;
+  line-height: 12.5 * 1.6px;
+  padding: 2em 0 5em 0;
+  .column {
+    @extend .col-xs-6, .col-sm-4, .col-md-2;
+  }
+  h3 {
+    font-size: 15px;
+    margin-bottom: 1.5 * 12.5px;
+  }
+  ul {
+    padding:0;
+    list-style-type: none;
+    > li {
+      margin-bottom: 6px;
+    }
+  }
+  a {
+    color: rgb(223,230,236);
+
+  }
+}
+
+.footer-legal {
+  margin:0;
+  color: rgb(223, 230, 236);
+  background: $plone-dark-purple;
+  font-size: 11.5px;
+  line-height: 11.5 * 1.6px;
+  padding: 2em 0 5em 0;
+  .column {
+    @extend .col-sm-3;
+  }
+  a {
+    color: rgb(223,230,236);
+  }
+  svg {
+    margin-bottom: 1.5em;
+  }
+}
+
+
+
+
+//html {
+//  position: relative;
+//  min-height: 100%;
+//}
+//
+//body {
+//  /* Margin bottom by footer height */
+//  margin-bottom: 200px;
+//}
+//#portal-footer-wrapper {
+//
+//}
+
+
+// -----------------------------------------------------------------------------
+// Small screen / tablet
+// -----------------------------------------------------------------------------
+
+@media (min-width: $screen-sm-min) {
+
+  //body {
+  //  /* Margin bottom by footer height */
+  //  margin-bottom: 100px;
+  //}
+  //#portal-footer-wrapper {
+  //
+  //}
+
+}
+
+
+// -----------------------------------------------------------------------------
+// Medium screen / desktop
+// -----------------------------------------------------------------------------
+
+@media (min-width: $screen-md-min) {
+
+  //body {
+  //  /* Margin bottom by footer height */
+  //  margin-bottom: 100px;
+  //}
+  //#portal-footer-wrapper {
+  //
+  //}
+
+}
+
+// -----------------------------------------------------------------------------
+// Large screen / wide desktop
+// -----------------------------------------------------------------------------
+
+@media (min-width: $screen-lg-min) {
+
+
+
+}

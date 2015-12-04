@@ -1,0 +1,581 @@
+//
+// Components
+// --------------------------------------------------
+//
+// Components are project specific building blocks.
+
+
+// -----------------------------------------------------------------------------
+// Mobile first
+// -----------------------------------------------------------------------------
+
+//
+// Set smooth font rendering.
+//
+
+body{
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+//
+// Animate all links.
+//
+
+a {
+  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s; // Safari
+}
+
+//
+// (Text) selection color
+//
+
+$selection-color: desaturate(lighten($plone-orange, 10), 30);
+::selection {
+  background: $selection-color;
+}
+::-moz-selection {
+  background: $selection-color;
+}
+
+//
+// Some extra buttons
+//
+//  - `.btn-prime`, a orange button for primary actions.
+//     I don't want to overwrite the BS `.btn-primary`.
+//  - `.btn-secondary`, a green button.
+
+.btn-prime {
+  @include button-variant(white, $plone-orange, $plone-orange);
+}
+.btn-secondary {
+  @include button-variant(white, $plone-green, $plone-green);
+}
+
+
+//
+// Plone items
+// --------------------------------------------------
+//
+// Styling of typical Plone classes.
+
+.state-published{
+  color: $brand-primary !important;
+}
+
+//
+// Messages
+//
+// Map Bootstrap message classes to Plone message classes.
+
+//.portalMessage {
+//  @extend .alert;
+//  margin-bottom: 0;
+//  border-radius: 0px;
+//
+//  &.success{
+//    @extend .alert-success;
+//  }
+//  &.info{
+//    @extend .alert-info;
+//  }
+//  &.error{
+//    @extend .alert-danger;
+//  }
+//  &.warning{
+//    @extend .alert-warning;
+//  }
+//}
+
+//.template-edit #global_statusmessage .portalMessage {
+//  margin-bottom: 1.5em;
+//  border-radius: 4px;
+//}
+
+
+//#parent-fieldname-text img{
+//  @extend .img-responsive;
+//}
+//
+//.error{
+//  color: red;
+//}
+//
+//h5{
+//  font-weight: bold;
+//}
+//
+//video {
+//  margin-bottom: 15px;
+//}
+//
+//dt, dd {
+//  line-height: 1.9em!important;
+//}
+//
+//#content {
+//  line-height: normal;
+//  font-size: 100%;
+//  margin: 0;
+//  p,li {
+//    line-height:1.5em;
+//  }
+//}
+//
+//.tileItem {
+//  a{
+//    text-decoration: none;
+//  }
+//  .tileImage{
+//    float: right;
+//  }
+//}
+
+
+//
+// Sections
+// --------------------------------------------------
+//
+// A section is what it says it is. A block of content.
+
+
+//
+// General section styles.
+//
+
+//
+// Full width
+//
+
+.sec-full-width {
+  width: 100%;
+  padding: 36px 0 54px 0;
+}
+
+.sec-spacer {
+  margin-bottom: 4em;
+}
+
+//
+// Section in order of appearance on the homepage.
+//
+
+//
+// Jumbotron
+//
+
+// TODO check if this can be set in _variables.
+.jumbotron {
+  color: white;
+  background: $plone-dark-blue;
+
+  h1 {
+    font-size: 32px;
+  }
+  .lead {
+    font-size: 26px;
+    font-weight: 300;
+  }
+  .intro {
+    @extend .col-lg-6;
+  }
+}
+
+.jumbotron-home {
+  @extend .sec-spacer;
+  margin: 0;
+  padding-top: 68px;
+  text-align: center;
+  p.lead {
+    font-weight: 400;
+    margin-bottom: 12px;
+
+  }
+  h1 {
+    margin-top: 0;
+    font-weight: 300;
+    font-size: 48px;
+    margin-bottom: 24px;
+  }
+  .btn {
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
+//
+// Search
+//
+
+.sec-search {
+  margin:0;
+  background: rgb(24, 77, 114);
+  color: rgb(200, 218, 218);
+  padding-bottom: 1.25em;
+  .column {
+    @extend .col-xs-10, .col-xs-offset-1, .col-md-6, .col-md-offset-3;
+  }
+  label {
+    font-weight: 300;
+  }
+}
+
+//
+// Totals
+//
+
+.sec-totals {
+  padding: 1em 0 1em 0;
+  font-size: 1.75em;
+  font-weight: 500;
+  text-align: center;
+  color: $plone-blue;
+  span {
+    color: $plone-dark-purple;
+  }
+}
+
+//
+// Download and Report issues
+//
+
+.sec-download, .sec-report-issues {
+  .about {
+    @extend .col-xs-8, .col-xs-offset-2;
+    @extend .col-sm-6, .col-sm-offset-0;
+    @extend .col-md-4, .col-md-offset-2;
+  }
+  .links {
+    @extend .col-xs-8, .col-xs-offset-2;
+    @extend .col-sm-6, .col-sm-offset-0;
+    @extend .col-md-4;
+  }
+  .container {
+    background: $plone-light-grey-bg;
+    // Keep padding left and right as is!
+    padding-top: 2em;
+    padding-bottom: 2em;
+    border-radius: 4px;
+    color: $plone-dark-purple;
+    .btn-prime, .btn-secondary {
+      margin-top: 1.25em;
+    }
+  }
+}
+
+
+//
+// News and related websites
+//
+
+.sec-news {
+  @extend .col-md-8;
+  article {
+    @extend .sec-spacer;
+    @extend .col-xs-6;
+    a {
+      display:block;
+      text-decoration: none;
+      &:hover, &:focus {
+        h3 {
+          text-decoration: underline;
+        }
+      }
+      p {
+        color: $text-color;
+      }
+    }
+    img {
+      @extend .img-responsive;
+    }
+  }
+}
+
+.sec-related-websites {
+  @extend .col-xs-10, .col-xs-offset-1, .col-md-4, .col-md-offset-0;
+  @extend .sec-spacer;
+  .list-group-item:hover {
+    background: $plone-light-grey-bg;
+  }
+}
+
+//
+// Events
+//
+
+.sec-events {
+  background: $plone-light-grey-bg;
+  .about {
+    @extend .col-sm-4, .col-md-3;
+    margin-top: -41px;
+    background: #D8E2E9;
+    padding-top: 1em;
+    padding-bottom: 1.5em;
+    margin-bottom: 1.5em;
+  }
+  .column {
+    @extend .col-xs-4, .col-sm-2;
+    padding: 20px;
+    img {
+      opacity: 0.4;
+    }
+  }
+  .events {
+    @extend .col-md-8, .col-md-offset-1;
+    .event {
+      @extend .col-xs-12, .col-sm-6;
+      > a {
+        text-decoration: none;
+        &:hover, &:focus {
+          .panel-body h3 {
+            text-decoration: underline;
+          }
+        }
+      }
+      .panel-heading {
+        color: white;
+        background: $plone-dark-purple;
+        text-transform: uppercase;
+        text-align: right;
+        font-weight: 600;
+        font-size: 20px;
+        padding: .2em .5em;
+      }
+      .panel-body {
+        h3 {
+          margin-top: 0;
+        }
+        img {
+          width: 75px;
+          float:right;
+          @extend .img-circle;
+        }
+        p {
+          color: $text-color;
+        }
+      }
+    }
+  }
+
+}
+
+
+//
+// Github totals
+//
+
+.sec-github-totals {
+  @extend .sec-spacer;
+  h2 > a:first-child {
+    margin-left: 1.5em;
+  }
+  .column {
+    @extend .col-xs-6, .col-sm-4, .col-md-2;
+    .well {
+      color: white;
+      background: $plone-dark-blue;
+      border: 0;
+      border-radius: 4px;
+
+      i {
+        font-size: 5em;
+        margin-bottom: .35em;
+      }
+      h3 {
+        margin:0;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 42px;
+        font-weight: 300;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
+//
+// Sponsors home
+//
+
+.sec-sponsors-home {
+  // No section spacer because it snaps snug against the footer.
+  background: $plone-light-grey-bg;
+  .about {
+    @extend .col-sm-4, .col-md-3;
+    margin-top: -41px;
+    background: #D8E2E9;
+    padding-top: 1em;
+    padding-bottom: 1.5em;
+  }
+  a.logos {
+    @extend .col-xs-12, .col-sm-8, .col-md-8, .col-md-offset-1;
+    opacity: 0.4;
+    overflow: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  .column {
+    @extend .col-xs-4, .col-sm-3, .col-md-3;
+    padding: 30px;
+  }
+  img {
+    @extend .img-responsive;
+  }
+}
+
+//
+// Sponsors
+//
+
+.sec-sponsors-premium {
+  .sponsor {
+    @extend .col-sm-6;
+    @extend .sec-spacer;
+    a {
+      display: inline-block;
+      &:hover, &:focus {
+        text-decoration: none;
+      }
+    }
+    .logo {
+      @extend .col-md-4;
+      margin-bottom: 1em;
+    }
+    .body {
+      @extend .col-md-8;
+      color: $text-color;
+    }
+  }
+  .break {
+    @extend .col-sm-12;
+    @extend .hidden-xs;
+  }
+}
+
+.sec-sponsors-standard {
+  @extend .sec-spacer;
+  .sponsor {
+    @extend .col-xs-6;
+    @extend .col-sm-4;
+    @extend .col-md-3;
+    @extend .col-lg-2;
+    height: 120px;
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+    text-align: center;
+  }
+}
+
+.sec-sponsors-university {
+  @extend .sec-sponsors-standard;
+}
+
+.sec-sponsors-foundation-heros {
+  @extend .col-md-6;
+  @extend .sec-spacer;
+}
+
+.sec-sponsors-about {
+  @extend .col-md-6;
+  @extend .sec-spacer;
+}
+
+//
+// Getting started
+//
+// We don't want to make the whole block article block a link because
+// we want to be able to add multiple links per block.
+
+.sec-getting-started {
+  .container {
+    @extend .sec-spacer;
+  }
+  article {
+    .image {
+      @extend .col-xs-3, .col-sm-1;
+      img {
+        width: 72px;
+        float: right;
+        margin-right: -12px;
+      }
+    }
+    .text {
+      @extend .col-xs-8, .col-sm-5;
+    }
+  }
+}
+
+//
+// Community
+//
+// The community/team overview.
+
+.sec-community {
+  .container {
+    @extend .sec-spacer;
+  }
+  article {
+    @extend .col-xs-12;
+    @extend .col-sm-6;
+    @extend .col-md-4;
+  }
+}
+
+//
+// Profile
+//
+
+.sec-profile {
+  .image {
+    @extend .col-xs-3;
+    text-align: right;
+  }
+  img {
+    width: 180px;
+    height: 180px;
+    margin-right: 2em;
+    border: 4px solid white;
+  }
+  .text {
+    margin-top: 3.75em;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Small screen / tablet
+// -----------------------------------------------------------------------------
+
+@media (min-width: $screen-sm-min) {
+  .sec-totals {
+    font-size: 2.25em;
+  }
+  .sec-report-issues {
+    margin-bottom: 4em;
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// Medium screen / desktop
+// -----------------------------------------------------------------------------
+
+@media (min-width: $screen-md-min) {
+  .sec-totals {
+    font-size: 3em;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Large screen / wide desktop
+// -----------------------------------------------------------------------------
+
+@media (min-width: $screen-lg-min) {
+
+}

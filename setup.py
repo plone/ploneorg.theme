@@ -1,25 +1,23 @@
 from setuptools import setup, find_packages
-import os
 
-version = '1.0a1'
-
-README = open("README.rst").read()
-HISTORY = open(os.path.join("docs", "HISTORY.rst")).read()
+version = '0.1.dev0'
 
 setup(name='ploneorg.theme',
       version=version,
-      description="plone.org 2014 Diazo Theme Package",
-      long_description=README + "\n" + HISTORY,
+      description="Diazo Theme Package for ploneorg",
+      long_description="",
+      # Get more strings from
+      # http://pypi.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
           "Framework :: Plone",
           "Programming Language :: Python",
           "Topic :: Software Development :: Libraries :: Python Modules",
-      ],
-      keywords='plone ploneorg diazo theme',
-      author='Plone Foundation',
-      author_email='foundation@plone.org',
-      url='https://github.com/plone/ploneorg.theme',
-      license='GPL version 2',
+          ],
+      keywords='',
+      author='Zest Software',
+      author_email='info@zestsoftware.nl',
+      url='http://zestsoftware.nl',
+      license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['ploneorg'],
       include_package_data=True,

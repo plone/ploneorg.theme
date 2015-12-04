@@ -1,0 +1,157 @@
+//
+// Header
+//
+// The top section of the site. Repeats on every page.
+
+// Topbar
+//
+// Holds links to other Plone sites.
+
+.topbar {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: $top-bar-bg-color; // Dark blackish purple.
+
+  width: 100%; // Clear fix
+  overflow: hidden; // Clear fix
+  //height: 28px;
+  border-bottom: 1px solid black;
+  ul {
+    list-style-type: none;
+    float: right;
+    margin: 0;
+    padding: 0; // Max space for links on mobile
+    li {
+      float: left;
+    }
+  }
+  a {
+    color: $top-bar-link-color;
+    text-decoration: none;
+    padding: 7px 8px 5px 8px;
+    line-height: 11px;
+    display: inline-block;
+    &:hover, &:focus {
+      color: $top-bar-link-color-hover;
+      background: $top-bar-bg-color-hover;
+    }
+  }
+}
+
+// Navbar
+//
+// We use BS .navbar-default for the default styling and override the styles
+// here when simple variable settings are insufficient.
+
+// Position the Plone logo.
+.navbar-brand {
+  padding: 21px 10px 0 15px;
+}
+
+// Login and search buttons next to the hamburger menu (only visible at mobile).
+.navbar-btn {
+    font-size: 18px;
+    line-height: 0;
+    color: $plone-light-blue;
+    padding: 7px 12px;
+  &:hover, &:focus {
+    color: white;
+  }
+}
+
+.navbar-default, .navbar-collapse {
+  // Additional coloring of the nav-bar.
+  // The _variables.scss isn't sufficient.
+  background: $plone-blue;
+  border-color: $plone-blue;
+  // Uppercase the text.
+  text-transform: uppercase;
+  font-weight: 500; // medium
+  // More, search and login styling.
+  .btn-more i {
+    line-height: 1.25em;
+  }
+  li:nth-last-child(-n+3) {
+    text-transform: none;
+    i {
+      font-size: 110%;
+    }
+    > a {
+      color: $plone-light-blue;
+    }
+  }
+  .dropdown-menu {
+    background-color: darken($plone-blue, 3);
+    >li>a {
+      color: $navbar-default-link-color;
+      font-weight: 500;
+      &:hover, &:focus {
+        color: $navbar-default-link-active-color;
+        background-color: $navbar-default-link-hover-bg;
+      }
+    }
+  }
+  // Style the Plone class `selected` like `active.`
+  // TODO: Write a diazo rule that replaces 'selected' with 'active'.
+  .selected {
+    @extend .active;
+  }
+}
+
+.navbar-nav>li>.dropdown-menu {
+  border-radius: 4px;
+}
+
+.navbar-default .navbar-toggle {
+  border-radius: 0;
+  .icon-bar {
+    background: white;
+    border-radius: 0;
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// Mobile first
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+// Small screen / tablet
+// -----------------------------------------------------------------------------
+
+@media (min-width: $screen-sm-min) {
+
+  // Customize the BS nav.
+  .navbar-nav {
+    margin-top: 28px;
+    >li>a {
+      padding: 0.5em 0.8em;
+      margin-right: 0.2em;
+      border-radius: 3px;
+    }
+  }
+
+  // Do not align topbar items with navbar items (when we have the space).
+  .topbar ul {
+    margin-right: 2.5em;
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// Medium screen / desktop
+// -----------------------------------------------------------------------------
+
+@media (min-width: $screen-md-min) {
+
+}
+
+// -----------------------------------------------------------------------------
+// Large screen / wide desktop
+// -----------------------------------------------------------------------------
+
+@media (min-width: $screen-lg-min) {
+
+}

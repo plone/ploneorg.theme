@@ -2,34 +2,28 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:i18n="http://namespaces.zope.org/i18n"
-    xmlns:cmf="http://namespaces.zope.org/cmf"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:plone="http://namespaces.plone.org/plone"
-    i18n_domain="diazotheme.test">
-
-  <!-- <i18n:registerTranslations directory="locales" /> -->
-
-  <include package=".browser" />
-
-  <!-- <cmf:registerDirectory name="skins" directory="skins" recursive="True" /> -->
+    i18n_domain="ploneorg.theme">
 
   <genericsetup:registerProfile
       name="default"
-      title="plone.org 2015 Theme Package (ploneorg.theme)"
+      title="Diazo Theme Package for Plone.org"
       directory="profiles/default"
-      description="Extension profile for Example Diazo Theme Package"
+      description="Extension profile for ploneorg Diazo Theme Package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
   <plone:static
+    name="ploneorg"
     directory="diazo_resources"
     type="theme"
     />
 
-  <include package="z3c.jbot" file="meta.zcml" />
-  <browser:jbot
-      directory="template_overrides"
-      layer=".interfaces.ICustomTheme"
-      />
+  <interface
+    interface=".interfaces.IThemeSpecific"
+    type="zope.publisher.interfaces.browser.IBrowserSkinType"
+    name="ploneorg.theme"
+    />
 
 </configure>

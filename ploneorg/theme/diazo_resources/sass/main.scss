@@ -1,0 +1,51 @@
+//
+// Main
+// --------------------------------------------------
+//
+// Combining custom bootstrap and partials to one file.
+
+//
+// Fonts
+//
+
+// TODO: Load only the used fonts.
+// At the moment we load to many fonts.
+$roboto-font-path: 'roboto' !default;
+@import "../bower_components/roboto-fontface/css/roboto-fontface.scss";
+
+// TODO: We also might enjoy the benefits of a CDN.
+//@import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700,700italic,500italic,500,400italic,300italic,300,100italic,100&subset=latin,latin-ext);
+
+
+// Set asset path
+$bootstrap-sass-asset-helper: "bootstrap-sass-official/assets/";
+
+// Custom bootstrap.
+@import "custom_bootstrap/variables";
+@import "custom_bootstrap/bootstrap";
+
+// Fontawesome.
+$fa-font-path:        "fontawesome/fonts" !default;
+@import "../bower_components/fontawesome/scss/font-awesome.scss";
+
+// Layout, positioning and floats.
+@import 'partials/layout';
+
+// Header and footer styling.
+@import 'partials/header';
+@import 'partials/footer';
+
+// Form styling.
+@import 'partials/forms';
+
+// Components are project specific building blocks.
+@import 'partials/components';
+
+// Page specific styling.
+@import 'partials/pages';
+
+// Page specific styling.
+@import 'partials/plone_edit_form';
+
+// Portlet specific styling.
+@import 'partials/portlets';

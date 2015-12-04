@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo"
+         xmlns:css="http://namespaces.plone.org/diazo/css"
+         xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+         xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <!-- insert CSS to override the background image on all headers with the header.jpg in the current plonefolder
+       add ID or class to specify -->
+  <!-- this rule needs the following in the manifest.cfg
+    [theme:parameters]
+    header = context/header.jpg/absolute_url | nothing
+  -->
+  <after theme-children="/html/head/link[last()]" if="$header != ''">
+      <xsl:element name="style">
+        <xsl:attribute name="type">text/css</xsl:attribute>header {background-image:url(<xsl:value-of select="$header" />);}
+      </xsl:element>
+    </after>
+
+
+</rules>
