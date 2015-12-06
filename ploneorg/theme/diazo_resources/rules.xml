@@ -8,38 +8,28 @@
     <!-- Plone Barcaloneta toolbar and forms -->
     <xi:include href="++theme++ploneorg/backend.xml" />
 
-    <!-- Add `/folder_contents` to main nav in admin. -->
-    <!--<xsl:if test="//body/@class['frontend']">-->
-      <!--<xsl:template match="//a//@href[contains(., *)]">-->
-        <!--<xsl:attribute name="href"><xsl:value-of select="." />/folder_contents</xsl:attribute>-->
-      <!--</xsl:template>-->
-    <!--</xsl:if>-->
-
-    <!-- Change Plone global nav `selected` class to bootstrap `active`-->
+    <!-- Change Plone global nav `selected` class to Bootstrap `active`-->
     <xsl:template match="//ul//@class[contains(., 'selected')]">
       <xsl:attribute name="class"><xsl:value-of select="." /> active</xsl:attribute>
     </xsl:template>
 
     <!-- Add Bootstrap message classes to Plone portalMessage classes -->
-    <!--TODO: This maches to much! After login there is a `login-success`
-        body class turning the complete page green...
-    -->
-    <xsl:template match="//@class[contains(., 'success')]">
+    <xsl:template match="//aside[@id='global_statusmessage']//@class[contains(., 'success')]">
         <xsl:attribute name="class">
           <xsl:value-of select="." /> alert alert-success
         </xsl:attribute>
     </xsl:template>
-    <xsl:template match="//@class[contains(., 'info')]">
+    <xsl:template match="//aside[@id='global_statusmessage']//@class[contains(., 'info')]">
         <xsl:attribute name="class">
           <xsl:value-of select="." /> alert alert-info
         </xsl:attribute>
     </xsl:template>
-    <xsl:template match="//@class[contains(., 'error')]">
+    <xsl:template match="//aside[@id='global_statusmessage']//@class[contains(., 'error')]">
         <xsl:attribute name="class">
           <xsl:value-of select="." /> alert alert-danger
         </xsl:attribute>
     </xsl:template>
-    <xsl:template match="//@class[contains(., 'warning')]">
+    <xsl:template match="//aside[@id='global_statusmessage']//@class[contains(., 'warning')]">
         <xsl:attribute name="class">
           <xsl:value-of select="." /> alert alert-warning
         </xsl:attribute>
@@ -84,7 +74,7 @@
       <drop content='//*[@id="links-select"]' />
     </rules>
 
-    <!-- If homepage replace the whole bock. -->
+    <!-- If homepage replace the whole content bock. -->
     <!-- Home has multiple full viewport width sections, the custom home
          template takes care of the correct Boostrap row styling. -->
     <rules css:if-content="body.portaltype-homepage">
