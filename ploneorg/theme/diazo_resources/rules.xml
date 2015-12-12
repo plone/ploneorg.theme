@@ -159,10 +159,6 @@
     <!-- toolbar -->
     <!--<replace css:theme="#anonymous-actions" css:content-children="#portal-personaltools-wrapper" css:if-not-content=".ajax_load" css:if-content=".userrole-anonymous"/>-->
 
-    <!-- Google analytics script -->
-    <!-- FIXME: JS for each page is configurable in Site Setup aka Site Settings.
-         What is the best way?
-    -->
     <!--<after theme-children="/html/body" content="//*[@id='portal-footer-wrapper']/script" />-->
 
   </rules>
