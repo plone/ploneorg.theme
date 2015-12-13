@@ -35,6 +35,14 @@ module.exports = function(grunt) {
                         src: 'sass/editor.scss',
                         dest: 'static/editor.css',
                         nonull: true
+                    },
+                    // Font Awesome TinyMCE plugin stylesheet.
+                    {
+                        expand: true,
+                        cwd: 'bower_components/TinyMCE-FontAwesome-Plugin/fontawesome/',
+                        src: ['css/fontawesome.min.css'],
+                        dest: 'static/fontawesome/plugin',
+                        nonull: true
                     }
                 ]
             }
@@ -89,8 +97,23 @@ module.exports = function(grunt) {
                       ],
                       dest: 'static/main.js',
                       nonull: true
+                  },
+                  // Font Awesome TinyMCE plugin.
+                  // Uglify (not copy) these so we can change the file names.
+                  {
+                      src: [
+                        'bower_components/TinyMCE-FontAwesome-Plugin/fontawesome/plugin.min.js'
+                      ],
+                      dest: 'static/fontawesome/plugin/fontawesome.js',
+                      nonull: true
+                  },
+                  {
+                      src: [
+                        'bower_components/TinyMCE-FontAwesome-Plugin/fontawesome/langs/en.js'
+                      ],
+                      dest: 'static/fontawesome/plugin/langs/en.js',
+                      nonull: true
                   }
-
                 ]
             }
         },

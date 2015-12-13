@@ -3,11 +3,8 @@
   "private": true,
   "dependencies": {
     "bootstrap-sass-official": "3.3.5",
-    "modernizr": "2.8.3",
     "fontawesome": "4.4.0",
-    "jquery-hoverIntent": "v1.8.1",
-    "bower": "*",
-    "install": "~1.0.4",
-    "roboto-fontface": "~0.4.3"
+    "roboto-fontface": "~0.4.3",
+    "TinyMCE-FontAwesome-Plugin": "https://github.com/josh18/TinyMCE-FontAwesome-Plugin.git#~1.6.0"
   }
 }

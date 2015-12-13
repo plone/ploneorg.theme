@@ -84,3 +84,16 @@
 //  p { ... }
 //  a { ... }
 //  .lead { ... }
+
+//
+// All styles
+//
+// A lazy way to make the TinyMCE content stylining is by
+// using the complete main.css.
+// It might be nicer to only load a subset, but this will work for now.
+
+@import "main.scss";
+
+body {
+  margin: 1em;
+}
