@@ -367,9 +367,6 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 
 .sec-github-totals {
   @extend .sec-spacer;
-  h2 > a:first-child {
-    margin-left: 1.5em;
-  }
   .column {
     @extend .col-xs-6, .col-sm-4, .col-md-2;
     .well {
