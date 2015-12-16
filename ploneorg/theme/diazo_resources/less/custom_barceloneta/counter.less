@@ -1,0 +1,24 @@
+//
+// Counter style Barceloneta
+//
+// There is styling in Barceloneta that does not fit our theme.
+// Here we counter style to our wish. This is not so dry but makes updating
+// to the latest Barceloneta much easier.
+
+#content-core a {
+  border-bottom: 0;
+}
+
+h1, h2, h3 {
+  a:hover, a:focus {
+    text-decoration: underline;
+    border-bottom: 0;
+  }
+}
+
+// Type overall is to light :/
+.portlet .portletContent>ul>li {
+  &>.tile, &>.portletItemDetails {
+    font-weight: 500;
+  }
+}

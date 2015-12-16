@@ -20,7 +20,7 @@ $roboto-font-path: 'roboto' !default;
 // Set asset path
 $bootstrap-sass-asset-helper: "bootstrap-sass-official/assets/";
 
-// Custom bootstrap.
+// Custom Bootstrap.
 @import "custom_bootstrap/variables";
 @import "custom_bootstrap/bootstrap";
 
@@ -46,6 +46,3 @@ $fa-font-path:        "fontawesome/fonts" !default;
 
 // Page specific styling.
 @import 'partials/plone_edit_form';
-
-// Portlet specific styling.
-@import 'partials/portlets';

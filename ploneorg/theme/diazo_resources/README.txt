@@ -84,3 +84,15 @@ A copy tasks looks something like this:
       }
 
 `nonull` raises an error when a copy task fails.
+
+
+WORKING WITH BARCELONETA AND LESS
+---------------------------------
+
+Barceloneta is installed as bower component like this:
+
+    $ bower install https://github.com/plone/plonetheme.barceloneta.git#1.6.15 --save
+
+In `less/custom-barceloneta/barceloneta.less` we import the required styles.
+In `less/custom-barceloneta/variables.less` we set our custom vars.
+

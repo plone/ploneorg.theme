@@ -48,6 +48,23 @@ module.exports = function(grunt) {
             }
         },
 
+        less: {
+          production: {
+            options: {
+              sourceMap: true
+//              paths: ["assets/css"]
+//              ,
+//              modifyVars: {
+//                imgPath: '"http://mycdn.com/path/to/images"',
+//                bgColor: 'red'
+//              }
+            },
+            files: {
+              "static/barceloneta.css": "less/custom_barceloneta/barceloneta.less"
+            }
+          }
+        },
+
         // Check this Gruntfile and all js in the scripts dir
         // if they are valid js. jshint settings are stored in `.jshintrc`
         jshint: {
@@ -156,6 +173,10 @@ module.exports = function(grunt) {
                 files: ['sass/**/*.scss'],
                 tasks: ['sass']
             },
+            less: {
+                files: ['less/**/*.less'],
+                tasks: ['less']
+            },
             uglify: {
                 files: ['js/ploneorg.js'],
                 tasks: ['jshint', 'uglify']
@@ -168,6 +189,7 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('build', [
+        'less',
         'sass',
         'jshint',
         'uglify',
