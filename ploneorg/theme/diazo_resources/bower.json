@@ -6,7 +6,7 @@
     "fontawesome": "4.4.0",
     "roboto-fontface": "~0.4.3",
     "TinyMCE-FontAwesome-Plugin": "https://github.com/josh18/TinyMCE-FontAwesome-Plugin.git#~1.6.0",
-    "plonetheme.barceloneta": "https://github.com/plone/plonetheme.barceloneta.git#allcaps-various-fixes",
+    "plonetheme.barceloneta": "https://github.com/plone/plonetheme.barceloneta.git#master",
     "featherlight": "~1.3.5"
   }
 }
