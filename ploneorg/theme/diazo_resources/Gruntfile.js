@@ -101,11 +101,18 @@ module.exports = function(grunt) {
 //                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js',
                         'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js',
 //                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js',
-                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js',
+                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js'
 //                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js',
 //                        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js',
                       ],
                       dest: 'static/bootstrap.js',
+                      nonull: true
+                  },
+                  {
+                      src: [
+                        'bower_components/featherlight/src/featherlight.js'
+                      ],
+                      dest: 'static/featherlight.js',
                       nonull: true
                   },
                   {

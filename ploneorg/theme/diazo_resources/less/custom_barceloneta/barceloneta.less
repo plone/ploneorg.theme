@@ -1,57 +1,65 @@
 //
 // Custom Barceloneta
 // --------------------------------------------------
+
+
+// The location where all Barceloneta .less files live.
+@base-path: "../../bower_components/plonetheme.barceloneta/plonetheme/barceloneta/theme/less";
+
+// Toolbar and Barceloneta variables
+@import "toolbar.less";
+@import "@{base-path}/variables.plone.less";
+
+// Our custom variables
+@import "variables.less";
+
+//*// Font families
+//@import "@{base-path}/fonts.plone.less";
+
 //
 // Note: Barceloneta is a heavy framework.
 // Uncomment *only* the required imports.
-
-
-// Variables
-// We use our own custom variables.
-@import "variables.less";
-
-////*// Font families
-//@import "@{base-path}/fonts.plone.less";
 //
-////*// Core variables and mixins
-//@import "@{base-path}/mixin.prefixes.plone.less";
-//@import "@{base-path}/mixin.tabfocus.plone.less";
-//@import "@{base-path}/mixin.images.plone.less";
-//@import "@{base-path}/mixin.forms.plone.less";
-//@import "@{base-path}/mixin.borderradius.plone.less";
-//@import "@{base-path}/mixin.buttons.plone.less";
-//@import "@{base-path}/mixin.clearfix.plone.less";
+
+//*// Core variables and mixins
+@import "@{base-path}/mixin.prefixes.plone.less";
+@import "@{base-path}/mixin.tabfocus.plone.less";
+@import "@{base-path}/mixin.images.plone.less";
+@import "@{base-path}/mixin.forms.plone.less";
+@import "@{base-path}/mixin.borderradius.plone.less";
+@import "@{base-path}/mixin.buttons.plone.less";
+@import "@{base-path}/mixin.clearfix.plone.less";
 //@import "@{base-path}/mixin.gridframework.plone.less"; //grid Bootstrap
 //@import "@{base-path}/mixin.grid.plone.less"; //grid Bootstrap
-//
+
 ////*// Reset and dependencies
-//@import "@{base-path}/normalize.plone.less";
-//@import "@{base-path}/print.plone.less";
-//
-////*// Core CSS
-//@import "@{base-path}/scaffolding.plone.less";
-//@import "@{base-path}/type.plone.less";
-//@import "@{base-path}/code.plone.less";
-////@import "@{base-path}/deco.plone.less"; //uncomment for deco variant
+@import "@{base-path}/normalize.plone.less";
+@import "@{base-path}/print.plone.less";
+
+//*// Core CSS
+@import "@{base-path}/scaffolding.plone.less";
+@import "@{base-path}/type.plone.less";
+@import "@{base-path}/code.plone.less";
+//@import "@{base-path}/deco.plone.less"; //uncomment for deco variant
 //@import "@{base-path}/grid.plone.less"; //grid Bootstrap
-//@import "@{base-path}/tables.plone.less";
-//@import "@{base-path}/forms.plone.less";
+@import "@{base-path}/tables.plone.less";
+@import "@{base-path}/forms.plone.less";
 //@import "@{base-path}/buttons.plone.less";
-//@import "@{base-path}/states.plone.less";
-//
-////*// Components
-//@import "@{base-path}/breadcrumbs.plone.less";
-//@import "@{base-path}/pagination.plone.less";
-//@import "@{base-path}/formtabbing.plone.less"; //pattern
-//@import "@{base-path}/views.plone.less";
-//@import "@{base-path}/thumbs.plone.less";
+@import "@{base-path}/states.plone.less";
+
+//*// Components
+@import "@{base-path}/breadcrumbs.plone.less";
+@import "@{base-path}/pagination.plone.less";
+@import "@{base-path}/formtabbing.plone.less"; //pattern
+@import "@{base-path}/views.plone.less";
+@import "@{base-path}/thumbs.plone.less";
 //@import "@{base-path}/alerts.plone.less";
-//@import "@{base-path}/portlets.plone.less";
+@import "@{base-path}/portlets.plone.less";
 //@import "@{base-path}/controlpanels.plone.less";
-//@import "@{base-path}/tags.plone.less";
-//@import "@{base-path}/contents.plone.less";
-//
-////*// Patterns
+@import "@{base-path}/tags.plone.less";
+@import "@{base-path}/contents.plone.less";
+
+//*// Patterns
 //@import "@{base-path}/accessibility.plone.less";
 //@import "@{base-path}/toc.plone.less";
 //@import "@{base-path}/dropzone.plone.less";
@@ -61,21 +69,21 @@
 //@import "@{base-path}/tablesorter.plone.less";
 //@import "@{base-path}/tooltip.plone.less";
 //@import "@{base-path}/tree.plone.less";
-//
-////*// Structure
+
+//*// Structure
 //@import "@{base-path}/header.plone.less";
 //@import "@{base-path}/sitenav.plone.less";
-//@import "@{base-path}/main.plone.less";
+@import "@{base-path}/main.plone.less";
 //@import "@{base-path}/footer.plone.less";
-//@import "@{base-path}/loginform.plone.less";
-//@import "@{base-path}/sitemap.plone.less";
-//
-////*// Products
-//@import "@{base-path}/event.plone.less";
-//@import "@{base-path}/image.plone.less";
-//@import "@{base-path}/behaviors.plone.less";
-//@import "@{base-path}/discussion.plone.less";
-//@import "@{base-path}/search.plone.less";
+@import "@{base-path}/loginform.plone.less";
+@import "@{base-path}/sitemap.plone.less";
+
+//*// Products
+@import "@{base-path}/event.plone.less";
+@import "@{base-path}/image.plone.less";
+@import "@{base-path}/behaviors.plone.less";
+@import "@{base-path}/discussion.plone.less";
+@import "@{base-path}/search.plone.less";
 
 //*// Counter style
 @import "counter.less";

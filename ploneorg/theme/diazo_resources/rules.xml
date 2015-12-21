@@ -57,6 +57,7 @@
       <after theme-children="/html/head" content="/html/head/link" />
       <!-- Script -->
       <after theme-children="/html/head" content="/html/head/script" />
+
     </rules>
 
     <!-- Copy over the id/class attributes on the body tag.
@@ -81,9 +82,19 @@
       <replace content='//*[@id="content"]' theme='//*[@id="main-container"]' />
     </rules>
 
+    <!-- Remove the Plone modal form images because a modal isn't a real lightbox. -->
+    <!-- Add the featerlight lightbox attribute instead. -->
+    <drop css:content="a[data-pat-plone-modal]" attributes="data-pat-plone-modal"></drop>
+    <xsl:template match="//@class[contains(., 'pat-plone-modal')]">
+    <xsl:attribute name="data-featherlight">image</xsl:attribute>
+    </xsl:template>
+
+
+    <!--<replace content='//*[@id="content"]' theme='//*[@id="main-container"]' />-->
+
     <!-- If any other page respect the Plone columns -->
-    <rules css:if-not-content="body.portaltype-homepage">
-      <replace css:theme="#content-container">
+    <!--<rules css:if-not-content="body.portaltype-homepage">-->
+      <replace css:theme="#content-container"  method="raw">
          <!-- Central column -->
         <xsl:variable name="central">
           <xsl:if test="//aside[@id='portal-column-one'] and //aside[@id='portal-column-two']">col-xs-12 col-sm-6</xsl:if>
@@ -94,8 +105,9 @@
         <div class="{$central}">
             <div class="row">
               <div class="col-xs-12 col-sm-12">
-                 <xsl:copy-of select="//article[@id='content']"/>
-                 <xsl:copy-of select="//div[@id='content']"/>
+                 <!--<xsl:copy-of select="//article[@id='content']"/>-->
+                 <!--<xsl:copy-of select="//div[@id='content']"/>-->
+                 <xsl:apply-templates css:select="#content" />
               </div>
             </div>
             <footer class="row">
@@ -105,7 +117,7 @@
             </footer>
         </div>
       </replace>
-    </rules>
+    <!--</rules>-->
 
     <!-- Alert message -->
     <!--TODO: needs some work when there is a full width jumbotron.-->
@@ -160,5 +172,8 @@
     <!--<replace css:theme="#anonymous-actions" css:content-children="#portal-personaltools-wrapper" css:if-not-content=".ajax_load" css:if-content=".userrole-anonymous"/>-->
 
     <!--<after theme-children="/html/body" content="//*[@id='portal-footer-wrapper']/script" />-->
+
+
+
 
   </rules>

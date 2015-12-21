@@ -1,0 +1,30 @@
+//
+// Featerlight (lightbox) custom styling
+//
+
+.featherlight .featherlight-close-icon {
+    font-size: 24px;
+    font-weight: bold;
+  background-color: #fff;
+}
+
+.featherlight .featherlight-close-icon {
+    /* position: centering vertical and horizontal; */
+    position: fixed;
+    top: 9px;
+    right: 9px;
+    line-height: 40px;
+    width: 40px;
+}
+
+.featherlight .featherlight-content {
+    margin-left: 10px;
+    margin-right: 10px;
+    max-height: 98%;
+    padding: 0px 0px 0;
+    border-bottom: 0;
+}
+
+.featherlight:last-of-type {
+    background: rgba(0, 0, 0, 0.85);
+}

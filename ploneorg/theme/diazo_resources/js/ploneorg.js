@@ -4,7 +4,8 @@
 
 require([
     'jquery',
-    '++theme++ploneorg/static/bootstrap'
+    '++theme++ploneorg/static/bootstrap',
+    '++theme++ploneorg/static/featherlight'
 ], function($) {
 
   // DOM ready

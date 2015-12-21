@@ -2,7 +2,7 @@
 // Main
 // --------------------------------------------------
 //
-// Combining custom bootstrap and partials to one file.
+// Combine custom bootstrap and partials into one file.
 
 //
 // Fonts
@@ -44,5 +44,12 @@ $fa-font-path:        "fontawesome/fonts" !default;
 // Page specific styling.
 @import 'partials/pages';
 
-// Page specific styling.
-@import 'partials/plone_edit_form';
+// Plone edit form.
+// @import 'partials/plone_edit_form';
+
+// Plone styling
+@import 'partials/plone';
+
+// Featerlight lightbox
+@import '../bower_components/featherlight/src/featherlight.css';
+@import 'partials/featerlight';
