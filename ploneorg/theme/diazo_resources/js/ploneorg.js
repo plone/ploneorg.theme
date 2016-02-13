@@ -50,5 +50,23 @@ require([
       $(".dropdown-toggle").dropdown();
     });
 
+    //STICKY FOOTER:
+    //Calculates height of footer on page load and on page resizing,
+    //Set body elements bottom padding to calculated height.
+    //Set footer height to calculated height.
+    function stickyFooter() {
+      var footerHeight = $('.footer-doormat').outerHeight()+$('.footer-legal').outerHeight();
+      $('body').css('padding-bottom', footerHeight);
+      $('footer').css('height', footerHeight);
+    }
+
+    $(document).ready(function(){
+      stickyFooter();
+    });
+
+    $( window ).resize(function() {
+      stickyFooter();
+    });
+
   });
 });
