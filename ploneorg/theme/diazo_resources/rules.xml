@@ -6,7 +6,7 @@
        xmlns:xi="http://www.w3.org/2001/XInclude">
 
     <!-- Plone Barcaloneta toolbar and forms -->
-    <xi:include href="++theme++ploneorg/backend.xml" />
+    <xi:include href="backend.xml" />
 
     <!-- Change Plone global nav `selected` class to Bootstrap `active`-->
     <xsl:template match="//ul//@class[contains(., 'selected')]">
@@ -36,7 +36,7 @@
     </xsl:template>
 
     <!-- Use base.html as default theme page. -->
-    <theme href="/++theme++ploneorg/base.html" />
+    <theme href="base.html" />
 
     <notheme css:if-not-content="#visual-portal-wrapper" />
 
