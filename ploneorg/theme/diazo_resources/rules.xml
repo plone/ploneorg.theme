@@ -37,6 +37,7 @@
 
     <!-- Use base.html as default theme page. -->
     <theme href="base.html" />
+    <theme href="community.html" css:if-content="body.section-community"/>
 
     <notheme css:if-not-content="#visual-portal-wrapper" />
 
@@ -80,6 +81,10 @@
          template takes care of the correct Boostrap row styling. -->
     <rules css:if-content="body.portaltype-homepage">
       <replace content='//*[@id="content"]' theme='//*[@id="main-container"]' />
+    </rules>
+
+    <rules css:if-content="body.section-community">
+        <replace css:content-children="#content-core" css:theme-children=".sec-community .container" />
     </rules>
 
     <!-- Remove the Plone modal form images because a modal isn't a real lightbox. -->
