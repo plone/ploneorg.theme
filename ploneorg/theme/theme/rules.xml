@@ -38,6 +38,7 @@
     <!-- Use base.html as default theme page. -->
     <theme href="base.html" />
     <theme href="community.html" css:if-content="body.section-community"/>
+    <theme href="getting-started.html" css:if-content="body.section-getting-started"/>
 
     <notheme css:if-not-content="#visual-portal-wrapper" />
 

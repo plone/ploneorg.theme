@@ -3,6 +3,6 @@
      so that it will be activated
      when this product is installed. -->
 <layers>
-    <layer name="ploneorg.theme.customization.layer"
-      interface="ploneorg.theme.interfaces.ICustomTheme" />
+    <layer name="ploneorg.theme"
+           interface="ploneorg.theme.interfaces.ICustomTheme" />
 </layers>

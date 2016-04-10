@@ -1,5 +1,5 @@
-ploneorg/theme/diazo_resources/bower_components
-ploneorg/theme/diazo_resources/node_modules
+ploneorg/theme/theme/bower_components
+ploneorg/theme/theme/node_modules
 ploneorg.theme.egg-info
 *.pyc
 build/

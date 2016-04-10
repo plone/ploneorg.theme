@@ -1,3 +1,0 @@
-/*! */
-/*! Ploneorg.theme */
-require(["jquery","++theme++ploneorg/static/bootstrap","++theme++ploneorg/static/featherlight"],function(a){a(function(){"use strict";a(".btn-search").click(function(){a(".sec-search").slideToggle("fast",function(){a("#search").focus()})});var b=a("p.truncate");a.each(b,function(b,c){var d,e,f,g,h=0,i=1;if(d=c.textContent.split(/\s+/),a(c).height()>75){for(;75>h;)g=f,f=e,e=c.textContent=d.slice(0,i).join(" "),h=a(c).height(),i++;c.textContent=g+" ..."}}),a(document).ready(function(){a(".dropdown-toggle").dropdown()})})});

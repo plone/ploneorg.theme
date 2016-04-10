@@ -6,6 +6,16 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="ploneorg.theme">
 
+  <includeDependencies package="." />
+
+  <include package="plone.app.theming" />
+
+  <plone:static
+    name="ploneorg.theme"
+    directory="theme"
+    type="theme"
+    />
+
   <genericsetup:registerProfile
       name="default"
       title="Diazo Theme Package for Plone.org"
@@ -13,17 +23,5 @@
       description="Extension profile for ploneorg Diazo Theme Package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
-
-  <plone:static
-    name="ploneorg"
-    directory="diazo_resources"
-    type="theme"
-    />
-
-  <interface
-    interface=".interfaces.IThemeSpecific"
-    type="zope.publisher.interfaces.browser.IBrowserSkinType"
-    name="ploneorg.theme"
-    />
 
 </configure>
