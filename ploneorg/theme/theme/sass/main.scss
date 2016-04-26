@@ -99,3 +99,17 @@ input.searchButton {
 .searchSection label::first-letter {
   text-transform: capitalize;
 }
+
+.section-getting-started .image .fa {
+  background-color: #3093C7;
+  color: white;
+  font-size: 3.5em;
+  padding: 0.3em;
+  border-radius: 50%;
+  &.fa-graduation-cap {
+    padding: 0.3em 0.2em;
+  }
+  &.fa-download {
+    padding: 0.25em 0.3em;
+  }
+}
