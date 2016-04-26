@@ -179,6 +179,10 @@
 
     <!--<after theme-children="/html/body" content="//*[@id='portal-footer-wrapper']/script" />-->
 
+    <replace css:theme=".sec-search form" css:content="#portal-searchbox"  />
+    <xsl:template match="//input[@id='searchGadget']/@placeholder">
+        <xsl:attribute name="placeholder">Search Plone.org</xsl:attribute>
+    </xsl:template>
 
 
 
