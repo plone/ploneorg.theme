@@ -8,6 +8,8 @@
     <!-- Plone Barcaloneta toolbar and forms -->
     <xi:include href="backend.xml" />
 
+    <replace css:theme=".topbar" css:content=".topbar" href="/@@theme-fragment/topbar" />
+
     <!-- Change Plone global nav `selected` class to Bootstrap `active`-->
     <xsl:template match="//ul//@class[contains(., 'selected')]">
       <xsl:attribute name="class"><xsl:value-of select="." /> active</xsl:attribute>
@@ -171,13 +173,14 @@
     <replace css:theme-children=".dropdown-menu"
              css:content='#portal-globalnav > li:nth-child(n+5)' />
 
-    <!-- TODO: Copy footer -->
-    <!--<replace css:theme-children="#portal-footer" css:content-children="#portal-footer-wrapper" />-->
 
     <!-- toolbar -->
     <!--<replace css:theme="#anonymous-actions" css:content-children="#portal-personaltools-wrapper" css:if-not-content=".ajax_load" css:if-content=".userrole-anonymous"/>-->
 
     <!--<after theme-children="/html/body" content="//*[@id='portal-footer-wrapper']/script" />-->
+
+    <!-- footer -->
+    <replace css:theme="#staticfooter" css:content="#staticfooter" href="/@@theme-fragment/footer" />
 
     <replace css:theme=".sec-search form" css:content="#portal-searchbox"  />
     <xsl:template match="//input[@id='searchGadget']/@placeholder">

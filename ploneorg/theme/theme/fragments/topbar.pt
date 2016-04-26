@@ -1,0 +1,24 @@
+          <div class="topbar">
+            <div class="container">
+              <ul id="links-select">
+                <li>
+                  <a href="http://plone.com"
+                     title="Plone.com">
+                    plone.com
+                  </a>
+                </li>
+                <li>
+                  <a href="http://docs.plone.org"
+                     title="Documentation">
+                    docs.plone.org
+                  </a>
+                </li>
+                <li>
+                  <a href="http://community.plone.org"
+                     title="Discussion groups">
+                    community.plone.org
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
