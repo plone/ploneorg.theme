@@ -90,10 +90,10 @@
 
     <!-- Remove the Plone modal form images because a modal isn't a real lightbox. -->
     <!-- Add the featerlight lightbox attribute instead. -->
-    <drop css:content="a[data-pat-plone-modal]" attributes="data-pat-plone-modal"></drop>
+    <!-- <drop css:content="a[data-pat-plone-modal]" attributes="data-pat-plone-modal"></drop>
     <xsl:template match="//@class[contains(., 'pat-plone-modal')]">
     <xsl:attribute name="data-featherlight">image</xsl:attribute>
-    </xsl:template>
+    </xsl:template> -->
 
 
     <!--<replace content='//*[@id="content"]' theme='//*[@id="main-container"]' />-->

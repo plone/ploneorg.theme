@@ -29,7 +29,7 @@
   <replace css:theme="#anonymous-actions" css:content-children="#portal-personaltools-wrapper" css:if-not-content=".ajax_load" css:if-content=".userrole-anonymous" />
 
   <!-- We don't want overlays -->
-  <drop attributes="class" css:content="#edit-bar a.pat-plone-modal" />
+  <!-- <drop attributes="class" css:content="#edit-bar a.pat-plone-modal" /> -->
 
   <!-- Cut down barceloneta without just for backend UI -->
   <rules css:if-not-content="body.viewpermission-view, body.viewpermission-none">
