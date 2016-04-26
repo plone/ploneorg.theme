@@ -27,7 +27,14 @@
   <!-- Toolbar -->
   <before css:theme-children="body" css:content-children="#edit-bar" css:if-not-content=".ajax_load" css:if-content=".userrole-authenticated" />
   <replace css:theme="#anonymous-actions" css:content-children="#portal-personaltools-wrapper" css:if-not-content=".ajax_load" css:if-content=".userrole-anonymous" />
-
+  <replace css:theme=".btn-login" css:if-content=".userrole-authenticated">
+    <li class="btn-myprofile">
+      <a href="{$portal_url}/profile/{$member}">
+        <i class="fa fa-user"></i>
+        <span class="hidden-sm">My Profile</span>
+      </a>
+    </li>
+  </replace>
   <!-- We don't want overlays -->
   <!-- <drop attributes="class" css:content="#edit-bar a.pat-plone-modal" /> -->
 
