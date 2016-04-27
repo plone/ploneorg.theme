@@ -70,7 +70,7 @@
     <after css:theme-children="head" css:content="head link" />
 
     <!-- Script -->
-    <after css:theme-children="head" css:content="head script" />
+    <!-- <after css:theme-children="head" css:content="head script" /> -->
 
     <!-- We use global nav. Note modified links to point to .../folder_contents -->
     <before css:theme="#above-content" css:content="#portal-mainnavigation" />
