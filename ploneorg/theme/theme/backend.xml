@@ -36,7 +36,7 @@
          aria-haspopup="true"
          aria-expanded="false">
         <span class="caret hidden-sm"></span>
-        <i class="fa fa-user"></i>
+        <span class="fa fa-user"></span>
         <span class="hidden-sm">My Profile</span>
       </a>
       <ul class="dropdown-menu">
