@@ -28,11 +28,23 @@
   <before css:theme-children="body" css:content-children="#edit-bar" css:if-not-content=".ajax_load" css:if-content=".userrole-authenticated" />
   <replace css:theme="#anonymous-actions" css:content-children="#portal-personaltools-wrapper" css:if-not-content=".ajax_load" css:if-content=".userrole-anonymous" />
   <replace css:theme=".btn-login" css:if-content=".userrole-authenticated">
-    <li class="btn-myprofile">
-      <a href="{$portal_url}/profile/{$member}">
+    <li class="dropdown">
+      <a href="#"
+         class="dropdown-toggle btn-myprofile"
+         data-toggle="dropdown"
+         role="button"
+         aria-haspopup="true"
+         aria-expanded="false">
+        <span class="caret hidden-sm"></span>
         <i class="fa fa-user"></i>
         <span class="hidden-sm">My Profile</span>
       </a>
+      <ul class="dropdown-menu">
+        <li><a href="{$portal_url}/profile/{$member}">View</a></li>
+        <li><a href="{$portal_url}/@@personal-information">Edit</a></li>
+        <li><a href="sponsors.html">Submit event</a></li>
+        <li><a href="#">Another section</a></li>
+      </ul>
     </li>
   </replace>
   <!-- We don't want overlays -->
