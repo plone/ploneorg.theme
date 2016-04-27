@@ -69,7 +69,7 @@
     <copy attributes="*" css:content="body" css:theme="body" />
 
     <!-- Full-width breadcrumb -->
-    <!--<replace css:theme="#above-content" css:content="#viewlet-above-content"/>-->
+    <!-- <replace css:theme="#above-content" css:content="#viewlet-above-content"/> -->
 
     <!-- Related sites in topbar -->
     <replace theme='//*[@id="links-select"]' content='//*[@id="links-select"]' />
