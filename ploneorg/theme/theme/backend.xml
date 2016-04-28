@@ -91,10 +91,10 @@
     <drop css:theme="div.principal" css:if-not-content="body.template-document_view.section-front-page" />
 
     <!-- Full-width breadcrumb -->
-    <replace css:theme="#above-content" css:content="#viewlet-above-content" />
+    <!-- <replace css:theme="#above-content" css:content="#viewlet-above-content" />
     <after css:theme-children="head">
         <style>.plone-breadcrumb {margin-top: -20px;}</style>
-    </after>
+    </after> -->
 
     <!-- Central column -->
     <replace css:theme="#content-container" method="raw">

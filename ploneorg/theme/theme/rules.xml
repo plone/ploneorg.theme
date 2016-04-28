@@ -69,7 +69,10 @@
     <copy attributes="*" css:content="body" css:theme="body" />
 
     <!-- Full-width breadcrumb -->
-    <!-- <replace css:theme="#above-content" css:content="#viewlet-above-content"/> -->
+    <rules css:if-not-content=".jumbotron">
+      <replace css:theme="#breadcrumbs" css:content="#portal-breadcrumbs"/>
+    </rules>
+    
 
     <!-- Related sites in topbar -->
     <replace theme='//*[@id="links-select"]' content='//*[@id="links-select"]' />
