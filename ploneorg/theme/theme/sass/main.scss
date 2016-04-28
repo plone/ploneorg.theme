@@ -129,3 +129,16 @@ section.sec-community ul {
 }
 
 .plone-breadcrumb {margin-top: 0px;}
+
+.portlet .portletContent > ul {
+  list-style: inside disc;
+}
+.portletStaticText ul {
+  font-size: 14px;
+  font-weight: 400;
+  li {
+    color: #6b808c;
+    margin: 0;
+    padding: 10px 15px;
+  }
+}
