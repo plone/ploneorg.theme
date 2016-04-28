@@ -73,7 +73,6 @@
     <rules css:if-not-content=".jumbotron">
       <replace css:theme="#breadcrumbs" css:content="#portal-breadcrumbs"/>
     </rules>
-    
 
     <!-- Related sites in topbar -->
     <replace theme='//*[@id="links-select"]' content='//*[@id="links-select"]' />
