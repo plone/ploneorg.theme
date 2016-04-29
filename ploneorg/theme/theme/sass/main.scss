@@ -147,7 +147,11 @@ section.sec-community ul {
   margin-top: 0px;
 }
 
-// The event page is done.. so commenting this out for now
+.portlet-collection-news-archives ul {
+  list-style: none;
+}
+
+// The event page is fixed in 5.1.. so commenting this out for now
 // .vevent {
 //   div.cal_date {
 //     padding: 0em 0.7em 0.5em !important;
