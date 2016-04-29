@@ -94,6 +94,10 @@
         <replace css:content-children="#content-core" css:theme-children=".sec-community .container" />
     </rules>
 
+    <rules css:if-content="body.section-sponsors">
+        <replace css:content-children="#content-core" css:theme-children=".sec-sponsors .container" />
+    </rules>
+
     <!-- Remove the Plone modal form images because a modal isn't a real lightbox. -->
     <!-- Add the featerlight lightbox attribute instead. -->
     <!-- <drop css:content="a[data-pat-plone-modal]" attributes="data-pat-plone-modal"></drop>
