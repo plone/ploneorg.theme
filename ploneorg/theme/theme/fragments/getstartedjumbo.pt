@@ -1,0 +1,10 @@
+        <section class="jumbotron">
+          <div class="container">
+              <div class="intro">
+                <h1>Get Started with Plone</h1>
+                <p class="lead">
+                  Test drive a demo or try a tutorial.
+                </p>
+              </div>
+          </div>
+        </section>

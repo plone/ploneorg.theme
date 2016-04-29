@@ -1,0 +1,11 @@
+        <section class="jumbotron">
+          <div class="container">
+              <div class="intro">
+                <h1>Download</h1>
+                <p class="lead">
+                  Here's what you need to download Plone and to browse the many available Plone add-ons.
+                </p>
+
+              </div>
+          </div>
+        </section>
