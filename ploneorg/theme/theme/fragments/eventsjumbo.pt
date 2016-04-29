@@ -1,0 +1,11 @@
+        <section class="jumbotron">
+          <div class="container">
+              <div class="intro">
+                <h1>Events </h1>
+                <p class="lead">
+                  Jumbotron for Events
+                </p>
+
+              </div>
+          </div>
+        </section>
