@@ -155,6 +155,16 @@ ul.livesearch-results {
   width: 99% !important;
 }
 
+.subsection-badges .newsImageContainer {
+  box-shadow: none;
+  border-radius: 0px;
+}
+
+[class*="subsection-badges-"] .newsImageContainer a img {
+  width: 300px;
+}
+
+
 @media (max-width: 460px) {
 
   input#searchGadget {
@@ -165,16 +175,3 @@ ul.livesearch-results {
     width: 32%;
   }
 }
-
-// The event page is fixed in 5.1.. so commenting this out for now
-// .vevent {
-//   div.cal_date {
-//     padding: 0em 0.7em 0.5em !important;
-//     min-height: 16em;
-//     box-shadow: none !important;
-//     min-width: 16em !important;
-//   }
-//   span.cal_month {
-//     display: block !important;
-//   }
-// }
