@@ -521,7 +521,7 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 //
 // The community/team overview.
 
-.sec-community {
+.sec-community, sec-foundation {
   .container {
     @extend .sec-spacer;
   }
