@@ -166,6 +166,10 @@ ul.livesearch-results {
     padding-left: 6%;
 }
 
+.contributor-badges .col-md-2:first-child {
+  padding-left: 0px;
+}
+
 @media (max-width: 460px) {
 
   input#searchGadget {
