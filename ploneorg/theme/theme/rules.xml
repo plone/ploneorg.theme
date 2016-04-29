@@ -37,6 +37,19 @@
         </xsl:attribute>
     </xsl:template>
 
+
+
+
+    <!-- Use base.html as default theme page. -->
+    <theme href="base.html" />
+    <theme href="base.html" if-content="//body[contains(@class, 'subsection')]" />
+    <theme href="community.html" css:if-content="body.section-community" />
+    <theme href="getting-started.html" css:if-content="body.section-getting-started"/>
+    <theme href="sponsors.html" css:if-content="body.section-sponsors" />
+
+    <notheme css:if-not-content="#visual-portal-wrapper" />
+
+
     <rules css:if-content="body.section-foundation">
        <replace css:content=".jumbotron" css:theme="#breadcrumbs" href="/@@theme-fragment/foundationjumbo" />
     </rules>
@@ -58,17 +71,12 @@
     <rules css:if-content="body.section-support">
        <replace css:content=".jumbotron" css:theme="#breadcrumbs" href="/@@theme-fragment/supportjumbo" />
     </rules>
-
-
-
-    <!-- Use base.html as default theme page. -->
-    <theme href="base.html" />
-    <theme href="base.html" if-content="//body[contains(@class, 'subsection')]" />
-    <theme href="community.html" css:if-content="body.section-community" />
-    <theme href="getting-started.html" css:if-content="body.section-getting-started"/>
-    <theme href="sponsors.html" css:if-content="body.section-sponsors" />
-
-    <notheme css:if-not-content="#visual-portal-wrapper" />
+    <rules css:if-content="body.section-community">
+       <replace css:content=".jumbotron" css:theme="#breadcrumbs" href="/@@theme-fragment/communityjumbo" />
+    </rules>
+     <rules css:if-content="body.section-getstarted">
+       <replace css:content=".jumbotron" css:theme="#breadcrumbs" href="/@@theme-fragment/getstartedjumbo" />
+    </rules>   
 
     <!-- Head -->
     <rules if-content="//*[@id='portal-top']">
