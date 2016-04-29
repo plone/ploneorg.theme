@@ -130,9 +130,6 @@ section.sec-community ul, section.sec-foundation ul {
 
 .plone-breadcrumb {margin-top: 0px !important;}
 
-.portlet .portletContent > ul {
-  list-style: inside disc;
-}
 .portletStaticText ul {
   font-size: 14px;
   font-weight: 400;
@@ -140,6 +137,7 @@ section.sec-community ul, section.sec-foundation ul {
     color: #6b808c;
     margin: 0;
     padding: 10px 15px;
+    list-style: inside disc;
   }
 }
 
@@ -166,6 +164,10 @@ ul.livesearch-results {
 
 .sec-getting-started article .text {
     padding-left: 6%;
+}
+
+.contributor-badges .col-md-2:first-child {
+  padding-left: 0px;
 }
 
 @media (max-width: 460px) {
