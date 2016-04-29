@@ -56,7 +56,7 @@ $fa-font-path:        "fontawesome/fonts" !default;
 
 input#searchGadget {
   float: left;
-  width: 88%;
+  width: 80%;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
   color: #6b808c;
   display: block;
@@ -93,7 +93,7 @@ input.searchButton {
     position: relative;
     float: left;
     margin-left: -1%;
-    width: 13%;
+    width: 20%;
 }
 
 .searchSection label::first-letter {
@@ -149,6 +149,21 @@ section.sec-community ul {
 
 .portlet-collection-news-archives ul {
   list-style: none;
+}
+
+ul.livesearch-results {
+  width: 99% !important;
+}
+
+@media (max-width: 460px) {
+
+  input#searchGadget {
+    width: 68%;
+  }
+
+  input.searchButton {
+    width: 32%;
+  }
 }
 
 // The event page is fixed in 5.1.. so commenting this out for now

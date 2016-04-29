@@ -53,7 +53,8 @@
   <!-- Cut down barceloneta without just for backend UI -->
   <rules css:if-not-content="body.viewpermission-view, body.viewpermission-none">
 
-    <theme href="../++theme++barceloneta/index.html" />
+    <!-- We decided to take this out to have it look like the rest of the site
+    <theme href="../++theme++barceloneta/index.html" /> -->
     <notheme css:if-not-content="#visual-portal-wrapper" />
 
     <!-- We can't control the bundle from here due to include. Just hard code -->
@@ -147,8 +148,8 @@
     </rules>
 
     <!-- Content header -->
-    <drop css:theme="#portal-top" />
-    <drop css:theme="#portal-footer-wrapper" />
+    <!-- <drop css:theme="#portal-top" />
+    <drop css:theme="#portal-footer-wrapper" /> -->
 
   </rules>
 
