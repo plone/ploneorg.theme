@@ -50,7 +50,7 @@
 
     <notheme css:if-not-content="#visual-portal-wrapper" />
 
-
+<rules if-not-content="//body[contains(@class, 'subsection')]">
     <rules css:if-content="body.section-foundation">
        <replace css:content=".jumbotron" css:theme="#breadcrumbs" href="/@@theme-fragment/foundationjumbo" />
     </rules>
@@ -78,6 +78,7 @@
      <rules css:if-content="body.section-getstarted">
        <replace css:content=".jumbotron" css:theme="#breadcrumbs" href="/@@theme-fragment/getstartedjumbo" />
     </rules>
+  </rules>  
 
     <!-- Head -->
     <rules if-content="//*[@id='portal-top']">
@@ -107,6 +108,8 @@
     <rules css:if-not-content=".jumbotron">
       <replace css:theme="#breadcrumbs" css:content="#portal-breadcrumbs"/>
     </rules>
+
+
 
     <!-- Related sites in topbar -->
     <replace theme='//*[@id="links-select"]' content='//*[@id="links-select"]' />
