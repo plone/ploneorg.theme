@@ -37,6 +37,30 @@
         </xsl:attribute>
     </xsl:template>
 
+    <rules css:if-content="body.section-foundation">
+       <replace css:content=".jumbotron" css:theme="#breadcrumbs" href="/@@theme-fragment/foundationjumbo" />
+    </rules>
+    <rules css:if-content="body.section-news">
+       <replace css:content=".jumbotron" css:theme="#breadcrumbs" href="/@@theme-fragment/newsjumbo" />
+    </rules>
+    <rules css:if-content="body.section-events">
+       <replace css:content=".jumbotron" css:theme="#breadcrumbs" href="/@@theme-fragment/eventsjumbo" />
+    </rules>
+    <rules css:if-content="body.section-download">
+       <replace css:content=".jumbotron" css:theme="#breadcrumbs" href="/@@theme-fragment/downloadjumbo" />
+    </rules>
+    <rules css:if-content="body.section-news">
+       <replace css:content=".jumbotron" css:theme="#breadcrumbs" href="/@@theme-fragment/newsjumbo" />
+    </rules>
+    <rules css:if-content="body.section-related-websites">
+       <replace css:content=".jumbotron" css:theme="#breadcrumbs" href="/@@theme-fragment/relatedjumbo" />
+    </rules>
+    <rules css:if-content="body.section-support">
+       <replace css:content=".jumbotron" css:theme="#breadcrumbs" href="/@@theme-fragment/supportjumbo" />
+    </rules>
+
+
+
     <!-- Use base.html as default theme page. -->
     <theme href="base.html" />
     <theme href="base.html" if-content="//body[contains(@class, 'subsection')]" />
