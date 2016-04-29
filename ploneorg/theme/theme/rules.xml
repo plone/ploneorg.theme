@@ -40,6 +40,7 @@
     <!-- Use base.html as default theme page. -->
     <theme href="base.html" />
     <theme href="base.html" if-content="//body[contains(@class, 'subsection')]" />
+    <theme href="base.html" if-content="//body[contains(@class, 'template-folder_contents')]" />
     <theme href="community.html" css:if-content="body.section-community" />
     <theme href="getting-started.html" css:if-content="body.section-getting-started"/>
     <theme href="sponsors.html" css:if-content="body.section-sponsors" />
@@ -92,10 +93,6 @@
 
     <rules css:if-content="body.section-community">
         <replace css:content-children="#content-core" css:theme-children=".sec-community .container" />
-    </rules>
-
-    <rules css:if-content="body.section-sponsors">
-        <replace css:content-children="#content-core" css:theme-children=".sec-sponsors .container" />
     </rules>
 
     <!-- Remove the Plone modal form images because a modal isn't a real lightbox. -->
