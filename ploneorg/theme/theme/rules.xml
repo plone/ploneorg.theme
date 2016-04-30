@@ -138,7 +138,7 @@
     <xsl:template match="//@class[contains(., 'pat-plone-modal')]">
     <xsl:attribute name="data-featherlight">image</xsl:attribute>
     </xsl:template> -->
-
+    <drop content=".isotope-item h2" />
 
     <!--<replace content='//*[@id="content"]' theme='//*[@id="main-container"]' />-->
 
