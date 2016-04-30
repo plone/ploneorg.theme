@@ -44,6 +44,7 @@
     <theme href="base.html" />
     <theme href="base.html" if-content="//body[contains(@class, 'subsection')]" />
     <theme href="base.html" if-content="//body[contains(@class, 'template-folder_contents')]" />
+    <theme href="base.html" if-path="/++add++Document"/>
     <theme href="community.html" css:if-content="body.section-community" />
     <theme href="get-started.html" css:if-content="body.section-get-started"/>
     <theme href="sponsors.html" css:if-content="body.section-sponsors" />
@@ -78,7 +79,7 @@
      <rules css:if-content="body.section-getstarted">
        <replace css:content=".jumbotron" css:theme="#breadcrumbs" href="/@@theme-fragment/getstartedjumbo" />
     </rules>
-  </rules>  
+  </rules>
 
     <!-- Head -->
     <rules if-content="//*[@id='portal-top']">
