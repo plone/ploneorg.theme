@@ -227,6 +227,10 @@ ul.livesearch-results {
   min-height: 16em
 }
 
+// Hide the Advanced Search Options
+.searchPage .actionMenu {
+  display: none;
+}
 @media (max-width: 1000px) {
   .template-homepage .sec-events .events  {
     width: 66.6666%;
@@ -248,5 +252,8 @@ ul.livesearch-results {
   }
   .template-homepage .sec-events .events, .template-homepage .sec-events .about  {
     width: 50%;
+  }
+  .sec-events .events .event .panel-heading {
+    text-align: left;
   }
 }
