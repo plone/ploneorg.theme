@@ -16,6 +16,12 @@
     type="theme"
     />
 
+  <include package="z3c.jbot" file="meta.zcml" />
+  <browser:jbot
+      directory="templates"
+      layer=".interfaces.ICustomTheme"
+  />
+
   <genericsetup:registerProfile
       name="default"
       title="Diazo Theme Package for Plone.org"
