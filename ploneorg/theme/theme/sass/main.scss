@@ -170,12 +170,26 @@ ul.livesearch-results {
   padding-left: 0px;
 }
 
-.template-summary_view.section-foundation article.tileItem {
-  width: 30%;
-  height: 18em;
-  float: left;
-  margin-right: 3%;
-  margin-bottom: 2em;
+
+// There is a special view for the first level folder summary view which gets set here and unset below in subsections
+.template-summary_view[class*="section-"] {
+  article.tileItem {
+    width: 30%;
+    height: 18em;
+    float: left;
+    margin-right: 3%;
+    margin-bottom: 2em;
+  }
+}
+// Unset the special view above
+.template-summary_view[class*="subsection-"] {
+  article.tileItem {
+    width: inherit;
+    height: inherit;
+    float: inherit;
+    margin-right: inherit;
+    margin-bottom: inherit;
+  }
 }
 
 .subsection-badges .isotope-filter {
@@ -186,6 +200,21 @@ ul.livesearch-results {
   border: none;
   background-color: transparent;
 }
+
+.isotope-filter label {
+  position: absolute;
+  left: -999em;
+}
+
+#parent-fieldname-text {
+  dt {
+    margin-top: 1em;
+  }
+  dd {
+    margin-left: 1em;
+  }
+}
+
 @media (max-width: 460px) {
 
   input#searchGadget {
