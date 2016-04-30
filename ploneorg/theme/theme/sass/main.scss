@@ -186,6 +186,12 @@ ul.livesearch-results {
   border: none;
   background-color: transparent;
 }
+
+.isotope-filter label {
+  position: absolute;
+  left: -999em;
+}
+
 @media (max-width: 460px) {
 
   input#searchGadget {
