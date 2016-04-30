@@ -216,12 +216,24 @@ ul.livesearch-results {
   }
 }
 
-.template-homepage .sec-events .panel-body {
-    min-height: 10em;
+.template-homepage .sec-events {
+  .panel-body {
+      min-height: 10em;
+  }
 }
 
+.template-homepage  .sec-sponsors-home .column {
+  padding: 9px;
+  min-height: 16em
+}
 
-@media (max-width: 460px) {
+@media (max-width: 1000px) {
+  .template-homepage .sec-events  {
+    width: 66.666%;
+  }
+}
+
+@media (max-width: 480px) {
 
   input#searchGadget {
     width: 68%;
@@ -229,5 +241,9 @@ ul.livesearch-results {
 
   input.searchButton {
     width: 32%;
+  }
+
+  .template-homepage .sec-events .event {
+    width: 100%;
   }
 }
