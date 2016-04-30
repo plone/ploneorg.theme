@@ -497,7 +497,7 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 // We don't want to make the whole block article block a link because
 // we want to be able to add multiple links per block.
 
-.sec-getting-started {
+.sec-get-started {
   .container {
     @extend .sec-spacer;
   }
