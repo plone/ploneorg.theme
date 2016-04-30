@@ -53,7 +53,7 @@
                     <li><a href="/documentation/manual">Manuals</a></li>
                     <li><a href="/documentation/books">Books</a></li>
                     <!-- <li><a href="">Knowledge Base</a></li> -->
-                    <li><a href="/documentation/error">Error Reference</a></li>
+                    <li><a href="/documentation/error">Error reference</a></li>
                     <!-- <li><a href="">Module documentation</a></li> -->
                     <li><a href="http://plone.net/sites">Sites using Plone</a></li>
                   </ul>
