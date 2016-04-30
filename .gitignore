@@ -3,3 +3,4 @@ ploneorg/theme/theme/node_modules
 ploneorg.theme.egg-info
 *.pyc
 build/
+*~
