@@ -192,7 +192,6 @@ ul.livesearch-results {
   }
 }
 
-// &:not('[class^="subsection-"]') { }
 .subsection-badges .isotope-filter {
   width: 9em;
 }
@@ -205,6 +204,15 @@ ul.livesearch-results {
 .isotope-filter label {
   position: absolute;
   left: -999em;
+}
+
+#parent-fieldname-text {
+  dt {
+    margin-top: 1em;
+  }
+  dd {
+    margin-left: 1em;
+  }
 }
 
 @media (max-width: 460px) {
