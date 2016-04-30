@@ -196,9 +196,10 @@ ul.livesearch-results {
   width: 9em;
 }
 
+// Have to use important due to cascading
 #isotope-grid .horizontal {
-  border: none;
-  background-color: transparent;
+  border: none !important;
+  background-color: transparent !important;
 }
 
 .isotope-filter label {
