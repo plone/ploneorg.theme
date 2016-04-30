@@ -216,6 +216,11 @@ ul.livesearch-results {
   }
 }
 
+.template-homepage .sec-events .panel-body {
+    min-height: 10em;
+}
+
+
 @media (max-width: 460px) {
 
   input#searchGadget {
