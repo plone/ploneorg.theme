@@ -10,6 +10,7 @@
                     <li><a href="/foundation/meetings/minutes">Meeting minutes</a></li>
                     <li><a href="/foundation/board">Current board</a></li>
                     <li><a href="/foundation/members">Foundation members</a></li>
+                    <li><a href="/foundation/materials/foundation-resolutions/code-of-conduct">Code of Conduct</a></li>
                   </ul>
                 </div>
                 <div class="column">
@@ -45,6 +46,7 @@
                     <li><a href="http://training.plone.org">Training</a></li>
                     <li><a href="http://docs.plone.org/manage/installing/">Installation</a></li>
                     <li><a href="https://plone.com/success-stories">Sites using Plone</a></li>
+                    <li><a href="/about">About this site</a></li>                    
                   </ul>
                 </div>
 
