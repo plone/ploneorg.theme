@@ -162,8 +162,13 @@ ul.livesearch-results {
   width: 300px;
 }
 
-.sec-get-started article .text {
+.sec-get-started article {
+  .text {
     padding-left: 6%;
+  }
+  .image {
+    margin-top: 2em;
+  }
 }
 
 .contributor-badges .col-md-2:first-child {
