@@ -162,8 +162,13 @@ ul.livesearch-results {
   width: 300px;
 }
 
-.sec-get-started article .text {
+.sec-get-started article {
+  .text {
     padding-left: 6%;
+  }
+  .image {
+    margin-top: 2em;
+  }
 }
 
 .contributor-badges .col-md-2:first-child {
@@ -227,9 +232,33 @@ ul.livesearch-results {
   min-height: 16em
 }
 
+// Hide the Advanced Search Options
+.searchPage .actionMenu {
+  display: none;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin: 4px 1em 0;
+}
+
+.field {
+    margin: 1em 0 0;
+    width: 100%;
+}
+.formQuestion {
+  margin-bottom: 0.3em;
+}
+
+.sec-github-totals .column .well {
+  min-height: 18em;
+}
 @media (max-width: 1000px) {
-  .template-homepage .sec-events  {
-    width: 66.666%;
+  .template-homepage .sec-events .events  {
+    width: 66.6666%;
+  }
+  .template-summary_view[class*="section-"] article.tileItem {
+    width: 46%;
+    margin-bottom: 1em;
   }
 }
 
@@ -245,5 +274,11 @@ ul.livesearch-results {
 
   .template-homepage .sec-events .event {
     width: 100%;
+  }
+  .template-homepage .sec-events .events, .template-homepage .sec-events .about  {
+    width: 50%;
+  }
+  .sec-events .events .event .panel-heading {
+    text-align: left;
   }
 }
