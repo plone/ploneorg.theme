@@ -244,6 +244,9 @@ input[type="radio"], input[type="checkbox"] {
   margin-bottom: 0.3em;
 }
 
+.sec-github-totals .column .well {
+  min-height: 18em;
+}
 @media (max-width: 1000px) {
   .template-homepage .sec-events .events  {
     width: 66.6666%;
