@@ -42,8 +42,7 @@
       <ul class="dropdown-menu">
         <li><a href="{$portal_url}/profile/{$member}">View</a></li>
         <li><a href="{$portal_url}/@@personal-information">Edit</a></li>
-        <li><a href="sponsors.html">Submit event</a></li>
-        <li><a href="#">Another section</a></li>
+        <li><a href="{$portal_url}/events/community/++add++Event">Submit event</a></li>
       </ul>
     </li>
   </replace>
