@@ -231,6 +231,19 @@ ul.livesearch-results {
 .searchPage .actionMenu {
   display: none;
 }
+
+input[type="radio"], input[type="checkbox"] {
+    margin: 4px 1em 0;
+}
+
+.field {
+    margin: 1em 0 0;
+    width: 100%;
+}
+.formQuestion {
+  margin-bottom: 0.3em;
+}
+
 @media (max-width: 1000px) {
   .template-homepage .sec-events .events  {
     width: 66.6666%;
