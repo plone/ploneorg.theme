@@ -248,6 +248,10 @@ input[type="radio"], input[type="checkbox"] {
   .template-homepage .sec-events .events  {
     width: 66.6666%;
   }
+  .template-summary_view[class*="section-"] article.tileItem {
+    width: 46%;
+    margin-bottom: 1em;
+  }
 }
 
 @media (max-width: 480px) {
