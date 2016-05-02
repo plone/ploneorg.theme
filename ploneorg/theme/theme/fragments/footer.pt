@@ -6,25 +6,20 @@
                 <div class="column">
                     <h3><a href="/foundation">Plone Foundation</a></h3>
                   <ul>
-                    <li><a href="/foundation/foundation-donations">Donate</a></li>
-                    <li><a href="/foundation/donors">Sponsors</a></li>
+                    <li><a href="/sponsors">Donate &amp; Sponsors</a></li>
                     <li><a href="/foundation/meetings/minutes">Meeting minutes</a></li>
-                    <li><a href="/team/FoundationBoard">Current board</a></li>
+                    <li><a href="/foundation/board">Current board</a></li>
                     <li><a href="/foundation/members">Foundation members</a></li>
-                    <li><a href="/foundation/membership">Apply for membership</a></li>
-                    <li><a href="/foundation#contact">Contact</a></li>
+                    <li><a href="/foundation/materials/foundation-resolutions/code-of-conduct">Code of Conduct</a></li>
                   </ul>
                 </div>
                 <div class="column">
                   <h3><a href="/support">Support</a></h3>
                   <ul>
-                    <li><a href="http://plone.net/providers">Commercial services</a></li>
+                    <li><a href="https://plone.com/providers">Commercial services</a></li>
                     <li><a href="/support/chat">Chat room</a></li>
                     <li><a href="/support/forums">Forums</a></li>
-                    <li><a href="/support/for">Sector-specific forums</a></li>
-                    <li><a href="/support/region">Region-specific forums</a></li>
                     <li><a href="/support/local-user-groups">Local user groups</a></li>
-                    <li><a href="http://training.plone.org">Training</a></li>
                   </ul>
                 </div>
 
@@ -35,10 +30,9 @@
                   <h3><a href="/products">Downloads</a></h3>
                   <ul>
                     <li><a href="/download">Get Plone</a></li>
-                    <li><a href="/products?getCategories=themes">Themes</a></li>
-                    <li><a href="/products?getCategories=dev">Development tools</a></li>
-                    <li><a href="/products?getCategories=auth">Authentication</a></li>
-                    <li><a href="/products">All addons</a></li>
+                    <li><a href="/download/add-ons">All addons</a></li>
+                    <li><a href="/security/hotfixes">Check hotfixes</a></li>
+                    <li><a href="https://github.com/plone">Browse source</a></li>                    
                   </ul>
                 </div>
 
@@ -48,14 +42,11 @@
                 <div class="column">
                   <h3><a href="/documentation">Documentation</a></h3>
                   <ul>
-                    <li><a href="/documentation/faq/">FAQs</a></li>
-                    <li><a href="/documentation/movies/">Tutorial videos</a></li>
-                    <li><a href="/documentation/manual">Manuals</a></li>
-                    <li><a href="/documentation/books">Books</a></li>
-                    <!-- <li><a href="">Knowledge Base</a></li> -->
-                    <li><a href="/documentation/error">Error reference</a></li>
-                    <!-- <li><a href="">Module documentation</a></li> -->
-                    <li><a href="http://plone.net/sites">Sites using Plone</a></li>
+                    <li><a href="http://docs.plone.org">Full documentation</a></li>
+                    <li><a href="http://training.plone.org">Training</a></li>
+                    <li><a href="http://docs.plone.org/manage/installing/">Installation</a></li>
+                    <li><a href="https://plone.com/success-stories">Sites using Plone</a></li>
+                    <li><a href="/about">About this site</a></li>                    
                   </ul>
                 </div>
 
@@ -63,24 +54,23 @@
                 <div class="col-xs-12 visible-xs"></div>
 
                 <div class="column">
-                   <!-- TODO: Fix href. This changed from developers to contribute. -->
-                  <h3><a href="http://docs.plone.org/develop">Contribute</a></h3>
+                  <h3><a href="/community/sign-me-up">Contribute</a></h3>
                   <ul>
                     <li><a href="http://plone.org/roadmap">Roadmap</a></li>
-                    <li><a href="https://github.com/plone/Products.CMFPlone/issues">Report bugs in Plone</a></li>
-                    <li><a href="https://github.com/plone/Products.CMFPlone/issues">Report website issues</a></li>
-                    <li><a href="https://github.com/plone">Latest changes</a></li>
-                    <li><a href="https://github.com/plone">Browse source</a></li>
-                    <li><a href="http://docs.plone.org/develop/index.html#developing-for-plone-core">Contribute to Plone</a></li>
-                    <li><a href="http://planet.plone.org">Community blogs</a></li>
+                    <li><a href="/support/bugs">Report bugs in Plone</a></li>
+                    <li><a href="https://github.com/plone/ploneorg.core/issues">Report website issues</a></li>
+                    <li><a href="/community/sign-me-up">Contribute skills</a></li>
+                    <li><a href="http://docs.plone.org/develop/index.html#developing-for-plone-core">Contribute code</a></li>
                   </ul>
                 </div>
                 <div class="column">
-                  <h3><a href="#">User groups</a></h3>
+                  <h3><a href="#">Stay up to date</a></h3>
                   <ul>
-                    <li><a href="#">Germany</a></li>
-                    <li><a href="#">The Netherlands</a></li>
-                    <li><a href="#">Spain</a></li>
+                    <li><a href="http://eepurl.com/S4wfL">Newsletter signup</a></li>
+                    <li><a href="http://planet.plone.org">Planet Plone (blogs)</a></li>
+                    <li><a href="https://twitter.com/plone"><span class="fa fa-twitter"></span> @plone on Twitter</a></li>
+                    <li><a href="https://www.facebook.com/plonecms/"><span class="fa fa-facebook"></span> PloneCMS on Facebook</a></li>
+                    <li><a href="https://www.linkedin.com/groups/2300"><span class="fa fa-linkedin"></span> Plone LinkedIn group</a></li>
                   </ul>
                 </div>
               </div>

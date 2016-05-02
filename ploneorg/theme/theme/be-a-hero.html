@@ -26,6 +26,9 @@
         <meta name="theme-color" content="#ffffff">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
         <link rel="stylesheet" href="static/barceloneta.css">
         <link rel="stylesheet" href="static/main.css">
 
@@ -78,9 +81,7 @@
                 </button>
 
                 <button type="button"
-                        class="navbar-toggle navbar-btn"
-                        data-toggle="modal"
-                        data-target="#modal-login">
+                        class="navbar-toggle navbar-btn">
                   <span class="fa fa-user"></span>
                   <span class="sr-only">Login</span>
                 </button>
@@ -134,8 +135,8 @@
                       <span class="hidden-sm">Search</span>
                     </a>
                   </li>
-                  <li class="btn-login">
-                    <a href="#" data-toggle="modal" data-target="#modal-login">
+                  <li>
+                    <a href="#">
                       <span class="fa fa-user"></span>
                       <span class="hidden-sm">Login</span>
                     </a>
@@ -172,56 +173,89 @@
           </div>
         </section>
 
-        <div id="breadcrumbs"></div>
-
         <div class="container">
-          <div class="row">
-            <aside id="global_statusmessage"></aside>
-          </div>
+
+          <section class="sec-be-a-hero">
+
+	    <div id="content">
+
+	      <h1>Be a Foundation Hero</h1>
+
+              <p class="lead">
+		The Plone community couldn't exist without the
+		continuing contributions of individuals, financial and
+		otherwise. Thank you for joining the ranks of these
+		Plone Foundation Heroes!
+              </p>
+
+	      <p>
+		Donations are tax-deductible in the US, and you will
+		receive a receipt from the Plone Foundation after the
+		donation has been processed.
+		<em>
+		  (While we are grateful for every amount, please
+		  donate at least $5, otherwise our  processing costs
+		  will exceed your donation).
+		</em>
+	      </p>
+
+	      <p>
+		If you are a Plone provider, please consider becoming
+		a
+		<a href="../sponsors/become-a-sponsor">Plone
+		Foundation Sponsor</a> to receive additional benefits.
+	      </p>
+	      
+	      <p>The EIN (tax ID) of the Plone Foundation
+	      is <b>56-2468025</b> </p>
+	      
+	      <h2>One-Time or Monthly Donation (Ammado)</h2>
+	      <p>
+		Ammado may be a better option for European donors, since it accepts more European payment cards and currencies.
+		You can use this button to make either a one-time donation or a repeating, monthly donation.
+	      </p>
+
+	      <div id="ammadoGivingWidget"></div><script type="text/javascript">var s = document.createElement('script'); s.type='text/javascript'; s.async=true;s.src='https://www.ammado.com/nonprofit/124732/givingwidget/embed.js?renderTo=ammadoGivingWidget';var f = document.getElementsByTagName('script')[0]; f.parentNode.insertBefore(s, f);</script>
+
+
+	      <h2>Monthly Donation (PayPal)</h2>
+	      
+	      <p>
+		<strong>$15/month</strong>
+	      <form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post" id="_xclick">
+		<input type="hidden" name="cmd" value="_xclick-subscriptions"><input type="hidden" name="business" value="treasurer@plone.org"><input type="hidden" name="currency_code" value="USD"><input type="hidden" name="no_shipping" value="1"><input type="image" src="http://www.paypal.com/en_US/i/btn/btn_subscribe_LG.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!"><input type="hidden" name="a3" value="15.00"><input type="hidden" name="p3" value="1"><input type="hidden" name="t3" value="M"><input type="hidden" name="src" value="1"><input type="hidden" name="sra" value="1"></form>
+	      </p>
+
+	      <p></p>
+
+	      <p>
+		<strong>$25/month</strong>
+	      <form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post" id="_xclick">
+		<input type="hidden" name="cmd" value="_xclick-subscriptions"><input type="hidden" name="business" value="treasurer@plone.org"><input type="hidden" name="currency_code" value="USD"><input type="hidden" name="no_shipping" value="1"><input type="image" src="http://www.paypal.com/en_US/i/btn/btn_subscribe_LG.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!"><input type="hidden" name="a3" value="25.00"><input type="hidden" name="p3" value="1"><input type="hidden" name="t3" value="M"><input type="hidden" name="src" value="1"><input type="hidden" name="sra" value="1"></form>
+	      </p>
+
+	      <p></p>
+
+	      <p>
+		<strong>$40/month</strong>
+	      <form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post" id="_xclick">
+		<input type="hidden" name="cmd" value="_xclick-subscriptions"><input type="hidden" name="business" value="treasurer@plone.org"><input type="hidden" name="currency_code" value="USD"><input type="hidden" name="no_shipping" value="1"><input type="image" src="http://www.paypal.com/en_US/i/btn/btn_subscribe_LG.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!"><input type="hidden" name="a3" value="40.00"><input type="hidden" name="p3" value="1"><input type="hidden" name="t3" value="M"><input type="hidden" name="src" value="1"><input type="hidden" name="sra" value="1"></form>
+	      </p>
+
+	      <h2>One-Time Donation (PayPal)</h2>
+
+	      <!-- Any amount donation-->
+	      <p> You can specify any amount for a one-time donation using this button:</p>
+	      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+		<input type="hidden" name="cmd" value="_s-xclick"><input type="hidden" name="hosted_button_id" value="KDR7KPPVYZ2AN"><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"><img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"></form>
+
+	    </div>
+
+          </section>
+
         </div>
 
-        <main role="main" id="main-container">
-          <div class="container">
-            <div class="row row-offcanvas row-offcanvas-right">
-              <div id="column1-container"></div>
-              <div id="content-container"></div>
-              <div id="column2-container"></div>
-            </div>
-          </div>
-        </main>
 
-        <!-- Modal -->
-        <div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Login via GitHub</h4>
-              </div>
-              <div class="modal-body">
-                <p class="lead">To log in to this site, you will need a GitHub account. After logging in for the first
-                 time, please edit your profile information to activate your account.</p>
-                <p class="lead"><strong>Why:</strong> The Plone documentation, codebase, marketing and other tasks are 
-                 managed through GitHub. Using the same login here makes it easier to coordinate team assignments.</p>
-                <p class="lead"><strong>Note:</strong> You do <strong>not</strong> need to login to this site to ask
-                 questions or make suggestions. For that you can participate at 
-                 <a href="https://community.plone.org">community.plone.org</a> which provides a variety of login options.</p>
-              </div>
-              <div class="modal-footer">
-                <button type="button"
-                        class="btn btn-default"
-                        data-dismiss="modal">
-                  Cancel
-                </button>
-                <a href="/@@authomatic-handler/github"
-                   type="button"
-                   class="btn btn-primary">
-                  Okay, take me to GitHub
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <footer id="staticfooter">
          gets pulled from fragments/footer.pt
@@ -239,6 +273,5 @@
           ga('send', 'pageview');
 
         </script>
-
     </body>
 </html>
