@@ -248,7 +248,7 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 .field, .action, .PFGFieldsetWidget {
-  width: 100%;
+  width: 100% !important;
 }
 fieldset, label, .field {
   margin-top: 1em;
