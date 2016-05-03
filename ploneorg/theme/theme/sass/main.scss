@@ -263,6 +263,17 @@ fieldset label {
 .sec-github-totals .column .well {
   min-height: 18em;
 }
+
+.section-sponsors .sec-sponsors .sponsor {
+  min-height: 12.5em;
+  .logo {
+    width: 100%;
+  }
+}
+
+.sponsor-call-to-action {
+  clear: both;
+}
 @media (max-width: 1000px) {
   .template-homepage .sec-events .events  {
     width: 66.6666%;
