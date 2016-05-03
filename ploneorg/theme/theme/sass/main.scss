@@ -283,6 +283,10 @@ fieldset label {
 @media (max-width: 1000px) {
   .template-homepage .sec-events .events  {
     width: 66.6666%;
+    margin-left: 0px;
+  }
+  .template-homepage .sec-events .about  {
+    width: 33.3334%;
   }
   .template-summary_view[class*="section-"] article.tileItem {
     width: 46%;
