@@ -264,13 +264,19 @@ fieldset label {
   min-height: 18em;
 }
 
-.section-sponsors .sec-sponsors .sponsor {
+.section-sponsors .sec-sponsors-premium .sponsor {
   min-height: 12.5em;
   .logo {
     width: 100%;
   }
 }
 
+.section-sponsors .sec-sponsors-standard .sponsor {
+  img {
+    max-width: 100%;
+    max-height: 120px;
+  }
+}
 .sponsor-call-to-action {
   clear: both;
 }
