@@ -290,6 +290,21 @@ fieldset label {
   }
 }
 
+@media (max-width: 750px) {
+  .template-homepage .sec-events .events, .template-homepage .sec-events .about  {
+    width: 100%;
+  }
+  .template-homepage .sec-events .event, .template-homepage .sec-sponsors-home .logos {
+    width: 100%;
+  }
+  .template-homepage .sec-sponsors-home .logos .column {
+    width: 50%;
+  }
+  .template-homepage .sec-news article {
+    width: 100%;
+  }
+}
+
 @media (max-width: 480px) {
 
   input#searchGadget {
@@ -300,13 +315,13 @@ fieldset label {
     width: 32%;
   }
 
-  .template-homepage .sec-events .event {
-    width: 100%;
-  }
-  .template-homepage .sec-events .events, .template-homepage .sec-events .about  {
-    width: 50%;
-  }
-  .sec-events .events .event .panel-heading {
-    text-align: left;
-  }
+  // .template-homepage .sec-events .event {
+  //   width: 100%;
+  // }
+  // .template-homepage .sec-events .events, .template-homepage .sec-events .about  {
+  //   width: 50%;
+  // }
+  // .sec-events .events .event .panel-heading {
+  //   text-align: left;
+  // }
 }
