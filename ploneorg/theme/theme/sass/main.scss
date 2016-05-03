@@ -291,14 +291,11 @@ fieldset label {
 }
 
 @media (max-width: 750px) {
-  .template-homepage .sec-events .events, .template-homepage .sec-events .about  {
-    width: 100%;
-  }
-  .template-homepage .sec-events .event, .template-homepage .sec-sponsors-home .logos, .template-homepage .sec-sponsors-home .about {
+  .template-homepage .sec-events .events, .template-homepage .sec-events .about, .template-homepage .sec-events .event, .template-homepage .sec-sponsors-home .logos, .template-homepage .sec-sponsors-home div.about.column {
     width: 100%;
   }
   .template-homepage .sec-sponsors-home .logos .column {
-    width: 50%;
+    width: 33%;
   }
   .template-homepage .sec-news article {
     width: 100%;
