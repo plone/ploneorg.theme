@@ -288,6 +288,9 @@ fieldset label {
   .template-homepage .sec-events .about  {
     width: 33.3334%;
   }
+  .template-homepage .sec-events .event {
+    min-height: 15em;
+  }
   .template-summary_view[class*="section-"] article.tileItem {
     width: 46%;
     margin-bottom: 1em;
@@ -306,6 +309,9 @@ fieldset label {
   }
   .template-homepage .sec-sponsors-home img {
     max-height: 120px;
+  }
+  .template-homepage .sec-events .event {
+    min-height: inherit;
   }
 }
 
