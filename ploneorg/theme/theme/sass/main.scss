@@ -247,9 +247,14 @@ input[type="radio"], input[type="checkbox"] {
     margin: 4px 1em 0;
 }
 
-.field {
-    margin: 1em 0 0;
-    width: 100%;
+.field, .action, .PFGFieldsetWidget {
+  width: 100% !important;
+}
+fieldset, label, .field {
+  margin-top: 1em;
+}
+fieldset label {
+  margin-top: 0.3em;
 }
 .formQuestion {
   margin-bottom: 0.3em;
