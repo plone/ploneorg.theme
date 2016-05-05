@@ -280,6 +280,18 @@ fieldset label {
 .sponsor-call-to-action {
   clear: both;
 }
+
+.section-download {
+  .documentFirstHeading {
+    display: none;
+  }
+  .vertical-spacing {
+    margin-top: 1.5em;
+  }
+  .btn-lg.btn-prime {
+    width: 220px;
+  }
+}
 @media (max-width: 1000px) {
   .template-homepage .sec-events .events  {
     width: 66.6666%;
