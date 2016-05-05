@@ -291,6 +291,15 @@ fieldset label {
   .btn-lg.btn-prime {
     width: 220px;
   }
+  .subsection-releases {
+    .btn-lg.btn-default {
+      width: auto;
+      margin: 0.8em 0px;
+      background-color: #ff3600;
+      border-color: #ff3600;
+      color: #fff;
+    }
+  }
 }
 @media (max-width: 1000px) {
   .template-homepage .sec-events .events  {
