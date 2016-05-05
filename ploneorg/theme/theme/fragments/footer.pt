@@ -30,7 +30,7 @@
                   <h3><a href="/products">Downloads</a></h3>
                   <ul>
                     <li><a href="/download">Get Plone</a></li>
-                    <li><a href="/download/add-ons">All addons</a></li>
+                    <li><a href="/download/add-ons">All add-ons</a></li>
                     <li><a href="/security/hotfixes">Check hotfixes</a></li>
                     <li><a href="https://github.com/plone">Browse source</a></li>                    
                   </ul>
