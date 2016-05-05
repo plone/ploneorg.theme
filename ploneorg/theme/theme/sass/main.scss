@@ -296,6 +296,7 @@ fieldset label {
       width: auto;
       margin: 0.8em 0px;
       background-color: #ff3600;
+      // Possible main button color change: #A70A08
       border-color: #ff3600;
       color: #fff;
     }
@@ -330,6 +331,7 @@ fieldset label {
   }
   .template-homepage .sec-sponsors-home img {
     max-height: 120px;
+    padding: 0px 5px;
   }
   .template-homepage .sec-events .event {
     min-height: inherit;
