@@ -352,12 +352,14 @@ fieldset label {
 .btn-prime, input.searchButton {
   background-color: #E23000;
 }
-
+.btn-primary {
+  background-color: #007EB6;
+}
 .navbar-default, .navbar-collapse {
   background: #007eb6;
   border-color: #007eb6;
 }
-.navbar-default .navbar-nav > li > a {
+.navbar-default .navbar-nav > li > a, .btn-prime a {
   color: #ffffff;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .selected > a, .navbar-default .navbar-collapse .navbar-nav > .selected > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .selected > a:hover, .navbar-default .navbar-collapse .navbar-nav > .selected > a:hover, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .selected > a:focus, .navbar-default .navbar-collapse .navbar-nav > .selected > a:focus {
@@ -381,5 +383,5 @@ a {
 }
 
 .sec-download .container a, .sec-report-issues .container a {
-  color: #E6EDF1;
+  color: #175758;
 }
