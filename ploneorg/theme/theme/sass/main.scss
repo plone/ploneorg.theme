@@ -295,8 +295,7 @@ fieldset label {
     .btn-lg.btn-default {
       width: auto;
       margin: 0.8em 0px;
-      background-color: #ff3600;
-      // Possible main button color change: #A70A08
+      background-color: #A70A08;
       border-color: #ff3600;
       color: #fff;
     }
@@ -348,3 +347,33 @@ fieldset label {
     width: 32%;
   }
 }
+
+// Contrast Color changes for accessibility below
+.btn-prime, input.searchButton {
+  background-color: #A70A08;
+}
+
+.navbar-default, .navbar-collapse {
+  background: #0772BE;
+  border-color: #0772BE;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #DCFEFD;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .selected > a, .navbar-default .navbar-collapse .navbar-nav > .selected > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .selected > a:hover, .navbar-default .navbar-collapse .navbar-nav > .selected > a:hover, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .selected > a:focus, .navbar-default .navbar-collapse .navbar-nav > .selected > a:focus {
+    background-color: #1a0b31;
+  }
+
+  .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #1a0b31;
+  }
+
+  .navbar-default .dropdown-menu, .navbar-collapse .dropdown-menu, .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus  {
+    background-color: #184d72;
+  }
+  .discreet, .documentByLine {
+    color: #767676;
+  }
+  a {
+    color: #0079b0;
+  }
