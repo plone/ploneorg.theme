@@ -349,16 +349,16 @@ fieldset label {
 }
 
 // Contrast Color changes for accessibility below
-.btn-prime, input.searchButton {
-  background-color: #A70A08;
-}
+// .btn-prime, input.searchButton {
+//   background-color: #A70A08;
+// }
 
 .navbar-default, .navbar-collapse {
-  background: #0772BE;
-  border-color: #0772BE;
+  background: #007eb6;
+  border-color: #007eb6;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #DCFEFD;
+  color: #ffffff;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .selected > a, .navbar-default .navbar-collapse .navbar-nav > .selected > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .selected > a:hover, .navbar-default .navbar-collapse .navbar-nav > .selected > a:hover, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .selected > a:focus, .navbar-default .navbar-collapse .navbar-nav > .selected > a:focus {
     background-color: #1a0b31;
@@ -376,4 +376,11 @@ fieldset label {
   }
   a {
     color: #0079b0;
+
+  .sec-download .container a, .sec-report-issues .container a {
+    color: #E6EDF1;
+  }
+
+  .btn-primary {
+    background-color: #007eb6;
   }
