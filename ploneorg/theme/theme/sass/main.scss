@@ -351,9 +351,9 @@ fieldset label {
 // Contrast Color changes for accessibility below
 .btn-prime, input.searchButton {
   background-color: #E23000;
-  a {
-    color: white;
-  }
+}
+.btn-prime a {
+  color: white !important;
 }
 .btn-primary {
   background-color: #007EB6;
