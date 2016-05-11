@@ -233,9 +233,14 @@ ul.livesearch-results {
   }
 }
 
-.template-homepage  .sec-sponsors-home .column {
-  padding: 9px;
-  min-height: 16em
+.template-homepage  .sec-sponsors-home {
+  .column {
+    padding: 9px;
+    min-height: 10em;
+  }
+  a.logos {
+    opacity: inherit;
+  }
 }
 
 // Hide the Advanced Search Options
