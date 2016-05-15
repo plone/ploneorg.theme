@@ -80,6 +80,9 @@
      <rules css:if-content="body.section-getstarted">
        <replace css:content=".jumbotron" css:theme="#breadcrumbs" href="/@@theme-fragment/getstartedjumbo" />
     </rules>
+    <rules css:if-content="body.section-security">
+       <replace css:content=".jumbotron" css:theme="#breadcrumbs" href="/@@theme-fragment/securityjumbo" />
+    </rules>
   </rules>
 
     <!-- Head -->
