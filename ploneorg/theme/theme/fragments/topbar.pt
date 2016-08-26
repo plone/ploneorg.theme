@@ -8,6 +8,12 @@
                   </a>
                 </li>
                 <li>
+                  <a href="https://ploneconf.org"
+                     title="Conference">
+                    Conference
+                  </a>
+                </li>
+                <li>
                   <a href="http://docs.plone.org"
                      title="Documentation">
                     Documentation
