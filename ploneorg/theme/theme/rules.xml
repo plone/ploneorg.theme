@@ -73,6 +73,14 @@
     </rules>
     <rules css:if-content="body.section-support">
        <replace css:content=".jumbotron" css:theme="#breadcrumbs" href="/@@theme-fragment/supportjumbo" />
+       <after css:content="#content-core">
+	 <script>
+	   ((window.gitter = {}).chat = {}).options = {
+	   room: 'plone/public'
+	   };
+	 </script>
+	 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js"></script>
+       </after>
     </rules>
     <rules css:if-content="body.section-community">
        <replace css:content=".jumbotron" css:theme="#breadcrumbs" href="/@@theme-fragment/communityjumbo" />
