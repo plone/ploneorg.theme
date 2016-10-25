@@ -5,7 +5,7 @@
        xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
        xmlns:xi="http://www.w3.org/2001/XInclude">
 
-    <!-- Plone Barcaloneta toolbar and forms -->
+    <!-- Plone Barceloneta toolbar and forms -->
     <xi:include href="backend.xml" />
 
     <replace css:theme=".topbar" css:content=".topbar" href="/@@theme-fragment/topbar" />
@@ -36,9 +36,6 @@
           <xsl:value-of select="." /> alert alert-warning
         </xsl:attribute>
     </xsl:template>
-
-
-
 
     <!-- Use base.html as default theme page. -->
     <theme href="base.html" />
@@ -73,14 +70,6 @@
     </rules>
     <rules css:if-content="body.section-support">
        <replace css:content=".jumbotron" css:theme="#breadcrumbs" href="/@@theme-fragment/supportjumbo" />
-       <after css:content="#content-core">
-	 <script>
-	   ((window.gitter = {}).chat = {}).options = {
-	   room: 'plone/public'
-	   };
-	 </script>
-	 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js"></script>
-       </after>
     </rules>
     <rules css:if-content="body.section-community">
        <replace css:content=".jumbotron" css:theme="#breadcrumbs" href="/@@theme-fragment/communityjumbo" />
@@ -91,7 +80,7 @@
     <rules css:if-content="body.section-security">
        <replace css:content=".jumbotron" css:theme="#breadcrumbs" href="/@@theme-fragment/securityjumbo" />
     </rules>
-  </rules>
+</rules>
 
     <!-- Head -->
     <rules if-content="//*[@id='portal-top']">
@@ -110,7 +99,6 @@
       <after theme-children="/html/head" content="/html/head/link" />
       <!-- Script -->
       <after theme-children="/html/head" content="/html/head/script" />
-
     </rules>
 
     <!-- Copy over the id/class attributes on the body tag.
@@ -121,8 +109,6 @@
     <rules css:if-not-content=".jumbotron">
       <replace css:theme="#breadcrumbs" css:content="#portal-breadcrumbs"/>
     </rules>
-
-
 
     <!-- Related sites in topbar -->
     <replace theme='//*[@id="links-select"]' content='//*[@id="links-select"]' />
@@ -143,9 +129,8 @@
         <replace css:content-children="#content-core" css:theme-children=".sec-community .container" />
     </rules>
 
-
     <!-- Remove the Plone modal form images because a modal isn't a real lightbox. -->
-    <!-- Add the featerlight lightbox attribute instead. -->
+    <!-- Add the featherlight lightbox attribute instead. -->
     <!-- <drop css:content="a[data-pat-plone-modal]" attributes="data-pat-plone-modal"></drop>
     <xsl:template match="//@class[contains(., 'pat-plone-modal')]">
     <xsl:attribute name="data-featherlight">image</xsl:attribute>
@@ -241,6 +226,12 @@
         <xsl:attribute name="placeholder">Search Plone.org</xsl:attribute>
     </xsl:template>
 
-
+    <!-- Gitter chat sidecar -->
+    <before css:theme="#staticfooter">
+      <script>
+	    ((window.gitter = {}).chat = {}).options = { room: 'plone/public' };
+      </script>
+      <script src="https://sidecar.gitter.im/dist/sidecar.v1.js"></script>
+    </before>
 
   </rules>
