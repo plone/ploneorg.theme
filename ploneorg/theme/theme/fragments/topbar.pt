@@ -31,6 +31,12 @@
                     Forum
                   </a>
                 </li>
+                <li>
+                  <a href="https://community.plone.org/c/jobs"
+                     title="Plone Jobs">
+                    Jobs
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
