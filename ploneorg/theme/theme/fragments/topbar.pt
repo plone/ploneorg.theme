@@ -2,7 +2,7 @@
             <div class="container">
               <ul id="links-select">
                 <li>
-                  <a href="http://plone.com"
+                  <a href="https://plone.com"
                      title="Plone.com">
                     plone.com
                   </a>
@@ -14,19 +14,19 @@
                   </a>
                 </li>
                 <li>
-                  <a href="http://docs.plone.org"
+                  <a href="https://docs.plone.org"
                      title="Documentation">
                     Documentation
                   </a>
                 </li>
                 <li>
-                  <a href="http://training.plone.org"
+                  <a href="https://training.plone.org"
                      title="Training">
                     Training
                   </a>
                 </li>
                 <li>
-                  <a href="http://community.plone.org"
+                  <a href="https://community.plone.org"
                      title="Discussion forum">
                     Forum
                   </a>
