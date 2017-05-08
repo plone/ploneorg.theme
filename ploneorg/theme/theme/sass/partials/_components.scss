@@ -396,6 +396,10 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
         font-weight: 300;
         margin-bottom: 0;
       }
+
+      &.downloads p {
+        font-size: 32px;
+      }
     }
   }
 }
