@@ -324,9 +324,6 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
   .column {
     @extend .col-xs-4, .col-sm-2;
     padding: 20px;
-    img {
-      opacity: 0.4;
-    }
   }
   .events {
     @extend .col-md-8, .col-md-offset-1;
@@ -354,7 +351,11 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
           margin-top: 0;
         }
         img {
-          width: 75px;
+	  display: block;
+	  max-width: 75px;
+	  max-height: 75px;
+	  width: auto;
+	  height: auto;
           float:right;
           @extend .img-circle;
         }
