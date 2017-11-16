@@ -13,3 +13,8 @@
 .tileImage a img {
   margin-top: 4px;
 }
+
+// fix framed lead image display
+img, video, object {
+  max-width: 100%;
+}
