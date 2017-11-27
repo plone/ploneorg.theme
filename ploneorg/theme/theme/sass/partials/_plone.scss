@@ -18,3 +18,10 @@
 img, video, object {
   max-width: 100%;
 }
+
+// fix hotfix vulnerability right column portlet
+dd.portletItem {
+    display: list-item;
+    list-style-type: disc;
+    margin: 20px;
+}
