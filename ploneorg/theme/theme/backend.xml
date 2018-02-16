@@ -42,7 +42,7 @@
       <ul class="dropdown-menu">
         <li><a href="{$portal_url}/profile/{$member}">View</a></li>
         <li><a href="{$portal_url}/@@personal-information">Edit</a></li>
-        <li><a href="{$portal_url}/news/++add++News%20Item">Submit news</a></li>
+        <!--<li><a href="{$portal_url}/news/++add++News%20Item">Submit news</a></li>-->
         <li><a href="{$portal_url}/events/community/++add++Event">Submit event</a></li>
       </ul>
     </li>
