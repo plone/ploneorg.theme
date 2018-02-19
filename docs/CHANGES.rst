@@ -4,6 +4,9 @@ Changelog
 Ongoing
 -------
 
+- change sponsors page to display sponsor logos based on FoundationSponsor object queries
+  [tkimnguyen]
+
 - add sponsorship-payments.html and rule
   [tkimnguyen]
 
