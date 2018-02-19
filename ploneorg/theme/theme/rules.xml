@@ -46,6 +46,9 @@
     <theme href="get-started.html" css:if-content="body.section-get-started"/>
     <rules css:if-content="body.section-sponsors">
       <theme href="sponsors.html" css:if-content="body.template-listing_view" />
+      <replace css:theme=".sec-sponsors-premium-from-database" css:content=".sponsors-premium-from-database" href="/@@premium-sponsors-view" />
+      <replace css:theme=".sec-sponsors-standard-from-database" css:content=".sponsors-standard-from-database" href="/@@standard-sponsors-view" />
+      <replace css:theme=".sec-sponsors-university-from-database" css:content=".sponsors-university-from-database" href="/@@university-sponsors-view" />
     </rules>
 
     <notheme css:if-not-content="#visual-portal-wrapper" />
