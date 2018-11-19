@@ -1,11 +1,15 @@
 Changelog
 =========
 
-Ongoing
--------
+- remove Ammado, link to other payment forms
+  [tkimnguyen]
 
 - change sponsors page to display sponsor logos based on FoundationSponsor object queries
   [tkimnguyen]
+
+
+Ongoing
+-------
 
 - add sponsorship-payments.html and rule
   [tkimnguyen]
