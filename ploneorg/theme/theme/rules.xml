@@ -41,6 +41,7 @@
     <theme href="base.html" />
     <theme href="be-a-hero.html" css:if-content="body.template-document_view" if-path="be-a-hero" />
     <theme href="sponsorship-payments.html" css:if-content="body.template-document_view" if-path="sponsorship-payments" />
+    <theme href="plone-open-garden.html" css:if-content="body.template-document_view" if-path="plone-open-garden" />
     <theme href="base.html" if-content="//body[contains(@class, 'subsection')]" />
     <theme href="community.html" css:if-content="body.section-community" />
     <theme href="get-started.html" css:if-content="body.section-get-started"/>
