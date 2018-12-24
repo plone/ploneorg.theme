@@ -149,6 +149,32 @@
             </div>
           </nav>
 
+<script language="JavaScript">
+function tabhandler1() {
+  var x = document.getElementById("tab1");
+  x.style.display = "block";
+  var x = document.getElementById("tab2");
+  x.style.display = "none"
+  var x = document.getElementById("tab3");
+  x.style.display = "none"
+}
+function tabhandler2() {
+  var x = document.getElementById("tab1");
+  x.style.display = "none";
+  var x = document.getElementById("tab2");
+  x.style.display = "block"
+  var x = document.getElementById("tab3");
+  x.style.display = "none"
+}
+function tabhandler3() {
+  var x = document.getElementById("tab1");
+  x.style.display = "none";
+  var x = document.getElementById("tab2");
+  x.style.display = "none"
+  var x = document.getElementById("tab3");
+  x.style.display = "block"
+}
+</script>
         </header>
 
         <section class="sec-full-width sec-search" style="display: none;">
@@ -1571,9 +1597,9 @@ Being part of it is simple: just sign up by filling out the form below.
 
       <div class="tab" id="nav-tabs1">
          <ul class="nav nav-tabs">
-           <li class="active"><a data-toggle="tab" href="#here-tab1" class="tab1">by plane</a></li>
-           <li><a data-toggle="tab" class="tab2" href="#here-tab2">by car</a></li>
-           <li><a data-toggle="tab" class="tab3" href="#here-tab3">by train</a></li>
+           <li class="active"><a data-toggle="tab" href="#here-tab1" class="tab1" onclick="tabhandler1()">by plane</a></li>
+           <li><a data-toggle="tab" class="tab2" href="#here-tab2" onclick="tabhandler2()">by car</a></li>
+           <li><a data-toggle="tab" class="tab3" href="#here-tab3" onclick="tabhandler3()">by train</a></li>
          </ul>
          <div class="tab-content">
            <div id="here-tab1" class="tab-pane active">
