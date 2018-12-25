@@ -1,6 +1,8 @@
 Changelog
 =========
 
+- add theme page for /plone-open-garden URL
+
 - remove Ammado, link to other payment forms
   [tkimnguyen]
 
