@@ -108,7 +108,6 @@
               </div>
               <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                  <!-- li class="active" -->
                   <li><a href="get-started.html">Get started</a></li>
                   <li><a href="community.html">Community</a></li>
                   <li><a href="page.html">Foundation</a></li>
@@ -153,25 +152,37 @@ function tabhandler1() {
   var x = document.getElementById("here-tab1");
   x.style.display = "block";
   var x = document.getElementById("here-tab2");
-  x.style.display = "none"
+  x.style.display = "none";
   var x = document.getElementById("here-tab3");
-  x.style.display = "none"
+  x.style.display = "none";
+  $("#nav-tabs1 > ul > li:nth-child(1)").addClass('active');
+  $("#nav-tabs1 > ul > li:nth-child(2)").removeClass('active');
+  $("#nav-tabs1 > ul > li:nth-child(3)").removeClass('active');
+  $('html, body').animate({ scrollTop: $("#program > div:nth-child(18) > div:nth-child(1) > h2").offset().top }, 500);
 }
 function tabhandler2() {
   var x = document.getElementById("here-tab1");
   x.style.display = "none";
   var x = document.getElementById("here-tab2");
-  x.style.display = "block"
+  x.style.display = "block";
   var x = document.getElementById("here-tab3");
-  x.style.display = "none"
+  x.style.display = "none";
+  $("#nav-tabs1 > ul > li:nth-child(1)").removeClass('active');
+  $("#nav-tabs1 > ul > li:nth-child(2)").addClass('active');
+  $("#nav-tabs1 > ul > li:nth-child(3)").removeClass('active');
+  $('html, body').animate({ scrollTop: $("#program > div:nth-child(18) > div:nth-child(1) > h2").offset().top }, 500);
 }
 function tabhandler3() {
   var x = document.getElementById("here-tab1");
   x.style.display = "none";
   var x = document.getElementById("here-tab2");
-  x.style.display = "none"
+  x.style.display = "none";
   var x = document.getElementById("here-tab3");
-  x.style.display = "block"
+  x.style.display = "block";
+  $("#nav-tabs1 > ul > li:nth-child(1)").removeClass('active');
+  $("#nav-tabs1 > ul > li:nth-child(2)").removeClass('active');
+  $("#nav-tabs1 > ul > li:nth-child(3)").addClass('active');
+  $('html, body').animate({ scrollTop: $("#program > div:nth-child(18) > div:nth-child(1) > h2").offset().top }, 500);
 }
 </script>
         </header>
