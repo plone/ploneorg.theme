@@ -361,31 +361,31 @@ function tabhandler3() {
       height: 10em;
       margin-left: -5em;
       margin-top: -5em;
-      background-color: #222;
-      color: #fff;
+      /*background-color: #222;*/
+      /*color: #fff;*/
       opacity: 0.3;
-      border-radius: 5em;
-      -webkit-border-radius: 5em;
-      overflow: hidden;
+      /*border-radius: 5em;*/
+      /*-webkit-border-radius: 5em;*/
+      /*overflow: hidden;*/
   }
   a.vimeo-popup:link, a.vimeo-popup:visited, a.vimeo-popup:active, a.vimeo-popup:hover {
       text-decoration: none;
   }
-  #plog-video-trigger:hover {
-      background: #222;
-      opacity: 0.5;
-      color: #fff;
-  }
-  #plog-video-trigger:visited {
-      background: #222;
-      color: #fff;
-  }
-  #plog-video-trigger i.icon-play {
-      font-size: 700%;
-      left: 0.37em;
-      top: 0.23em;
-      position: relative;
-  }
+  /*#plog-video-trigger:hover {*/
+      /*background: #222;*/
+      /*opacity: 0.5;*/
+      /*color: #fff;*/
+  /*}*/
+  /*#plog-video-trigger:visited {*/
+      /*background: #222;*/
+      /*color: #fff;*/
+  /*}*/
+  /*#plog-video-trigger i.icon-play {*/
+      /*font-size: 700%;*/
+      /*left: 0.37em;*/
+      /*top: 0.23em;*/
+      /*position: relative;*/
+  /*}*/
   #plog-video-trigger-phone {
       width: 100%;
       text-align: center;
@@ -1347,7 +1347,9 @@ a .icon-stack, a .icon-spin {
 <span id="no-breadcrumb" style="display: none;"></span>
 
 <section id="plog-head" class="ng-casestudy-head">
-  <a href="https://vimeo.com/85804537" id="plog-video-trigger" class="vimeo-popup hidden-phone" title="Watch the PLOG community video"><i class="icon-play"></i></a>
+  <a target="_blank" href="https://vimeo.com/85804537" id="plog-video-trigger" class="vimeo-popup hidden-phone" title="Watch the PLOG community video">
+      <img src="/images/player-play-button-symbol.png" alt="video play button">
+  </a>
   <div id="plog-head-hero">
     <h1 class="hidden-phone">Live out the PLOG community.</h1>
     <h1 class="visible-phone">Be PLOG.</h1>
@@ -1355,11 +1357,13 @@ a .icon-stack, a .icon-spin {
       PLOG is the Italian Plone event taking place in Sorrento April 7-14, 2019, aimed at those who are passionate about the Plone CMS.<br />
       It’s the best way to get in touch with the community, and <strong>it’s free</strong>.
     </p>
-	<div class="call-to-action small-centered">
-      <a href="#register" class="btn btn-primary btn-large pull-bottom" data-hash="#register">Jump in</a>
+      <p><a target="_blank" href="https://vimeo.com/85804537" id="plog-video-trigger-phone" class="discreet vimeo-popup visible-phone" title="Watch the PLOG community video">
+          Watch the PLOG community video
+      </a></p>
+      <div class="call-to-action small-centered">
+        <a href="#register" class="btn btn-primary btn-large pull-bottom" data-hash="#register">Jump in</a>
     </div>
   </div>
-  <a href="https://vimeo.com/85804537" id="plog-video-trigger-phone" class="vimeo-popup visible-phone" title="Watch the PLOG community video"><i class="icon-play"></i> Watch the PLOG community video</a>
 </section>
 
 
