@@ -1,7 +1,11 @@
 Changelog
 =========
 
+- add annual PayPal subscription button
+  [tkimnguyen]
+
 - add theme page for /plone-open-garden URL
+  [tkimnguyen]
 
 - remove Ammado, link to other payment forms
   [tkimnguyen]
