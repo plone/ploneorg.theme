@@ -1,7 +1,8 @@
 Changelog
 =========
 
-- add one-time PayPal "any amount" donations instructions and button
+- add one-time PayPal "any amount" donations instructions and button, add "Make
+  a Donation" button and link to it on /sponsors page
   [tkimnguyen]
 
 - add annual PayPal subscription button
