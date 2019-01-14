@@ -1,6 +1,9 @@
 Changelog
 =========
 
+- add one-time PayPal "any amount" donations instructions
+  [tkimnguyen]
+
 - add annual PayPal subscription button
   [tkimnguyen]
 
