@@ -128,7 +128,12 @@ section.sec-community ul, section.sec-foundation ul {
   padding-left: 1.2em;
 }
 
-.plone-breadcrumb {margin-top: 0px !important;}
+.plone-breadcrumb {
+  margin-top: 0px !important;
+  ol a {
+    color: $breadcrumb-color;
+  }
+}
 
 .portletStaticText ul {
   font-size: 14px;
