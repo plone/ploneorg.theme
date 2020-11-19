@@ -403,7 +403,7 @@ p {
 .documentDescription {
   font-size: 18px;
   font-weight: 600;
-  color: #6b808c;
+  color: #5c6f79;
   margin-bottom: 10px;
 }
 small {
@@ -417,11 +417,11 @@ mark {
   padding: .2em;
 }
 .discreet {
-  color: #6b808c;
+  color: #5c6f79;
   font-weight: 400;
 }
 .documentByLine {
-  color: #6b808c;
+  color: #5c6f79;
   font-weight: 400;
   margin-bottom: 10px;
 }
@@ -518,7 +518,7 @@ table {
   background-color: #fff;
   border-radius: 2px;
   font-weight: 400;
-  color: #6b808c;
+  color: #5c6f79;
 }
 th {
   text-align: left;
@@ -720,10 +720,11 @@ output {
   padding-top: 7px;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #6b808c;
+  color: #5c6f79;
 }
 /*.form-control,*/
 input[type="text"],
+input[type="number"],
 input[type="email"],
 input[type="password"],
 textarea,
@@ -734,7 +735,7 @@ select {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #6b808c;
+  color: #5c6f79;
   background-color: #fff;
   background-image: none;
   border: 1px solid #ccc;
@@ -746,6 +747,7 @@ select {
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 input[type="text"]:focus,
+input[type="number"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
 textarea:focus,
@@ -756,6 +758,7 @@ select:focus {
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(100, 190, 232, 0.6);
 }
 input[type="text"]::-moz-placeholder,
+input[type="number"]::-moz-placeholder,
 input[type="email"]::-moz-placeholder,
 input[type="password"]::-moz-placeholder,
 textarea::-moz-placeholder,
@@ -764,6 +767,7 @@ select::-moz-placeholder {
   opacity: 1;
 }
 input[type="text"]:-ms-input-placeholder,
+input[type="number"]:-ms-input-placeholder,
 input[type="email"]:-ms-input-placeholder,
 input[type="password"]:-ms-input-placeholder,
 textarea:-ms-input-placeholder,
@@ -771,6 +775,7 @@ select:-ms-input-placeholder {
   color: #777777;
 }
 input[type="text"]::-webkit-input-placeholder,
+input[type="number"]::-webkit-input-placeholder,
 input[type="email"]::-webkit-input-placeholder,
 input[type="password"]::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder,
@@ -778,16 +783,19 @@ select::-webkit-input-placeholder {
   color: #777777;
 }
 input[type="text"][disabled],
+input[type="number"][disabled],
 input[type="email"][disabled],
 input[type="password"][disabled],
 textarea[disabled],
 select[disabled],
 input[type="text"][readonly],
+input[type="number"][readonly],
 input[type="email"][readonly],
 input[type="password"][readonly],
 textarea[readonly],
 select[readonly],
 fieldset[disabled] input[type="text"],
+fieldset[disabled] input[type="number"],
 fieldset[disabled] input[type="email"],
 fieldset[disabled] input[type="password"],
 fieldset[disabled] textarea,
@@ -804,6 +812,10 @@ textarea {
 textarea[name='form.widgets.IRichText.text'] {
   min-height: 12em;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+select {
+  width: unset;
+  display: inline-block;
 }
 input[type="search"] {
   -webkit-appearance: none;
@@ -953,15 +965,15 @@ label .required:after {
 }
 .optionsToggle label {
   font-weight: 300;
-  color: #6b808c;
+  color: #5c6f79;
 }
 .ordered-selection-field td {
   vertical-align: middle;
   text-align: center;
 }
 .ordered-selection-field td button {
-  float: left;
-  margin-left: 2rem;
+  display: block;
+  margin: auto;
 }
 .folder-factories {
   list-style: none;
@@ -1174,7 +1186,7 @@ label .required:after {
 .autotabs .autotoc-nav a.active,
 .pat-autotoc.autotabs .autotoc-nav a.active:hover,
 .autotabs .autotoc-nav a.active:hover {
-  color: #6b808c;
+  color: #5c6f79;
   cursor: default;
   background: #fff;
   border-bottom-color: #fff;
@@ -1203,12 +1215,12 @@ label .required:after {
     box-shadow: inset 0 -1px #e5e5e5;
   }
 }
-.autotabs ul {
+.autotabs ul.autotoc-nav {
   list-style: none;
   padding-left: 0;
   margin-bottom: 0;
 }
-.autotabs ul li {
+.autotabs ul.autotoc-nav li {
   list-style: none;
   display: inline-block;
 }
@@ -1298,7 +1310,7 @@ label .required:after {
   font-weight: 500;
   font-size: 18px;
   padding: 13px 15px;
-  color: #6b808c;
+  color: #5c6f79;
 }
 .portlet .portletHeader > a {
   color: #086ca3;
@@ -1340,7 +1352,7 @@ label .required:after {
 .portlet .portletContent > div:not(.portalMessage) {
   padding: 10px 15px;
   margin: 0;
-  color: #6b808c;
+  color: #5c6f79;
 }
 .portlet .portletContent > ul {
   padding: 0;
@@ -1380,7 +1392,7 @@ label .required:after {
   position: relative;
   margin-top: -26px;
   font-size: 12px;
-  color: #6b808c;
+  color: #5c6f79;
 }
 .portlet .portletContent > ul li:hover {
   background: #f5f8fa;
@@ -1403,7 +1415,7 @@ label .required:after {
   border-bottom: 1px solid #e5e5e5;
 }
 .portlet.portletCalendar table thead th {
-  color: #6b808c;
+  color: #5c6f79;
   font-weight: 300;
   height: 40px;
   text-align: center;
@@ -1489,7 +1501,7 @@ label .required:after {
   padding: 10px 15px 10px 15px;
   border-top: 1px solid #e5e5e5;
   background: #fafdff;
-  color: #6b808c;
+  color: #5c6f79;
   display: block;
   font-weight: 400;
 }
@@ -1522,7 +1534,7 @@ label .required:after {
 }
 .portletNavigationTree .portletContent .navTreeCurrentNode > a {
   background: #fafdff;
-  color: #6b808c;
+  color: #5c6f79;
 }
 .portletNavigationTree .portletContent .navTreeCurrentNode > a:after {
   content: "⟩";
@@ -1588,7 +1600,7 @@ label .required:after {
   font-weight: 500;
   font-size: 18px;
   padding: 13px 15px;
-  color: #6b808c;
+  color: #5c6f79;
 }
 .managedPortlet .portletHeader > a {
   color: #086ca3;
@@ -1630,7 +1642,7 @@ label .required:after {
 .managedPortlet .portletContent > div:not(.portalMessage) {
   padding: 10px 15px;
   margin: 0;
-  color: #6b808c;
+  color: #5c6f79;
 }
 .managedPortlet .portletContent > ul {
   padding: 0;
@@ -1670,7 +1682,7 @@ label .required:after {
   position: relative;
   margin-top: -26px;
   font-size: 12px;
-  color: #6b808c;
+  color: #5c6f79;
 }
 .managedPortlet .portletContent > ul li:hover {
   background: #f5f8fa;
@@ -1693,7 +1705,7 @@ label .required:after {
   border-bottom: 1px solid #e5e5e5;
 }
 .managedPortlet.portletCalendar table thead th {
-  color: #6b808c;
+  color: #5c6f79;
   font-weight: 300;
   height: 40px;
   text-align: center;
@@ -1885,6 +1897,7 @@ body#visual-portal-wrapper.pat-plone #edit-zone [class*="contenttype-"]:after {
   text-align: center;
   margin-right: 6px;
   position: absolute;
+  content: '\e834';
 }
 body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-folder:after {
   content: '\e801';
@@ -2051,7 +2064,7 @@ body.template-logged_out #content-core .portletHeader {
   font-weight: 500;
   font-size: 18px;
   padding: 13px 15px;
-  color: #6b808c;
+  color: #5c6f79;
 }
 body.template-login_form #content-core .portletHeader > a,
 body.template-logged_out #content-core .portletHeader > a {
@@ -2103,7 +2116,7 @@ body.template-login_form #content-core .portletContent > div:not(.portalMessage)
 body.template-logged_out #content-core .portletContent > div:not(.portalMessage) {
   padding: 10px 15px;
   margin: 0;
-  color: #6b808c;
+  color: #5c6f79;
 }
 body.template-login_form #content-core .portletContent > ul,
 body.template-logged_out #content-core .portletContent > ul {
@@ -2150,7 +2163,7 @@ body.template-logged_out #content-core .portletContent > ul .portletItemDetails 
   position: relative;
   margin-top: -26px;
   font-size: 12px;
-  color: #6b808c;
+  color: #5c6f79;
 }
 body.template-login_form #content-core .portletContent > ul li:hover,
 body.template-logged_out #content-core .portletContent > ul li:hover {
@@ -2179,7 +2192,7 @@ body.template-logged_out #content-core.portletCalendar table thead {
 }
 body.template-login_form #content-core.portletCalendar table thead th,
 body.template-logged_out #content-core.portletCalendar table thead th {
-  color: #6b808c;
+  color: #5c6f79;
   font-weight: 300;
   height: 40px;
   text-align: center;
@@ -2486,6 +2499,7 @@ body.template-logged_out #content-core .portletFooter {
 }
 .newsImageContainer a {
   display: table;
+  background-color: #fafafa;
 }
 .newsImageContainer a img {
   display: block;
@@ -2673,7 +2687,7 @@ h3 a:focus {
   padding: 10px 15px 10px 15px;
   border-top: 1px solid #e5e5e5;
   background: #fafdff;
-  color: #6b808c;
+  color: #5c6f79;
   display: block;
   font-weight: 400;
 }
@@ -2706,7 +2720,7 @@ h3 a:focus {
 }
 .portletNavigationTree .portletContent .navTreeCurrentNode > a {
   background: #e8f2f7;
-  color: #6b808c;
+  color: #5c6f79;
 }
 .portletNavigationTree .portletContent .navTreeCurrentNode > a:after {
   content: "⟩";
@@ -2716,4 +2730,4 @@ h3 a:focus {
   margin-top: -3px;
   color: #777777;
 }
-/*# sourceMappingURL=static/barceloneta.css.map */
+/*# sourceMappingURL=barceloneta.css.map */
