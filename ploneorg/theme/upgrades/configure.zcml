@@ -1,0 +1,16 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="ploneorg.theme">
+
+  <!-- upgrade 1000 to 1001 -->
+  <genericsetup:upgradeDepends
+      title="Update news image sizes"
+      description="Adds additional image sizes for newsitems and newslisting"
+      source="1000"
+      destination="1001"
+      profile="ploneorg.theme:default"
+      import_steps="plone.app.registry"
+      />
+        
+</configure>
