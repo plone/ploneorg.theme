@@ -36,12 +36,19 @@
           <xsl:value-of select="." /> alert alert-warning
         </xsl:attribute>
     </xsl:template>
-
+    
     <!-- Use base.html as default theme page. -->
     <theme href="base.html" />
     <theme href="be-a-hero.html" css:if-content="body.template-document_view" if-path="be-a-hero" />
     <theme href="sponsorship-payments.html" css:if-content="body.template-document_view" if-path="sponsorship-payments" />
     <theme href="plone-open-garden.html" css:if-content="body.template-document_view" if-path="plone-open-garden" />
+
+    <!-- News listing with tags and no bylines -->
+    <rules css:if-content=".section-news">
+      <xi:include href="++theme++ploneorg.theme/news-layout-update/rules-news.xml" />
+    </rules>
+
+
     <theme href="base.html" if-content="//body[contains(@class, 'subsection')]" />
     <theme href="community.html" css:if-content="body.section-community" />
     <theme href="get-started.html" css:if-content="body.section-get-started"/>
@@ -247,7 +254,7 @@
     <!-- Gitter chat sidecar -->
     <before css:theme="#staticfooter">
       <script>
-	    ((window.gitter = {}).chat = {}).options = { room: 'plone/public' };
+        ((window.gitter = {}).chat = {}).options = { room: 'plone/public' };
       </script>
       <script src="https://sidecar.gitter.im/dist/sidecar.v1.js"></script>
     </before>

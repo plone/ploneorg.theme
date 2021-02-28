@@ -9,7 +9,7 @@
   <includeDependencies package="." />
 
   <include package="plone.app.theming" />
-
+  <include package=".upgrades" />
   <plone:static
     name="ploneorg.theme"
     directory="theme"

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<registry>
+  <!-- add custom image scales. Note these can not be removed with an uninstall profile -->
+  <record name="plone.allowed_sizes"
+          interface="Products.CMFPlone.interfaces.controlpanel.IImagingSchema"
+          field="allowed_sizes">
+    <value purge="false">
+      <element>leadimage 300:200</element>
+      <element>newsimage_hd 333:200</element>
+      <element>newsimage_sd 300:200</element>
+      <element>newsimage_43 267:200</element>
+    </value>
+  </record>
+</registry>
