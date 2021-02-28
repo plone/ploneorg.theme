@@ -58,6 +58,12 @@
       <replace css:theme=".sec-sponsors-standard-from-database" css:content=".sponsors-standard-from-database" href="/@@standard-sponsors-view" />
       <replace css:theme=".sec-sponsors-university-from-database" css:content=".sponsors-university-from-database" href="/@@university-sponsors-view" />
     </rules>
+    <rules css:if-content="body.section-providers">
+      <theme href="providers.html" css:if-content="body.template-listing_view" />
+      <replace css:theme=".sec-providers-premium-from-database" css:content=".providers-premium-from-database" href="/@@premium-providers-view" />
+      <replace css:theme=".sec-providers-standard-from-database" css:content=".providers-standard-from-database" href="/@@standard-providers-view" />
+      <replace css:theme=".sec-providers-basic-from-database" css:content=".providers-basic-from-database" href="/@@basic-providers-view" />
+    </rules>
 
     <notheme css:if-not-content="#visual-portal-wrapper" />
 

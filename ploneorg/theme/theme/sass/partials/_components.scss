@@ -497,6 +497,53 @@ $selection-color: desaturate(lighten($plone-orange, 10), 30);
 }
 
 //
+// Providers
+//
+
+.sec-providers-premium {
+  .provider {
+    @extend .col-sm-6;
+    @extend .sec-spacer;
+    a {
+      display: inline-block;
+      &:hover, &:focus {
+        text-decoration: none;
+      }
+    }
+    .logo {
+      @extend .col-md-4;
+      margin-bottom: 1em;
+    }
+    .body {
+      @extend .col-md-8;
+      color: $text-color;
+    }
+  }
+  .break {
+    @extend .col-sm-12;
+    @extend .hidden-xs;
+  }
+}
+
+.sec-providers-standard {
+  @extend .sec-spacer;
+  .provider {
+    @extend .col-xs-6;
+    @extend .col-sm-4;
+    @extend .col-md-3;
+    @extend .col-lg-2;
+    height: 120px;
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+    text-align: center;
+  }
+}
+
+.sec-providers-basic {
+  @extend .sec-providers-standard;
+}
+
+//
 // Getting started
 //
 // We don't want to make the whole block article block a link because
