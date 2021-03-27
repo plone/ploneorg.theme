@@ -1,44 +1,59 @@
+.section-news,
+.template-newsitem_view {
+    font-size: 1.75em; /* 14px to 17.5px */
+    line-height: 1.5; /* was 1.42 */
+}
+
+.section-news .tileHeadline,
+.template-newsitem_view .documentFirstHeading {
+    margin-top: 0;
+    border-bottom: none;
+    font-size: 3.25em; /* 36px to 56px */
+}
+
 .section-news .tileItem {
     padding-bottom: 2.5em;
     min-height: 2.5em;
     overflow: hidden;
 }
-    
-.section-news .tileImage {
-    padding-right: 1.5em; // was: 5px;
+
+.section-news .tileImage img {
+    height: 80%;
+    width: 80%;
+    background-color: #0083BE; /* see Plone logo usage guidelines */
 }
 
 .section-news .tileSummary {
     display: table-cell;
-}    
-
-.section-news .tileHeadline {
-    margin-top: 0;
-    font-size: 2.75em;
 }
 
-.template-newsitem_view .documentFirstHeading {
-    border-bottom: none;
-} 
+.section-news .tileByline {
+    font-size: 1.15em;
+}
+
+.section-news .tileByline a {
+    text-transform: uppercase;
+}
+
+.template-newsitem_view {
+    font-weight: 400;
+}
 
 .template-newsitem_view .documentDescription {
-    font-weight: 400;
+    font-weight: 300;
     color: inherit;
+    font-size: 1.5em; /* 18px to 35px */
 } 
 
 .template-newsitem_view .newsImageContainer {
-    margin: 0 0 1.5em 1.5em; // was 0 0 6px 6px
+    margin: 0 0 1.5em 1.5em; /* was 0 0 6px 6px */
 }
 
 .template-newsitem_view #content header {
     overflow: hidden;
 }
 
-/*
-.section-news
-    .description {
-        font-size: 1.75rem;
-        font-family: serif;
-        color: #444;
-    }
-*/
+.template-newsitem_view h2 {
+    font-size: 2.5em; /* 30px to 38.5 */
+}
+
