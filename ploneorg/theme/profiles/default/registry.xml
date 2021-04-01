@@ -5,10 +5,15 @@
           interface="Products.CMFPlone.interfaces.controlpanel.IImagingSchema"
           field="allowed_sizes">
     <value purge="false">
-      <element>leadimage 300:200</element>
-      <element>newsimage_hd 333:200</element>
-      <element>newsimage_sd 300:200</element>
-      <element>newsimage_43 267:200</element>
+      <element>leadimage 400:300</element>
     </value>
   </record>
+  <!-- add imagecropping control panel defaults -->
+  <records prefix="plone.app.imagecropping.browser.settings.ISettings"
+          interface="plone.app.imagecropping.browser.settings.ISettings">
+    <value key="constrain_cropping">True</value>
+    <value key="cropping_for" purge="false">
+      <element>leadimage</element>
+    </value>
+  </records>
 </registry>

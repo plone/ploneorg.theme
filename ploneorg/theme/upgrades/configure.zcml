@@ -12,5 +12,14 @@
       profile="ploneorg.theme:default"
       import_steps="plone.app.registry"
       />
-        
+
+  <!-- upgrade 1001 to 1002 -->
+  <genericsetup:upgradeDepends
+      title="Configure leadimage and imagecropping"
+      description="Configure image size/cropping defaults for newsitems and newslisting"
+      source="1001"
+      destination="1002"
+      profile="ploneorg.theme:default"
+      import_steps="plone.app.registry"
+      />
 </configure>

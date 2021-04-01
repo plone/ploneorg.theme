@@ -23,10 +23,20 @@
                tal:condition="item_has_image"
                tal:attributes="class python: 'tileImage' if item_description else 'tileImageNoFloat'">
             <a tal:attributes="href item_link">
-              <img tal:replace="structure python:image_scale.tag(item, 'image', scale='thumb')" />
+              <img tal:replace="structure python:image_scale.tag(item, 'image', scale='leadimage')" />
             </a>
           </div>
 
+          <div class="tileImage"
+               tal:condition="not:item_has_image"
+               tal:attributes="class python: 'tileImage' if item_description else 'tileImageNoFloat'">
+            <a tal:attributes="href item_link">
+              <img src="/++theme++ploneorg.theme/img/plone-logo-inverse.svg"
+                   tal:attributes="alt item/title;
+                                   title item/title"/>
+            </a>
+          </div>
+          
           <div class="tileSummary">
             <h2 class="tileHeadline" metal:define-macro="listitem">
               <a class="summary url"

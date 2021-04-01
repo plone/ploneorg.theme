@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<registry>
+  <!-- remove imagecropping control panel defaults -->
+  <record remove="true" name="plone.app.imagecropping.constrain_cropping" />
+  <record remove="true" name="plone.app.imagecropping.cropping_for" />
+</registry>
