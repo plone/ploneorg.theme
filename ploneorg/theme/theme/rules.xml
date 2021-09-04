@@ -257,12 +257,4 @@
         <xsl:attribute name="placeholder">Search Plone.org</xsl:attribute>
     </xsl:template>
 
-    <!-- Gitter chat sidecar -->
-    <before css:theme="#staticfooter">
-      <script>
-        ((window.gitter = {}).chat = {}).options = { room: 'plone/public' };
-      </script>
-      <script src="https://sidecar.gitter.im/dist/sidecar.v1.js"></script>
-    </before>
-
   </rules>
