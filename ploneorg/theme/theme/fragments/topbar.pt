@@ -2,12 +2,6 @@
             <div class="container">
               <ul id="links-select">
                 <li>
-                  <a href="https://plone.com"
-                     title="Plone.com">
-                    plone.com
-                  </a>
-                </li>
-                <li>
                   <a href="https://ploneconf.org"
                      title="Conference">
                     Conference

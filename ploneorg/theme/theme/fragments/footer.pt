@@ -16,7 +16,6 @@
                 <div class="column">
                   <h3><a href="/support">Support</a></h3>
                   <ul>
-                    <li><a href="https://plone.com/providers">Commercial services</a></li>
                     <li><a href="/support/chat">Chat room</a></li>
                     <li><a href="/support/forums">Forums</a></li>
                     <li><a href="/support/local-user-groups">Local user groups</a></li>
@@ -46,7 +45,6 @@
                     <li><a href="http://docs.plone.org">Full documentation</a></li>
                     <li><a href="http://training.plone.org">Training</a></li>
                     <li><a href="http://docs.plone.org/manage/installing/">Installation</a></li>
-                    <li><a href="https://plone.com/success-stories">Sites using Plone</a></li>
                     <li><a href="/about">About this site</a></li>
                   </ul>
                 </div>
