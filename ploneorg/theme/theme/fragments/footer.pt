@@ -40,11 +40,11 @@
                 <div class="col-sm-12 visible-sm"></div>
 
                 <div class="column">
-                  <h3><a href="http://docs.plone.org">Documentation</a></h3>
+                  <h3><a href="https://docs.plone.org">Documentation</a></h3>
                   <ul>
-                    <li><a href="http://docs.plone.org">Full documentation</a></li>
-                    <li><a href="http://training.plone.org">Training</a></li>
-                    <li><a href="http://docs.plone.org/manage/installing/">Installation</a></li>
+                    <li><a href="https://docs.plone.org">Full documentation</a></li>
+                    <li><a href="https://training.plone.org">Training</a></li>
+                    <li><a href="https://6.dev-docs.plone.org/install/index.html">Installation</a></li>
                     <li><a href="/about">About this site</a></li>
                   </ul>
                 </div>
@@ -65,8 +65,8 @@
                 <div class="column">
                   <h3>Stay up to date</h3>
                   <ul>
-                    <li><a href="http://planet.plone.org">Planet Plone (blogs)</a></li>
                     <li><a href="https://twitter.com/plone"><span class="fa fa-twitter"></span> @plone on Twitter</a></li>
+                    <li><a href="https://plone.social/@plone" rel="me"><span class="fa fa-mastodon"></span> @plone on Mastodon</a></li>
                     <li><a href="https://www.facebook.com/plonecms/"><span class="fa fa-facebook"></span> PloneCMS on Facebook</a></li>
                     <li><a href="https://www.linkedin.com/groups/2300"><span class="fa fa-linkedin"></span> Plone LinkedIn group</a></li>
                   </ul>
